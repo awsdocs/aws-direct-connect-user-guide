@@ -38,7 +38,7 @@ You can create a public or private hosted virtual interface\. Before you begin, 
 
 1. Choose **Continue**\. The new interface is added to the list of virtual interfaces on the **Virtual Interfaces** pane\.
 
-1. After the hosted virtual interface is accepted by the owner of the other AWS account, you can download the router configuration file\.
+1. After the hosted virtual interface is accepted by the owner of the other AWS account, you can [download the router configuration file](create-vif.md#vif-router-config)\.
 
 **To create a hosted public virtual interface**
 
@@ -78,7 +78,7 @@ You can create a public or private hosted virtual interface\. Before you begin, 
 
 1. Choose **Continue**\. The new interface is added to the list of virtual interfaces on the **Virtual Interfaces** pane\.
 
-1. After the hosted virtual interface is accepted by the owner of the other AWS account, you can download the router configuration file\.
+1. After the hosted virtual interface is accepted by the owner of the other AWS account, you can [download the router configuration file](create-vif.md#vif-router-config)\.
 
 **To create a hosted private virtual interface using the command line or API**
 

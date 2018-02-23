@@ -12,7 +12,7 @@ The following rules apply:
 
 + You cannot use a Direct Connect gateway to connect to a VPC in the China \(Beijing\) region\.
 
-+ You cannot use a Direct Connect gateway to connect to a VPC in a different AWS account\.
++ You cannot use a Direct Connect gateway that's in your account to connect to a VPC that's in a different AWS account\. To associate a Direct Connect gateway with a virtual private gateway, it must be in the same account as the virtual private gateway\.
 
 + There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect Limits](Welcome.md#directconnect_limits)\.
 
@@ -35,6 +35,8 @@ The following rules apply:
 + You cannot tag a Direct Connect gateway\.
 
 To connect your AWS Direct Connect connection to a VPC in the same region only, you can create a Direct Connect gateway or you can create a private virtual interface and attach it to the virtual private gateway for the VPC\. For more information, see [Creating a Private Virtual Interface](create-vif.md#create-private-vif) and [VPN CloudHub](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPN_CloudHub.html)\.
+
+To use your AWS Direct Connect connection with a VPC in another account, you can create a hosted private virtual interface for that account\. When the owner of the other account accepts the hosted virtual interface, they can choose to attach it to either a virtual private gateway or a Direct Connect gateway in their account\. For more information, see [Virtual Interfaces](WorkingWithVirtualInterfaces.md)\.
 
 
 + [Creating a Direct Connect Gateway](#create-direct-connect-gateway)
@@ -118,6 +120,9 @@ You can view all the virtual private gateways in all regions that are associated
 
 To connect your AWS Direct Connect connection to the remote VPC, you must create a private virtual interface for your connection and specify the Direct Connect gateway to which to connect\.
 
+**Note**  
+If you're accepting a hosted private virtual interface, you can associate it with a Direct Connect gateway in your account\. For more information, see [Accepting a Hosted Virtual Interface](accepthostedvirtualinterface.md)\.
+
 **To provision a private virtual interface to a Direct Connect gateway**
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
@@ -167,7 +172,7 @@ After you've created the virtual interface, you can download the router configur
 
 ## Deleting a Direct Connect Gateway<a name="delete-direct-connect-gateway"></a>
 
-If you no longer require a Direct Connect gateway, you can delete it\. You must first disassociate all associated virtual private gateways and delete the attached private virtual interface\.
+If you no longer require a Direct Connect gateway, you can delete it\. You must first [disassociate](#associate-vgw-with-direct-connect-gateway) all associated virtual private gateways and [delete](deletevif.md) the attached private virtual interface\.
 
 **To delete a Direct Connect gateway**
 

@@ -15,7 +15,7 @@ Before you begin, ensure that you have read the information in [Prerequisites fo
 1. In the **Create a Virtual Interface** pane, choose **Public**\.  
 ![\[Create a Virtual Interface screen\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/create_virtual_interface_public.png)
 
-1. In the **Define Your New Public Virtual Interface** dialog box, do the following:
+1. In the **Define Your New Public Virtual Interface** dialog box, do the following and choose **Continue**:
 
    1. For **Connection**, select an existing physical connection on which to create the virtual interface\.
 
@@ -41,9 +41,7 @@ Before you begin, ensure that you have read the information in [Prerequisites fo
 
    1. For **Prefixes you want to advertise**, enter the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\.
 
-1. Choose **Continue**\. 
-
-After you've created the virtual interface, you can download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](#vif-router-config)\.
+1. Download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](#vif-router-config)\.
 
 **To create a public virtual interface using the command line or API**
 
@@ -101,13 +99,13 @@ After you've created the virtual interface, you can download the router configur
 
 ## Downloading the Router Configuration File<a name="vif-router-config"></a>
 
-After you've created the virtual interface, you can download the router configuration file for your router, and then use the appropriate configuration to ensure that you can connect to AWS Direct Connect\.
+After you've created the virtual interface, you can download the router configuration file for your router\.
 
 **To download a router configuration**
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
 
-1. In the **Virtual Interfaces** pane, select the virtual interface, and then choose **Actions**, **Download Router Configuration**\.
+1. In the **Virtual Interfaces** pane, select the virtual interface and then choose **Actions**, **Download Router Configuration**\.
 
 1. In the **Download Router Configuration** dialog box, do the following:
 
@@ -117,7 +115,7 @@ After you've created the virtual interface, you can download the router configur
 
    1. For **Software**, select the software version for your router\.
 
-1. Choose **Download Router Configuration**\.
+1. Choose **Download**, and then use the appropriate configuration for your router to ensure that you can connect to AWS Direct Connect\.
 
 ### Example Router Configuration Files<a name="vif-example-router-files"></a>
 

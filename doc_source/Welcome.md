@@ -4,7 +4,7 @@ AWS Direct Connect links your internal network to an AWS Direct Connect location
 
 The following diagram shows how AWS Direct Connect interfaces with your network\. 
 
-![\[ AWS Direct Connect\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/direct_connect_overview.png)
+![\[AWS Direct Connect\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/direct_connect_overview.png)
 
 
 + [AWS Direct Connect Components](#overview-components)
@@ -36,11 +36,15 @@ To use AWS Direct Connect in an AWS Direct Connect location, your network must m
 
 In addition, your network must meet the following conditions:
 
-+ Connections to AWS Direct Connect require single mode fiber, 1000BASE\-LX \(1310nm\) for 1 gigabit Ethernet, or 10GBASE\-LR \(1310nm\) for 10 gigabit Ethernet\. Auto Negotiation for the port must be disabled\. You must support 802\.1Q VLANs across these connections\.
++ Your network must use single mode fiber with a 1000BASE\-LX \(1310nm\) transceiver for 1 gigabit Ethernet, or a 10GBASE\-LR \(1310nm\) transceiver for 10 gigabit Ethernet\. 
 
-+ Your network must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\. 
++ Auto\-negotiation for the port must be disabled\. Port speed and full\-duplex mode must be configured manually\.
 
-You can optionally configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but will not take effect until you configure it on your router\. 
++ 802\.1Q VLAN encapsulation must be supported across the entire connection, including intermediate devices\.
+
++ Your device must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\. 
+
++ \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but will not take effect until you configure it on your router\. 
 
 AWS Direct Connect supports both the IPv4 and IPv6 communication protocols\. IPv6 addresses provided by public AWS services are accessible through AWS Direct Connect public virtual interfaces\.
 

@@ -78,7 +78,7 @@ For example, you can create an alarm that monitors the state of an AWS Direct Co
 
 1. In the navigation pane, choose **Alarms**, **Create Alarm**\.
 
-1. Choose **DX Metrics**\.
+1. Choose the **DX Metrics** category\.
 
 1. Select the AWS Direct Connect connection and choose the **ConnectionState** metric\. Choose **Next**\.
 

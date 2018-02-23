@@ -7,6 +7,7 @@ The following table describes the important changes since the last release of th
 
 | Change | Description | Release Date | 
 | --- | --- | --- | 
+| Local preference BGP communities | You can use local preference BGP community tags to achieve load balancing and route preference for incoming traffic to your network\. For more information, see [Local Preference BGP Communities](routing-and-bgp.md#local-pref-bgp-communities)\. | 2018\-02\-06 | 
 | AWS Direct Connect gateway | You can use a Direct Connect gateway to connect your AWS Direct Connect connection to VPCs in remote regions\. For more information, see [Direct Connect Gateways](direct-connect-gateways.md)\. | 2017\-11\-01 | 
 | Amazon CloudWatch metrics | You can view CloudWatch metrics for your AWS Direct Connect connections\. For more information, see [Monitoring with Amazon CloudWatch](monitoring-cloudwatch.md)\. | 2017\-06\-29 | 
 | Link aggregation groups | You can create a link aggregation group \(LAG\) to aggregate multiple AWS Direct Connect connections\. For more information, see [Link Aggregation Groups](lags.md)\. | 2017\-02\-13 | 

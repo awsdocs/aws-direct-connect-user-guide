@@ -21,6 +21,8 @@ If you do not have equipment at an AWS Direct Connect location, first contact an
 
    1. For **Location**, select the appropriate AWS Direct Connect location\.
 
+   1. If applicable, for **Sub Location**, choose the floor closest to you or your network provider\. This option is only available if the location has meet\-me rooms \(MMRs\) in multiple floors of the building\.
+
    1. Select the appropriate port speed that is compatible with your existing network\.
 
 **To create a connection using the command line or API**

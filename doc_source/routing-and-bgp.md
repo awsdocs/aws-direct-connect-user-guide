@@ -30,7 +30,7 @@ The following outbound routing policies apply:
 
 ## BGP Communities<a name="bgp-communities"></a>
 
-AWS Direct Connect supports a range of BGP community tags to help control the scope \(regional or global\) of traffic\.
+AWS Direct Connect supports a range of BGP community tags to help control the scope \(regional or global\) and route preference of traffic\.
 
 ### Scope BGP Communities<a name="scope-bgp-communities"></a>
 
@@ -59,3 +59,19 @@ AWS Direct Connect applies the following BGP communities to its advertised route
 + No tag—Global \(all public AWS Regions\)\.
 
 Communities that are not supported for an AWS Direct Connect public connection are removed\.
+
+### Local Preference BGP Communities<a name="local-pref-bgp-communities"></a>
+
+You can use local preference BGP community tags to achieve load balancing and route preference for incoming traffic to your network\. For each prefix that you advertise over a BGP session, you can apply a community tag to indicate the priority of the associated path for returning traffic\. Local preference BGP community tags are supported for private virtual interfaces\.
+
+The following local preference BGP community tags are supported:
+
++ `7224:7100`—Low preference
+
++ `7224:7200`—Medium preference
+
++ `7224:7300`—High preference
+
+Local preference BGP community tags are mutually exclusive\. To load balance traffic across multiple AWS Direct Connect connections, apply the same community tag across the prefixes for the connections\. To support failover across multiple AWS Direct Connect connections, apply a community tag with a higher preference to the prefixes for the primary or active virtual interface\.
+
+Local preference BGP community tags are evaluated before any AS\_PATH attribute, and are evaluated in order from lowest to highest preference\.
