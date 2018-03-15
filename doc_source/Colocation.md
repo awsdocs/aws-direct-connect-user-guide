@@ -29,6 +29,8 @@ If the cross connect is not completed within 90 days, the authority granted by t
 
 + [EU \(London\)](#cross-connect-eu-west-2)
 
++ [EU \(Paris)](#cross-connect-eu-west-3)
+
 + [South America \(São Paulo\)](#cross-connect-sa-east-1)
 
 + [US East \(N\. Virginia\)](#cross-connect-us-east-1)
@@ -137,6 +139,14 @@ If the cross connect is not completed within 90 days, the authority granted by t
 | --- | --- | 
 |  Digital Realty \(UK\) \(Sovereign House and London Meridian Gate\)  | Requests for cross connects can be submitted by contacting Digital Realty \(UK\) at [amazon\.orders@digitalrealty\.com](mailto:amazon.orders@digitalrealty.com)\. | 
 | Equinix London \(Slough\) \(Equinix LD4\-LD6\) | Requests for cross connects can be submitted by contacting Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\.  | 
+
+
+**EU \(Paris\)**
+
+| Location | How to request connection |
+| --- | --- |
+| Telehouse Voltaire, Paris \(TH2\) | Requests for cross connects can be submitted by creating a request at the [Customer Portal](https://thparis.force.com/login)\. Request type: DFM/SFM Layout/Connectivity/MMR Circuit Commissioning |
+| Equinix Paris \(Saint Denis\) \(Equinix PA3\) | Requests for cross connects can be submitted by contacting Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\.  |
 
 
 **South America \(São Paulo\)**  
