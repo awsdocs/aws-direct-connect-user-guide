@@ -75,7 +75,7 @@ To associate a virtual private gateway with a Direct Connect gateway, you must b
 **Note**
 
 If you are planning to use the virtual private gateway for Direct Connect gateway and a dynamic VPN, set the ASN on the VGW to the value you require for the VPN.
-Otherwise the ASN on the virtual private gateway can be set to any value. The gateway will advertise all connected VPC's over the ASN assigned to it.
+Otherwise the ASN on the virtual private gateway can be set to any value. Direct Connect gateway will advertise all connected VPC's over the ASN assigned to it.
 
 
 **To associate a virtual private gateway**
