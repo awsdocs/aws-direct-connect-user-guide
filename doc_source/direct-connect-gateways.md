@@ -72,6 +72,12 @@ You can create a Direct Connect gateway in any supported public region\.
 
 To associate a virtual private gateway with a Direct Connect gateway, you must be in the region in which the virtual private gateway is located\. The virtual private gateway must be attached to the VPC to which you want to connect\. For more information, see [Create a Virtual Private Gateway](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_VPN.html#vpn-create-vpg) in the *Amazon VPC User Guide*\.
 
+**Note**
+
+If you are planning to use the virtual private gateway for a Direct Connect gateway and a dynamic VPN connection, set the ASN on the virtual private gateway to the value you require for the VPN connection.
+Otherwise, the ASN on the virtual private gateway can be set to any value. The Direct Connect gateway advertises all connected VPCs over the ASN assigned to it.
+
+
 **To associate a virtual private gateway**
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
