@@ -6,7 +6,7 @@ Before you can begin using a hosted virtual interface, you must accept the virtu
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
 
-1. If necessary, change the region in the navigation bar\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html)\.
+1. If necessary, change the region in the navigation bar\. For more information, see [AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 

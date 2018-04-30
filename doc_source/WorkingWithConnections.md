@@ -4,7 +4,7 @@ To create an AWS Direct Connect connection, you need the following information:
 
 + **AWS Direct Connect location**
 
-  Work with a partner in the AWS Partner Network \(APN\) to help you establish network circuits between an AWS Direct Connect location and your data center, office, or colocation environment, or to provide colocation space within the same facility as the AWS Direct Connect location\. For the list of AWS Direct Connect partners who belong to the APN, see [APN Partners Supporting AWS Direct Connect](http://aws.amazon.com/directconnect/partners)\.
+  Work with a partner in the AWS Partner Network \(APN\) to help you establish network circuits between an AWS Direct Connect location and your data center, office, or colocation environment, or to provide colocation space within the same facility as the AWS Direct Connect location\. For the list of AWS Direct Connect partners who belong to the APN, see [APN Partners Supporting AWS Direct Connect](https://aws.amazon.com/directconnect/partners)\.
 
 + **Port speed**
 

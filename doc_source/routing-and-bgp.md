@@ -44,6 +44,9 @@ You can use the following BGP communities for your prefixes:
 
 + `7224:9300`—Global \(all public AWS Regions\)
 
+**Note**  
+If you do not apply any community tags, prefixes are advertised to all public AWS regions \(global\) by default\.
+
 The communities `7224:1` – `7224:65535` are reserved by AWS Direct Connect\.
 
 In addition, the well\-known `NO_EXPORT` BGP community is supported for both public and private virtual interfaces\.

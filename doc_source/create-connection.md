@@ -2,13 +2,13 @@
 
 You can create a standalone connection, or you can create a connection to associate with a LAG in your account\. If you associate a connection with a LAG, it's created with the same port speed and location as specified in the LAG\.
 
-If you do not have equipment at an AWS Direct Connect location, first contact an AWS partner at the AWS Partner Network \(APN\)\. For more information, see [APN Partners Supporting AWS Direct Connect](http://aws.amazon.com/directconnect/partners)\.
+If you do not have equipment at an AWS Direct Connect location, first contact an AWS partner at the AWS Partner Network \(APN\)\. For more information, see [APN Partners Supporting AWS Direct Connect](https://aws.amazon.com/directconnect/partners)\.
 
 **To create a new connection**
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
 
-1. In the navigation bar, select the region in which to connect to AWS Direct Connect\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html)\.
+1. In the navigation bar, select the region in which to connect to AWS Direct Connect\. For more information, see [AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html)\.
 
 1. In the navigation pane, choose **Connections**, **Create Connection**\.
 

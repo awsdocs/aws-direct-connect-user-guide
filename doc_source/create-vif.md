@@ -87,7 +87,7 @@ You can provision a private virtual interface to a virtual private gateway in th
       To provide your own BGP key, clear the **Auto\-generate BGP key** check box\. For **BGP Authentication Key**, enter your BGP MD5 key\.
 
 **Note**  
-If you use the VPC wizard to create a VPC, route propagation is automatically enabled for you\. With route propagation, routes are automatically populated to the route tables in your VPC\. If you choose, you can disable route propagation\. For more information, see [Enable Route Propagation in Your Route Table](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_VPN.html#vpn-configure-routing) in the *Amazon VPC User Guide*\. 
+If you use the VPC wizard to create a VPC, route propagation is automatically enabled for you\. With route propagation, routes are automatically populated to the route tables in your VPC\. If you choose, you can disable route propagation\. For more information, see [Enable Route Propagation in Your Route Table](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/SetUpVPNConnections.html#vpn-configure-routing) in the *Amazon VPC User Guide*\. 
 
 After you've created the virtual interface, you can download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](#vif-router-config)\.
 
@@ -133,7 +133,7 @@ encapsulation dot1Q VLAN_NUMBER
 ip address YOUR_PEER_IP
 
 router bgp CUSTOMER_BGP_ASN
-neighbor AWS_PEER_IP remote-as 7224
+neighbor AWS_PEER_IP remote-as AWS_ASN
 neighbor AWS_PEER_IP password MD5_key
 network 0.0.0.0 
 exit
@@ -182,7 +182,7 @@ interface Ethernet0/1
 router bgp CUSTOMER_BGP_ASN
   address-family ipv4 unicast
     network 0.0.0.0
-  neighbor AWS_PEER_IP remote-as 7224
+  neighbor AWS_PEER_IP remote-as AWS_ASN
     password 0 MD5_key
     address-family ipv4 unicast
 
@@ -192,7 +192,7 @@ feature bfd
 interface VlanVLAN_NUMBER
 bfd interval 300 min_rx 300 multiplier 3
 router bgp CUSTOMER_BGP_ASN
-neighbor AWS_PEER_IP remote-as 7224
+neighbor AWS_PEER_IP remote-as AWS_ASN
 bfd
 
 ! NAT Configuration for Public Virtual Interfaces (Optional)
@@ -239,7 +239,7 @@ set routing-options autonomous-system CUSTOMER_BGP_ASN
 
 edit protocols bgp group EBGP
 set type external
-set peer-as 7224
+set peer-as AWS_ASN
 
 edit neighbor AWS_PEER_IP
 set local-address YOUR_PEER_IP

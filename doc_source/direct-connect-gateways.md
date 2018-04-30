@@ -10,7 +10,7 @@ In the following diagram, the Direct Connect gateway enables you to use your AWS
 
 The following rules apply:
 
-+ You cannot use a Direct Connect gateway to connect to a VPC in the China \(Beijing\) region\.
++ You cannot use a Direct Connect gateway to connect to a VPC in the China regions\.
 
 + You cannot use a Direct Connect gateway that's in your account to connect to a VPC that's in a different AWS account\. To associate a Direct Connect gateway with a virtual private gateway, it must be in the same account as the virtual private gateway\.
 
@@ -72,11 +72,8 @@ You can create a Direct Connect gateway in any supported public region\.
 
 To associate a virtual private gateway with a Direct Connect gateway, you must be in the region in which the virtual private gateway is located\. The virtual private gateway must be attached to the VPC to which you want to connect\. For more information, see [Create a Virtual Private Gateway](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_VPN.html#vpn-create-vpg) in the *Amazon VPC User Guide*\.
 
-**Note**
-
-If you are planning to use the virtual private gateway for a Direct Connect gateway and a dynamic VPN connection, set the ASN on the virtual private gateway to the value you require for the VPN connection.
-Otherwise, the ASN on the virtual private gateway can be set to any value. The Direct Connect gateway advertises all connected VPCs over the ASN assigned to it.
-
+**Note**  
+If you are planning to use the virtual private gateway for a Direct Connect gateway and a dynamic VPN connection, set the ASN on the virtual private gateway to the value you require for the VPN connection\. Otherwise, the ASN on the virtual private gateway can be set to any permitted value\. The Direct Connect gateway advertises all connected VPCs over the ASN assigned to it\.
 
 **To associate a virtual private gateway**
 

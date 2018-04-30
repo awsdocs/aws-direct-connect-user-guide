@@ -57,6 +57,6 @@ To create a virtual interface, you need the following information:
 
 + \(Public virtual interface only\) **Prefixes you want to advertise**: Public IPv4 routes or IPv6 routes to advertise over BGP\. You must advertise at least one prefix using BGP, up to a maximum of 1,000 prefixes\.
 
-  + IPv4: The IPv4 CIDR must not overlap with another public IPv4 CIDR announced via AWS Direct Connect\. If you do not have public IPv4 addresses, [contact AWS Support](https://aws.amazon.com/support/createCase)\. 
+  + IPv4: The IPv4 CIDR must not overlap with another public IPv4 CIDR announced via AWS Direct Connect\. If you do not own public IPv4 addresses, your network provider might be able to provide you with a public IPv4 CIDR\. If not, [contact AWS Support](https://aws.amazon.com/support/createCase) to request a /31 public IPv4 CIDR \(and provide a use case in your request\)\.
 
   + IPv6: Specify a prefix length of /64 or shorter\.

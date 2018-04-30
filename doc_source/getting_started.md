@@ -10,8 +10,8 @@ You can set up an AWS Direct Connect connection in one of the following ways\.
 | Port speed | Method | 
 | --- | --- | 
 |  1 Gbps or higher  |  Connect directly to an AWS device from your router at an AWS Direct Connect location\.  | 
-|  1 Gbps or higher  |  Work with a partner in the [AWS Partner Network](http://aws.amazon.com/directconnect/partners) \(APN\) or a network provider that will help you connect a router from your data center, office, or colocation environment to an AWS Direct Connect location\. The network provider does not have to be a member of the APN to connect you\.   | 
-|  Sub\-1 Gbps  |  Work with a partner in the [AWS Partner Network](http://aws.amazon.com/directconnect/partners) \(APN\) who will create a hosted connection for you\. Sign up for AWS, and then follow the instructions to [accept your hosted connection](#get-started-accept-hosted-connection)\.  | 
+|  1 Gbps or higher  |  Work with a partner in the [AWS Partner Network](https://aws.amazon.com/directconnect/partners) \(APN\) or a network provider that will help you connect a router from your data center, office, or colocation environment to an AWS Direct Connect location\. The network provider does not have to be a member of the APN to connect you\.   | 
+|  Sub\-1 Gbps  |  Work with a partner in the [AWS Partner Network](https://aws.amazon.com/directconnect/partners) \(APN\) who will create a hosted connection for you\. Sign up for AWS, and then follow the instructions to [accept your hosted connection](#get-started-accept-hosted-connection)\.  | 
 
 
 + [Prerequisites](#get-started-prerequisites)
@@ -65,7 +65,7 @@ If you require a port speed less than 1 Gbps, you cannot request a connection us
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
 
-1. In the navigation bar, select the region in which to connect to AWS Direct Connect\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html)\.
+1. In the navigation bar, select the region in which to connect to AWS Direct Connect\. For more information, see [AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html)\.
 
 1. On the **Welcome to AWS Direct Connect** screen, choose **Get Started with Direct Connect**\.
 
@@ -96,7 +96,7 @@ If you requested a sub\-1G connection from your selected partner, they create a 
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
 
-1. If necessary, select the region in which the hosted connection resides\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html)\.
+1. If necessary, select the region in which the hosted connection resides\. For more information, see [AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html)\.
 
 1. In the navigation pane, choose **Connections**\.
 
@@ -105,7 +105,7 @@ If you requested a sub\-1G connection from your selected partner, they create a 
 
 1. Select **I understand that Direct Connect port charges apply once I click Accept Connection**, and then choose **Accept Connection**\.
 
-1. Go to [Step 4](#RedundantConnections) to continue setting up your AWS Direct Connect connection\.
+1. Go to [Step 4](#createvirtualinterface) to continue setting up your AWS Direct Connect connection\.
 
 ## Step 3: Download the LOA\-CFA<a name="DedicatedConnection"></a>
 
@@ -130,6 +130,9 @@ If the link is not enabled, the LOA\-CFA is not yet available for you to downloa
    + If you have equipment at the AWS Direct Connect location, contact the colocation provider to request a cross\-network connection\. You must be a customer of the colocation provider, and you must present them with the LOA\-CFA that authorizes the connection to the AWS router, as well as the necessary information to connect to your network\.
 
 AWS Direct Connect locations that are listed as multiple sites \(for example, Equinix DC1\-DC6 & DC10\-DC11\) are set up as a campus\. If your or your network provider’s equipment is located in any of these sites, you will be able to request a cross connect to your assigned port even if it resides in a different building on the campus\. 
+
+**Important**  
+A campus is treated as a single AWS Direct Connect location\. To achieve high availability, configure connections to different AWS Direct Connect locations\.
 
 If you or your network partner experience issues establishing a physical connection, see [Troubleshooting Layer 1 \(Physical\) Issues](Troubleshooting.md#ts_layer_1)\.
 
@@ -169,7 +172,7 @@ Before you begin, ensure that you have the following information:
 
 + \(Public virtual interface only\) **Prefixes you want to advertise**: Public IPv4 routes or IPv6 routes to advertise over BGP\. You must advertise at least one prefix using BGP, up to a maximum of 1,000 prefixes\.
 
-  + IPv4: The IPv4 CIDR must not overlap with another public IPv4 CIDR announced via AWS Direct Connect\. If you do not have public IPv4 addresses, [contact AWS Support](https://aws.amazon.com/support/createCase)\. 
+  + IPv4: The IPv4 CIDR must not overlap with another public IPv4 CIDR announced via AWS Direct Connect\. If you do not own public IPv4 addresses, your network provider might be able to provide you with a public IPv4 CIDR\. If not, [contact AWS Support](https://aws.amazon.com/support/createCase) to request a /31 public IPv4 CIDR \(and provide a use case in your request\)\.
 
   + IPv6: Specify a prefix length of /64 or shorter\.
 
@@ -251,7 +254,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 1. Download your router configuration\. For more information, see [Step 5: Download the Router Configuration](#routerconfig)\.
 
 **Note**  
-If you use the VPC wizard to create a VPC, route propagation is automatically enabled for you\. With route propagation, routes are automatically populated to the route tables in your VPC\. If you choose, you can disable route propagation\. For more information, see [Enable Route Propagation in Your Route Table](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_VPN.html#vpn-configure-routing) in the *Amazon VPC User Guide*\. 
+If you use the VPC wizard to create a VPC, route propagation is automatically enabled for you\. With route propagation, routes are automatically populated to the route tables in your VPC\. If you choose, you can disable route propagation\. For more information, see [Enable Route Propagation in Your Route Table](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/SetUpVPNConnections.html#vpn-configure-routing) in the *Amazon VPC User Guide*\. 
 
 ## Step 5: Download the Router Configuration<a name="routerconfig"></a>
 
@@ -309,4 +312,4 @@ How you configure the connections doesn't affect redundancy, but it does affect 
 
 If you use a VPN connection for redundancy, ensure that you implement a health check and failover mechanism, and check your [route table routing](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/SetUpVPNConnections.html#vpn-configure-routing)\.
 
-For more information about high availability options, see [Multiple Data Center HA Network Connectivity](https://aws.amazon.com/answers/networking/aws-multiple-data-center-ha-network-connectivity/)\.
+To achieve high availability, we strongly recommend that you configure connections to different AWS Direct Connect locations\. For more information about high availability options, see [Multiple Data Center HA Network Connectivity](https://aws.amazon.com/answers/networking/aws-multiple-data-center-ha-network-connectivity/)\.
