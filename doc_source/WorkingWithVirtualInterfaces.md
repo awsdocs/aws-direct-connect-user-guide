@@ -1,6 +1,6 @@
 # Virtual Interfaces<a name="WorkingWithVirtualInterfaces"></a>
 
-You must create a virtual interface to begin using your AWS Direct Connect connection\. You can create a private virtual interface to connect to your VPC, or you can create a public virtual interface to connect to AWS services that aren't in a VPC, such as Amazon S3 and Amazon Glacier\. You can configure multiple virtual interfaces on a single AWS Direct Connect connection\. For private virtual interfaces, you need one private virtual interface for each VPC to connect to from the AWS Direct Connect connection\.
+You must create a virtual interface to begin using your AWS Direct Connect connection\. You can create a private virtual interface to connect to your VPC, or you can create a public virtual interface to connect to AWS services that aren't in a VPC, such as Amazon S3 and Amazon Glacier\. You can configure multiple virtual interfaces on a single AWS Direct Connect connection\. For private virtual interfaces, you need one private virtual interface for each VPC to connect to from the AWS Direct Connect connection or you need to use a Direct Connect Gateway\. See [Direct Connect Gateway](https://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-gateways.html) for more details\.
 
 To connect to other AWS services using IPv6 addresses, check the service documentation to verify that IPv6 addressing is supported\.
 
