@@ -15,7 +15,5 @@ You can view the current status of your connection\. You can also view your conn
    The service provider associated with the connection is listed in the **Provided By** column\.
 
 **To describe a connection using the command line or API**
-
 + [describe\-connections](http://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-connections.html) \(AWS CLI\)
-
 + [DescribeConnections](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeConnections.html) \(AWS Direct Connect API\)

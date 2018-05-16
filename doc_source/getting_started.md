@@ -13,7 +13,7 @@ You can set up an AWS Direct Connect connection in one of the following ways\.
 |  1 Gbps or higher  |  Work with a partner in the [AWS Partner Network](https://aws.amazon.com/directconnect/partners) \(APN\) or a network provider that will help you connect a router from your data center, office, or colocation environment to an AWS Direct Connect location\. The network provider does not have to be a member of the APN to connect you\.   | 
 |  Sub\-1 Gbps  |  Work with a partner in the [AWS Partner Network](https://aws.amazon.com/directconnect/partners) \(APN\) who will create a hosted connection for you\. Sign up for AWS, and then follow the instructions to [accept your hosted connection](#get-started-accept-hosted-connection)\.  | 
 
-
+**Topics**
 + [Prerequisites](#get-started-prerequisites)
 + [Step 1: Sign Up for AWS](#get-started-signup)
 + [Step 2: Request an AWS Direct Connect Connection](#ConnectionRequest)
@@ -26,15 +26,10 @@ You can set up an AWS Direct Connect connection in one of the following ways\.
 ## Prerequisites<a name="get-started-prerequisites"></a>
 
 For connections to AWS Direct Connect with port speeds of 1 Gbps or higher, ensure that your network meets the following requirements\.
-
 + Your network must use single mode fiber with a 1000BASE\-LX \(1310nm\) transceiver for 1 gigabit Ethernet, or a 10GBASE\-LR \(1310nm\) transceiver for 10 gigabit Ethernet\. 
-
 + Auto\-negotiation for the port must be disabled\. Port speed and full\-duplex mode must be configured manually\.
-
 + 802\.1Q VLAN encapsulation must be supported across the entire connection, including intermediate devices\.
-
 + Your device must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\. 
-
 + \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but will not take effect until you configure it on your router\. 
 
 ## Step 1: Sign Up for AWS<a name="get-started-signup"></a>
@@ -54,9 +49,7 @@ This might be unavailable in your browser if you previously signed into the AWS 
 ## Step 2: Request an AWS Direct Connect Connection<a name="ConnectionRequest"></a>
 
 For connections of 1 Gbps or higher, you can submit a connection request using the AWS Direct Connect console\. Ensure that you have the following information:
-
 + The port speed that you require: 1 Gbps or 10 Gbps\. You cannot change the port speed after you've created the connection request\. 
-
 + The AWS Direct Connect location at which the connection will be terminated\.
 
 If you require a port speed less than 1 Gbps, you cannot request a connection using the console\. Instead, contact an APN partner, who will create a hosted connection for you, which you then accept\. Skip the following procedure and go to [\(Sub\-1 Gbps Only\) Accept Your Hosted Connection](#get-started-accept-hosted-connection)\.
@@ -124,9 +117,7 @@ If the link is not enabled, the LOA\-CFA is not yet available for you to downloa
 1. Optionally enter the name of your provider to have it to appear with your company name as the requester in the LOA\-CFA\. Choose **Download**\. The LOA\-CFA is downloaded to your computer as a PDF file\.
 
 1. After you've downloaded the LOA\-CFA, do one of the following:
-
    + If you're working with an APN member or network provider, send them the LOA\-CFA so that they can order a cross\-connect for you at the AWS Direct Connect location\. If they cannot order the cross\-connect for you, you can [contact the colocation provider](Colocation.md) directly\.
-
    + If you have equipment at the AWS Direct Connect location, contact the colocation provider to request a cross\-network connection\. You must be a customer of the colocation provider, and you must present them with the LOA\-CFA that authorizes the connection to the AWS router, as well as the necessary information to connect to your network\.
 
 AWS Direct Connect locations that are listed as multiple sites \(for example, Equinix DC1\-DC6 & DC10\-DC11\) are set up as a campus\. If your or your network provider’s equipment is located in any of these sites, you will be able to request a cross connect to your assigned port even if it resides in a different building on the campus\. 
@@ -141,39 +132,22 @@ If you or your network partner experience issues establishing a physical connect
 To begin using your AWS Direct Connect connection, you must create a virtual interface\. You can create a private virtual interface to connect to your VPC, or you can create a public virtual interface to connect to public AWS services that aren't in a VPC\. When you create a private virtual interface to a VPC, you need a private virtual interface for each VPC to which to connect\. For example, you need three private virtual interfaces to connect to three VPCs\.
 
 Before you begin, ensure that you have the following information:
-
 + **Connection**: The AWS Direct Connect connection or link aggregation group \(LAG\) for which you are creating the virtual interface\.
-
 + **Virtual interface name**: A name for the virtual interface\.
-
 + **Virtual interface owner**: If you're creating the virtual interface for another account, you need the AWS account ID of the other account\.
-
 + \(Private virtual interface only\) **Connection to**: For connecting to a VPC in the same region, you need the virtual private gateway for your VPC\. The ASN for the Amazon side of the BGP session is inherited from the virtual private gateway\. When you create a virtual private gateway, you can specify your own private ASN\. Otherwise, Amazon provides a default ASN\. For more information, see [Create a Virtual Private Gateway](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/SetUpVPNConnections.html#vpn-create-vpg ) in the *Amazon VPC User Guide*\. For connecting to a VPC through a Direct Connect gateway, you need the Direct Connect gateway\. For more information, see [Direct Connect Gateways](http://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-gateways.html)\.
-
 + **VLAN**: A unique virtual local area network \(VLAN\) tag that's not already in use on your connection\. The value must be between 1 and 4094 and must comply with the Ethernet 802\.1Q standard\. This tag is required for any traffic traversing the AWS Direct Connect connection\.
-
 + **Address family**: Whether the BGP peering session will be over IPv4 or IPv6\.
-
 + **Peer IP addresses**: A virtual interface can support a BGP peering session for IPv4, IPv6, or one of each \(dual\-stack\)\. You cannot create multiple BGP sessions for the same IP addressing family on the same virtual interface\. The IP address ranges are assigned to each end of the virtual interface for the BGP peering session\. 
-
   + IPv4: 
-
     + \(Public virtual interface only\) You must specify unique public IPv4 addresses \(/30\) that you own\.
-
     + \(Private virtual interface only\) Amazon can generate private IPv4 addresses for you\. If you specify your own, ensure that you specify private CIDRs for your router interface and the AWS Direct Connect interface only \(for example, do not specify other IP addresses from your local network\)\.
-
   + IPv6: Amazon automatically allocates you a /125 IPv6 CIDR\. You cannot specify your own peer IPv6 addresses\.
-
 + **BGP information**:
-
   + A public or private Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) for your side of the BGP session\. If you are using a public ASN, you must own it\. If you are using a private ASN, it must be in the 64512 to 65535 range\. Autonomous System \(AS\) prepending does not work if you use a private ASN for a public virtual interface\.
-
   + An MD5 BGP authentication key\. You can provide your own, or you can let Amazon generate one for you\.
-
 + \(Public virtual interface only\) **Prefixes you want to advertise**: Public IPv4 routes or IPv6 routes to advertise over BGP\. You must advertise at least one prefix using BGP, up to a maximum of 1,000 prefixes\.
-
   + IPv4: The IPv4 CIDR must not overlap with another public IPv4 CIDR announced via AWS Direct Connect\. If you do not own public IPv4 addresses, your network provider might be able to provide you with a public IPv4 CIDR\. If not, [contact AWS Support](https://aws.amazon.com/support/createCase) to request a /31 public IPv4 CIDR \(and provide a use case in your request\)\.
-
   + IPv6: Specify a prefix length of /64 or shorter\.
 
 **To provision a public virtual interface to non\-VPC services**
@@ -196,9 +170,7 @@ Before you begin, ensure that you have the following information:
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\.
 
    1. If you're configuring an IPv4 BGP peer, choose **IPv4**, and do the following:
-
       + For **Your router peer IP**, enter the IPv4 CIDR destination address to which Amazon should send traffic\.
-
       + For **Amazon router peer IP**, enter the IPv4 CIDR address to use to send traffic to Amazon\.
 
    1. If you're configuring an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
@@ -225,7 +197,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 1. In the navigation pane, choose **Connections**, select the connection to use, and choose **Actions**, **Create Virtual Interface**\.
 
 1. In the **Create a Virtual Interface** pane, select **Private**\.  
-![\[Create a Virtual Interface screen\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/create_virtual_interface_private.png)
+![\[Create a Virtual Interface screen\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/create_virtual_interface_private-vgw.png)
 
 1. Under **Define Your New Private Virtual Interface**, do the following and choose **Continue**:
 
@@ -238,9 +210,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\.
 
    1. If you're configuring an IPv4 BGP peer, choose **IPv4**, and do the following:
-
       + To have AWS generate your router IP address and Amazon IP address, select **Auto\-generate peer IPs**\.
-
       + To specify these IP addresses yourself, clear the **Auto\-generate peer IPs** check box\. For **Your router peer IP**, enter the destination IPv4 CIDR address to which Amazon should send traffic\. For **Amazon router peer IP**, enter the IPv4 CIDR address to use to send traffic to AWS\. 
 
    1. If you're configuring an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
@@ -285,7 +255,6 @@ After you configure your router, the status of the virtual interface goes to `UP
 After you have established virtual interfaces to the AWS Cloud or to Amazon VPC, you can verify your AWS Direct Connect connection using the following procedures\. 
 
 **To verify your virtual interface connection to the AWS Cloud**
-
 + Run `traceroute` and verify that the AWS Direct Connect identifier is in the network trace\.
 
 **To verify your virtual interface connection to Amazon VPC**
@@ -303,9 +272,7 @@ To provide for failover, we recommend that you request and configure two dedicat
 ![\[Redundant connection diagram\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/redundant_connection.png)
 
 There are different configuration choices available when you provision two dedicated connections:
-
 + Active/Active \(BGP multipath\)\. This is the default configuration, where both connections are active\. AWS Direct Connect supports multipathing to multiple virtual interfaces within the same location, and traffic is load\-shared between interfaces based on flow\. If one connection becomes unavailable, all traffic is routed through the other connection\.
-
 + Active/Passive \(failover\)\. One connection is handling traffic, and the other is on standby\. If the active connection becomes unavailable, all traffic is routed through the passive connection\. You need to prepend the AS path to the routes on one of your links for that to be the passive link\.
 
 How you configure the connections doesn't affect redundancy, but it does affect the policies that determine how your data is routed over both connections\. We recommend that you configure both connections as active\.

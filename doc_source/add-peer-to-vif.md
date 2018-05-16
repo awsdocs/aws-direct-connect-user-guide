@@ -15,16 +15,12 @@ Multiprotocol BGP is not supported\. IPv4 and IPv6 operate in dual\-stack mode f
 1. Choose **Actions**, **Add Peering**\.
 
 1. \(Private virtual interface\) To add an IPv4 BGP peer, do the following:
-
    + To have AWS generate your router IP address and Amazon IP address, select **Auto\-generate peer IPs**\.
-
    + To specify these IP addresses yourself, clear the **Auto\-generate peer IPs** check box\. For **Your router peer IP**, enter the destination IPv4 CIDR address to which Amazon should send traffic\. In the **Amazon router peer IP** field, enter the IPv4 CIDR address to use to send traffic to AWS\.  
 ![\[Add BGP peering for IPv4\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/add_bgp_peering.png)
 
 1. \(Public virtual interface\) To add an IPv4 BGP peer, do the following:
-
    + For **Your router peer IP**, enter the IPv4 CIDR destination address where traffic should be sent\.
-
    + For **Amazon router peer IP**, enter the IPv4 CIDR address to use to send traffic to AWS\.
 
 1. \(Private or public virtual interface\) To add an IPv6 BGP peer, the **Auto\-generate peer IPs** is selected by default\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses; you cannot specify custom IPv6 addresses\.  
@@ -53,13 +49,9 @@ If your virtual interface has both an IPv4 and IPv6 BGP peering session, you can
 1. Choose **Delete**\.
 
 **To create a BGP peer using the command line or API**
-
 + [create\-bgp\-peer](http://docs.aws.amazon.com/cli/latest/reference/directconnect/create-bgp-peer.html) \(AWS CLI\)
-
 + [CreateBGPPeer](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateBGPPeer.html) \(AWS Direct Connect API\)
 
 **To delete a BGP peer using the command line or API**
-
 + [delete\-bgp\-peer](http://docs.aws.amazon.com/cli/latest/reference/directconnect/delete-bgp-peer.html) \(AWS CLI\)
-
 + [DeleteBGPPeer](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_DeleteBGPPeer.html) \(AWS Direct Connect API\)

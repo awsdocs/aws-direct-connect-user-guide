@@ -10,39 +10,22 @@ An AWS Direct Connect connection can provide access to resources in other region
 
 **Note**  
 If the cross connect is not completed within 90 days, the authority granted by the LOA\-CFA expires\. To renew a LOA\-CFA that has expired, you can download it again from the AWS Direct Connect console\. For more information, see [Downloading the LOA\-CFA](create-connection.md#create-connection-loa-cfa)\.
-
 + [Asia Pacific \(Tokyo\)](#cross-connect-ap-northeast-1)
-
 + [Asia Pacific \(Seoul\)](#cross-connect-ap-northeast-2)
-
 + [Asia Pacific \(Singapore\)](#cross-connect-ap-southeast-1)
-
 + [Asia Pacific \(Sydney\)](#cross-connect-ap-southeast-2)
-
 + [Asia Pacific \(Mumbai\)](#cross-connect-ap-south-1)
-
 + [Canada \(Central\)](#cross-connect-ca-central-1)
-
 + [China \(Beijing\)](#cross-connect-cn-north-1)
-
 + [EU \(Frankfurt\)](#cross-connect-eu-central-1)
-
 + [EU \(Ireland\)](#cross-connect-eu-west-1)
-
 + [EU \(London\)](#cross-connect-eu-west-2)
-
 + [EU \(Paris\)](#cross-connect-eu-west-3)
-
 + [South America \(São Paulo\)](#cross-connect-sa-east-1)
-
 + [US East \(N\. Virginia\)](#cross-connect-us-east-1)
-
 + [US East \(Ohio\)](#cross-connect-us-east-2)
-
 + [AWS GovCloud \(US\)](#cross-connect-gov-us-west-1)
-
 + [US West \(N\. California\)](#cross-connect-us-west-1)
-
 + [US West \(Oregon\)](#cross-connect-us-west-2)
 
 

@@ -20,7 +20,5 @@ Connectivity to AWS over the connection is interrupted during disassociation\.
 1. Select the confirmation check box, and choose **Continue**\.
 
 **To disassociate a connection using the command line or API**
-
 + [disassociate\-connection\-from\-lag](http://docs.aws.amazon.com/cli/latest/reference/directconnect/disassociate-connection-from-lag.html) \(AWS CLI\)
-
 + [DisassociateConnectionFromLag](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_DisassociateConnectionFromLag.html) \(AWS Direct Connect API\)

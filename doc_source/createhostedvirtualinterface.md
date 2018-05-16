@@ -23,9 +23,7 @@ You can create a public or private hosted virtual interface\. Before you begin, 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\.
 
    1. If you're configuring an IPv4 BGP peer, choose **IPv4**, and do the following:
-
       + To have AWS generate your router IP address and Amazon IP address, select **Auto\-generate peer IPs**\.
-
       + To specify these IP addresses yourself, clear the **Auto\-generate peer IPs** check box\. For **Your router peer IP**, enter the destination IPv4 CIDR address to which Amazon should send traffic\. For **Amazon router peer IP**, enter the IPv4 CIDR address to use to send traffic to AWS\. 
 
    1. If you're configuring an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
@@ -61,9 +59,7 @@ You can create a public or private hosted virtual interface\. Before you begin, 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\.
 
    1. If you're configuring an IPv4 BGP peer, choose **IPv4**, and do the following:
-
       + For **Your router peer IP**, enter the IPv4 CIDR destination address to which Amazon should send traffic\.
-
       + For **Amazon router peer IP**, enter the IPv4 CIDR address to use to send traffic to Amazon\.
 
    1. If you're configuring an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
@@ -81,13 +77,9 @@ You can create a public or private hosted virtual interface\. Before you begin, 
 1. After the hosted virtual interface is accepted by the owner of the other AWS account, you can [download the router configuration file](create-vif.md#vif-router-config)\.
 
 **To create a hosted private virtual interface using the command line or API**
-
 + [allocate\-private\-virtual\-interface](http://docs.aws.amazon.com/cli/latest/reference/directconnect/allocate-private-virtual-interface.html) \(AWS CLI\)
-
 + [AllocatePrivateVirtualInterface](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_AllocatePrivateVirtualInterface.html) \(AWS Direct Connect API\)
 
 **To create a hosted public virtual interface using the command line or API**
-
 + [allocate\-public\-virtual\-interface](http://docs.aws.amazon.com/cli/latest/reference/directconnect/allocate-public-virtual-interface.html) \(AWS CLI\)
-
 + [AllocatePublicVirtualInterface](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_AllocatePublicVirtualInterface.html) \(AWS Direct Connect API\)

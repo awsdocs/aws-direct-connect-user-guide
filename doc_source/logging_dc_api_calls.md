@@ -4,7 +4,7 @@ AWS Direct Connect is integrated with AWS CloudTrail, a service that captures AP
 
 To learn more about CloudTrail, including how to configure and enable it, see the [AWS CloudTrail User Guide](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/)\. 
 
-
+**Topics**
 + [AWS Direct Connect Information in CloudTrail](#dc_info_in_ct)
 + [Understanding AWS Direct Connect Log File Entries](#understanding_dc_log_file_entries)
 

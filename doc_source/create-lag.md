@@ -11,13 +11,9 @@ You cannot create a LAG with new connections if this results in you exceeding th
 1. In the navigation pane, choose **LAGs**, **Create LAG**\.
 
 1. Choose **Request new Connections**, and provide the following information\. 
-
    + **Location**: Select the location for the LAG\.
-
    + **LAG Name**: Specify a name for the LAG\.
-
    + **Connection Bandwidth**: Select the port speed for the connections\.
-
    + **Number of new Connections**: Specify the number of connections that must be provisioned in the LAG\.   
 ![\[Create a LAG screen\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/create_lag_new_connections.png)
 
@@ -55,19 +51,13 @@ After you've created a LAG, you can view its details in the AWS Direct Connect c
 After you've created a LAG, you can associate or disassociate connections from it\. For more information, see [Associating a Connection with a LAG](associate-connection-with-lag.md) and [Disassociating a Connection From a LAG](disassociate-connection-from-lag.md)\.
 
 **To create a LAG using the command line or API**
-
 + [create\-lag](http://docs.aws.amazon.com/cli/latest/reference/directconnect/create-lag.html) \(AWS CLI\)
-
 + [CreateLag](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateLag.html) \(AWS Direct Connect API\)
 
 **To describe your LAGs using the command line or API**
-
 + [describe\-lags](http://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-lags.html) \(AWS CLI\)
-
 + [DescribeLags](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLags.html) \(AWS Direct Connect API\)
 
 **To download the LOA\-CFA using the command line or API**
-
 + [describe\-loa](http://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-loa.html) \(AWS CLI\)
-
 + [DescribeLoa](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLoa.html) \(AWS Direct Connect API\)

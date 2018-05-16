@@ -14,7 +14,5 @@ You can view the current status of your virtual interface; the connection state,
 ![\[Virtual Interfaces pane\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/view_virtual_interface_details.png)
 
 **To describe virtual interfaces using the command line or API**
-
 + [describe\-virtual\-interfaces](http://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-virtual-interfaces.html) \(AWS CLI\)
-
 + [DescribeVirtualInterfaces](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeVirtualInterfaces.html) \(AWS Direct Connect API\)

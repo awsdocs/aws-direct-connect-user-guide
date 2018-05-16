@@ -26,9 +26,7 @@ Before you begin, ensure that you have read the information in [Prerequisites fo
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\.
 
    1. If you're configuring an IPv4 BGP peer, choose **IPv4**, and do the following:
-
       + For **Your router peer IP**, enter the IPv4 CIDR destination address to which Amazon should send traffic\.
-
       + For **Amazon router peer IP**, enter the IPv4 CIDR address to use to send traffic to Amazon\.
 
    1. If you're configuring an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
@@ -44,9 +42,7 @@ Before you begin, ensure that you have read the information in [Prerequisites fo
 1. Download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](#vif-router-config)\.
 
 **To create a public virtual interface using the command line or API**
-
 + [create\-public\-virtual\-interface](http://docs.aws.amazon.com/cli/latest/reference/directconnect/create-public-virtual-interface.html) \(AWS CLI\)
-
 + [CreatePublicVirtualInterface](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreatePublicVirtualInterface.html) \(AWS Direct Connect API\)
 
 ## Creating a Private Virtual Interface<a name="create-private-vif"></a>
@@ -60,7 +56,7 @@ You can provision a private virtual interface to a virtual private gateway in th
 1. In the navigation pane, choose **Connections**, select the connection to use, and choose **Actions**, **Create Virtual Interface**\.
 
 1. In the **Create a Virtual Interface** pane, select **Private**\.  
-![\[Create a Virtual Interface screen\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/create_virtual_interface_private.png)
+![\[Create a Virtual Interface screen\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/create_virtual_interface_private-vgw.png)
 
 1. Under **Define Your New Private Virtual Interface**, do the following and choose **Continue**:
 
@@ -73,9 +69,7 @@ You can provision a private virtual interface to a virtual private gateway in th
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\.
 
    1. If you're configuring an IPv4 BGP peer, choose **IPv4**, and do the following:
-
       + To have AWS generate your router IP address and Amazon IP address, select **Auto\-generate peer IPs**\.
-
       + To specify these IP addresses yourself, clear the **Auto\-generate peer IPs** check box\. For **Your router peer IP**, enter the destination IPv4 CIDR address to which Amazon should send traffic\. For **Amazon router peer IP**, enter the IPv4 CIDR address to use to send traffic to AWS\. 
 
    1. If you're configuring an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
@@ -92,9 +86,7 @@ If you use the VPC wizard to create a VPC, route propagation is automatically en
 After you've created the virtual interface, you can download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](#vif-router-config)\.
 
 **To create a private virtual interface using the command line or API**
-
 + [create\-private\-virtual\-interface](http://docs.aws.amazon.com/cli/latest/reference/directconnect/create-private-virtual-interface.html) \(AWS CLI\)
-
 + [CreatePrivateVirtualInterface](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreatePrivateVirtualInterface.html) \(AWS Direct Connect API\)
 
 ## Downloading the Router Configuration File<a name="vif-router-config"></a>

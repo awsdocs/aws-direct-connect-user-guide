@@ -20,7 +20,5 @@ Connectivity to AWS over the connection is interrupted during association\.
 1. Select the confirmation check box and choose **Continue**\.
 
 **To associate a connection using the command line or API**
-
 + [associate\-connection\-with\-lag](http://docs.aws.amazon.com/cli/latest/reference/directconnect/associate-connection-with-lag.html) \(AWS CLI\)
-
 + [AssociateConnectionWithLag](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_AssociateConnectionWithLag.html) \(AWS Direct Connect API\)

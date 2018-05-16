@@ -3,11 +3,8 @@
 You can associate a virtual interface with a link aggregation group \(LAG\), or another connection\.
 
 You cannot associate a virtual interface if the target connection or LAG has an existing associated virtual interface with the following matching attributes:
-
 + A conflicting VLAN number
-
 + \(Public virtual interfaces\) The same IP address range for the Amazon router, or for the customer router
-
 + \(Private virtual interfaces\) The same virtual private gateway and the same IP address range for the Amazon router, or for the customer router
 
 You cannot disassociate a virtual interface from a connection or LAG, but you can re\-associate it or delete it\. For more information, see [Deleting a Virtual Interface](deletevif.md)\.
@@ -38,7 +35,5 @@ You can use the same procedure above to associate a virtual interface with a LAG
 1. Choose the required virtual interface, select the confirmation check box, and choose **Continue**\.
 
 **To associate a virtual interface using the command line or API**
-
 + [associate\-virtual\-interface](http://docs.aws.amazon.com/cli/latest/reference/directconnect/associate-virtual-interface.html) \(AWS CLI\)
-
 + [AssociateVirtualInterface](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_AssociateVirtualInterface.html) \(AWS Direct Connect API\)

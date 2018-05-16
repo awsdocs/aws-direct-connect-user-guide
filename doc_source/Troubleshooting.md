@@ -2,7 +2,7 @@
 
 The following topics can help you troubleshoot issues with your AWS Direct Connect connection\.
 
-
+**Topics**
 + [Troubleshooting Layer 1 \(Physical\) Issues](#ts_layer_1)
 + [Troubleshooting Layer 2 \(Data Link\) Issues](#ts-layer-2)
 + [Troubleshooting Layer 3/4 \(Network/Transport\) Issues](#ts-layer-3)
@@ -85,7 +85,6 @@ If your virtual interface is up and you've established a BGP peering session but
 1. For a private virtual interface, ensure that your VPC security groups and network ACLs allow inbound and outbound traffic for your on\-premises network prefix\. For more information, see [Security Groups](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html) and [Network ACLs](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html) in the *Amazon VPC User Guide*\.
 
 1. For a private virtual interface, ensure that your VPC route tables have prefixes pointing to the virtual private gateway to which your private virtual interface is connected\. For example, if you prefer to have all your traffic routed towards your on\-premises network by default, you can add the default route \(0\.0\.0\.0/0 and/or ::/0\) with the virtual private gateway as the target in your VPC route tables\.
-
    + Alternatively, enable route propagation to automatically update routes in your route tables based on your dynamic BGP route advertisement\. You can have up to 100 propagated routes per route table\. This limit cannot be increased\. For more information, see [Enabling and Disabling Route Propagation](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html#EnableDisableRouteProp) in the *Amazon VPC User Guide*\.
 
 1. If the above steps do not resolve your routing issues, [contact AWS Support](https://aws.amazon.com/support/createCase)\.

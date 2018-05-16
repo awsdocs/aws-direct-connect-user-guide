@@ -1,11 +1,9 @@
 # Connections<a name="WorkingWithConnections"></a>
 
 To create an AWS Direct Connect connection, you need the following information:
-
 + **AWS Direct Connect location**
 
   Work with a partner in the AWS Partner Network \(APN\) to help you establish network circuits between an AWS Direct Connect location and your data center, office, or colocation environment, or to provide colocation space within the same facility as the AWS Direct Connect location\. For the list of AWS Direct Connect partners who belong to the APN, see [APN Partners Supporting AWS Direct Connect](https://aws.amazon.com/directconnect/partners)\.
-
 + **Port speed**
 
   AWS Direct Connect supports two port speeds: 1 Gbps: 1000BASE\-LX \(1310nm\) over single\-mode fiber and 10 Gbps: 10GBASE\-LR \(1310nm\) over single\-mode fiber\. You cannot change the port speed after you've created the connection request\. If you need to change the port speed, you must create and configure a new connection\. 
@@ -18,7 +16,7 @@ For information about associating a connection with a link aggregation group \(L
 
 After you've created a connection, create a virtual interface to connect to public and private AWS resources\. For more information, see [Virtual Interfaces](WorkingWithVirtualInterfaces.md)\.
 
-
+**Topics**
 + [Creating a Connection](create-connection.md)
 + [Viewing Connection Details](viewdetails.md)
 + [Deleting a Connection](deleteconnection.md)

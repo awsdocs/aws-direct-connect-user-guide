@@ -18,7 +18,5 @@ Before you can begin using a hosted connection, you must accept the connection\.
 1. Select **I understand that Direct Connect port charges apply once I click Accept Connection**, and then choose **Accept Connection**\.
 
 **To accept a hosted connection using the command line or API**
-
 + [confirm\-connection](http://docs.aws.amazon.com/cli/latest/reference/directconnect/confirm-connection.html) \(AWS CLI\)
-
 + [ConfirmConnection](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_ConfirmConnection.html) \(AWS Direct Connect API\)

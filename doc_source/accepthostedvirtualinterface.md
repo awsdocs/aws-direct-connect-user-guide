@@ -20,13 +20,9 @@ Before you can begin using a hosted virtual interface, you must accept the virtu
 1. After you've accepted the hosted virtual interface, the owner of the AWS Direct Connect connection can download the router configuration file\. The **Download Router Configuration** option is not available for the account that accepts the hosted virtual interface\.
 
 **To accept a hosted private virtual interface using the command line or API**
-
 + [confirm\-private\-virtual\-interface](http://docs.aws.amazon.com/cli/latest/reference/directconnect/confirm-private-virtual-interface.html) \(AWS CLI\)
-
 + [ConfirmPrivateVirtualInterface](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_ConfirmPrivateVirtualInterface.html) \(AWS Direct Connect API\)
 
 **To accept a hosted public virtual interface using the command line or API**
-
 + [confirm\-public\-virtual\-interface](http://docs.aws.amazon.com/cli/latest/reference/directconnect/confirm-public-virtual-interface.html) \(AWS CLI\)
-
 + [ConfirmPublicVirtualInterface](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_ConfirmPublicVirtualInterface.html) \(AWS Direct Connect API\)

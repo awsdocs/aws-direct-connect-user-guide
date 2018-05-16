@@ -6,7 +6,7 @@ The following example uses the AWS CLI commands to create an AWS Direct Connect 
 
 Before you begin, ensure that you have installed and configured the AWS CLI\. For more information, see the [AWS Command Line Interface User Guide](http://docs.aws.amazon.com/cli/latest/userguide/)\.
 
-
+**Topics**
 + [Step 1: Create a Connection](#using-cli-create-connection)
 + [Step 2: Download the LOA\-CFA](#using-cli-loa-cfa)
 + [Step 3: Create a Virtual Interface and get the Router Configuration](#using-cli-create-vif)

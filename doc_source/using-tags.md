@@ -18,19 +18,12 @@ For example, you have two AWS Direct Connect connections in a region, each in di
 ## Tag Restrictions<a name="using-tags-restrictions"></a>
 
 The following rules and restrictions apply to tags:
-
 + Maximum number of tags per resource: 50
-
 + Maximum key length: 128 Unicode characters
-
 + Maximum value length: 265 Unicode characters
-
 + Tag keys and values are case sensitive\.
-
 + The `aws:` prefix is reserved for AWS use — you can't create or delete tag keys or values with this prefix\. Tags with this prefix do not count against your tags per resource limit\.
-
 + Allowed characters are letters, spaces, and numbers representable in UTF\-8, plus the following special characters: \+ \- = \. \_ : / @
-
 + Cost allocation tags are not supported; therefore, tags that you apply to AWS Direct Connect resources cannot be used for cost allocation tracking\.
 
 ## Working with Tags<a name="working-with-tags"></a>

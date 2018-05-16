@@ -17,7 +17,5 @@ If the connection is part of a link aggregation group \(LAG\), you cannot delete
 1. In the **Delete Connection** dialog box, choose **Delete**\.
 
 **To delete a connection using the command line or API**
-
 + [delete\-connection](http://docs.aws.amazon.com/cli/latest/reference/directconnect/delete-connection.html) \(AWS CLI\)
-
 + [DeleteConnection](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_DeleteConnection.html) \(AWS Direct Connect API\)

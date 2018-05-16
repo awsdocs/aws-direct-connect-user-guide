@@ -7,7 +7,7 @@ For more information about Amazon CloudWatch, see the *[Amazon CloudWatch User G
 **Note**  
 If your connection is a hosted connection from an AWS Direct Connect partner, you cannot view CloudWatch metrics for the hosted connection\. 
 
-
+**Topics**
 + [AWS Direct Connect Metrics and Dimensions](#metrics-dimensions)
 + [Creating CloudWatch Alarms to Monitor AWS Direct Connect Connections](#creating-alarms)
 
@@ -38,7 +38,6 @@ Metrics are grouped first by the service namespace, and then by the various dime
 1. The **Monitoring** tab displays the metrics for your connection\.
 
 **To view metrics using the AWS CLI**
-
 + At a command prompt, use the following command:
 
   ```
@@ -83,11 +82,8 @@ For example, you can create an alarm that monitors the state of an AWS Direct Co
 1. Select the AWS Direct Connect connection and choose the **ConnectionState** metric\. Choose **Next**\.
 
 1. Configure the alarm as follows, and choose **Create Alarm** when you are done:
-
    + Under **Alarm Threshold**, enter a name and description for your alarm\. For **Whenever**, choose **<** and enter `1`\. Enter **5** for the consecutive periods\.
-
    + Under **Actions**, select an existing notification list or choose **New list** to create a new one\. 
-
    + Under **Alarm Preview**, select a period of 1 minute\.
 
 For more examples of creating alarms, see [Creating Amazon CloudWatch Alarms](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html) in the *Amazon CloudWatch User Guide*\.

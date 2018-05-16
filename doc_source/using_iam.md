@@ -18,15 +18,10 @@ AWS Direct Connect does not support resource\-level permissions; therefore, you 
 ## AWS Direct Connect Keys<a name="keys"></a>
 
 AWS Direct Connect implements the following policy keys:
-
 + `aws:CurrentTime` \(for date/time conditions\)
-
 + `aws:EpochTime` \(the date in epoch or UNIX time, for use with date/time conditions\)
-
 + `aws:SecureTransport` \(Boolean representing whether the request was sent using SSL\)
-
 + `aws:SourceIp` \(the requester's IP address, for use with IP address conditions\)
-
 + `aws:UserAgent` \(information about the requester's client application, for use with string conditions\)
 
 If you use `aws:SourceIp`, and the request comes from an Amazon EC2 instance, the instance's public IP address is used to determine if access is allowed\.

@@ -1,5 +1,4 @@
 # Document History<a name="AboutThisGuide"></a>
-
 + **API version:** 2012\-10\-25
 
 The following table describes the important changes since the last release of the *AWS Direct Connect User Guide*\. 
