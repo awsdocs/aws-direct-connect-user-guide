@@ -124,7 +124,7 @@ When you create a virtual interface using the AWS CLI, the output includes gener
 
 1. Create a private virtual interface\. You must specify a name, a VLAN ID, and a BGP Autonomous System Number \(ASN\)\. 
 
-   For IPv4 traffic, you need private IPv4 addresses for each end of the BPG peering session\. You can specify your own IPv4 addresses, or you can let Amazon generate the addresses for you\. In the following example, the IPv4 addresses are generated for you\.
+   For IPv4 traffic, you need private IPv4 addresses for each end of the BGP peering session\. You can specify your own IPv4 addresses, or you can let Amazon generate the addresses for you\. In the following example, the IPv4 addresses are generated for you\.
 
    ```
    aws directconnect create-private-virtual-interface --connection-id dxcon-fg31dyv6 --new-private-virtual-interface virtualInterfaceName=PrivateVirtualInterface,vlan=101,asn=65000,virtualGatewayId=vgw-ebaa27db,addressFamily=ipv4
@@ -186,7 +186,7 @@ When you create a virtual interface using the AWS CLI, the output includes gener
 
 1. To create a public virtual interface, you must specify a name, a VLAN ID, and a BGP Autonomous System Number \(ASN\)\. 
 
-   For IPv4 traffic, you must also specify public IPv4 addresses for each end of the BPG peering session, and public IPv4 routes that you will advertise over BGP\. The following example creates a public virtual interface for IPv4 traffic\.
+   For IPv4 traffic, you must also specify public IPv4 addresses for each end of the BGP peering session, and public IPv4 routes that you will advertise over BGP\. The following example creates a public virtual interface for IPv4 traffic\.
 
    ```
    aws directconnect create-public-virtual-interface --connection-id dxcon-fg31dyv6 --new-public-virtual-interface virtualInterfaceName=PublicVirtualInterface,vlan=2000,asn=65000,amazonAddress=203.0.113.1/30,customerAddress=203.0.113.2/30,addressFamily=ipv4,routeFilterPrefixes=[{cidr=203.0.113.0/30},{cidr=203.0.113.4/30}]
