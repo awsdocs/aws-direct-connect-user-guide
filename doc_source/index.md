@@ -39,7 +39,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Disassociating a Connection From a LAG](disassociate-connection-from-lag.md)
    + [Deleting a LAG](delete-lag.md)
 + [Direct Connect Gateways](direct-connect-gateways.md)
-+ [Using AWS Identity and Access Management with AWS Direct Connect](using_iam.md)
++ [Control Access to AWS Direct Connect Using AWS Identity and Access Management](using_iam.md)
 + [Using Tags with AWS Direct Connect](using-tags.md)
 + [Using the AWS CLI](using-cli.md)
 + [Logging AWS Direct Connect API Calls in AWS CloudTrail](logging_dc_api_calls.md)
