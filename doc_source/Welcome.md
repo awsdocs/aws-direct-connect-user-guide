@@ -33,7 +33,7 @@ To use AWS Direct Connect in an AWS Direct Connect location, your network must m
 
 In addition, your network must meet the following conditions:
 + Your network must use single mode fiber with a 1000BASE\-LX \(1310nm\) transceiver for 1 gigabit Ethernet, or a 10GBASE\-LR \(1310nm\) transceiver for 10 gigabit Ethernet\. 
-+ Auto\-negotiation for the port must be disabled\. Port speed and full\-duplex mode must be configured manually\.
++ Auto\-negotiation for the port must be explicitly disabled in addition to port speed and full\-duplex mode being configured manually\.
 + 802\.1Q VLAN encapsulation must be supported across the entire connection, including intermediate devices\.
 + Your device must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\. 
 + \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but will not take effect until you configure it on your router\. 
