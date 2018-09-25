@@ -6,7 +6,7 @@ Permissions granted using IAM cover all AWS resources you use with AWS Direct Co
 
 ## AWS Direct Connect Actions<a name="actions"></a>
 
-In an IAM policy, you can specify any or all actions that AWS Direct Connect offers\. The action name must include the lowercase prefix `directconnect:`\. For example: `directconnect:DescribeConnections`, `directconnect:CreateConnection`, or `directconnect:*` \(for all AWS Direct Connect actions\)\. For a list of the actions, see the [AWS Direct Connect API Reference](http://docs.aws.amazon.com/directconnect/latest/APIReference/)\.
+In an IAM policy, you can specify any or all actions that AWS Direct Connect offers\. The action name must include the lowercase prefix `directconnect:`\. For example: `directconnect:DescribeConnections`, `directconnect:CreateConnection`, or `directconnect:*` \(for all AWS Direct Connect actions\)\. For a list of the actions, see the [AWS Direct Connect API Reference](https://docs.aws.amazon.com/directconnect/latest/APIReference/)\.
 
 ## AWS Direct Connect Resources<a name="iam-dx-resources"></a>
 
@@ -25,7 +25,7 @@ If you use `aws:SourceIp`, and the request comes from an Amazon EC2 instance, th
 
 For services that use only SSL, such as Amazon Relational Database Service and Amazon Route 53, the `aws:SecureTransport` key has no meaning\.
 
-For more information, see [Condition](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) in the *IAM User Guide*\.
+For more information, see [Condition](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) in the *IAM User Guide*\.
 
 ## Example Policies for AWS Direct Connect<a name="example_policy"></a>
 
@@ -65,4 +65,4 @@ The following example policy grants full access to AWS Direct Connect\.
 }
 ```
 
-For more information about writing IAM policies, see [IAM Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) in the *IAM User Guide*\.
+For more information about writing IAM policies, see [IAM Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) in the *IAM User Guide*\.

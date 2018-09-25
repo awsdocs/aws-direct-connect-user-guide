@@ -1,11 +1,11 @@
 # Link Aggregation Groups<a name="lags"></a>
 
-A link aggregation group \(LAG\) is a logical interface that uses the Link Aggregation Control Protocol \(LACP\) to aggregate multiple 1 gigabit or 10 gigabit connections at a single AWS Direct Connect endpoint, allowing you to treat them as a single, managed connection\. 
+A link aggregation group \(LAG\) is a logical interface that uses the Link Aggregation Control Protocol \(LACP\) to aggregate multiple connections at a single AWS Direct Connect endpoint, allowing you to treat them as a single, managed connection\.
 
 You can create a LAG from existing connections, or you can provision new connections\. After you've created the LAG, you can associate existing connections \(whether standalone or part of another LAG\) with the LAG\.
 
 The following rules apply:
-+ All connections in the LAG must use the same bandwidth\. The following bandwidths are supported: 1 Gbps and 10 Gbps\.
++ All connections in the LAG must use the same bandwidth\.
 + You can have a maximum of 4 connections in a LAG\. Each connection in the LAG counts towards your overall connection limit for the region\.
 + All connections in the LAG must terminate at the same AWS Direct Connect endpoint\. 
 

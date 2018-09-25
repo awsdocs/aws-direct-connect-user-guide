@@ -9,14 +9,14 @@ If you adjust the threshold value for the minimum number if operational connecti
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
 
-1. In the navigation pane, choose **LAGs**, and select the LAG\.
+1. In the navigation pane, choose **LAGs**\.
 
-1. Choose **Actions**, **Update LAG**\.
+1. Select the LAG and choose **Actions**, **Update LAG**\.
 
 1. For **LAG Name**, specify a new name for the LAG\. For **Minimum Links**, adjust the value for the minimum number of operational connections\.
 
 1. Choose **Continue**\.
 
 **To update a LAG using the command line or API**
-+ [update\-lag](http://docs.aws.amazon.com/cli/latest/reference/directconnect/update-lag.html) \(AWS CLI\)
-+ [UpdateLag](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateLag.html) \(AWS Direct Connect API\)
++ [update\-lag](https://docs.aws.amazon.com/cli/latest/reference/directconnect/update-lag.html) \(AWS CLI\)
++ [UpdateLag](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateLag.html) \(AWS Direct Connect API\)

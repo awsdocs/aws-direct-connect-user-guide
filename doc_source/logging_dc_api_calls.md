@@ -1,30 +1,40 @@
-# Logging AWS Direct Connect API Calls in AWS CloudTrail<a name="logging_dc_api_calls"></a>
+# Logging AWS Direct Connect API Calls Using AWS CloudTrail<a name="logging_dc_api_calls"></a>
 
-AWS Direct Connect is integrated with AWS CloudTrail, a service that captures API calls made by or on behalf of your AWS account\. This information is collected and written to log files that are stored in an Amazon Simple Storage Service \(S3\) bucket that you specify\. API calls are logged when you use the AWS Direct Connect API, the AWS Direct Connect console, a back\-end console, or the AWS CLI\. Using the information collected by CloudTrail, you can determine what request was made to AWS Direct Connect, the source IP address the request was made from, who made the request, when it was made, and so on\. 
+AWS Direct Connect is integrated with AWS CloudTrail, a service that provides a record of actions taken by a user, role, or an AWS service in AWS Direct Connect\. CloudTrail captures all API calls for AWS Direct Connect as events\. The calls captured include calls from the AWS Direct Connect console and code calls to the AWS Direct Connect API operations\. If you create a trail, you can enable continuous delivery of CloudTrail events to an Amazon S3 bucket, including events for AWS Direct Connect\. If you don't configure a trail, you can still view the most recent events in the CloudTrail console in **Event history**\. Using the information collected by CloudTrail, you can determine the request that was made to AWS Direct Connect, the IP address from which the request was made, who made the request, when it was made, and additional details\.
 
-To learn more about CloudTrail, including how to configure and enable it, see the [AWS CloudTrail User Guide](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/)\. 
+To learn more about CloudTrail, see the [AWS CloudTrail User Guide](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/)\.
 
-**Topics**
-+ [AWS Direct Connect Information in CloudTrail](#dc_info_in_ct)
-+ [Understanding AWS Direct Connect Log File Entries](#understanding_dc_log_file_entries)
+## AWS Direct Connect Information in CloudTrail<a name="direct-connect-info-in-cloudtrail"></a>
 
-## AWS Direct Connect Information in CloudTrail<a name="dc_info_in_ct"></a>
+CloudTrail is enabled on your AWS account when you create the account\. When activity occurs in AWS Direct Connect, that activity is recorded in a CloudTrail event along with other AWS service events in **Event history**\. You can view, search, and download recent events in your AWS account\. For more information, see [Viewing Events with CloudTrail Event History](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events.html)\.
 
-If CloudTrail logging is turned on, calls made to all AWS Direct Connect actions are captured in log files\. All of the AWS Direct Connect actions are documented in the [AWS Direct Connect API Reference](http://docs.aws.amazon.com/directconnect/latest/APIReference/)\. For example, calls to the **CreateConnection**, **CreatePrivateVirtualInterface**, and **DescribeConnections** actions generate entries in CloudTrail log files\.
+For an ongoing record of events in your AWS account, including events for AWS Direct Connect, create a trail\. A *trail* enables CloudTrail to deliver log files to an Amazon S3 bucket\. By default, when you create a trail in the console, the trail applies to all AWS regions\. The trail logs events from all regions in the AWS partition and delivers the log files to the Amazon S3 bucket that you specify\. Additionally, you can configure other AWS services to further analyze and act upon the event data collected in CloudTrail logs\. For more information, see the following:
++ [Overview for Creating a Trail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html)
++ [CloudTrail Supported Services and Integrations](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-aws-service-specific-topics.html#cloudtrail-aws-service-specific-topics-integrations)
++ [Configuring Amazon SNS Notifications for CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/getting_notifications_top_level.html)
++ [Receiving CloudTrail Log Files from Multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) and [Receiving CloudTrail Log Files from Multiple Accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)
 
-Every log entry contains information about who generated the request\. For example, if a request is made to create a new connection to AWS Direct Connect \(**CreateConnection**\), CloudTrail logs the user identity of the person or service that made the request\. The user identity information helps you determine whether the request was made with root credentials or AWS Identity and Access Management \(IAM\) user credentials, with temporary security credentials for a role or federated user, or by another service in AWS\. For more information about CloudTrail fields, see [CloudTrail Event Reference](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/eventreference.html) in the AWS CloudTrail User Guide\. 
+All AWS Direct Connect actions are logged by CloudTrail and are documented in the [AWS Direct Connect API Reference](https://docs.aws.amazon.com/directconnect/latest/APIReference/)\. For example, calls to the `CreateConnection` and `CreatePrivateVirtualInterface` actions generate entries in the CloudTrail log files\.
 
-You can store your log files in your bucket for as long as you want, but you can also define Amazon S3 lifecycle rules to archive or delete log files automatically\. By default, your log files are encrypted by using Amazon S3 server\-side encryption \(SSE\)\. 
+Every event or log entry contains information about who generated the request\. The identity information helps you determine the following: 
++ Whether the request was made with root or AWS Identity and Access Management \(IAM\) user credentials\.
++ Whether the request was made with temporary security credentials for a role or federated user\.
++ Whether the request was made by another AWS service\.
 
-## Understanding AWS Direct Connect Log File Entries<a name="understanding_dc_log_file_entries"></a>
+For more information, see the [CloudTrail userIdentity Element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\.
 
-CloudTrail log files can contain one or more log entries composed of multiple JSON\-formatted events\. A log entry represents a single request from any source and includes information about the requested action, any input parameters, the date and time of the action, and so on\. The log entries do not appear in any particular order\. That is, they do not represent an ordered stack trace of the public API calls\. 
+## Understanding AWS Direct Connect Log File Entries<a name="understanding-direct-connect-entries"></a>
 
-The following log file record shows that a user called the **CreateConnection** action\.
+A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source and includes information about the requested action, the date and time of the action, request parameters, and so on\. CloudTrail log files aren't an ordered stack trace of the public API calls, so they don't appear in any specific order\.
+
+The following are example CloudTrail log records for AWS Direct Connect\.
+
+**Example Example: CreateConnection**  
 
 ```
 {
-    "Records": [{
+    "Records": [
+    {
         "eventVersion": "1.0",
         "userIdentity": {
             "type": "IAMUser",
@@ -61,12 +71,12 @@ The following log file record shows that a user called the **CreateConnection** 
             "connectionName": "MyExampleConnection"
         }
     },
-    ...additional entries
+    ...
   ]
 }
 ```
 
-The following log file record shows that a user called the **CreatePrivateVirtualInterface** action\.
+**Example Example: CreatePrivateVirtualInterface**  
 
 ```
 {
@@ -123,12 +133,12 @@ The following log file record shows that a user called the **CreatePrivateVirtua
             "location": "EqSE2"
         }
     },
-    ...additional entries
+    ...
   ]
 }
 ```
 
-The following log file record shows that a user called the **DescribeConnections** action\.
+**Example Example: DescribeConnections**  
 
 ```
 {
@@ -158,12 +168,12 @@ The following log file record shows that a user called the **DescribeConnections
         "requestParameters": null,
         "responseElements": null
     },
-    ...additional entries
+    ...
   ]
 }
 ```
 
-The following log file record shows that a user called the **DescribeVirtualInterfaces** action\.
+**Example Example: DescribeVirtualInterfaces**  
 
 ```
 {
@@ -195,7 +205,7 @@ The following log file record shows that a user called the **DescribeVirtualInte
         },
         "responseElements": null
     },
-    ...additional entries
+    ...
   ]
 }
 ```

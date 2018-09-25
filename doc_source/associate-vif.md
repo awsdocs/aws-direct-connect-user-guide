@@ -16,9 +16,9 @@ Connectivity to AWS is temporarily interrupted during the association process\.
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
 
-1. In the navigation pane, choose **Virtual Interfaces**, and select the virtual interface\.
+1. In the navigation pane, choose **Virtual Interfaces**\.
 
-1. Choose **Actions**, **Associate Connection or LAG**\.
+1. Select the virtual interface and choose **Actions**, **Associate Connection or LAG**\.
 
 1. Choose the required connection, select the confirmation check box, and choose **Continue**\.
 
@@ -28,12 +28,12 @@ You can use the same procedure above to associate a virtual interface with a LAG
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
 
-1. In the navigation pane, choose **LAGs**, and select the LAG\.
+1. In the navigation pane, choose **LAGs**\.
 
-1. Choose **Actions**, **Associate Virtual Interface**\.
+1. Select the LAG and choose **Actions**, **Associate Virtual Interface**\.
 
 1. Choose the required virtual interface, select the confirmation check box, and choose **Continue**\.
 
 **To associate a virtual interface using the command line or API**
-+ [associate\-virtual\-interface](http://docs.aws.amazon.com/cli/latest/reference/directconnect/associate-virtual-interface.html) \(AWS CLI\)
-+ [AssociateVirtualInterface](http://docs.aws.amazon.com/directconnect/latest/APIReference/API_AssociateVirtualInterface.html) \(AWS Direct Connect API\)
++ [associate\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/associate-virtual-interface.html) \(AWS CLI\)
++ [AssociateVirtualInterface](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_AssociateVirtualInterface.html) \(AWS Direct Connect API\)

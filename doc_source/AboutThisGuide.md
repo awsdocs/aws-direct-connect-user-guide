@@ -1,10 +1,9 @@
 # Document History<a name="AboutThisGuide"></a>
-+ **API version:** 2012\-10\-25
 
-The following table describes the important changes since the last release of the *AWS Direct Connect User Guide*\. 
+The following table describes the releases for AWS Direct Connect\.
 
 
-| Change | Description | Release Date | 
+| Feature | Description | Date | 
 | --- | --- | --- | 
 | Local preference BGP communities | You can use local preference BGP community tags to achieve load balancing and route preference for incoming traffic to your network\. For more information, see [Local Preference BGP Communities](routing-and-bgp.md#local-pref-bgp-communities)\. | 2018\-02\-06 | 
 | AWS Direct Connect gateway | You can use a Direct Connect gateway to connect your AWS Direct Connect connection to VPCs in remote regions\. For more information, see [Direct Connect Gateways](direct-connect-gateways.md)\. | 2017\-11\-01 | 
@@ -22,7 +21,7 @@ The following table describes the important changes since the last release of th
 | New Las Vegas location in the US West \(Oregon\) region | Updated topics to include the addition of the new AWS Direct Connect Las Vegas location in the US West \(Oregon\) region\. | 2014\-11\-10 | 
 | New EU \(Frankfurt\) region | Updated topics to include the addition of the new AWS Direct Connect locations serving the EU \(Frankfurt\) region\. | 2014\-10\-23 | 
 | New locations in the Asia Pacific \(Sydney\) region | Updated topics to include the addition of the new AWS Direct Connect locations serving the Asia Pacific \(Sydney\) region\. | 2014\-07\-14 | 
-| Support for AWS CloudTrail | Added a new topic to explain how you can use CloudTrail to log activity in AWS Direct Connect\. For more information, see [Logging AWS Direct Connect API Calls in AWS CloudTrail](logging_dc_api_calls.md)\. | 2014\-04\-04 | 
+| Support for AWS CloudTrail | Added a new topic to explain how you can use CloudTrail to log activity in AWS Direct Connect\. For more information, see [Logging AWS Direct Connect API Calls Using AWS CloudTrail](logging_dc_api_calls.md)\. | 2014\-04\-04 | 
 | Support for accessing remote AWS regions | Added a new topic to explain how you can access public resources in a remote region\. For more information, see [Accessing a Remote AWS Region](remote_regions.md)\. | 2013\-12\-19 | 
 | Support for hosted connections | Updated topics to include support for hosted connections\. | 2013\-10\-22 | 
 | New location in the EU \(Ireland\) region | Updated topics to include the addition of the new AWS Direct Connect location serving the EU \(Ireland\) region\. | 2013\-06\-24 | 

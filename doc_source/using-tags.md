@@ -28,11 +28,11 @@ The following rules and restrictions apply to tags:
 
 ## Working with Tags<a name="working-with-tags"></a>
 
-Currently, you can work with tags using the AWS Direct Connect API, the AWS CLI, the AWS Tools for Windows PowerShell, or an AWS SDK only\. To apply or remove tags, you must specify the Amazon Resource Name \(ARN\) for the resource\. For more information, see [Amazon Resource Names \(ARNs\) and AWS Service Namespaces](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *Amazon Web Services General Reference*\.
+Currently, you can work with tags using the AWS Direct Connect API, the AWS CLI, the AWS Tools for Windows PowerShell, or an AWS SDK only\. To apply or remove tags, you must specify the Amazon Resource Name \(ARN\) for the resource\. For more information, see [Amazon Resource Names \(ARNs\) and AWS Service Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *Amazon Web Services General Reference*\.
 
 **To add a tag using the AWS CLI**
 
-Use the [tag\-resource](http://docs.aws.amazon.com/cli/latest/reference/directconnect/tag-resource.html) command:
+Use the [tag\-resource](https://docs.aws.amazon.com/cli/latest/reference/directconnect/tag-resource.html) command:
 
 ```
 aws directconnect tag-resource --resource-arn arn:aws:directconnect:region:account-id:resource-type/resource-id --tags "key=key,value=value"
@@ -40,7 +40,7 @@ aws directconnect tag-resource --resource-arn arn:aws:directconnect:region:accou
 
 **To describe your tags using the AWS CLI**
 
-Use the [describe\-tags](http://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-tags.html) command:
+Use the [describe\-tags](https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-tags.html) command:
 
 ```
 aws directconnect describe-tags --resource-arns arn:aws:directconnect:region:account-id:resource-type/resource-id
@@ -48,7 +48,7 @@ aws directconnect describe-tags --resource-arns arn:aws:directconnect:region:acc
 
 **To delete a tag using the AWS CLI**
 
-Use the [untag\-resource](http://docs.aws.amazon.com/cli/latest/reference/directconnect/untag-resource.html) command:
+Use the [untag\-resource](https://docs.aws.amazon.com/cli/latest/reference/directconnect/untag-resource.html) command:
 
 ```
 aws directconnect untag-resource --resource-arn arn:aws:directconnect:region:account-id:resource-type/resource-id --tag-keys key

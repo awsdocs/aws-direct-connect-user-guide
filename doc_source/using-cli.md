@@ -4,7 +4,7 @@ You can use the AWS CLI to create and work with AWS Direct Connect resources\.
 
 The following example uses the AWS CLI commands to create an AWS Direct Connect connection, download the Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\), and provision a private or public virtual interface\.
 
-Before you begin, ensure that you have installed and configured the AWS CLI\. For more information, see the [AWS Command Line Interface User Guide](http://docs.aws.amazon.com/cli/latest/userguide/)\.
+Before you begin, ensure that you have installed and configured the AWS CLI\. For more information, see the [AWS Command Line Interface User Guide](https://docs.aws.amazon.com/cli/latest/userguide/)\.
 
 **Topics**
 + [Step 1: Create a Connection](#using-cli-create-connection)
@@ -13,7 +13,7 @@ Before you begin, ensure that you have installed and configured the AWS CLI\. Fo
 
 ## Step 1: Create a Connection<a name="using-cli-create-connection"></a>
 
-The first step is to submit a connection request\. Ensure that you know the port speed that you require and the AWS Direct Connect location\. For more information, see [Connections](WorkingWithConnections.md)\.
+The first step is to submit a connection request\. Ensure that you know the port speed that you require and the AWS Direct Connect location\. For more information, see [AWS Direct Connect Connections](WorkingWithConnections.md)\.
 
 **To create a connection request**
 
