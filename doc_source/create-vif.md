@@ -2,9 +2,12 @@
 
 You can create a public virtual interface to connect to public resources \(non\-VPC services\), or a private virtual interface to connect to your VPC\.
 
+**Prerequisites**  
 Before you begin, ensure that you have read the information in [Prerequisites for Virtual Interfaces](WorkingWithVirtualInterfaces.md#vif-prerequisites)\.
 
 ## Creating a Public Virtual Interface<a name="create-public-vif"></a>
+
+When you create a public virtual interface, it can take up to 72 hours for AWS to review and approve your request\.
 
 **To provision a public virtual interface**
 
@@ -12,33 +15,35 @@ Before you begin, ensure that you have read the information in [Prerequisites fo
 
 1. In the navigation pane, choose **Connections**\.
 
-1. Select the connection and then choose **Actions**, **Create Virtual Interface**\.
+1. Select the connection and choose **Actions**, **Create Virtual Interface**\.
 
 1. Choose **Public**\.
 
-1. In the **Define Your New Public Virtual Interface** dialog box, do the following and choose **Continue**:
+1. For **Virtual Interface Name**, type a name for the virtual interface\.
 
-   1. For **Connection**, select an existing physical connection on which to create the virtual interface\.
+1. For **Virtual Interface Owner**, choose **My AWS Account** if the virtual interface is for your AWS account\.
 
-   1. For **Virtual Interface Name**, type a name for the virtual interface\.
+1. For **VLAN**, type the ID number for your virtual local area network \(VLAN\)\.
 
-   1. For **Virtual Interface Owner**, select **My AWS Account** if the virtual interface is for your AWS account\.
+1. \[IPv4\] To configure an IPv4 BGP peer, do the following:
 
-   1. For **VLAN**, type the ID number for your virtual local area network \(VLAN\)\.
+   1. Choose **IPv4**\.
 
-   1. If you're configuring an IPv4 BGP peer, choose **IPv4**, and do the following:
-      + For **Your router peer IP**, type the IPv4 CIDR destination address to which Amazon should send traffic\.
-      + For **Amazon router peer IP**, type the IPv4 CIDR address to use to send traffic to Amazon\.
+   1. For **Your router peer IP**, type the IPv4 CIDR destination address to which Amazon should send traffic\.
 
-   1. If you're configuring an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
+   1. For **Amazon router peer IP**, type the IPv4 CIDR address to use to send traffic to AWS\.
 
-   1. For **BGP ASN**, type the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+   \[IPv6\] To configure an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
 
-   1. To have AWS generate a BGP key, select **Auto\-generate BGP key**\.
+1. For **BGP ASN**, type the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
 
-      To provide your own BGP key, clear **Auto\-generate BGP key**\. For **BGP Authentication Key**, type your BGP MD5 key\.
+   To have AWS generate a BGP key, select **Auto\-generate BGP key**\.
 
-   1. For **Prefixes you want to advertise**, type the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\.
+   To provide your own BGP key, clear **Auto\-generate BGP key**\. For **BGP Authentication Key**, type your BGP MD5 key\.
+
+1. For **Prefixes you want to advertise**, type the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\.
+
+1. Choose **Continue**\.
 
 1. Download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](#vif-router-config)\.
 
@@ -50,6 +55,8 @@ Before you begin, ensure that you have read the information in [Prerequisites fo
 
 You can provision a private virtual interface to a virtual private gateway in the same region as your AWS Direct Connect connection\. For more information about provisioning a private virtual interface to a direct connect gateway, see [Direct Connect Gateways](direct-connect-gateways.md)\.
 
+If you use the VPC wizard to create a VPC, route propagation is automatically enabled for you\. With route propagation, routes are automatically populated to the route tables in your VPC\. If you choose, you can disable route propagation\. For more information, see [Enable Route Propagation in Your Route Table](https://docs.aws.amazon.com/vpc/latest/userguide/SetUpVPNConnections.html#vpn-configure-routing) in the *Amazon VPC User Guide*\.
+
 **To provision a private virtual interface to a VPC**
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
@@ -58,34 +65,33 @@ You can provision a private virtual interface to a virtual private gateway in th
 
 1. Select the connection and choose **Actions**, **Create Virtual Interface**\.
 
-1. Select **Private**\.
+1. Choose **Private**\.
 
-1. For **Define Your New Private Virtual Interface**, do the following and choose **Continue**:
+1. For **Virtual Interface Name**, type a name for the virtual interface\.
 
-   1. For **Virtual Interface Name**, type a name for the virtual interface\.
+1. For **Virtual Interface Owner**, choose **My AWS Account** if the virtual interface is for your AWS account\.
 
-   1. For **Virtual Interface Owner**, select **My AWS Account** if the virtual interface is for your AWS account\.
+1. For **Connection To**, choose **Virtual Private Gateway** and select the virtual private gateway\.
 
-   1. For **Connection To**, choose **Virtual Private Gateway** and select the virtual private gateway\.
+1. For **VLAN**, type the ID number for your virtual local area network \(VLAN\)\.
 
-   1. For **VLAN**, type the ID number for your virtual local area network \(VLAN\)\.
+1. \[IPv4\] To configure an IPv4 BGP peer, choose **IPv4** and do one of the following:
+   + To have AWS generate your router IP address and Amazon IP address, select **Auto\-generate peer IPs**\.
+   + To specify these IP addresses yourself, clear **Auto\-generate peer IPs**\. For **Your router peer IP**, type the destination IPv4 CIDR address to which Amazon should send traffic\. For **Amazon router peer IP**, type the IPv4 CIDR address to use to send traffic to AWS\.
 
-   1. If you're configuring an IPv4 BGP peer, choose **IPv4**, and do the following:
-      + To have AWS generate your router IP address and Amazon IP address, select **Auto\-generate peer IPs**\.
-      + To specify these IP addresses yourself, clear **Auto\-generate peer IPs**\. For **Your router peer IP**, type the destination IPv4 CIDR address to which Amazon should send traffic\. For **Amazon router peer IP**, type the IPv4 CIDR address to use to send traffic to AWS\.
+   \[IPv6\] To configure an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
 
-   1. If you're configuring an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
+1. For **BGP ASN**, type the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
 
-   1. For **BGP ASN**, type the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+   To have AWS generate a BGP key, select **Auto\-generate BGP key**\.
 
-   1. To have AWS generate a BGP key, select **Auto\-generate BGP key**\.
+   To provide your own BGP key, clear **Auto\-generate BGP key**\. For **BGP Authentication Key**, type your BGP MD5 key\.
 
-      To provide your own BGP key, clear **Auto\-generate BGP key**\. For **BGP Authentication Key**, type your BGP MD5 key\.
+1. To change the maximum transmission unit \(MTU\) from 1500 \(default\) to 9001 \(jumbo frames\), select **Jumbo MTU \(MTU size 9001\)**\.
 
-**Note**  
-If you use the VPC wizard to create a VPC, route propagation is automatically enabled for you\. With route propagation, routes are automatically populated to the route tables in your VPC\. If you choose, you can disable route propagation\. For more information, see [Enable Route Propagation in Your Route Table](https://docs.aws.amazon.com/vpc/latest/userguide/SetUpVPNConnections.html#vpn-configure-routing) in the *Amazon VPC User Guide*\.
+1. Choose **Continue**\.
 
-After you've created the virtual interface, you can download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](#vif-router-config)\.
+1. Download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](#vif-router-config)\.
 
 **To create a private virtual interface using the command line or API**
 + [create\-private\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-private-virtual-interface.html) \(AWS CLI\)
@@ -103,7 +109,7 @@ After you've created the virtual interface, you can download the router configur
 
 1. Select the virtual interface and then choose **Actions**, **Download Router Configuration**\.
 
-1. In the **Download Router Configuration** dialog box, do the following:
+1. For **Download Router Configuration**, do the following:
 
    1. For **Vendor**, select the manufacturer of your router\.
 

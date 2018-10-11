@@ -5,11 +5,12 @@ The following table describes the releases for AWS Direct Connect\.
 
 | Feature | Description | Date | 
 | --- | --- | --- | 
+| Jumbo frames support | You can send jumbo frames \(9001 MTU\) over AWS Direct Connect\. For more information, see [Setting Network MTU](set-jumbo-frames-vif.md)\. | 2018\-10\-11 | 
 | Local preference BGP communities | You can use local preference BGP community tags to achieve load balancing and route preference for incoming traffic to your network\. For more information, see [Local Preference BGP Communities](routing-and-bgp.md#local-pref-bgp-communities)\. | 2018\-02\-06 | 
 | AWS Direct Connect gateway | You can use a Direct Connect gateway to connect your AWS Direct Connect connection to VPCs in remote regions\. For more information, see [Direct Connect Gateways](direct-connect-gateways.md)\. | 2017\-11\-01 | 
 | Amazon CloudWatch metrics | You can view CloudWatch metrics for your AWS Direct Connect connections\. For more information, see [Monitoring with Amazon CloudWatch](monitoring-cloudwatch.md)\. | 2017\-06\-29 | 
 | Link aggregation groups | You can create a link aggregation group \(LAG\) to aggregate multiple AWS Direct Connect connections\. For more information, see [Link Aggregation Groups](lags.md)\. | 2017\-02\-13 | 
-| IPv6 support | Your virtual interface can now support an IPv6 BGP peering session\. For more information, see [Adding or Removing a BGP Peer](add-peer-to-vif.md)\. | 2016\-12\-01 | 
+| IPv6 support | Your virtual interface can now support an IPv6 BGP peering session\. For more information, see [Adding or Deleting a BGP Peer](add-peer-to-vif.md)\. | 2016\-12\-01 | 
 | Tagging support | You can now tag your AWS Direct Connect resources\. For more information, see [Using Tags with AWS Direct Connect](using-tags.md)\. | 2016\-11\-04 | 
 | Self\-service LOA\-CFA | You can now download your Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\) using the AWS Direct Connect console or API\. | 2016\-06\-22 | 
 | New location in Silicon Valley | Updated topic to include the addition of the new Silicon Valley location in the US West \(N\. California\) region\. | 2016\-06\-03 | 

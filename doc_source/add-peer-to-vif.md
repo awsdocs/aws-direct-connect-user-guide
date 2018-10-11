@@ -1,10 +1,14 @@
-# Adding or Removing a BGP Peer<a name="add-peer-to-vif"></a>
+# Adding or Deleting a BGP Peer<a name="add-peer-to-vif"></a>
 
 A virtual interface can support a single IPv4 BGP peering session and a single IPv6 BGP peering session\. You can add an IPv6 BGP peering session to a virtual interface that has an existing IPv4 BGP peering session\. Alternately, you can add an IPv4 BGP peering session to a virtual interface that has an existing IPv6 BGP peering session\. 
 
 You cannot specify your own peer IPv6 addresses for an IPv6 BGP peering session\. Amazon automatically allocates you a /125 IPv6 CIDR\. 
 
 Multiprotocol BGP is not supported\. IPv4 and IPv6 operate in dual\-stack mode for the virtual interface\.
+
+## Adding a BGP Peer<a name="add-bgp-peer-vif"></a>
+
+Use the following procedure to add a BGP peer\.
 
 **To add a BGP peer**
 
@@ -34,6 +38,12 @@ Multiprotocol BGP is not supported\. IPv4 and IPv6 operate in dual\-stack mode f
 
 1. Choose **Continue**\.
 
+**To create a BGP peer using the command line or API**
++ [create\-bgp\-peer](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-bgp-peer.html) \(AWS CLI\)
++ [CreateBGPPeer](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateBGPPeer.html) \(AWS Direct Connect API\)
+
+## Deleting a BGP Peer<a name="delete-bgp-peer-vif"></a>
+
 If your virtual interface has both an IPv4 and IPv6 BGP peering session, you can delete one of the BGP peering sessions \(but not both\)\.
 
 **To delete a BGP peer**
@@ -47,10 +57,6 @@ If your virtual interface has both an IPv4 and IPv6 BGP peering session, you can
 1. To delete the IPv4 BGP peer, choose **IPv4**\. To delete the IPv6 BGP peer, choose **IPv6**\.
 
 1. Choose **Delete**\.
-
-**To create a BGP peer using the command line or API**
-+ [create\-bgp\-peer](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-bgp-peer.html) \(AWS CLI\)
-+ [CreateBGPPeer](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateBGPPeer.html) \(AWS Direct Connect API\)
 
 **To delete a BGP peer using the command line or API**
 + [delete\-bgp\-peer](https://docs.aws.amazon.com/cli/latest/reference/directconnect/delete-bgp-peer.html) \(AWS CLI\)

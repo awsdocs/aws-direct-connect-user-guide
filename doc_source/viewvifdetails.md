@@ -1,6 +1,6 @@
 # Viewing Virtual Interface Details<a name="viewvifdetails"></a>
 
-You can view the current status of your virtual interface; the connection state, name, and location; VLAN and BGP details; and peer IP addresses\.
+You can view the current status of your virtual interface, including the connection state, name, and location; VLAN and BGP details; and peer IP addresses\.
 
 **To view details about a virtual interface**
 

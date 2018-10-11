@@ -19,7 +19,9 @@ If the cross connect is not completed within 90 days, the authority granted by t
 | GPX, Mumbai | Contact GPX at [nkankane@gpxglobal\.net](mailto:nkankane@gpxglobal.net)\. | 
 | NetMagic DC2, Bangalore | Contact NetMagic Sales and Marketing toll\-free at 18001033130 or at [marketing@netmagicsolutions\.com](mailto:marketing@netmagicsolutions.com)\. | 
 | Sify Rabale, Mumbai | Contact Sify at [aws\.directconnect@sifycorp\.com](mailto:aws.directconnect@sifycorp.com)\. | 
-| STT GDC Pvt\. Ltd\. VSB, Chennai | Contact STT at [enquiry\.AWSDX@sttelemediagdc\.in](mailto:enquiry.AWSDX@sttelemediagdc.in)  | 
+| STT Delhi DC2, Delhi | Contact STT at [enquiry\.AWSDX@sttelemediagdc\.in](mailto:enquiry.AWSDX@sttelemediagdc.in)\. | 
+| STT GDC Pvt\. Ltd\. VSB, Chennai | Contact STT at [enquiry\.AWSDX@sttelemediagdc\.in](mailto:enquiry.AWSDX@sttelemediagdc.in)\. | 
+| STT Hyderabad DC1, Hyderabad | Contact STT at [enquiry\.AWSDX@sttelemediagdc\.in](mailto:enquiry.AWSDX@sttelemediagdc.in)\. | 
 
 ## Asia Pacific \(Seoul\)<a name="cross-connect-ap-northeast-2"></a>
 
@@ -107,7 +109,8 @@ If the cross connect is not completed within 90 days, the authority granted by t
 | Equinix HE6, Helsinki | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 | Equinix MU1, Munich  | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 | Equinix WA1, Warsaw | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
-| Interxion CPH2, Copenhagen | Contact Interxion CPH2 at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
+| Interxion AMS7, Amsterdam | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
+| Interxion CPH2, Copenhagen | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
 | Interxion FRA6, Frankfurt | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
 | Interxion MAD2, Madrid | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
 | Interxion STO1, Stockholm | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 

@@ -35,11 +35,11 @@ In addition, your network must meet the following conditions:
 + Auto\-negotiation for the port must be disabled\. Port speed and full\-duplex mode must be configured manually\.
 + 802\.1Q VLAN encapsulation must be supported across the entire connection, including intermediate devices\.
 + Your device must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\.
-+ \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but will not take effect until you configure it on your router\. 
++ \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but will not take effect until you configure it on your router\.
 
 AWS Direct Connect supports both the IPv4 and IPv6 communication protocols\. IPv6 addresses provided by public AWS services are accessible through AWS Direct Connect public virtual interfaces\.
 
-AWS Direct Connect supports a maximum transmission unit \(MTU\) of up to 1522 bytes at the physical connection layer \(14 bytes Ethernet header \+ 4 bytes VLAN tag \+ 1500 bytes IP datagram \+ 4 bytes FCS\)\.
+AWS Direct Connect supports an Ethernet frame size of 1522 or 9023 bytes \(14 bytes Ethernet header \+ 4 bytes VLAN tag \+ bytes for the IP datagram \+ 4 bytes FCS\) at the link layer\. You can set the MTU of your private virtual interfaces\. For more information, see [Setting Network MTU](set-jumbo-frames-vif.md)\.
 
 ## AWS Direct Connect Limits<a name="directconnect_limits"></a>
 

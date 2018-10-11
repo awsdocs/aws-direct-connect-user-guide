@@ -32,7 +32,7 @@ For connections to AWS Direct Connect with port speeds of 1 Gbps or higher, ensu
 + Auto\-negotiation for the port must be disabled\. Port speed and full\-duplex mode must be configured manually\.
 + 802\.1Q VLAN encapsulation must be supported across the entire connection, including intermediate devices\.
 + Your device must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\.
-+ \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but will not take effect until you configure it on your router\. 
++ \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but will not take effect until you configure it on your router\.
 
 ## Step 1: Sign Up for AWS<a name="get-started-signup"></a>
 
@@ -42,11 +42,11 @@ To use AWS Direct Connect, you need an AWS account if you don't already have one
 
 1. Open [https://aws\.amazon\.com/](https://aws.amazon.com/), and then choose **Create an AWS Account**\.
 **Note**  
-This might be unavailable in your browser if you previously signed into the AWS Management Console\. In that case, choose **Sign in to a different account**, and then choose **Create a new AWS account**\.
+If you previously signed in to the AWS Management Console using AWS account root user credentials, choose **Sign in to a different account**\. If you previously signed in to the console using IAM credentials, choose **Sign\-in using root account credentials**\. Then choose **Create a new AWS account**\.
 
 1. Follow the online instructions\.
 
-   Part of the sign\-up procedure involves receiving a phone call and entering a PIN using the phone keypad\.
+   Part of the sign\-up procedure involves receiving a phone call and entering a verification code using the phone keypad\.
 
 ## Step 2: Request an AWS Direct Connect Connection<a name="ConnectionRequest"></a>
 
@@ -138,15 +138,20 @@ Before you begin, ensure that you have the following information:
 + **Address family**: Whether the BGP peering session will be over IPv4 or IPv6\.
 + **Peer IP addresses**: A virtual interface can support a BGP peering session for IPv4, IPv6, or one of each \(dual\-stack\)\. You cannot create multiple BGP sessions for the same IP addressing family on the same virtual interface\. The IP address ranges are assigned to each end of the virtual interface for the BGP peering session\.
   + IPv4:
-    + \(Public virtual interface only\) You must specify unique public IPv4 addresses \(/30\) that you own\.
+    + \(Public virtual interface only\) You must specify unique public IPv4 addresses that you own\.
     + \(Private virtual interface only\) Amazon can generate private IPv4 addresses for you\. If you specify your own, ensure that you specify private CIDRs for your router interface and the AWS Direct Connect interface only \(for example, do not specify other IP addresses from your local network\)\.
   + IPv6: Amazon automatically allocates you a /125 IPv6 CIDR\. You cannot specify your own peer IPv6 addresses\.
 + **BGP information**:
   + A public or private Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) for your side of the BGP session\. If you are using a public ASN, you must own it\. If you are using a private ASN, it must be in the 64512 to 65535 range\. Autonomous System \(AS\) prepending does not work if you use a private ASN for a public virtual interface\.
   + An MD5 BGP authentication key\. You can provide your own, or you can let Amazon generate one for you\.
 + \(Public virtual interface only\) **Prefixes you want to advertise**: Public IPv4 routes or IPv6 routes to advertise over BGP\. You must advertise at least one prefix using BGP, up to a maximum of 1,000 prefixes\.
-  + IPv4: The IPv4 CIDR must not overlap with another public IPv4 CIDR announced using AWS Direct Connect\. If you do not own public IPv4 addresses, your network provider might be able to provide you with a public IPv4 CIDR\. If not, [contact AWS Support](https://aws.amazon.com/support/createCase) to request a /31 public IPv4 CIDR \(and provide a use case in your request\)\.
+  + IPv4: The IPv4 CIDR must not overlap with another public IPv4 CIDR announced using AWS Direct Connect\. If you do not own public IPv4 addresses, your network provider might be able to provide you with a public IPv4 CIDR\. If not, [contact AWS Support](https://aws.amazon.com/support/createCase) to request a public IPv4 CIDR \(and provide a use case in your request\)\.
   + IPv6: Specify a prefix length of /64 or shorter\.
++ \(Private virtual interface only\) **Jumbo frames**: The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find **Jumbo Frame Capable** on the **Summary** tab\.
+
+AWS requests additional information from you if your public prefixes or ASNs belong to an ISP or network carrier\. This can be a document using an official company letterhead or an email from the company's domain name verifying that the network prefix/ASN may be used by you\.
+
+When you create a public virtual interface, it can take up to 72 hours for AWS to review and approve your request\.
 
 **To provision a public virtual interface to non\-VPC services**
 
@@ -154,40 +159,35 @@ Before you begin, ensure that you have the following information:
 
 1. In the navigation pane, choose **Connections**\.
 
-1. Select the connection and then choose **Actions**, **Create Virtual Interface**\.
+1. Select the connection and choose **Actions**, **Create Virtual Interface**\.
 
 1. Choose **Public**\.
 
-1. In the **Define Your New Public Virtual Interface** dialog box, do the following and choose **Continue**:
+1. For **Virtual Interface Name**, type a name for the virtual interface\.
 
-   1. For **Connection**, select an existing physical connection on which to create the virtual interface\.
+1. For **Virtual Interface Owner**, choose **My AWS Account** if the virtual interface is for your AWS account\.
 
-   1. For **Virtual Interface Name**, type a name for the virtual interface\.
+1. For **VLAN**, type the ID number for your virtual local area network \(VLAN\)\.
 
-   1. For **Virtual Interface Owner**, select **My AWS Account** if the virtual interface is for your AWS account\.
+1. \[IPv4\] To configure an IPv4 BGP peer, do the following:
 
-   1. For **VLAN**, type the ID number for your virtual local area network \(VLAN\)\.
+   1. Choose **IPv4**\.
 
-   1. If you're configuring an IPv4 BGP peer, choose **IPv4**, and do the following:
-      + For **Your router peer IP**, type the IPv4 CIDR destination address to which Amazon should send traffic\.
-      + For **Amazon router peer IP**, type the IPv4 CIDR address to use to send traffic to Amazon\.
+   1. For **Your router peer IP**, type the IPv4 CIDR destination address to which Amazon should send traffic\.
 
-   1. If you're configuring an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
+   1. For **Amazon router peer IP**, type the IPv4 CIDR address to use to send traffic to AWS\.
 
-   1. For **BGP ASN**, type the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+   \[IPv6\] To configure an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
 
-   1. To have AWS generate a BGP key, select **Auto\-generate BGP key**\.
+1. For **BGP ASN**, type the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
 
-      To provide your own BGP key, clear **Auto\-generate BGP key**\. For **BGP Authentication Key**, type your BGP MD5 key\.
+   To have AWS generate a BGP key, select **Auto\-generate BGP key**\.
 
-   1. For **Prefixes you want to advertise**, type the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\.
+   To provide your own BGP key, clear **Auto\-generate BGP key**\. For **BGP Authentication Key**, type your BGP MD5 key\.
 
-1. Download your router configuration\. For more information, see [Step 5: Download the Router Configuration](#routerconfig)\.
+1. For **Prefixes you want to advertise**, type the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\.
 
-**Note**  
-AWS requests additional information from you if your public prefixes or ASNs belong to an ISP or network carrier\. This can be a document using an official company letterhead or an email from the company's domain name verifying that the network prefix/ASN may be used by you\.
-
-When you create a public virtual interface, it can take up to 72 hours for AWS to review and approve your request\.
+1. Choose **Continue**\.
 
 **To provision a private virtual interface to a VPC**
 
@@ -197,34 +197,33 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 1. Select the connection and choose **Actions**, **Create Virtual Interface**\.
 
-1. Select **Private**\.
+1. Choose **Private**\.
 
-1. For **Define Your New Private Virtual Interface**, do the following and choose **Continue**:
+1. For **Virtual Interface Name**, type a name for the virtual interface\.
 
-   1. For **Virtual Interface Name**, type a name for the virtual interface\.
+1. For **Virtual Interface Owner**, choose **My AWS Account** if the virtual interface is for your AWS account\.
 
-   1. For **Virtual Interface Owner**, select **My AWS Account** if the virtual interface is for your AWS account\.
+1. For **Connection To**, choose **Virtual Private Gateway** and select the virtual private gateway\.
 
-   1. For **Connection To**, choose **Virtual Private Gateway** and select the virtual private gateway\.
+1. For **VLAN**, type the ID number for your virtual local area network \(VLAN\)\.
 
-   1. For **VLAN**, type the ID number for your virtual local area network \(VLAN\)\.
+1. \[IPv4\] To configure an IPv4 BGP peer, choose **IPv4** and do one of the following:
+   + To have AWS generate your router IP address and Amazon IP address, select **Auto\-generate peer IPs**\.
+   + To specify these IP addresses yourself, clear **Auto\-generate peer IPs**\. For **Your router peer IP**, type the destination IPv4 CIDR address to which Amazon should send traffic\. For **Amazon router peer IP**, type the IPv4 CIDR address to use to send traffic to AWS\.
 
-   1. If you're configuring an IPv4 BGP peer, choose **IPv4**, and do the following:
-      + To have AWS generate your router IP address and Amazon IP address, select **Auto\-generate peer IPs**\.
-      + To specify these IP addresses yourself, clear **Auto\-generate peer IPs**\. For **Your router peer IP**, type the destination IPv4 CIDR address to which Amazon should send traffic\. For **Amazon router peer IP**, type the IPv4 CIDR address to use to send traffic to AWS\.
+   \[IPv6\] To configure an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
 
-   1. If you're configuring an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
+1. For **BGP ASN**, type the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
 
-   1. For **BGP ASN**, type the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+   To have AWS generate a BGP key, select **Auto\-generate BGP key**\.
 
-   1. To have AWS generate a BGP key, select **Auto\-generate BGP key**\.
+   To provide your own BGP key, clear **Auto\-generate BGP key**\. For **BGP Authentication Key**, type your BGP MD5 key\.
 
-      To provide your own BGP key, clear **Auto\-generate BGP key**\. For **BGP Authentication Key**, type your BGP MD5 key\.
+1. To change the maximum transmission unit \(MTU\) from 1500 \(default\) to 9001 \(jumbo frames\), select **Jumbo MTU \(MTU size 9001\)**\.
 
-1. Download your router configuration\. For more information, see [Step 5: Download the Router Configuration](#routerconfig)\.
+1. Choose **Continue**\.
 
-**Note**  
-If you use the VPC wizard to create a VPC, route propagation is automatically enabled for you\. With route propagation, routes are automatically populated to the route tables in your VPC\. If you choose, you can disable route propagation\. For more information, see [Enable Route Propagation in Your Route Table](https://docs.aws.amazon.com/vpc/latest/userguide/SetUpVPNConnections.html#vpn-configure-routing) in the *Amazon VPC User Guide*\. 
+If you use the VPC wizard to create a VPC, route propagation is automatically enabled for you\. With route propagation, routes are automatically populated to the route tables in your VPC\. If you choose, you can disable route propagation\. For more information, see [Enable Route Propagation in Your Route Table](https://docs.aws.amazon.com/vpc/latest/userguide/SetUpVPNConnections.html#vpn-configure-routing) in the *Amazon VPC User Guide*\.
 
 ## Step 5: Download the Router Configuration<a name="routerconfig"></a>
 
@@ -238,7 +237,7 @@ After you have created a virtual interface for your AWS Direct Connect connectio
 
 1. Select the virtual interface and then choose **Actions**, **Download Router Configuration**\.
 
-1. In the **Download Router Configuration** dialog box, do the following:
+1. For **Download Router Configuration**, do the following:
 
    1. For **Vendor**, select the manufacturer of your router\.
 

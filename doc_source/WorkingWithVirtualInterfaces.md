@@ -11,17 +11,18 @@ We recommend that you use a firewall filter \(based on the source/destination ad
 
 To use your AWS Direct Connect connection with another AWS account, you can create a hosted virtual interface for that account\. The owner of the other account must accept the hosted virtual interface to begin using it\. A hosted virtual interface works the same as a standard virtual interface and can connect to public resources or a VPC\.
 
-A connection of less than 1 Gbps only supports one virtual interface\.
+A connection of less than 1 Gbps supports only one virtual interface\.
 
 **Topics**
 + [Prerequisites for Virtual Interfaces](#vif-prerequisites)
 + [Creating a Virtual Interface](create-vif.md)
 + [Viewing Virtual Interface Details](viewvifdetails.md)
++ [Associating a Virtual Interface with a Connection or LAG](associate-vif.md)
++ [Adding or Deleting a BGP Peer](add-peer-to-vif.md)
++ [Setting Network MTU](set-jumbo-frames-vif.md)
 + [Deleting a Virtual Interface](deletevif.md)
 + [Creating a Hosted Virtual Interface](createhostedvirtualinterface.md)
 + [Accepting a Hosted Virtual Interface](accepthostedvirtualinterface.md)
-+ [Adding or Removing a BGP Peer](add-peer-to-vif.md)
-+ [Associating a Virtual Interface with a Connection or LAG](associate-vif.md)
 
 ## Prerequisites for Virtual Interfaces<a name="vif-prerequisites"></a>
 
@@ -34,12 +35,13 @@ To create a virtual interface, you need the following information:
 + **Address family**: Whether the BGP peering session will be over IPv4 or IPv6\.
 + **Peer IP addresses**: A virtual interface can support a BGP peering session for IPv4, IPv6, or one of each \(dual\-stack\)\. You cannot create multiple BGP sessions for the same IP addressing family on the same virtual interface\. The IP address ranges are assigned to each end of the virtual interface for the BGP peering session\.
   + IPv4:
-    + \(Public virtual interface only\) You must specify unique public IPv4 addresses \(/30\) that you own\.
+    + \(Public virtual interface only\) You must specify unique public IPv4 addresses that you own\.
     + \(Private virtual interface only\) Amazon can generate private IPv4 addresses for you\. If you specify your own, ensure that you specify private CIDRs for your router interface and the AWS Direct Connect interface only \(for example, do not specify other IP addresses from your local network\)\.
   + IPv6: Amazon automatically allocates you a /125 IPv6 CIDR\. You cannot specify your own peer IPv6 addresses\.
 + **BGP information**:
   + A public or private Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) for your side of the BGP session\. If you are using a public ASN, you must own it\. If you are using a private ASN, it must be in the 64512 to 65535 range\. Autonomous System \(AS\) prepending does not work if you use a private ASN for a public virtual interface\.
   + An MD5 BGP authentication key\. You can provide your own, or you can let Amazon generate one for you\.
 + \(Public virtual interface only\) **Prefixes you want to advertise**: Public IPv4 routes or IPv6 routes to advertise over BGP\. You must advertise at least one prefix using BGP, up to a maximum of 1,000 prefixes\.
-  + IPv4: The IPv4 CIDR must not overlap with another public IPv4 CIDR announced using AWS Direct Connect\. If you do not own public IPv4 addresses, your network provider might be able to provide you with a public IPv4 CIDR\. If not, [contact AWS Support](https://aws.amazon.com/support/createCase) to request a /31 public IPv4 CIDR \(and provide a use case in your request\)\.
+  + IPv4: The IPv4 CIDR must not overlap with another public IPv4 CIDR announced using AWS Direct Connect\. If you do not own public IPv4 addresses, your network provider might be able to provide you with a public IPv4 CIDR\. If not, [contact AWS Support](https://aws.amazon.com/support/createCase) to request a public IPv4 CIDR \(and provide a use case in your request\)\.
   + IPv6: Specify a prefix length of /64 or shorter\.
++ \(Private virtual interface only\) **Jumbo frames**: The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find **Jumbo Frame Capable** on the **Summary** tab\.
