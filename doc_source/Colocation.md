@@ -1,12 +1,12 @@
 # Requesting Cross Connects at AWS Direct Connect Locations<a name="Colocation"></a>
 
-After you have downloaded your Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\), you need to complete your cross\-network connection, also known as a *cross connect*\. If you already have equipment located in an AWS Direct Connect location, contact the appropriate provider to complete the cross connect\. For specific instructions for each provider, see the table below\. Contact your provider for cross connect pricing\. After the cross connect is established, you can create the virtual interfaces using the AWS Direct Connect console\.
+After you have downloaded your Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\), you must complete your cross\-network connection, also known as a *cross connect*\. If you already have equipment located in an AWS Direct Connect location, contact the appropriate provider to complete the cross connect\. For specific instructions for each provider, see the table below\. Contact your provider for cross connect pricing\. After the cross connect is established, you can create the virtual interfaces using the AWS Direct Connect console\.
 
 Some locations are set up as a campus\. For more information, see [AWS Direct Connect Locations](https://aws.amazon.com/directconnect/details/#AWS_Direct_Connect_Locations)\.
 
-If you do not already have equipment located in an AWS Direct Connect location, you can work with one of the partners in the AWS Partner Network \(APN\) to help you to connect to an AWS Direct Connect location\. For a list of partners in the APN with experience connecting to AWS Direct Connect, see [APN Partners supporting AWS Direct Connect](http://aws.amazon.com/directconnect/partners/)\. You must share the LOA\-CFA with your selected provider to facilitate your cross connect request\.
+If you do not already have equipment located in an AWS Direct Connect location, you can work with one of the partners in the AWS Partner Network \(APN\)\. They help you to connect to an AWS Direct Connect location\. For more information, see [APN Partners supporting AWS Direct Connect](http://aws.amazon.com/directconnect/partners/)\. You must share the LOA\-CFA with your selected provider to facilitate your cross connect request\.
 
-An AWS Direct Connect connection can provide access to resources in other regions\. For more information, see [Accessing a Remote AWS Region](remote_regions.md)\.
+An AWS Direct Connect connection can provide access to resources in other Regions\. For more information, see [Accessing a Remote AWS Region](remote_regions.md)\.
 
 **Note**  
 If the cross connect is not completed within 90 days, the authority granted by the LOA\-CFA expires\. To renew a LOA\-CFA that has expired, you can download it again from the AWS Direct Connect console\. For more information, see [Downloading the LOA\-CFA](create-connection.md#create-connection-loa-cfa)\.
@@ -40,7 +40,7 @@ If the cross connect is not completed within 90 days, the authority granted by t
 | Global Switch, Singapore | Contact Global Switch at [salessingapore@globalswitch\.com](mailto:salessingapore@globalswitch.com)\. | 
 | GPX, Mumbai | Contact GPX at [nkankane@gpxglobal\.net](mailto:nkankane@gpxglobal.net)\. | 
 | iAdvantage Mega\-i, Hong Kong | Contact iAdvantage at [cs@iadvantage\.net](mailto:cs@iadvantage.net) or place an order using [iAdvantage Cabling Order e\-Form](https://cable.iadvantage.net)\. | 
-| Menara AIMS, Kuala Lumpur | Existing AIMS customers can request a X\-Connect order using the Customer Service portal by filling out the Engineering Work Order Request Form and contacting [service\.delivery@aims\.com\.my](mailto:service.delivery@aims.com.my) if there are any problems submitting the request\. | 
+| Menara AIMS, Kuala Lumpur | Existing AIMS customers can request an X\-Connect order using the Customer Service portal by filling out the Engineering Work Order Request Form\. Contacting [service\.delivery@aims\.com\.my](mailto:service.delivery@aims.com.my) if there are any problems submitting the request\. | 
 
 ## Asia Pacific \(Sydney\)<a name="cross-connect-ap-southeast-2"></a>
 
@@ -58,13 +58,13 @@ If the cross connect is not completed within 90 days, the authority granted by t
 
 | Location | How to request a connection | 
 | --- | --- | 
-| AT Tokyo Chuo Data Center, Tokyo | Contact Junko Ikenishi at [ikenishi\.junko@attokyo\.co\.jp](mailto:ikenishi.junko@attokyo.co.jp)\. | 
+| AT Tokyo Chuo Data Center, Tokyo | Contact AT TOKYO at [at\-sales@attokyo\.co\.jp](mailto:at-sales@attokyo.co.jp)\. | 
 | Chief Telecom LY, Taipei | Contact Chief Telecom at [vicky\_chan@chief\.com\.tw](mailto:vicky_chan@chief.com.tw)\. | 
 | Chunghwa Telecom, Taipei | Contact CHT Taipei IDC NOC at [taipei\_idc@cht\.com\.tw](mailto:taipei_idc@cht.com.tw)\. | 
 | Equinix OS1, Osaka  | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 | Equinix TY2, Tokyo  | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 
-## AWS GovCloud \(US\)<a name="cross-connect-gov-us-west-1"></a>
+## AWS GovCloud \(US\-West\)<a name="cross-connect-gov-us-west-1"></a>
 
 
 | Location | How to request a connection | 

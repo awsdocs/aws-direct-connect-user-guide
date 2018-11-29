@@ -1,6 +1,6 @@
 # Adding or Deleting a BGP Peer<a name="add-peer-to-vif"></a>
 
-A virtual interface can support a single IPv4 BGP peering session and a single IPv6 BGP peering session\. You can add an IPv6 BGP peering session to a virtual interface that has an existing IPv4 BGP peering session\. Alternately, you can add an IPv4 BGP peering session to a virtual interface that has an existing IPv6 BGP peering session\. 
+ In some locations, a virtual interface can support up to two IPv4 BGP peering sessions and up to two IPv6 BGP peering sessions\. In other locations, a virtual interface can support a single IPv4 BGP peering session and a single IPv6 BGP peering session\. For information about the Regions that support logical redundancy, see [AWS Direct Connect Locations](https://aws.amazon.com/directconnect/features/#AWS_Direct_Connect_Locations)\.
 
 You cannot specify your own peer IPv6 addresses for an IPv6 BGP peering session\. Amazon automatically allocates you a /125 IPv6 CIDR\. 
 
@@ -18,16 +18,16 @@ Use the following procedure to add a BGP peer\.
 
 1. Select the virtual interface and choose **Actions**, **Add Peering**\.
 
-1. \(Private virtual interface\) To add an IPv4 BGP peer, do the following:
+1. \(Private virtual interface\) To add IPv4 BGP peers, do the following:
    + To have AWS generate your router IP address and Amazon IP address, select **Auto\-generate peer IPs**\.
    + To specify these IP addresses yourself, clear **Auto\-generate peer IPs**\. For **Your router peer IP**, type the destination IPv4 CIDR address to which Amazon should send traffic\. In the **Amazon router peer IP** field, type the IPv4 CIDR address to use to send traffic to AWS\.  
 ![\[Add BGP peering for IPv4\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/add_bgp_peering.png)
 
-1. \(Public virtual interface\) To add an IPv4 BGP peer, do the following:
+1. \(Public virtual interface\) To add IPv4 BGP peers, do the following:
    + For **Your router peer IP**, type the IPv4 CIDR destination address where traffic should be sent\.
    + For **Amazon router peer IP**, type the IPv4 CIDR address to use to send traffic to AWS\.
 
-1. \(Private or public virtual interface\) To add an IPv6 BGP peer, the **Auto\-generate peer IPs** is selected by default\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses; you cannot specify custom IPv6 addresses\.  
+1. \(Private or public virtual interface\) To add IPv6 BGP peers, the **Auto\-generate peer IPs** is selected by default\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses; you cannot specify custom IPv6 addresses\.  
 ![\[Add BGP peering for IPv6\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/add_bgp_peering_ipv6.png)
 
 1. In the **BGP ASN** field, type the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway; for example, a number between 1 and 65534\. For a public virtual interface, the ASN must be private or already whitelisted for the virtual interface\.

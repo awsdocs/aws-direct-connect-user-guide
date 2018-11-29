@@ -1,6 +1,6 @@
 # Viewing Connection Details<a name="viewdetails"></a>
 
-You can view the current status of your connection\. You can also view your connection ID \(for example, `dxcon-12nikabc`\) and verify that it matches the connection ID on the Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\) that you received or downloaded\.
+You can view the current status of your connection\. You can also view your connection ID \(for example, `dxcon-12nikabc`\) and verify that it matches the connection ID on the LOA\-CFA that you received or downloaded\.
 
 **To view details about a connection**
 

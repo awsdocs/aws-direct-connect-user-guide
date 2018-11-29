@@ -8,7 +8,7 @@ Before you can begin using a hosted connection, you must accept the connection\.
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
 
-1. If necessary, change the region in the navigation bar\.
+1. If necessary, change the Region in the navigation bar\.
 
 1. In the navigation pane, choose **Connections**\.
 

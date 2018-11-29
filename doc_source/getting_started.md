@@ -11,7 +11,7 @@ You can set up an AWS Direct Connect connection in one of the following ways\.
 | --- | --- | 
 |  1 Gbps or higher  |  Connect directly to an AWS device from your router at an AWS Direct Connect location\.  | 
 |  1 Gbps or higher  |  Work with a partner in the [AWS Partner Network](https://aws.amazon.com/directconnect/partners) or a network provider to connect a router from your data center, office, or colocation environment to an AWS Direct Connect location\. The network provider does not have to be a member of the APN to connect you\.  | 
-|  Less than 1 Gbps  |  Work with a partner in the [AWS Partner Network](https://aws.amazon.com/directconnect/partners) who will create a hosted connection for you\. Sign up for AWS and then follow the instructions to [accept your hosted connection](#get-started-accept-hosted-connection)\.  | 
+|  Less than 1 Gbps  |  Work with a partner in the [AWS Partner Network](https://aws.amazon.com/directconnect/partners) who can create a hosted connection for you\. Sign up for AWS and then follow the instructions to [accept your hosted connection](#get-started-accept-hosted-connection)\.  | 
 
 The following procedures demonstrate the common scenarios to get set up with an AWS Direct Connect connection\. Alternatively, you can refer to the article [How do I provision an AWS Direct Connect connection?](https://aws.amazon.com/premiumsupport/knowledge-center/provision-direct-connection/) in the Knowledge Center\.
 
@@ -32,7 +32,7 @@ For connections to AWS Direct Connect with port speeds of 1 Gbps or higher, ensu
 + Auto\-negotiation for the port must be disabled\. Port speed and full\-duplex mode must be configured manually\.
 + 802\.1Q VLAN encapsulation must be supported across the entire connection, including intermediate devices\.
 + Your device must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\.
-+ \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but will not take effect until you configure it on your router\.
++ \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but does not take effect until you configure it on your router\.
 
 ## Step 1: Sign Up for AWS<a name="get-started-signup"></a>
 
@@ -52,15 +52,15 @@ If you previously signed in to the AWS Management Console using AWS account root
 
 For connections of 1 Gbps or higher, you can submit a connection request using the AWS Direct Connect console\. Ensure that you have the following information:
 + The port speed that you require\. You cannot change the port speed after you've created the connection request\. 
-+ The AWS Direct Connect location at which the connection will be terminated\.
++ The AWS Direct Connect location at which the connection is to be terminated\.
 
-If you require a port speed less than 1 Gbps, you cannot request a connection using the console\. Instead, contact an APN partner, who will create a hosted connection for you, which you then accept\. Skip the following procedure and go to [\(Less than 1 Gbps Only\) Accept Your Hosted Connection](#get-started-accept-hosted-connection)\.
+If you require a port speed less than 1 Gbps, you cannot request a connection using the console\. Instead, contact an APN partner, who can create a hosted connection for you, which you then accept\. Skip the following procedure and go to [\(Less than 1 Gbps Only\) Accept Your Hosted Connection](#get-started-accept-hosted-connection)\.
 
 **To create a new AWS Direct Connect connection**
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
 
-1. In the navigation bar, select the region for the connection\.
+1. In the navigation bar, select the Region for the connection\.
 
 1. On the **Welcome to AWS Direct Connect** screen, choose **Get Started with Direct Connect**\.
 
@@ -88,7 +88,7 @@ If you requested a connection of less than 1 Gbps from your selected partner, th
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
 
-1. If necessary, select the region in which the hosted connection resides\.
+1. If necessary, select the Region in which the hosted connection resides\.
 
 1. In the navigation pane, choose **Connections**\.
 
@@ -116,9 +116,9 @@ If the link is not enabled, the LOA\-CFA is not yet available for you to downloa
 
 1. After you've downloaded the LOA\-CFA, do one of the following:
    + If you're working with an APN member or network provider, send them the LOA\-CFA so that they can order a cross\-connect for you at the AWS Direct Connect location\. If they cannot order the cross\-connect for you, you can [contact the colocation provider](Colocation.md) directly\.
-   + If you have equipment at the AWS Direct Connect location, contact the colocation provider to request a cross\-network connection\. You must be a customer of the colocation provider, and you must present them with the LOA\-CFA that authorizes the connection to the AWS router, as well as the necessary information to connect to your network\.
+   + If you have equipment at the AWS Direct Connect location, contact the colocation provider to request a cross\-network connection\. You must be a customer of the colocation provider\. You must also present them with the LOA\-CFA that authorizes the connection to the AWS router, as well as the necessary information to connect to your network\.
 
-AWS Direct Connect locations that are listed as multiple sites \(for example, Equinix DC1\-DC6 & DC10\-DC11\) are set up as a campus\. If your or your network provider’s equipment is located in any of these sites, you will be able to request a cross connect to your assigned port even if it resides in a different building on the campus\. 
+AWS Direct Connect locations that are listed as multiple sites \(for example, Equinix DC1\-DC6 & DC10\-DC11\) are set up as a campus\. If your or your network provider’s equipment is located in any of these sites, you can request a cross connect to your assigned port even if it resides in a different campus building\. 
 
 **Important**  
 A campus is treated as a single AWS Direct Connect location\. To achieve high availability, configure connections to different AWS Direct Connect locations\.
@@ -127,7 +127,7 @@ If you or your network partner experience issues establishing a physical connect
 
 ## Step 4: Create a Virtual Interface<a name="createvirtualinterface"></a>
 
-To begin using your AWS Direct Connect connection, you must create a virtual interface\. You can create a private virtual interface to connect to your VPC, or you can create a public virtual interface to connect to public AWS services that aren't in a VPC\. When you create a private virtual interface to a VPC, you need a private virtual interface for each VPC to which to connect\. For example, you need three private virtual interfaces to connect to three VPCs\.
+To begin using your AWS Direct Connect connection, you must create a virtual interface\. You can create a private virtual interface to connect to your VPC\. Or, you can create a public virtual interface to connect to public AWS services that aren't in a VPC\. When you create a private virtual interface to a VPC, you need a private virtual interface for each VPC to which to connect\. For example, you need three private virtual interfaces to connect to three VPCs\.
 
 Before you begin, ensure that you have the following information:
 + **Connection**: The AWS Direct Connect connection or link aggregation group \(LAG\) for which you are creating the virtual interface\.

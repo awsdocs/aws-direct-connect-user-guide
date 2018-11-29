@@ -2,7 +2,7 @@
 
 You can create a LAG by provisioning new connections, or aggregating existing connections\.
 
-You cannot create a LAG with new connections if this results in you exceeding the overall connections limit for the region\.
+You cannot create a LAG with new connections if this results in you exceeding the overall connections limit for the Region\.
 
 **To create a LAG with new connections**
 
@@ -20,7 +20,7 @@ You cannot create a LAG with new connections if this results in you exceeding th
 
 1. Choose **Create**\.
 
-To create a LAG from existing connections, the connections must be on the same AWS device \(terminate at the same AWS Direct Connect endpoint\), and they must use the same bandwidth\. You cannot migrate a connection from an existing LAG if removing the connection causes the original LAG to fall below its setting for minimum number of operational connections\.
+To create a LAG from existing connections, the connections must be on the same AWS device \(terminate at the same AWS Direct Connect endpoint\)\. They must also use the same bandwidth\. You cannot migrate a connection from an existing LAG if removing the connection causes the original LAG to fall below its setting for the minimum number of operational connections\.
 
 **Important**  
 For existing connections, connectivity to AWS is interrupted during the creation of the LAG\.

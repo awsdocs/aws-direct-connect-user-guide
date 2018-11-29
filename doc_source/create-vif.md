@@ -53,7 +53,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 ## Creating a Private Virtual Interface<a name="create-private-vif"></a>
 
-You can provision a private virtual interface to a virtual private gateway in the same region as your AWS Direct Connect connection\. For more information about provisioning a private virtual interface to a direct connect gateway, see [Direct Connect Gateways](direct-connect-gateways.md)\.
+You can provision a private virtual interface to a virtual private gateway in the same Region as your AWS Direct Connect connection\. For more information about provisioning a private virtual interface to a AWS Direct Connect gateway, see [Direct Connect Gateways](direct-connect-gateways.md)\.
 
 If you use the VPC wizard to create a VPC, route propagation is automatically enabled for you\. With route propagation, routes are automatically populated to the route tables in your VPC\. If you choose, you can disable route propagation\. For more information, see [Enable Route Propagation in Your Route Table](https://docs.aws.amazon.com/vpc/latest/userguide/SetUpVPNConnections.html#vpn-configure-routing) in the *Amazon VPC User Guide*\.
 

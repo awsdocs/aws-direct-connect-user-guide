@@ -1,12 +1,12 @@
 # Accepting a Hosted Virtual Interface<a name="accepthostedvirtualinterface"></a>
 
-Before you can begin using a hosted virtual interface, you must accept the virtual interface\. For a private virtual interface, you must also have an existing virtual private gateway or Direct Connect Gateway\.
+Before you can begin using a hosted virtual interface, you must accept the virtual interface\. For a private virtual interface, you must also have an existing virtual private gateway or Direct Connect gateway\.
 
 **To accept a hosted virtual interface**
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
 
-1. If necessary, change the region in the navigation bar\.
+1. If necessary, change the Region in the navigation bar\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 

@@ -2,13 +2,13 @@
 
 You can create a standalone connection, or you can create a connection to associate with a LAG in your account\. If you associate a connection with a LAG, it's created with the same port speed and location as specified in the LAG\.
 
-If you do not have equipment at an AWS Direct Connect location, first contact an AWS partner at the AWS Partner Network \(APN\)\. For more information, see [APN Partners Supporting AWS Direct Connect](https://aws.amazon.com/directconnect/partners)\.
+If you do not have equipment at an AWS Direct Connect location, first contact an AWS partner at the APN\. For more information, see [APN Partners Supporting AWS Direct Connect](https://aws.amazon.com/directconnect/partners)\.
 
 **To create a new connection**
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
 
-1. In the navigation bar, select the region for the connection\.
+1. In the navigation bar, select the Region for the connection\.
 
 1. In the navigation pane, choose **Connections**\.
 
@@ -32,7 +32,7 @@ If you do not have equipment at an AWS Direct Connect location, first contact an
 
 ## Downloading the LOA\-CFA<a name="create-connection-loa-cfa"></a>
 
-After AWS has processed your connection request, you can download the Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\)\. 
+After AWS has processed your connection request, you can download the LOA\-CFA\. 
 
 **To download the LOA\-CFA**
 
@@ -42,7 +42,7 @@ After AWS has processed your connection request, you can download the Letter of 
 
 1. Choose **Actions**, **Download LOA\-CFA**\. 
 **Note**  
-If the link is not enabled, the LOA\-CFA is not yet available for you to download\. Check your email for a request for more information\. If it's still unavailable, or you haven't received an email after 72 hours, contact [AWS Support](https://aws.amazon.com/support/createCase)\.
+If the link is not enabled, the LOA\-CFA is not yet available for you to download\. Check your email for a request for information\. If it's still unavailable, or you haven't received an email after 72 hours, contact [AWS Support](https://aws.amazon.com/support/createCase)\.
 
 1. In the dialog box, optionally type the name of your provider to have it appear with your company name as the requester in the LOA\-CFA\. Choose **Download**\. The LOA\-CFA is downloaded to your computer as a PDF file\.
 
