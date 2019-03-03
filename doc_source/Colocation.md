@@ -195,6 +195,7 @@ If the cross connect is not completed within 90 days, the authority granted by t
 | Location | How to request a connection | 
 | --- | --- | 
 | CoreSite LA1, Los Angeles | Place an order using the [CoreSite Customer Portal](https://mycoresite.coresite.com/login)\. After you complete the form, review the order for accuracy, and then approve it using the website\. | 
+| CoreSite SV2, Milpitas  | Place an order using the [CoreSite Customer Portal](https://mycoresite.coresite.com/login)\. After you complete the form, review the order for accuracy, and then approve it using the website\. | 
 | CoreSite SV4, Santa Clara  | Place an order using the [CoreSite Customer Portal](https://mycoresite.coresite.com/login)\. After you complete the form, review the order for accuracy, and then approve it using the MyCoreSite website\. | 
 | Equinix LA3, El Segundo | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\.  | 
 | Equinix SV5, San Jose | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\.  | 

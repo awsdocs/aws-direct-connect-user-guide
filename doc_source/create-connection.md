@@ -27,8 +27,8 @@ If you do not have equipment at an AWS Direct Connect location, first contact an
    1. Select the port speed that is compatible with your existing network\.
 
 **To create a connection using the command line or API**
-+ [create\-connection](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-connection.html) \(AWS CLI\)
-+ [CreateConnection](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateConnection.html) \(AWS Direct Connect API\)
++ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-connection.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-connection.html) \(AWS CLI\)
++ [https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateConnection.html](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateConnection.html) \(AWS Direct Connect API\)
 
 ## Downloading the LOA\-CFA<a name="create-connection-loa-cfa"></a>
 
@@ -54,5 +54,5 @@ The LOA\-CFA expires after 90 days\. If your connection is not up after 90 days,
 Port\-hour billing starts 90 days after you created the connection, or after the connection between your router and the AWS Direct Connect endpoint is established, whichever comes first\. For more information, see [AWS Direct Connect Pricing](https://aws.amazon.com/directconnect/pricing/)\. If you no longer want the connection after you've reissued the LOA\-CFA, you must delete the connection yourself\. For more information, see [Deleting a Connection](deleteconnection.md)\.
 
 **To download the LOA\-CFA using the command line or API**
-+ [describe\-loa](https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-loa.html) \(AWS CLI\)
-+ [DescribeLoa](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLoa.html) \(AWS Direct Connect API\)
++ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-loa.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-loa.html) \(AWS CLI\)
++ [https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLoa.html](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLoa.html) \(AWS Direct Connect API\)

@@ -18,5 +18,5 @@ If you adjust the threshold value for the minimum number if operational connecti
 1. Choose **Continue**\.
 
 **To update a LAG using the command line or API**
-+ [update\-lag](https://docs.aws.amazon.com/cli/latest/reference/directconnect/update-lag.html) \(AWS CLI\)
-+ [UpdateLag](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateLag.html) \(AWS Direct Connect API\)
++ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/update-lag.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/update-lag.html) \(AWS CLI\)
++ [https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateLag.html](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateLag.html) \(AWS Direct Connect API\)

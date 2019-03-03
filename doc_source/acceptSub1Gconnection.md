@@ -17,5 +17,5 @@ Before you can begin using a hosted connection, you must accept the connection\.
 1. Select the confirmation check box and choose **Accept Connection**\.
 
 **To accept a hosted connection using the command line or API**
-+ [confirm\-connection](https://docs.aws.amazon.com/cli/latest/reference/directconnect/confirm-connection.html) \(AWS CLI\)
-+ [ConfirmConnection](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_ConfirmConnection.html) \(AWS Direct Connect API\)
++ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/confirm-connection.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/confirm-connection.html) \(AWS CLI\)
++ [https://docs.aws.amazon.com/directconnect/latest/APIReference/API_ConfirmConnection.html](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_ConfirmConnection.html) \(AWS Direct Connect API\)

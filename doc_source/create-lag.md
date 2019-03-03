@@ -56,13 +56,13 @@ After you've created a LAG, you can view its details in the AWS Direct Connect c
 After you've created a LAG, you can associate or disassociate connections from it\. For more information, see [Associating a Connection with a LAG](associate-connection-with-lag.md) and [Disassociating a Connection From a LAG](disassociate-connection-from-lag.md)\.
 
 **To create a LAG using the command line or API**
-+ [create\-lag](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-lag.html) \(AWS CLI\)
-+ [CreateLag](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateLag.html) \(AWS Direct Connect API\)
++ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-lag.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-lag.html) \(AWS CLI\)
++ [https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateLag.html](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateLag.html) \(AWS Direct Connect API\)
 
 **To describe your LAGs using the command line or API**
-+ [describe\-lags](https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-lags.html) \(AWS CLI\)
-+ [DescribeLags](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLags.html) \(AWS Direct Connect API\)
++ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-lags.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-lags.html) \(AWS CLI\)
++ [https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLags.html](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLags.html) \(AWS Direct Connect API\)
 
 **To download the LOA\-CFA using the command line or API**
-+ [describe\-loa](https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-loa.html) \(AWS CLI\)
-+ [DescribeLoa](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLoa.html) \(AWS Direct Connect API\)
++ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-loa.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-loa.html) \(AWS CLI\)
++ [https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLoa.html](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLoa.html) \(AWS Direct Connect API\)

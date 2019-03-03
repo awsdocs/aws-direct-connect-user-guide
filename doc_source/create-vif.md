@@ -48,8 +48,8 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 1. Download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](#vif-router-config)\.
 
 **To create a public virtual interface using the command line or API**
-+ [create\-public\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-public-virtual-interface.html) \(AWS CLI\)
-+ [CreatePublicVirtualInterface](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreatePublicVirtualInterface.html) \(AWS Direct Connect API\)
++ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-public-virtual-interface.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-public-virtual-interface.html) \(AWS CLI\)
++ [https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreatePublicVirtualInterface.html](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreatePublicVirtualInterface.html) \(AWS Direct Connect API\)
 
 ## Creating a Private Virtual Interface<a name="create-private-vif"></a>
 
@@ -94,8 +94,8 @@ If you use the VPC wizard to create a VPC, route propagation is automatically en
 1. Download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](#vif-router-config)\.
 
 **To create a private virtual interface using the command line or API**
-+ [create\-private\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-private-virtual-interface.html) \(AWS CLI\)
-+ [CreatePrivateVirtualInterface](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreatePrivateVirtualInterface.html) \(AWS Direct Connect API\)
++ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-private-virtual-interface.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-private-virtual-interface.html) \(AWS CLI\)
++ [https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreatePrivateVirtualInterface.html](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreatePrivateVirtualInterface.html) \(AWS Direct Connect API\)
 
 ## Downloading the Router Configuration File<a name="vif-router-config"></a>
 
@@ -150,7 +150,7 @@ neighbor AWS_PEER_IP fall-over bfd
 ! NAT Configuration for Public Virtual Interfaces (Optional)
 
 ip access-list standard NAT-ACL
- permit any
+permit (internal subnet IP address for NAT)
 exit
 
 ip nat inside source list NAT-ACL interface GigabitEthernet0/1.VLAN_NUMBER overload
@@ -192,6 +192,7 @@ router bgp CUSTOMER_BGP_ASN
 
 feature bfd
 interface VlanVLAN_NUMBER
+no ip redirects
 bfd interval 300 min_rx 300 multiplier 3
 router bgp CUSTOMER_BGP_ASN
 neighbor AWS_PEER_IP remote-as AWS_ASN
