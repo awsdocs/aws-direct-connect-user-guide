@@ -20,5 +20,5 @@ Your connection to AWS is broken off during disassociation\.
 1. Confirm and choose **Continue**\.
 
 **To disassociate a connection using the command line or API**
-+ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/disassociate-connection-from-lag.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/disassociate-connection-from-lag.html) \(AWS CLI\)
-+ [https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DisassociateConnectionFromLag.html](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DisassociateConnectionFromLag.html) \(AWS Direct Connect API\)
++ [disassociate\-connection\-from\-lag](https://docs.aws.amazon.com/cli/latest/reference/directconnect/disassociate-connection-from-lag.html) \(AWS CLI\)
++ [DisassociateConnectionFromLag](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DisassociateConnectionFromLag.html) \(AWS Direct Connect API\)

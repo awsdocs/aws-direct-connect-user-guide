@@ -32,7 +32,7 @@ Currently, you can work with tags using the AWS Direct Connect API, the AWS CLI,
 
 **To add a tag using the AWS CLI**
 
-Use the [https://docs.aws.amazon.com/cli/latest/reference/directconnect/tag-resource.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/tag-resource.html) command:
+Use the [tag\-resource](https://docs.aws.amazon.com/cli/latest/reference/directconnect/tag-resource.html) command:
 
 ```
 aws directconnect tag-resource --resource-arn arn:aws:directconnect:Region:account-id:resource-type/resource-id --tags "key=key,value=value"
@@ -40,7 +40,7 @@ aws directconnect tag-resource --resource-arn arn:aws:directconnect:Region:accou
 
 **To describe your tags using the AWS CLI**
 
-Use the [https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-tags.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-tags.html) command:
+Use the [describe\-tags](https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-tags.html) command:
 
 ```
 aws directconnect describe-tags --resource-arns arn:aws:directconnect:Region:account-id:resource-type/resource-id
@@ -48,7 +48,7 @@ aws directconnect describe-tags --resource-arns arn:aws:directconnect:Region:acc
 
 **To delete a tag using the AWS CLI**
 
-Use the [https://docs.aws.amazon.com/cli/latest/reference/directconnect/untag-resource.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/untag-resource.html) command:
+Use the [untag\-resource](https://docs.aws.amazon.com/cli/latest/reference/directconnect/untag-resource.html) command:
 
 ```
 aws directconnect untag-resource --resource-arn arn:aws:directconnect:Region:account-id:resource-type/resource-id --tag-keys key

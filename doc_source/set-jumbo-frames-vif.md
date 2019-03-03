@@ -22,5 +22,5 @@ If an EC2 instance doesn't support jumbo frames, it drops jumbo frames from AWS 
 1. When prompted for confirmation, choose **Accept**\. The state of the virtual interface is `pending` until the update is complete\.
 
 **To set the MTU of a private virtual interface using the command line or API**
-+ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/update-virtual-interface-attributes.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/update-virtual-interface-attributes.html) \(AWS CLI\)
-+ [https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateVirtualInterfaceAttributes.html](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateVirtualInterfaceAttributes.html) \(AWS Direct Connect API\)
++ [update\-virtual\-interface\-attributes](https://docs.aws.amazon.com/cli/latest/reference/directconnect/update-virtual-interface-attributes.html) \(AWS CLI\)
++ [UpdateVirtualInterfaceAttributes](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateVirtualInterfaceAttributes.html) \(AWS Direct Connect API\)

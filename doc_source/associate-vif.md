@@ -35,5 +35,5 @@ You can use the same procedure above to associate a virtual interface with a LAG
 1. Choose the required virtual interface, select the confirmation check box, and choose **Continue**\.
 
 **To associate a virtual interface using the command line or API**
-+ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/associate-virtual-interface.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/associate-virtual-interface.html) \(AWS CLI\)
-+ [https://docs.aws.amazon.com/directconnect/latest/APIReference/API_AssociateVirtualInterface.html](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_AssociateVirtualInterface.html) \(AWS Direct Connect API\)
++ [associate\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/associate-virtual-interface.html) \(AWS CLI\)
++ [AssociateVirtualInterface](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_AssociateVirtualInterface.html) \(AWS Direct Connect API\)

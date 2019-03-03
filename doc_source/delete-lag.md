@@ -13,5 +13,5 @@ If you no longer need a LAG, you can delete it\. You cannot delete a LAG if it h
 1. Select the confirmation check box and choose **Continue**\.
 
 **To delete a LAG using the command line or API**
-+ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/delete-lag.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/delete-lag.html) \(AWS CLI\)
-+ [https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DeleteLag.html](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DeleteLag.html) \(AWS Direct Connect API\)
++ [delete\-lag](https://docs.aws.amazon.com/cli/latest/reference/directconnect/delete-lag.html) \(AWS CLI\)
++ [DeleteLag](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DeleteLag.html) \(AWS Direct Connect API\)
