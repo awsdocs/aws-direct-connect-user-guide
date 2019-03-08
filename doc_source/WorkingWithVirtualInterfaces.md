@@ -17,10 +17,10 @@ A connection of less than 1 Gbps supports only one virtual interface\.
 + [Prerequisites for Virtual Interfaces](#vif-prerequisites)
 + [Creating a Virtual Interface](create-vif.md)
 + [Viewing Virtual Interface Details](viewvifdetails.md)
-+ [Associating a Virtual Interface with a Connection or LAG](associate-vif.md)
 + [Adding or Deleting a BGP Peer](add-peer-to-vif.md)
 + [Setting Network MTU](set-jumbo-frames-vif.md)
-+ [Deleting a Virtual Interface](deletevif.md)
++ [Adding or Removing Virtual Interface Tags](modify-tags-vif.md)
++ [Deleting Virtual Interfaces](deletevif.md)
 + [Creating a Hosted Virtual Interface](createhostedvirtualinterface.md)
 + [Accepting a Hosted Virtual Interface](accepthostedvirtualinterface.md)
 

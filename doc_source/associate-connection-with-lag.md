@@ -9,15 +9,17 @@ Connectivity to AWS over the connection is interrupted during association\.
 
 **To associate a connection with a LAG**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
 
 1. In the navigation pane, choose **LAGs**\.
 
-1. Select the LAG and choose **Actions**, **Associate Connection**\.
+1. Select the LAG and choose **View details**\.
 
-1. Select the connection from the list of available connections\.
+1. Under **Connections**, choose **Associate connection**\.
 
-1. Select the confirmation check box and choose **Continue**\.
+1. For **Connection**, choose the Direct Connect connection to use for the LAG\.
+
+1. Choose **Associate Connection**\.
 
 **To associate a connection using the command line or API**
 + [associate\-connection\-with\-lag](https://docs.aws.amazon.com/cli/latest/reference/directconnect/associate-connection-with-lag.html) \(AWS CLI\)

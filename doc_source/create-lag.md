@@ -4,54 +4,53 @@ You can create a LAG by provisioning new connections, or aggregating existing co
 
 You cannot create a LAG with new connections if this results in you exceeding the overall connections limit for the Region\.
 
-**To create a LAG with new connections**
-
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
-
-1. In the navigation pane, choose **LAGs**\.
-
-1. Choose **Create LAG**\.
-
-1. Choose **Request new Connections**, and provide the following information:
-   + **Location**: The location for the LAG\.
-   + **LAG Name**: A name for the LAG\.
-   + **Connection Bandwidth**: The port speed for the connections\.
-   + **Number of new Connections**: The number of connections that must be provisioned in the LAG\.
-
-1. Choose **Create**\.
-
 To create a LAG from existing connections, the connections must be on the same AWS device \(terminate at the same AWS Direct Connect endpoint\)\. They must also use the same bandwidth\. You cannot migrate a connection from an existing LAG if removing the connection causes the original LAG to fall below its setting for the minimum number of operational connections\.
 
 **Important**  
 For existing connections, connectivity to AWS is interrupted during the creation of the LAG\.
 
-**To create a LAG from existing connections**
+**To create a LAG with new connections**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
 
 1. In the navigation pane, choose **LAGs**\.
 
 1. Choose **Create LAG**\.
 
-1. Choose **Use existing Connections**, and select the required connections\.
+1. Under** Lag creation type**, choose **Request new connections**, and provide the following information:
+   + **LAG name**: A name for the LAG\.
+   + **Location**: The location for the LAG\.
+   + **Port speed**: The port speed for the connections\.
+   + **Number of new connections**: The number of new connections to create\.
 
-1. For **LAG Name**, specify a name for the LAG\. For **Set Minimum Links**, specify the minimum number of connections that must be operational for the LAG itself to be operational\. If you do not specify a value, we assign a default value of 0\.  
-![\[Create a LAG screen\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/create_lag_existing_connections.png)
+1. Choose **Create LAG**\.
 
-1. Select the confirmation check box and choose **Create**\.
+**To create a LAG from existing connections**
+
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+
+1. In the navigation pane, choose **LAGs**\.
+
+1. Choose **Create LAG**\.
+
+1. Under** Lag creation type**, choose **Use existing connections**, and provide the following information:
+   + **LAG name**: A name for the LAG\.
+   + **Connection**: The Direct Connect connection to use for the LAG\.
+   + **Minimum links**: The minimum number of connections that must be operational for the LAG itself to be operational\. If you do not specify a value, we assign a default value of 0\.
+
+1. Choose **Create LAG**\.
 
 After you've created a LAG, you can view its details in the AWS Direct Connect console\.
 
 **To view information about your LAG**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
 
 1. In the navigation pane, choose **LAGs**\.
 
-1. Select the LAG\.
+1. Select the LAG and choose **View details**\.
 
-1. You can view information about the LAG, including its ID, the AWS Direct Connect endpoint on which the connections terminate \(**AWS Device**\), and the number of connections in the LAG \(**Port Count**\)\.  
-![\[LAG details screen\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/view_lag.png)
+1. You can view information about the LAG, including its ID, the AWS Direct Connect endpoint on which the connections terminate\.
 
 After you've created a LAG, you can associate or disassociate connections from it\. For more information, see [Associating a Connection with a LAG](associate-connection-with-lag.md) and [Disassociating a Connection From a LAG](disassociate-connection-from-lag.md)\.
 

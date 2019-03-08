@@ -23,5 +23,6 @@ After you've created a connection, create a virtual interface to connect to publ
 **Topics**
 + [Creating a Connection](create-connection.md)
 + [Viewing Connection Details](viewdetails.md)
-+ [Deleting a Connection](deleteconnection.md)
++ [Updating a Connection](updateconnection.md)
++ [Deleting Connections](deleteconnection.md)
 + [Accepting a Hosted Connection](acceptSub1Gconnection.md)

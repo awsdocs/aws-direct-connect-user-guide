@@ -1,16 +1,16 @@
-# Deleting a Virtual Interface<a name="deletevif"></a>
+# Deleting Virtual Interfaces<a name="deletevif"></a>
 
-Before you can delete a connection, you must delete its virtual interface\. The number of virtual interfaces configured on a connection is listed in the **\# VIs** column in the **Connection** pane\. Deleting a virtual interface stops AWS Direct Connect data transfer charges associated with the virtual interface\.
+Delete one or more virtual interfaces\. Before you can delete a connection, you must delete its virtual interface\. Deleting a virtual interface stops AWS Direct Connect data transfer charges associated with the virtual interface\.
 
 **To delete a virtual interface**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
 
 1. In the left pane, choose **Virtual Interfaces**\.
 
-1. Select the virtual interface and choose **Actions**, **Delete Virtual Interface**\.
+1. Select the virtual interfaces and choose **Delete**\.
 
-1. Choose **Delete**\.
+1. In the **Delete** confirmation dialog box, choose **Delete**\.
 
 **To delete a virtual interface using the command line or API**
 + [delete\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/delete-virtual-interface.html) \(AWS CLI\)

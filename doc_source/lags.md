@@ -23,4 +23,4 @@ When you create a LAG or associate more connections with the LAG, we may not be 
 + [Updating a LAG](update-lag.md)
 + [Associating a Connection with a LAG](associate-connection-with-lag.md)
 + [Disassociating a Connection From a LAG](disassociate-connection-from-lag.md)
-+ [Deleting a LAG](delete-lag.md)
++ [Deleting LAGs](delete-lag.md)

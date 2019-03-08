@@ -11,15 +11,15 @@ If an EC2 instance doesn't support jumbo frames, it drops jumbo frames from AWS 
 
 **To set the MTU of a private virtual interface**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
-1. Select the virtual interface and verify that **Jumbo Frame Capable** is **true**\.
+1.  Select the virtual interface and choose **Edit**\.
 
-1. Choose **Actions**, **Toggle Jumbo MTU**\. If the current value of **MTU** is 1500, the new value is 9001\. If the current value is 9001, the new value is 1500\.
+1. Under **Jumbo MTU \(MTU size 9001\)**, select **Enabled**\.
 
-1. When prompted for confirmation, choose **Accept**\. The state of the virtual interface is `pending` until the update is complete\.
+1. Under **Acknowledge**, select **I understand the selected connection\(s\) will go down for a brief period**\. The state of the virtual interface is `pending` until the update is complete\.
 
 **To set the MTU of a private virtual interface using the command line or API**
 + [update\-virtual\-interface\-attributes](https://docs.aws.amazon.com/cli/latest/reference/directconnect/update-virtual-interface-attributes.html) \(AWS CLI\)

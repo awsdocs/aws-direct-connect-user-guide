@@ -28,7 +28,12 @@ The following rules and restrictions apply to tags:
 
 ## Working with Tags<a name="working-with-tags"></a>
 
-Currently, you can work with tags using the AWS Direct Connect API, the AWS CLI, the AWS Tools for Windows PowerShell, or an AWS SDK only\. To apply or remove tags, you must specify the Amazon Resource Name \(ARN\) for the resource\. For more information, see [Amazon Resource Names \(ARNs\) and AWS Service Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *Amazon Web Services General Reference*\.
+After you create any of the following resources, you can use the AWS Direct Connect console to add and remove tags\.
++ Connections: For more information, see [Updating a Connection](updateconnection.md)\.
++ Virtual Interfaces: For more information, see [Adding or Removing Virtual Interface Tags](modify-tags-vif.md)\.
++ Link aggregation group For more information, see [Updating a LAG](update-lag.md)
+
+You can add, remove or describe tags using the AWS Direct Connect API, the AWS CLI, the AWS Tools for Windows PowerShell, or an AWS SDK only\. When you use these tools to manage tags, you must specify the Amazon Resource Name \(ARN\) for the resource\. For more information, see [Amazon Resource Names \(ARNs\) and AWS Service Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *Amazon Web Services General Reference*\.
 
 **To add a tag using the AWS CLI**
 

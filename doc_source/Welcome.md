@@ -9,7 +9,6 @@ The following diagram shows how AWS Direct Connect interfaces with your network\
 **Topics**
 + [AWS Direct Connect Components](#overview-components)
 + [Network Requirements](#overview_requirements)
-+ [AWS Direct Connect Limits](#directconnect_limits)
 + [Accessing a Remote AWS Region](remote_regions.md)
 + [Routing Policies and BGP Communities](routing-and-bgp.md)
 
@@ -40,22 +39,3 @@ In addition, your network must meet the following conditions:
 AWS Direct Connect supports both the IPv4 and IPv6 communication protocols\. IPv6 addresses provided by public AWS services are accessible through AWS Direct Connect public virtual interfaces\.
 
 AWS Direct Connect supports an Ethernet frame size of 1522 or 9023 bytes \(14 bytes Ethernet header \+ 4 bytes VLAN tag \+ bytes for the IP datagram \+ 4 bytes FCS\) at the link layer\. You can set the MTU of your private virtual interfaces\. For more information, see [Setting Network MTU](set-jumbo-frames-vif.md)\.
-
-## AWS Direct Connect Limits<a name="directconnect_limits"></a>
-
-The following table lists the limits related to AWS Direct Connect\. Unless indicated otherwise, you can request an increase for any of these limits using the [AWS Direct Connect Limits form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-direct-connect)\.
-
-
-| Component | Limit | Comments | 
-| --- | --- | --- | 
-|  Virtual interfaces per AWS Direct Connect connection  |  50  |  This limit cannot be increased  | 
-|  Active AWS Direct Connect connections per Region per account  |  10  |  | 
-|  Routes per Border Gateway Protocol \(BGP\) session on a private virtual interface  |  100  |  This limit cannot be increased  | 
-|  Routes per Border Gateway Protocol \(BGP\) session on a public virtual interface  |  1,000  |  This limit cannot be increased  | 
-|  Connections per link aggregation group \(LAG\)  | 4 |  | 
-|  Link aggregation groups \(LAGs\) per Region  |  10  |  | 
-|  AWS Direct Connect gateways per account  |  200  |  | 
-|  Virtual private gateways per AWS Direct Connect gateway  |  10  |  This limit cannot be increased  | 
-|  Virtual interfaces per AWS Direct Connect gateway  |  30  |  | 
-
-AWS Direct Connect supports these port speeds over single\-mode fiber: 1 Gbps: 1000BASE\-LX \(1310nm\) and 10 Gbps: 10GBASE\-LR \(1310nm\)\.

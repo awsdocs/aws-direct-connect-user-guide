@@ -54,47 +54,43 @@ For connections of 1 Gbps or higher, you can submit a connection request using t
 + The port speed that you require\. You cannot change the port speed after you've created the connection request\. 
 + The AWS Direct Connect location at which the connection is to be terminated\.
 
-If you require a port speed less than 1 Gbps, you cannot request a connection using the console\. Instead, contact an APN partner, who can create a hosted connection for you, which you then accept\. Skip the following procedure and go to [\(Less than 1 Gbps Only\) Accept Your Hosted Connection](#get-started-accept-hosted-connection)\.
+If you require a port speed less than 1 Gbps, you cannot request a connection using the console\. Instead, contact an APN partner, who can create a hosted connection for you, which you then accept\. Skip the following procedure and go to [ Accept Your Hosted Connection](#get-started-accept-hosted-connection)\.
 
 **To create a new AWS Direct Connect connection**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
 
-1. In the navigation bar, select the Region for the connection\.
+1. On the **AWS Direct Connect** screen, under **Get started**, choose **Create a connection**\.
 
-1. On the **Welcome to AWS Direct Connect** screen, choose **Get Started with Direct Connect**\.
+1. On the **Create Connection** pane, under **Connection settings,** do the following:
 
-1. In the **Create a Connection** dialog box, do the following:
-
-   1. For **Connection Name**, type a name for the connection\.
-
-   1. For **LAG Association**, specify whether the connection is standalone, or if it should be associated with a link aggregation group \(LAG\) in your account\. This option is only available if you have a LAG in your account\. To associate the connection with a LAG, select the LAG ID\. The connection is created with the same port speed and location as specified in the LAG\. For more information, see [Link Aggregation Groups](lags.md)\.
+   1. For **Name**, enter a name for the connection\.
 
    1. For **Location**, select the appropriate AWS Direct Connect location\.
 
    1. If applicable, for **Sub Location**, choose the floor closest to you or your network provider\. This option is only available if the location has meet\-me rooms \(MMRs\) in multiple floors of the building\.
 
-   1. Select the appropriate port speed, and then choose **Create**\.
+   1. For **Port Speed**, choose the connection bandwidth\.
+
+1. Choose **Create Connection**\.
 
 It can take up to 72 hours for AWS to review your request and provision a port for your connection\. During this time, you may receive an email with a request for more information about your use case or the specified location\. The email is sent to the email address that you used when you signed up for AWS\. You must respond within 7 days or the connection is deleted\.
 
 For more information, see [AWS Direct Connect Connections](WorkingWithConnections.md)\.
 
-### \(Less than 1 Gbps Only\) Accept Your Hosted Connection<a name="get-started-accept-hosted-connection"></a>
+### Accept Your Hosted Connection<a name="get-started-accept-hosted-connection"></a>
 
-If you requested a connection of less than 1 Gbps from your selected partner, they create a hosted connection for you \(you cannot create it yourself\)\. You must accept it in the AWS Direct Connect console before you can create a virtual interface\.
+ You must accept the hosted connection in the AWS Direct Connect console before you can create a virtual interface\.
 
 **To accept a hosted connection**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
-
-1. If necessary, select the Region in which the hosted connection resides\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
 
 1. In the navigation pane, choose **Connections**\.
 
-1. Select the hosted connection\.
+1. Select the hosted connection and choose **View details**\.
 
-1. Select the confirmation check box and choose **Accept Connection**\.
+1. Select the confirmation check box and choose **Accept connection**\.
 
 1. Go to [Step 4](#createvirtualinterface) to continue setting up your AWS Direct Connect connection\.
 
@@ -104,15 +100,17 @@ After you request a connection, AWS makes a Letter of Authorization and Connecti
 
 **To download the LOA\-CFA**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
 
 1. In the navigation pane, choose **Connections**\.
 
-1. Select the connection and choose **Actions**, **Download LOA\-CFA**\.
+1. Select the connection and choose **View Details**\.
+
+1. Choose **Download LOA\-CFA**\.
+
+   The LOA\-CFA is downloaded to your computer as a PDF file\.
 **Note**  
 If the link is not enabled, the LOA\-CFA is not yet available for you to download\. Check your email for a request for more information\. If it's still unavailable, or you haven't received an email after 72 hours, contact [AWS Support](https://aws.amazon.com/support/createCase)\.
-
-1. Optionally type the name of your provider to have it to appear with your company name as the requester in the LOA\-CFA\. Choose **Download**\. The LOA\-CFA is downloaded to your computer as a PDF file\.
 
 1. After you've downloaded the LOA\-CFA, do one of the following:
    + If you're working with an APN member or network provider, send them the LOA\-CFA so that they can order a cross\-connect for you at the AWS Direct Connect location\. If they cannot order the cross\-connect for you, you can [contact the colocation provider](Colocation.md) directly\.
@@ -155,75 +153,83 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 **To provision a public virtual interface to non\-VPC services**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
 
-1. In the navigation pane, choose **Connections**\.
+1. In the navigation pane, choose **Virtual Interfaces**\.
 
-1. Select the connection and choose **Actions**, **Create Virtual Interface**\.
+1. Choose **Create virtual interface**\.
 
-1. Choose **Public**\.
+1. Under **Virtual interface type**, for **Type**, choose **Public**\.
 
-1. For **Virtual Interface Name**, type a name for the virtual interface\.
+1. Under **Public Virtual Interface Settings**, do the following:
 
-1. For **Virtual Interface Owner**, choose **My AWS Account** if the virtual interface is for your AWS account\.
+   1. For **Virtual interface name**, enter a name for the virtual interface\.
 
-1. For **VLAN**, type the ID number for your virtual local area network \(VLAN\)\.
+   1. For **Connection**, choose the Direct Connect connection that you want to use for this interface\.
 
-1. \[IPv4\] To configure an IPv4 BGP peer, do the following:
+   1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. Choose **IPv4**\.
+   1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
 
-   1. For **Your router peer IP**, type the IPv4 CIDR destination address to which Amazon should send traffic\.
+1. Under **Additional Settings**, do the following:
 
-   1. For **Amazon router peer IP**, type the IPv4 CIDR address to use to send traffic to AWS\.
+   1. To configure an IPv4 BGP or an IPv6 peer, do the following:
 
-   \[IPv6\] To configure an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
+      \[IPv4\] To configure an IPv4 BGP peer, choose **IPv4** and do one of the following:
+      + To specify these IP addresses yourself, for **Your router peer ip**, enter the destination IPv4 CIDR address to which Amazon should send traffic\. 
+      + For **Amazon router peer ip**, enter the IPv4 CIDR address to use to send traffic to AWS\.
 
-1. For **BGP ASN**, type the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+      \[IPv6\] To configure an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
 
-   To have AWS generate a BGP key, select **Auto\-generate BGP key**\.
+   1. To advertise prefixes to Amazon, for **Prefixes you want to advertise**, enter the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\. 
 
-   To provide your own BGP key, clear **Auto\-generate BGP key**\. For **BGP Authentication Key**, type your BGP MD5 key\.
+   1. To change the maximum transmission unit \(MTU\) from 1500 \(default\) to 9001 \(jumbo frames\), select **Jumbo MTU \(MTU size 9001\)**\.
 
-1. For **Prefixes you want to advertise**, type the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\.
+1. To advertise prefixes to Amazon, under **Additional Settings**, for **Prefixes you want to advertise**, enter the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\. 
 
-1. Choose **Continue**\.
+1. Choose **Create virtual interface**\.
 
 **To provision a private virtual interface to a VPC**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
 
-1. In the navigation pane, choose **Connections**\.
+1. In the navigation pane, choose **Virtual Interfaces**\.
 
-1. Select the connection and choose **Actions**, **Create Virtual Interface**\.
+1. Choose **Create virtual interface**\.
 
-1. Choose **Private**\.
+1. Under **Virtual interface type**, for **Type**, choose **Private**\.
 
-1. For **Virtual Interface Name**, type a name for the virtual interface\.
+1. Under **Private virtual interface settings**, do the following:
 
-1. For **Virtual Interface Owner**, choose **My AWS Account** if the virtual interface is for your AWS account\.
+   1. For **Virtual interface name**, enter a name for the virtual interface\.
 
-1. For **Connection To**, choose **Virtual Private Gateway** and select the virtual private gateway\.
+   1. For **Connection**, choose the Direct Connect connection that you want to use for this interface\.
 
-1. For **VLAN**, type the ID number for your virtual local area network \(VLAN\)\.
+   1. For **Gateway type**, choose **Virtual private gateway**\. 
 
-1. \[IPv4\] To configure an IPv4 BGP peer, choose **IPv4** and do one of the following:
-   + To have AWS generate your router IP address and Amazon IP address, select **Auto\-generate peer IPs**\.
-   + To specify these IP addresses yourself, clear **Auto\-generate peer IPs**\. For **Your router peer IP**, type the destination IPv4 CIDR address to which Amazon should send traffic\. For **Amazon router peer IP**, type the IPv4 CIDR address to use to send traffic to AWS\.
+   1. For **Virtual interface owner**, choose **My AWS account** if the virtual interface is for your AWS account\. 
 
-   \[IPv6\] To configure an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
+   1. For **Virtual private gateway**, choose the virtual private gateway to use for this interface\.
 
-1. For **BGP ASN**, type the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+   1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   To have AWS generate a BGP key, select **Auto\-generate BGP key**\.
+   1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
 
-   To provide your own BGP key, clear **Auto\-generate BGP key**\. For **BGP Authentication Key**, type your BGP MD5 key\.
+1. Under **Additional Settings**, do the following:
 
-1. To change the maximum transmission unit \(MTU\) from 1500 \(default\) to 9001 \(jumbo frames\), select **Jumbo MTU \(MTU size 9001\)**\.
+   1. To configure an IPv4 BGP or an IPv6 peer, do the following:
 
-1. Choose **Continue**\.
+      \[IPv4\] To configure an IPv4 BGP peer, choose **IPv4** and do one of the following:
+      + To specify these IP addresses yourself, for **Your router peer ip**, enter the destination IPv4 CIDR address to which Amazon should send traffic\. 
+      + For **Amazon router peer ip**, enter the IPv4 CIDR address to use to send traffic to AWS\.
 
-If you use the VPC wizard to create a VPC, route propagation is automatically enabled for you\. With route propagation, routes are automatically populated to the route tables in your VPC\. If you choose, you can disable route propagation\. For more information, see [Enable Route Propagation in Your Route Table](https://docs.aws.amazon.com/vpc/latest/userguide/SetUpVPNConnections.html#vpn-configure-routing) in the *Amazon VPC User Guide*\.
+      \[IPv6\] To configure an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
+
+   1. To advertise prefixes to Amazon, for **Prefixes you want to advertise**, enter the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\. 
+
+   1. To change the maximum transmission unit \(MTU\) from 1500 \(default\) to 9001 \(jumbo frames\), select **Jumbo MTU \(MTU size 9001\)**\.
+
+1. Choose **Create virtual interface**\.
 
 ## Step 5: Download the Router Configuration<a name="routerconfig"></a>
 
@@ -231,13 +237,15 @@ After you have created a virtual interface for your AWS Direct Connect connectio
 
 **To download a router configuration**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
-1. Select the virtual interface and then choose **Actions**, **Download Router Configuration**\.
+1. Select the connection and choose **View Details**\.
 
-1. For **Download Router Configuration**, do the following:
+1. Choose **Download router configuration**\.
+
+1. For **Download router configuration**, do the following:
 
    1. For **Vendor**, select the manufacturer of your router\.
 
