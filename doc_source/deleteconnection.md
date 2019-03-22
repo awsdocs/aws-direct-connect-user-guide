@@ -6,7 +6,7 @@ If the connection is part of a link aggregation group \(LAG\), you cannot delete
 
 **To delete a connection**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. In the navigation pane, choose **Connections**\.
 

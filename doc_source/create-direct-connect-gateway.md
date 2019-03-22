@@ -4,7 +4,7 @@ You can create a Direct Connect gateway in any supported public Region\.
 
 **To create a Direct Connect gateway**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. In the navigation pane, choose **Direct Connect Gateways**\.
 

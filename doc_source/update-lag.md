@@ -7,7 +7,7 @@ If you adjust the threshold value for the minimum number if operational connecti
 
 **To update a LAG**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. In the navigation pane, choose **LAGs**\.
 

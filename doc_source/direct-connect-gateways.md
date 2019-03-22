@@ -8,6 +8,14 @@ In the following diagram, the Direct Connect gateway enables you to use your AWS
 
 ![\[Direct connect gateway\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/dx-gateway.png)
 
+Complete the following steps for this configuration\.
+
+1.  Create a Direct Connect gateway\.
+
+1. Associate each private virtual gateway with the Direct Connect gateway\.
+
+1. Create a private virtual interface between the Direct Connect gateway and the Direct Connect location\.
+
 The following rules apply:
 + You cannot use a Direct Connect gateway to connect to a VPC in the China Regions\.
 + You cannot use a Direct Connect gateway that's in your account to connect to a VPC that's in a different AWS account\. To associate a Direct Connect gateway with a virtual private gateway, it must be in the same account as the virtual private gateway\.

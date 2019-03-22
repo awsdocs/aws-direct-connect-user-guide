@@ -11,7 +11,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 **To provision a public virtual interface**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
@@ -61,7 +61,7 @@ If you use the VPC wizard to create a VPC, route propagation is automatically en
 
 **To provision a private virtual interface to a VPC**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
@@ -111,7 +111,7 @@ If you use the VPC wizard to create a VPC, route propagation is automatically en
 
 After you've created the virtual interface, you can download the router configuration file for your router\.
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 

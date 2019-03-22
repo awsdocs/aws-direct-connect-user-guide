@@ -11,7 +11,7 @@ If an EC2 instance doesn't support jumbo frames, it drops jumbo frames from AWS 
 
 **To set the MTU of a private virtual interface**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 

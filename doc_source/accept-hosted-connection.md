@@ -1,10 +1,10 @@
-# Accepting a Hosted Connection<a name="acceptSub1Gconnection"></a>
+# Accepting a Hosted Connection<a name="accept-hosted-connection"></a>
 
-If you are interested in purchasing a hosted connection, you must contact a partner in the AWS Partner Network \(APN\)\. The partner provisions the connection for you\. After the connection is configured, it appears in the **Connections** pane in the AWS Direct Connect console\.
+If you are interested in purchasing a hosted connection, you must contact an AWS Direct Connect Partner in the AWS Direct Connect Partner Program\. The partner provisions the connection for you\. After the connection is configured, it appears in the **Connections** pane in the AWS Direct Connect console\.
 
 Before you can begin using a hosted connection, you must accept the connection\.
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. In the navigation pane, choose **Connections**\.
 

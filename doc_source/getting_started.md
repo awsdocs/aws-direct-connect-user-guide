@@ -7,23 +7,22 @@ AWS Direct Connect supports these port speeds over single\-mode fiber: 1 Gbps: 1
 You can set up an AWS Direct Connect connection in one of the following ways\.
 
 
-| Port speed | Method | 
-| --- | --- | 
-|  1 Gbps or higher  |  Connect directly to an AWS device from your router at an AWS Direct Connect location\.  | 
-|  1 Gbps or higher  |  Work with a partner in the [AWS Partner Network](https://aws.amazon.com/directconnect/partners) or a network provider to connect a router from your data center, office, or colocation environment to an AWS Direct Connect location\. The network provider does not have to be a member of the APN to connect you\.  | 
-|  Less than 1 Gbps  |  Work with a partner in the [AWS Partner Network](https://aws.amazon.com/directconnect/partners) who can create a hosted connection for you\. Sign up for AWS and then follow the instructions to [accept your hosted connection](#get-started-accept-hosted-connection)\.  | 
+| Model | Capacity | Method | 
+| --- | --- | --- | 
+| Dedicated connection | 1Gbps, 10 Gbps |  Connect directly to an AWS device from your router at an AWS Direct Connect location or work with an AWS Direct Connect Partner or a network provider to connect a router from your data center, office, or colocation environment to an AWS Direct Connect location\. The network provider does not have to be an [AWS Direct Connect Partner](https://aws.amazon.com/directconnect/partners) to connect you to a dedicated connection\. AWS Direct Connect dedicated connections support these port speeds over single\-mode fiber: 1 Gbps: 1000BASE\-LX \(1310nm\) and 10 Gbps: 10GBASE\-LR \(1310nm\)  | 
+| Hosted connection | 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, and 10Gbps |  Work with a partner in the [AWS Direct Connect Partner Program](https://aws.amazon.com/directconnect/partners) to connect a router from your data center, office, or colocation environment to an AWS Direct Connect location\. Only certain partners provide higher capacity connections\.   | 
 
 The following procedures demonstrate the common scenarios to get set up with an AWS Direct Connect connection\. Alternatively, you can refer to the article [How do I provision an AWS Direct Connect connection?](https://aws.amazon.com/premiumsupport/knowledge-center/provision-direct-connection/) in the Knowledge Center\.
 
 **Topics**
 + [Prerequisites](#get-started-prerequisites)
 + [Step 1: Sign Up for AWS](#get-started-signup)
-+ [Step 2: Request an AWS Direct Connect Connection](#ConnectionRequest)
-+ [Step 3: Download the LOA\-CFA](#DedicatedConnection)
++ [Step 2: Request an AWS Direct Connect Dedicated Connection or Accept a Hosted Connection](#ConnectionRequest)
++ [\(Dedicated Connection\) Step 3: Download the LOA\-CFA](#DedicatedConnection)
 + [Step 4: Create a Virtual Interface](#createvirtualinterface)
 + [Step 5: Download the Router Configuration](#routerconfig)
 + [Step 6: Verify Your Virtual Interface](#connected)
-+ [\(Optional\) Configure Redundant Connections](#RedundantConnections)
++ [\(Recommended\) Configure Redundant Connections](#RedundantConnections)
 
 ## Prerequisites<a name="get-started-prerequisites"></a>
 
@@ -48,17 +47,17 @@ If you previously signed in to the AWS Management Console using AWS account root
 
    Part of the sign\-up procedure involves receiving a phone call and entering a verification code using the phone keypad\.
 
-## Step 2: Request an AWS Direct Connect Connection<a name="ConnectionRequest"></a>
+## Step 2: Request an AWS Direct Connect Dedicated Connection or Accept a Hosted Connection<a name="ConnectionRequest"></a>
 
-For connections of 1 Gbps or higher, you can submit a connection request using the AWS Direct Connect console\. Ensure that you have the following information:
-+ The port speed that you require\. You cannot change the port speed after you've created the connection request\. 
+For dedicated connections, you can submit a connection request using the AWS Direct Connect console\. For hosted connections, work with an AWS Direct Connect Partner to request a hosted connection\. Ensure that you have the following information:
++ The port speed that you require\. You cannot change the port speed after you create the connection request\. 
 + The AWS Direct Connect location at which the connection is to be terminated\.
 
-If you require a port speed less than 1 Gbps, you cannot request a connection using the console\. Instead, contact an APN partner, who can create a hosted connection for you, which you then accept\. Skip the following procedure and go to [ Accept Your Hosted Connection](#get-started-accept-hosted-connection)\.
+You cannot use the AWS Direct Connect console to request a hosted connection\. Instead, contact an AWS Direct Connect Partner, who can create a hosted connection for you, which you then accept\. Skip the following procedure and go to [ Accept Your Hosted Connection](#get-started-accept-hosted-connection)\.
 
 **To create a new AWS Direct Connect connection**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. On the **AWS Direct Connect** screen, under **Get started**, choose **Create a connection**\.
 
@@ -84,7 +83,7 @@ For more information, see [AWS Direct Connect Connections](WorkingWithConnection
 
 **To accept a hosted connection**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. In the navigation pane, choose **Connections**\.
 
@@ -94,13 +93,13 @@ For more information, see [AWS Direct Connect Connections](WorkingWithConnection
 
 1. Go to [Step 4](#createvirtualinterface) to continue setting up your AWS Direct Connect connection\.
 
-## Step 3: Download the LOA\-CFA<a name="DedicatedConnection"></a>
+## \(Dedicated Connection\) Step 3: Download the LOA\-CFA<a name="DedicatedConnection"></a>
 
 After you request a connection, AWS makes a Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\) available to you to download, or emails you with a request for more information\. The LOA\-CFA is the authorization to connect to AWS, and is required by the colocation provider or your network provider to establish the cross\-network connection \(cross\-connect\)\.
 
 **To download the LOA\-CFA**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. In the navigation pane, choose **Connections**\.
 
@@ -112,16 +111,16 @@ After you request a connection, AWS makes a Letter of Authorization and Connecti
 **Note**  
 If the link is not enabled, the LOA\-CFA is not yet available for you to download\. Check your email for a request for more information\. If it's still unavailable, or you haven't received an email after 72 hours, contact [AWS Support](https://aws.amazon.com/support/createCase)\.
 
-1. After you've downloaded the LOA\-CFA, do one of the following:
-   + If you're working with an APN member or network provider, send them the LOA\-CFA so that they can order a cross\-connect for you at the AWS Direct Connect location\. If they cannot order the cross\-connect for you, you can [contact the colocation provider](Colocation.md) directly\.
+1. After you download the LOA\-CFA, do one of the following:
+   + If you're working with an AWS Direct Connect Partner or network provider, send them the LOA\-CFA so that they can order a cross\-connect for you at the AWS Direct Connect location\. If they cannot order the cross\-connect for you, you can [contact the colocation provider](Colocation.md) directly\.
    + If you have equipment at the AWS Direct Connect location, contact the colocation provider to request a cross\-network connection\. You must be a customer of the colocation provider\. You must also present them with the LOA\-CFA that authorizes the connection to the AWS router, as well as the necessary information to connect to your network\.
 
-AWS Direct Connect locations that are listed as multiple sites \(for example, Equinix DC1\-DC6 & DC10\-DC11\) are set up as a campus\. If your or your network provider’s equipment is located in any of these sites, you can request a cross connect to your assigned port even if it resides in a different campus building\. 
+AWS Direct Connect locations that are listed as multiple sites \(for example, Equinix DC1\-DC6 & DC10\-DC11\) are set up as a campus\. If your or your network provider’s equipment is located in any of these sites, you can request a cross\-connect to your assigned port even if it resides in a different campus building\. 
 
 **Important**  
 A campus is treated as a single AWS Direct Connect location\. To achieve high availability, configure connections to different AWS Direct Connect locations\.
 
-If you or your network partner experience issues establishing a physical connection, see [Troubleshooting Layer 1 \(Physical\) Issues](Troubleshooting.md#ts_layer_1)\.
+If you or your network provider experience issues establishing a physical connection, see [Troubleshooting Layer 1 \(Physical\) Issues](Troubleshooting.md#ts_layer_1)\.
 
 ## Step 4: Create a Virtual Interface<a name="createvirtualinterface"></a>
 
@@ -133,6 +132,8 @@ Before you begin, ensure that you have the following information:
 + **Virtual interface owner**: If you're creating the virtual interface for another account, you need the AWS account ID of the other account\.
 + \(Private virtual interface only\) **Connection to**: For connecting to a VPC in the same region, you need the virtual private gateway for your VPC\. The ASN for the Amazon side of the BGP session is inherited from the virtual private gateway\. When you create a virtual private gateway, you can specify your own private ASN\. Otherwise, Amazon provides a default ASN\. For more information, see [Create a Virtual Private Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/SetUpVPNConnections.html#vpn-create-vpg) in the *Amazon VPC User Guide*\. For connecting to a VPC through a Direct Connect gateway, you need the Direct Connect gateway\. For more information, see [Direct Connect Gateways](https://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-gateways.html)\.
 + **VLAN**: A unique virtual local area network \(VLAN\) tag that's not already in use on your connection\. The value must be between 1 and 4094 and must comply with the Ethernet 802\.1Q standard\. This tag is required for any traffic traversing the AWS Direct Connect connection\.
+
+  If you have a hosted connection, your AWS Direct Connect Partner provides this value\. You can’t modify the value after you have created the virtual interface\.
 + **Address family**: Whether the BGP peering session will be over IPv4 or IPv6\.
 + **Peer IP addresses**: A virtual interface can support a BGP peering session for IPv4, IPv6, or one of each \(dual\-stack\)\. You cannot create multiple BGP sessions for the same IP addressing family on the same virtual interface\. The IP address ranges are assigned to each end of the virtual interface for the BGP peering session\.
   + IPv4:
@@ -153,7 +154,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 **To provision a public virtual interface to non\-VPC services**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
@@ -191,7 +192,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 **To provision a private virtual interface to a VPC**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
@@ -237,7 +238,7 @@ After you have created a virtual interface for your AWS Direct Connect connectio
 
 **To download a router configuration**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
@@ -274,7 +275,7 @@ After you have established virtual interfaces to the AWS Cloud or to Amazon VPC,
 
 1. Ping the private IPv4 address and get a response\.
 
-## \(Optional\) Configure Redundant Connections<a name="RedundantConnections"></a>
+## \(Recommended\) Configure Redundant Connections<a name="RedundantConnections"></a>
 
 To provide for failover, we recommend that you request and configure two dedicated connections to AWS, as shown in the following figure\. These connections can terminate on one or two routers in your network\.
 
@@ -289,3 +290,5 @@ How you configure the connections doesn't affect redundancy, but it does affect 
 If you use a VPN connection for redundancy, ensure that you implement a health check and failover mechanism, and check your [route table routing](https://docs.aws.amazon.com/vpc/latest/userguide/SetUpVPNConnections.html#vpn-configure-routing)\.
 
 To achieve high availability, we strongly recommend that you configure connections to different AWS Direct Connect locations\. For more information about high availability options, see [Multiple Data Center HA Network Connectivity](https://aws.amazon.com/answers/networking/aws-multiple-data-center-ha-network-connectivity/)\.
+
+For more information about AWS Direct Connect resiliency, see [AWS Direct Connect Resiliency Recommendations](https://aws.amazon.com/directconnect/resiliency-recommendation/)\.

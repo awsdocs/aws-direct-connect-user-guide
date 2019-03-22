@@ -26,12 +26,18 @@ A connection of less than 1 Gbps supports only one virtual interface\.
 
 ## Prerequisites for Virtual Interfaces<a name="vif-prerequisites"></a>
 
+Before you create a virtual interface, do the following:
++ Create a connection\. For more information, see [Creating a Connection](create-connection.md)\.
++ Create a link aggregation group \(LAG\) when you have multiple connections that you want to treat as a single one\. For information, see [Associating a Connection with a LAG](associate-connection-with-lag.md)\.
+
 To create a virtual interface, you need the following information:
 + **Connection**: The AWS Direct Connect connection or link aggregation group \(LAG\) for which you are creating the virtual interface\.
 + **Virtual interface name**: A name for the virtual interface\.
 + **Virtual interface owner**: If you're creating the virtual interface for another account, you need the AWS account ID of the other account\.
 + \(Private virtual interface only\) **Connection to**: For connecting to a VPC in the same region, you need the virtual private gateway for your VPC\. The ASN for the Amazon side of the BGP session is inherited from the virtual private gateway\. When you create a virtual private gateway, you can specify your own private ASN\. Otherwise, Amazon provides a default ASN\. For more information, see [Create a Virtual Private Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/SetUpVPNConnections.html#vpn-create-vpg) in the *Amazon VPC User Guide*\. For connecting to a VPC through a Direct Connect gateway, you need the Direct Connect gateway\. For more information, see [Direct Connect Gateways](https://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-gateways.html)\.
 + **VLAN**: A unique virtual local area network \(VLAN\) tag that's not already in use on your connection\. The value must be between 1 and 4094 and must comply with the Ethernet 802\.1Q standard\. This tag is required for any traffic traversing the AWS Direct Connect connection\.
+
+  If you have a hosted connection, your AWS Direct Connect Partner provides this value\. You can’t modify the value after you have created the virtual interface\.
 + **Address family**: Whether the BGP peering session will be over IPv4 or IPv6\.
 + **Peer IP addresses**: A virtual interface can support a BGP peering session for IPv4, IPv6, or one of each \(dual\-stack\)\. You cannot create multiple BGP sessions for the same IP addressing family on the same virtual interface\. The IP address ranges are assigned to each end of the virtual interface for the BGP peering session\.
   + IPv4:

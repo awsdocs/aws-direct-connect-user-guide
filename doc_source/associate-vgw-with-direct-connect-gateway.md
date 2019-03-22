@@ -7,7 +7,7 @@ If you are planning to use the virtual private gateway for a Direct Connect gate
 
 **To associate a virtual private gateway**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. In the navigation pane, choose **Direct Connect Gateways** and select the Direct Connect gateway\.
 
@@ -21,7 +21,7 @@ You can view all of the virtual private gateways in all Regions that are associa
 
 **To disassociate a virtual private gateway**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. Use the Region selector to switch to the Region in which your virtual private gateway is located\.
 

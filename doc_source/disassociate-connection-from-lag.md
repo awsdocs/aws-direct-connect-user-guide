@@ -9,7 +9,7 @@ Your connection to AWS is broken off during disassociation\.
 
 **To disassociate a connection from a LAG**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home/](https://console.aws.amazon.com/directconnect/v2/home/)\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. In the left pane, choose **LAGs**\.
 

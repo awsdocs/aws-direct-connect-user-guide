@@ -23,7 +23,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Viewing Connection Details](viewdetails.md)
    + [Updating a Connection](updateconnection.md)
    + [Deleting Connections](deleteconnection.md)
-   + [Accepting a Hosted Connection](acceptSub1Gconnection.md)
+   + [Accepting a Hosted Connection](accept-hosted-connection.md)
 + [Requesting Cross Connects at AWS Direct Connect Locations](Colocation.md)
 + [AWS Direct Connect Virtual Interfaces](WorkingWithVirtualInterfaces.md)
    + [Creating a Virtual Interface](create-vif.md)
