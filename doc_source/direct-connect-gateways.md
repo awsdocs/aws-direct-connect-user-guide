@@ -18,8 +18,7 @@ Complete the following steps for this configuration\.
 
 The following rules apply:
 + You cannot use a Direct Connect gateway to connect to a VPC in the China Regions\.
-+ You cannot use a Direct Connect gateway that's in your account to connect to a VPC that's in a different AWS account\. To associate a Direct Connect gateway with a virtual private gateway, it must be in the same account as the virtual private gateway\.
-+ There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect Limits](limits.md)
++ There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect Limits](limits.md)\.
 + The VPCs to which you connect through a Direct Connect gateway cannot have overlapping CIDR blocks\. If you add an IPv4 CIDR block to a VPC that's associated with a Direct Connect gateway, ensure that the CIDR block does not overlap with an existing CIDR block for any other associated VPC\. For more information, see [Adding IPv4 CIDR Blocks to a VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#vpc-resize) in the *Amazon VPC User Guide*\.
 + You cannot create a public virtual interface to a Direct Connect gateway\.
 + A Direct Connect gateway supports communication between attached private virtual interfaces and associated virtual private gateways only\. The following traffic flows are not supported:
@@ -39,3 +38,4 @@ To use your AWS Direct Connect connection with a VPC in another account, you can
 + [Creating a Private Virtual Interface to the Direct Connect Gateway](create-private-vif-for-gateway.md)
 + [Adding or Removing Direct Connect Gateway Tags](modify-tags-gateway.md)
 + [Deleting Direct Connect Gateways](delete-direct-connect-gateway.md)
++ [Associating a Virtual Private Gateway Across Accounts](multi-account-associate-vgw.md)

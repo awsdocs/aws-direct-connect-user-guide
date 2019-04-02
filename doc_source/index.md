@@ -46,6 +46,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Creating a Private Virtual Interface to the Direct Connect Gateway](create-private-vif-for-gateway.md)
    + [Adding or Removing Direct Connect Gateway Tags](modify-tags-gateway.md)
    + [Deleting Direct Connect Gateways](delete-direct-connect-gateway.md)
+   + [Associating a Virtual Private Gateway Across Accounts](multi-account-associate-vgw.md)
 + [Control Access to AWS Direct Connect Using AWS Identity and Access Management](using_iam.md)
 + [Using Tags with AWS Direct Connect](using-tags.md)
 + [Using the AWS CLI](using-cli.md)

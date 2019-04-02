@@ -1,6 +1,6 @@
 # Associating and Disassociating Virtual Private Gateways<a name="associate-vgw-with-direct-connect-gateway"></a>
 
-To associate a virtual private gateway with a Direct Connect gateway, you must be in the Region in which the virtual private gateway is located\. The virtual private gateway must be attached to the VPC to which you want to connect\. For more information, see [Create a Virtual Private Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_VPN.html#vpn-create-vpg) in the *Amazon VPC User Guide*\.
+The virtual private gateway must be attached to the VPC to which you want to connect\. For more information, see [Create a Virtual Private Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_VPN.html#vpn-create-vpg) in the *Amazon VPC User Guide*\.
 
 **Note**  
 If you are planning to use the virtual private gateway for a Direct Connect gateway and a dynamic VPN connection, set the ASN on the virtual private gateway to the value you require for the VPN connection\. Otherwise, the ASN on the virtual private gateway can be set to any permitted value\. The Direct Connect gateway advertises all connected VPCs over the ASN assigned to it\.
@@ -9,23 +9,23 @@ If you are planning to use the virtual private gateway for a Direct Connect gate
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
-1. In the navigation pane, choose **Direct Connect Gateways** and select the Direct Connect gateway\.
+1. In the navigation pane, choose **Direct Connect gateways** and select the Direct Connect gateway\.
 
 1. Choose **View details**\.
 
-1. Choose **Virtual gateways associations** and choose **Associate virtual private gateway**\.
+1. Choose **Gateways associations** and choose **Associate gateway**\.
 
-1. For **Virtual private gateway**, choose the virtual private gateways to associate, and choose **Associate virtual private gateway**\.
+1. For **Gateways**, choose the virtual private gateways to associate, and choose **Associate gateway**\.
 
-You can view all of the virtual private gateways in all Regions that are associated with the Direct Connect gateway by choosing **Virtual Gateway Associations**\. To disassociate a virtual private gateway from a Direct Connect gateway, you must be in the Region in which the virtual private gateway is located\.
+1. \(Optional\) To specify a list of prefixes to be allowed from the virtual private gateway, add the prefixes to **Allowed prefixes**, separating them using commas\.
+
+You can view all of the virtual private gateways that are associated with the Direct Connect gateway by choosing **Gateway associations**\. 
 
 **To disassociate a virtual private gateway**
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
-1. Use the Region selector to switch to the Region in which your virtual private gateway is located\.
-
-1. In the navigation pane, choose **Direct Connect Gateways** and select the Direct Connect gateway\.
+1. In the navigation pane, choose **Direct Connect gateways** and select the Direct Connect gateway\.
 
 1. Choose **View details**\.
 

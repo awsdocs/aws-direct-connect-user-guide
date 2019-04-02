@@ -6,7 +6,7 @@ If you no longer require a Direct Connect gateway, you can delete it\. You must 
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
-1. In the navigation pane, choose **Direct Connect Gateways**\.
+1. In the navigation pane, choose **Direct Connect gateways**\.
 
 1. Select the gateways and choose **Delete**\.
 

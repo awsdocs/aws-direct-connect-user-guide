@@ -6,7 +6,7 @@ Tags provide a way to identify the Direct Connect gateway\. Add or remove a tag\
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
-1. In the navigation pane, choose **Direct Connect Gateways**\.
+1. In the navigation pane, choose **Direct Connect gateways**\.
 
 1.  Select the Direct Connect gateway and choose **Edit**\.
 
@@ -16,7 +16,7 @@ Tags provide a way to identify the Direct Connect gateway\. Add or remove a tag\
    + For **Key**, enter the key name\.
    + For **Value**, enter the key value
 
-   \[Remove a tag\] Beside the tag, choose **Remove tag**\.
+   \[Remove a tag\] Next to the tag, choose **Remove tag**\.
 
 1. Choose **Edit Direct Connect gateway**\.
 
