@@ -23,5 +23,5 @@ You can update the connection name, add a tag to the connection, or remove a tag
 1. Choose **Edit connection**\.
 
 **To add a tag or remove a tag using the command line**
-+ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/tag-resource.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/tag-resource.html) \(AWS CLI\) 
-+ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/untag-resource.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/untag-resource.html) \(AWS CLI\) 
++ [tag\-resource](https://docs.aws.amazon.com/cli/latest/reference/directconnect/tag-resource.html) \(AWS CLI\) 
++ [untag\-resource](https://docs.aws.amazon.com/cli/latest/reference/directconnect/untag-resource.html) \(AWS CLI\) 

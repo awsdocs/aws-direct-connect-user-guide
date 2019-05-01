@@ -14,6 +14,6 @@ After you have created a public virtual interface and established a BGP session 
 
 ## Accessing VPCs in a Remote Region<a name="inter-region-private"></a>
 
-You can create a *Direct Connect gateway* in any public Region\. Use it to connect your AWS Direct Connect connection over a private virtual interface to VPCs in your account that are located in different Regions\. For more information, see [Direct Connect Gateways](direct-connect-gateways.md)\.
+You can create a *Direct Connect gateway* in any public Region\. Use it to connect your AWS Direct Connect connection over a private virtual interface to VPCs in your account that are located in different Regions or to a transit gateway\. For more information, see [Working with Direct Connect Gateways](direct-connect-gateways.md)\.
 
 Alternatively, you can create a public virtual interface for your AWS Direct Connect connection and then establish a VPN connection to your VPC in the remote Region\. For more information about configuring VPN connectivity to a VPC, see [Scenarios for Using Amazon Virtual Private Cloud](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenarios.html) in the *Amazon VPC User Guide*\. 

@@ -1,6 +1,6 @@
 # Accepting a Hosted Virtual Interface<a name="accepthostedvirtualinterface"></a>
 
-Before you can begin using a hosted virtual interface, you must accept the virtual interface\. For a private virtual interface, you must also have an existing virtual private gateway or Direct Connect gateway\.
+Before you can begin using a hosted virtual interface, you must accept the virtual interface\. For a private virtual interface, you must also have an existing virtual private gateway or Direct Connect gateway\. For a transit virtual interface, you must have an existing transit gateway or Direct Connect gateway\.
 
 **To accept a hosted virtual interface**
 
@@ -8,13 +8,13 @@ Before you can begin using a hosted virtual interface, you must accept the virtu
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
-1. Select the virtual interface and choose **View details**\.
+1. Select the virtual interface and then choose **View details**\.
 
 1. Choose **Accept**\.
 
-1. \(Private virtual interface\) In the **Accept virtual interface** dialog box, select a virtual private gateway or Direct Connect gateway, and choose **Accept**\.
+1. \(Private virtual interface\) In the **Accept virtual interface** dialog box, select a virtual private gateway or Direct Connect gateway, and then choose **Accept**\.
 
-1. After you've accepted the hosted virtual interface, the owner of the AWS Direct Connect connection can download the router configuration file\. The **Download router configuration** option is not available for the account that accepts the hosted virtual interface\.
+1. After you accept the hosted virtual interface, the owner of the AWS Direct Connect connection can download the router configuration file\. The **Download router configuration** option is not available for the account that accepts the hosted virtual interface\.
 
 **To accept a hosted private virtual interface using the command line or API**
 + [confirm\-private\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/confirm-private-virtual-interface.html) \(AWS CLI\)
@@ -23,3 +23,7 @@ Before you can begin using a hosted virtual interface, you must accept the virtu
 **To accept a hosted public virtual interface using the command line or API**
 + [confirm\-public\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/confirm-public-virtual-interface.html) \(AWS CLI\)
 + [ConfirmPublicVirtualInterface](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_ConfirmPublicVirtualInterface.html) \(AWS Direct Connect API\)
+
+**To accept a hosted transit virtual interface using the command line or API**
++ [confirm\-transit\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/confirmtransit-virtual-interface.html) \(AWS CLI\)
++ [ConfirmTransitVirtualInterface](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_ConfirTransitVirtualInterface.html) \(AWS Direct Connect API\)

@@ -14,7 +14,7 @@ You can view the current status of your virtual interface\. Details include:
 
 1. In the left pane, choose **Virtual Interfaces**\.
 
-1. Select the virtual interface and choose **View details**\.
+1. Select the virtual interface and then choose **View details**\.
 
 **To describe virtual interfaces using the command line or API**
 + [describe\-virtual\-interfaces](https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-virtual-interfaces.html) \(AWS CLI\)

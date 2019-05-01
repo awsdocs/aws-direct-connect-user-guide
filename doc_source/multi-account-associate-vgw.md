@@ -10,7 +10,16 @@ Consider this scenario of a Direct Connect gateway owner \(Account Z\) who owns 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/ma-vpc.png)
 
+## Allowed Prefixes<a name="allowed-prefixes"></a>
+
+When you associate a virtual private gateway with a Direct Connect gateway, you specify a list of Amazon VPC prefixes to advertise to the Direct Connect gateway\. The prefix list acts as a filter that allows the same CIDRs, or smaller CIDRs to be advertised to the Direct Connect gateway\. You must set the **Allowed prefixes** to a range that is the same or wider than the VPC CIDR because we provision entire VPC CIDR on the virtual private gateway\. 
+
+Consider the case where the VPC CIDR is 10\.0\.0\.0/16\. You can set the **Allowed prefixes** to 10\.0\.0\.0/16 \(the VPC CIDR value\), or 10\.0\.0\.0/15 \( a value that is wider than the VPC CIDR\)\. 
+
+For more information on how allowed prefixes interact with virtual private gateways and transit gateways, see [Allowed Prefixes Interactions](allowed-to-prefixes.md)\.
+
 **Topics**
++ [Allowed Prefixes](#allowed-prefixes)
 + [Creating an Association Proposal](#multi-account-create-proposal)
 + [Accepting or Rejecting an Association Proposal](#multi-account-accept-reject-proposal)
 + [Updating the Allowed Prefixes for an Association](#multi-account-update-proposal-routes)
@@ -104,7 +113,7 @@ If you're the owner of the Direct Connect gateway, update the allowed prefixes w
 
 ## Deleting an Association Proposal<a name="multi-account-delete-proposal"></a>
 
-The owner of the virtual private gateway can delete the Direct Connect gateway association proposal if it is still pending acceptance\. After an association proposal is accepted, you can't delete it, but you can disassociate the virtual private gateway from the Direct Connect gateway\. For more information, see [Associating and Disassociating Virtual Private Gateways](associate-vgw-with-direct-connect-gateway.md)\.
+The owner of the virtual private gateway can delete the Direct Connect gateway association proposal if it is still pending acceptance\. After an association proposal is accepted, you can't delete it, but you can disassociate the virtual private gateway from the Direct Connect gateway\. For more information, see [Associating and Disassociating Virtual Private Gateways](virtualgateways.md#associate-vgw-with-direct-connect-gateway)\.
 
 **To delete an association proposal**
 

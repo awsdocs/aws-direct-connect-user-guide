@@ -37,7 +37,7 @@ If you do not apply any community tags, prefixes are advertised to all public AW
 
 The communities `7224:1` – `7224:65535` are reserved by AWS Direct Connect\.
 
-In addition, the well\-known `NO_EXPORT` BGP community is supported for both public and private virtual interfaces\.
+In addition, the well\-known `NO_EXPORT` BGP community is supported for both public and private virtual interfaces, and transit virtual interfaces\.
 
 AWS Direct Connect also provides BGP community tags on advertised Amazon routes\. If you're using AWS Direct Connect to access public AWS services, this enables you to create filters based on these community tags\. 
 
@@ -50,7 +50,7 @@ Communities that are not supported for an AWS Direct Connect public connection a
 
 ### Local Preference BGP Communities<a name="local-pref-bgp-communities"></a>
 
-You can use local preference BGP community tags to achieve load balancing and route preference for incoming traffic to your network\. For each prefix that you advertise over a BGP session, you can apply a community tag to indicate the priority of the associated path for returning traffic\. Local preference BGP community tags are supported for private virtual interfaces\.
+You can use local preference BGP community tags to achieve load balancing and route preference for incoming traffic to your network\. For each prefix that you advertise over a BGP session, you can apply a community tag to indicate the priority of the associated path for returning traffic\. Local preference BGP community tags are supported for private virtual interfaces, and transit virtual interfaces\.
 
 The following local preference BGP community tags are supported:
 + `7224:7100`—Low preference

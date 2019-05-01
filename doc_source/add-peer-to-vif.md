@@ -16,13 +16,13 @@ Use the following procedure to add a BGP peer\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
-1. Select the virtual interface and choose **View details**\.
+1. Select the virtual interface and then choose **View details**\.
 
 1. Choose **Add peering**\.
 
 1. \(Private virtual interface\) To add IPv4 BGP peers, do the following:
    + Choose **IPv4**\.
-   + To specify these IP addresses yourself, for **Your router peer ip**, enter the destination IPv4 CIDR address to which Amazon should send traffic\. In the **Amazon router peer ip** field, enter the IPv4 CIDR address to use to send traffic to AWS\.  
+   + To specify these IP addresses yourself, for **Your router peer ip**, enter the destination IPv4 CIDR address to which Amazon should send traffic\. For **Amazon router peer ip**, enter the IPv4 CIDR address to use to send traffic to AWS\.  
 ![\[Add BGP peering for IPv4\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/add_bgp_peering.png)
 
 1. \(Public virtual interface\) To add IPv4 BGP peers, do the following:
@@ -31,7 +31,7 @@ Use the following procedure to add a BGP peer\.
 
 1. \(Private or public virtual interface\) To add IPv6 BGP peers, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses; you cannot specify custom IPv6 addresses\.
 
-1. In the **BGP ASN** field, type the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway, for example, a number between 1 and 65534\. For a public virtual interface, the ASN must be private or already whitelisted for the virtual interface\.
+1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway, for example, a number between 1 and 65534\. For a public virtual interface, the ASN must be private or already whitelisted for the virtual interface\.
 
 1. To provide your own BGP key, for **BGP Authentication Key**, enter your BGP MD5 key\.
 
@@ -51,9 +51,9 @@ If your virtual interface has both an IPv4 and IPv6 BGP peering session, you can
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
-1. Select the virtual interface and choose **View details**\.
+1. Select the virtual interface and then choose **View details**\.
 
-1. Under **Peerings,** select the peering that you want to delete and choose **Delete**\.
+1. Under **Peerings,** select the peering that you want to delete and then choose **Delete**\.
 
 1. In the **Remove peering from virtual interface** dialog box, choose **Delete**\.
 

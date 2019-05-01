@@ -1,10 +1,13 @@
 # AWS Direct Connect Virtual Interfaces<a name="WorkingWithVirtualInterfaces"></a>
 
-You must create a virtual interface to begin using your AWS Direct Connect connection\. You can create a private virtual interface to connect to your VPC\. Or, you can create a public virtual interface to connect to AWS services that aren't in a VPC, such as Amazon S3 and Glacier\. You can configure multiple virtual interfaces on a single AWS Direct Connect connection\. For private virtual interfaces, you need one private virtual interface for each VPC to connect to from the AWS Direct Connect connection, or you can use a AWS Direct Connect gateway\. For more information, see [Direct Connect Gateways](https://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-gateways.html)\.
+You must create one of the following virtual interfaces to begin using your AWS Direct Connect connection\. 
++ Private virtual interface: A private virtual interface should be used to access an Amazon VPC using private IP addresses\.
++ Public virtual interface: A public virtual interface can access all AWS public services using public IP addresses\.
++ Transit virtual interface: A transit virtual interface is a VLAN that transports traffic from a Direct Connect gateway to one or more transit gateways\.
 
 To connect to other AWS services using IPv6 addresses, check the service documentation to verify that IPv6 addressing is supported\.
 
-We advertise appropriate Amazon prefixes to you so you can reach either your VPCs or other AWS services\. You can access all AWS prefixes through this connection; for example, Amazon EC2, Amazon S3, and Amazon\.com\. You do not have access to non\-Amazon prefixes\. For a current list of prefixes advertised by AWS, see [AWS IP Address Ranges](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in the *Amazon Web Services General Reference*\.
+We advertise appropriate Amazon prefixes to you so that you can reach either your VPCs or other AWS services\. You can access all AWS prefixes through this connection; for example, Amazon EC2, Amazon S3, and Amazon\.com\. You do not have access to non\-Amazon prefixes\. For a current list of prefixes advertised by AWS, see [AWS IP Address Ranges](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in the *Amazon Web Services General Reference*\.
 
 **Note**  
 We recommend that you use a firewall filter \(based on the source/destination address of packets\) to control traffic to and from some prefixes\. If you're using a prefix filter \(route map\), ensure that it accepts prefixes with an exact match or longer\. Prefixes advertised from AWS Direct Connect may be aggregated and may differ from the prefixes defined in your prefix filter\.
@@ -18,7 +21,7 @@ A connection of less than 1 Gbps supports only one virtual interface\.
 + [Creating a Virtual Interface](create-vif.md)
 + [Viewing Virtual Interface Details](viewvifdetails.md)
 + [Adding or Deleting a BGP Peer](add-peer-to-vif.md)
-+ [Setting Network MTU](set-jumbo-frames-vif.md)
++ [Setting Network MTU for Private Virtual Interfaces or Transit Virtual Interfaces](set-jumbo-frames-vif.md)
 + [Adding or Removing Virtual Interface Tags](modify-tags-vif.md)
 + [Deleting Virtual Interfaces](deletevif.md)
 + [Creating a Hosted Virtual Interface](createhostedvirtualinterface.md)
@@ -51,3 +54,4 @@ To create a virtual interface, you need the following information:
   + IPv4: The IPv4 CIDR must not overlap with another public IPv4 CIDR announced using AWS Direct Connect\. If you do not own public IPv4 addresses, your network provider might be able to provide you with a public IPv4 CIDR\. If not, [contact AWS Support](https://aws.amazon.com/support/createCase) to request a public IPv4 CIDR \(and provide a use case in your request\)\.
   + IPv6: Specify a prefix length of /64 or shorter\.
 + \(Private virtual interface only\) **Jumbo frames**: The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find **Jumbo Frame Capable** on the **Summary** tab\.
++ \(Transit virtual interface only\) **Jumbo frames**: The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 8500 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find **Jumbo Frame Capable** on the **Summary** tab\.

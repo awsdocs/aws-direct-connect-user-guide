@@ -8,7 +8,7 @@ Delete one or more virtual interfaces\. Before you can delete a connection, you 
 
 1. In the left pane, choose **Virtual Interfaces**\.
 
-1. Select the virtual interfaces and choose **Delete**\.
+1. Select the virtual interfaces and then choose **Delete**\.
 
 1. In the **Delete** confirmation dialog box, choose **Delete**\.
 

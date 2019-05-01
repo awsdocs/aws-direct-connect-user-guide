@@ -32,5 +32,5 @@ If you adjust the threshold value for the minimum number if operational connecti
 + [UpdateLag](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateLag.html) \(AWS Direct Connect API\)
 
 **To add a tag or remove a tag using the command line**
-+ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/tag-resource.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/tag-resource.html) \(AWS CLI\) 
-+ [https://docs.aws.amazon.com/cli/latest/reference/directconnect/untag-resource.html](https://docs.aws.amazon.com/cli/latest/reference/directconnect/untag-resource.html) \(AWS CLI\) 
++ [tag\-resource](https://docs.aws.amazon.com/cli/latest/reference/directconnect/tag-resource.html) \(AWS CLI\) 
++ [untag\-resource](https://docs.aws.amazon.com/cli/latest/reference/directconnect/untag-resource.html) \(AWS CLI\) 
