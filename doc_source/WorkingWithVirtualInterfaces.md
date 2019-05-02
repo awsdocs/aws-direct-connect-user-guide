@@ -7,6 +7,7 @@ You must create one of the following virtual interfaces to begin using your AWS 
 
 To connect to other AWS services using IPv6 addresses, check the service documentation to verify that IPv6 addressing is supported\.
 
+**Public Interface Only**
 We advertise appropriate Amazon prefixes to you so that you can reach either your VPCs or other AWS services\. You can access all AWS prefixes through this connection; for example, Amazon EC2, Amazon S3, and Amazon\.com\. You do not have access to non\-Amazon prefixes\. For a current list of prefixes advertised by AWS, see [AWS IP Address Ranges](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in the *Amazon Web Services General Reference*\.
 
 **Note**  
