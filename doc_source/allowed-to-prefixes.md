@@ -2,7 +2,7 @@
 
 ## Transit Gateway Associations<a name="allowed-to-prefixes-transit-gateway"></a>
 
-For a transit gateway, association, you provision the allowed prefixes list on the Direct Connect gateway\. The list is used to route traffic from on\-premises to AWS into the transit gateway even if the VPCs attached to the transit gateway don not have assigned CIDRs\. Prefixes in the Direct Connect gateway allowed prefix list originate on the Direct Connect gateway and are advertised to the on\-premises network\.
+For a transit gateway, association, you provision the allowed prefixes list on the Direct Connect gateway\. The list is used to route traffic from on\-premises to AWS into the transit gateway even if the VPCs attached to the transit gateway do not have assigned CIDRs\. Prefixes in the Direct Connect gateway allowed prefix list originate on the Direct Connect gateway and are advertised to the on\-premises network\.
 
 For example, consider the scenario where you have a VPC with CIDR 10\.0\.0\.0/16 is attached to a transit gateway\.
 + When the allowed prefixes list is set to 22\.0\.0\.0/24, you receive 22\.0\.0\.0/24 via BGP on your transit virtual interface\. You do not receive 10\.0\.0\.0/16 because we directly provision the prefixes that are in the allowed prefix list\.
