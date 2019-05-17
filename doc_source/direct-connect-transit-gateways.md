@@ -24,6 +24,7 @@ The following rules apply:
 + There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect Limits](limits.md)\.
 + A Direct Connect gateway supports communication between attached transit virtual interfaces and associated transit gateways only\. 
 + You cannot associate a transit gateway with more than one Direct Connect gateway\.
++ You can create a Transit VIF in any location but the transit gateway has to reside in a US region, for now\.
 
 ## Associating and Disassociating Transit Gateways<a name="associate-tgw-with-direct-connect-gateway"></a>
 
