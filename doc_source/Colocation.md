@@ -88,6 +88,8 @@ If the cross connect is not completed within 90 days, the authority granted by t
 | --- | --- | 
 | CIDS Jiachuang IDC, Beijing | Contact [dx\-order@sinnet\.com\.cn](mailto:dx-order@sinnet.com.cn)\. | 
 | Sinnet Jiuxianqiao IDC, Beijing | Contact [dx\-order@sinnet\.com\.cn](mailto:dx-order@sinnet.com.cn)\. | 
+| GDS No\. 3 Data Center, Shanghai | Contact [dx@nwcdcloud\.cn](mailto:ddx@nwcdcloud.cn)\. | 
+| GDS No\. 3 Data Center, Shenzhen | Contact [dx@nwcdcloud\.cn](mailto:ddx@nwcdcloud.cn)\. | 
 
 ## China \(Ningxia\)<a name="cross-connect-cn-northwest-1"></a>
 

@@ -8,7 +8,6 @@ Use *AWS Direct Connect gateway* to connect your VPCs\. You associate an *AWS Di
 
 **Topics**
 + [Creating a Direct Connect Gateway](#create-direct-connect-gateway)
-+ [Adding or Removing Direct Connect Gateway Tags](#modify-tags-gateway)
 + [Deleting Direct Connect Gateways](#delete-direct-connect-gateway)
 
 ## Creating a Direct Connect Gateway<a name="create-direct-connect-gateway"></a>
@@ -31,32 +30,6 @@ You can create a Direct Connect gateway in any supported public Region\.
 **To create a Direct Connect gateway using the command line or API**
 + [create\-direct\-connect\-gateway](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-direct-connect-gateway.html) \(AWS CLI\)
 + [CreateDirectConnectGateway](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateDirectConnectGateway.html) \(AWS Direct Connect API\)
-
-## Adding or Removing Direct Connect Gateway Tags<a name="modify-tags-gateway"></a>
-
-Tags provide a way to identify the Direct Connect gateway\. You can add or remove a tag\.
-
-**To add or remove a Direct Connect gateway tag**
-
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
-
-1. In the navigation pane, choose **Direct Connect Gateways**\.
-
-1.  Select the Direct Connect gateway and choose **Edit**\.
-
-1. Add or remove a tag\.
-
-   \[Add a tag\] Choose **Add tag** and do the following:
-   + For **Key**, enter the key name\.
-   + For **Value**, enter the key value
-
-   \[Remove a tag\] Next to the tag, choose **Remove tag**\.
-
-1. Choose **Edit Direct Connect gateway**\.
-
-**To add a tag or remove a tag using the command line**
-+ [tag\-resource](https://docs.aws.amazon.com/cli/latest/reference/directconnect/tag-resource.html) \(AWS CLI\) 
-+ [untag\-resource](https://docs.aws.amazon.com/cli/latest/reference/directconnect/untag-resource.html) \(AWS CLI\) 
 
 ## Deleting Direct Connect Gateways<a name="delete-direct-connect-gateway"></a>
 

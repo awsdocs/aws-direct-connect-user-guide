@@ -12,7 +12,7 @@ Consider this scenario of a Direct Connect gateway owner \(Account Z\) who owns 
 
 ## Allowed Prefixes<a name="allowed-prefixes-transit-gateway"></a>
 
-For a transit gateway, association, you provision the allowed prefixes list on the Direct Connect gateway\. The list is used to route traffic from on\-premises to AWS into the transit gateway even if the VPCs attached to the transit gateway don not have assigned CIDRs\. Prefixes in the Direct Connect gateway allowed prefix list originate on the Direct Connect gateway and are advertised to the on\-premises network\. For more information on how allowed prefixes interact with transit gateways and virtual private gateways, see [Allowed Prefixes Interactions](allowed-to-prefixes.md)\.
+For a transit gateway, association, you provision the allowed prefixes list on the Direct Connect gateway\. The list is used to route traffic from on\-premises to AWS into the transit gateway even if the VPCs attached to the transit gateway do not have assigned CIDRs\. Prefixes in the Direct Connect gateway allowed prefix list originate on the Direct Connect gateway and are advertised to the on\-premises network\. For more information on how allowed prefixes interact with transit gateways and virtual private gateways, see [Allowed Prefixes Interactions](allowed-to-prefixes.md)\.
 
 **Topics**
 + [Allowed Prefixes](#allowed-prefixes-transit-gateway)

@@ -3,7 +3,7 @@
 You must create one of the following virtual interfaces to begin using your AWS Direct Connect connection\. 
 + Private virtual interface: A private virtual interface should be used to access an Amazon VPC using private IP addresses\.
 + Public virtual interface: A public virtual interface can access all AWS public services using public IP addresses\.
-+ Transit virtual interface: A transit virtual interface is a VLAN that transports traffic from a Direct Connect gateway to one or more transit gateways\.
++ Transit virtual interface: A transit virtual interface should be used to access one or more transit gateways associated with Direct Connect gateways\.
 
 To connect to other AWS services using IPv6 addresses, check the service documentation to verify that IPv6 addressing is supported\.
 
