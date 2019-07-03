@@ -1,6 +1,6 @@
 # Associating a Transit Gateway Across Accounts<a name="multi-account-associate-tgw"></a>
 
-You can associate a Direct Connect gateway with a transit gateway that's in a different AWS account\. The owner of the transit gateway creates an *association proposal* and the owner of the Direct Connect gateway must accept the association proposal\.
+You can associate an existing Direct Connect gateway or a new Direct gateway with a transit gateway that's in a different AWS account\. The owner of the transit gateway creates an *association proposal* and the owner of the Direct Connect gateway must accept the association proposal\.
 
 An association proposal can contain prefixes that will be allowed from the transit gateway\. The owner of the Direct Connect gateway can optionally override any requested prefixes in the association proposal\.
 

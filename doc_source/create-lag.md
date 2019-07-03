@@ -23,6 +23,14 @@ For existing connections, connectivity to AWS is interrupted during the creation
    + **Port speed**: The port speed for the connections\.
    + **Number of new connections**: The number of new connections to create\.
 
+1. \(Optional\) Add or remove a tag\.
+
+   \[Add a tag\] Choose **Add tag** and do the following:
+   + For **Key**, enter the key name\.
+   + For **Value**, enter the key value\.
+
+   \[Remove a tag\] Next to the tag, choose **Remove tag**\.
+
 1. Choose **Create LAG**\.
 
 **To create a LAG from existing connections**
@@ -37,6 +45,14 @@ For existing connections, connectivity to AWS is interrupted during the creation
    + **LAG name**: A name for the LAG\.
    + **Connection**: The Direct Connect connection to use for the LAG\.
    + **Minimum links**: The minimum number of connections that must be operational for the LAG itself to be operational\. If you do not specify a value, we assign a default value of 0\.
+
+1. \(Optional\) Add or remove a tag\.
+
+   \[Add a tag\] Choose **Add tag** and do the following:
+   + For **Key**, enter the key name\.
+   + For **Value**, enter the key value\.
+
+   \[Remove a tag\] Next to the tag, choose **Remove tag**\.
 
 1. Choose **Create LAG**\.
 

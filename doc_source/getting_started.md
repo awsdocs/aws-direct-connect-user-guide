@@ -69,6 +69,14 @@ You cannot use the AWS Direct Connect console to request a hosted connection\. I
 
    1. For **Port Speed**, choose the connection bandwidth\.
 
+   1. \(Optional\) Add or remove a tag\.
+
+      \[Add a tag\] Choose **Add tag** and do the following:
+      + For **Key**, enter the key name\.
+      + For **Value**, enter the key value\.
+
+      \[Remove a tag\] Next to the tag, choose **Remove tag**\.
+
 1. Choose **Create Connection**\.
 
 It can take up to 72 hours for AWS to review your request and provision a port for your connection\. During this time, you may receive an email with a request for more information about your use case or the specified location\. The email is sent to the email address that you used when you signed up for AWS\. You must respond within 7 days or the connection is deleted\.
@@ -161,7 +169,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 1. Under **Virtual interface type**, for **Type**, choose **Public**\.
 
-1. Under **Public Virtual Interface Settings**, do the following:
+1. Under **Public virtual interface settings**, do the following:
 
    1. For **Virtual interface name**, enter a name for the virtual interface\.
 
@@ -171,21 +179,29 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
    1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
 
-1. Under **Additional Settings**, do the following:
+1. Under **Additional settings**, do the following:
 
    1. To configure an IPv4 BGP or an IPv6 peer, do the following:
 
       \[IPv4\] To configure an IPv4 BGP peer, choose **IPv4** and do one of the following:
       + To specify these IP addresses yourself, for **Your router peer ip**, enter the destination IPv4 CIDR address to which Amazon should send traffic\. 
-      + For **Amazon router peer ip**, enter the IPv4 CIDR address to use to send traffic to AWS\.
+      + For **Amazon router peer IP**, enter the IPv4 CIDR address to use to send traffic to AWS\.
 
       \[IPv6\] To configure an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
 
+   1. To provide your own BGP key, enter your BGP MD5 key\.
+
+      If you do not enter a value, AWS generates a BGP key\.
+
    1. To advertise prefixes to Amazon, for **Prefixes you want to advertise**, enter the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\. 
 
-   1. To change the maximum transmission unit \(MTU\) from 1500 \(default\) to 9001 \(jumbo frames\), select **Jumbo MTU \(MTU size 9001\)**\.
+   1. \(Optional\) Add or remove a tag\.
 
-1. To advertise prefixes to Amazon, under **Additional Settings**, for **Prefixes you want to advertise**, enter the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\. 
+      \[Add a tag\] Choose **Add tag** and do the following:
+      + For **Key**, enter the key name\.
+      + For **Value**, enter the key value\.
+
+      \[Remove a tag\] Next to the tag, choose **Remove tag**\.
 
 1. Choose **Create virtual interface**\.
 
@@ -228,6 +244,14 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
    1. To advertise prefixes to Amazon, for **Prefixes you want to advertise**, enter the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\. 
 
    1. To change the maximum transmission unit \(MTU\) from 1500 \(default\) to 9001 \(jumbo frames\), select **Jumbo MTU \(MTU size 9001\)**\.
+
+   1. \(Optional\) Ador remove a tag\.
+
+      \[Add a tag\] Choose **Add tag** and do the following:
+      + For **Key**, enter the key name\.
+      + For **Value**, enter the key value\.
+
+      \[Remove a tag\] Next to the tag, choose **Remove tag**\.
 
 1. Choose **Create virtual interface**\.
 

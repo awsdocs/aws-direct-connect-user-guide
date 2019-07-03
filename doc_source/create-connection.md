@@ -8,21 +8,29 @@ If you do not have equipment at an AWS Direct Connect location, first contact an
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
-1. In the navigation pane, choose **Connections**\.
+1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
-1. Choose **Create connection**\.
+1. On the **AWS Direct Connect** screen, under **Get started**, choose **Create a connection**\.
 
-1. On the **Create connection** pane, under **Connection settings,** do the following:
+1. On the **Create Connection** pane, under **Connection settings,** do the following:
 
    1. For **Name**, enter a name for the connection\.
 
    1. For **Location**, select the appropriate AWS Direct Connect location\.
 
-   1. If applicable, for **Sub location**, choose the floor closest to you or your network provider\. This option is available only if the location has meet\-me rooms \(MMRs\) in multiple floors of the building\.
+   1. If applicable, for **Sub Location**, choose the floor closest to you or your network provider\. This option is only available if the location has meet\-me rooms \(MMRs\) in multiple floors of the building\.
 
-   1. For **Port speed**, choose the connection bandwidth\.
+   1. For **Port Speed**, choose the connection bandwidth\.
 
-1. Choose **Create connection**\.
+   1. \(Optional\) Add or remove a tag\.
+
+      \[Add a tag\] Choose **Add tag** and do the following:
+      + For **Key**, enter the key name\.
+      + For **Value**, enter the key value\.
+
+      \[Remove a tag\] Next to the tag, choose **Remove tag**\.
+
+1. Choose **Create Connection**\.
 
 ******To create a connection using the command line or API**
 + [create\-connection](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-connection.html) \(AWS CLI\)

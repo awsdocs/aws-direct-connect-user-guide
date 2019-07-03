@@ -136,6 +136,13 @@ If the cross connect is not completed within 90 days, the authority granted by t
 | Teraco CT1, Cape Town | Contact Teraco at [support@teraco\.co\.za](mailto:support@teraco.co.za) for existing Teraco customers or [connect@teraco\.co\.za](mailto:connect@teraco.co.za) for new customers\. | 
 | Teraco JB1, Johannesburg | Contact Teraco at [support@teraco\.co\.za](mailto:support@teraco.co.za) for existing Teraco customers or [connect@teraco\.co\.za](mailto:connect@teraco.co.za) for new customers\. | 
 
+## EU \(Italy\)<a name="cross-connect-italy"></a>
+
+
+| Location | How to request a connection | 
+| --- | --- | 
+| CDLAN srl Via Caldera 21, Milano | Contact CDLAN at [sales@cdlan\.it](mailto:mailto:sales@cdlan.it)\. | 
+
 ## EU \(London\)<a name="cross-connect-eu-west-2"></a>
 
 

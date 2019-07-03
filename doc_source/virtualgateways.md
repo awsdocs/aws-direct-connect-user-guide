@@ -122,6 +122,14 @@ If you're accepting a hosted private virtual interface, you can associate it wit
 
    1. To change the maximum transmission unit \(MTU\) from 1500 \(default\) to 9001 \(jumbo frames\), select **Jumbo MTU \(MTU size 9001\)**\.
 
+   1. \(Optional\) Ador remove a tag\.
+
+      \[Add a tag\] Choose **Add tag** and do the following:
+      + For **Key**, enter the key name\.
+      + For **Value**, enter the key value\.
+
+      \[Remove a tag\] Next to the tag, choose **Remove tag**\.
+
 1. Choose **Create virtual interface**\.
 
 After you've created the virtual interface, you can download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](create-vif.md#vif-router-config)\.

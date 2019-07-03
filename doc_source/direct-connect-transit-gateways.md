@@ -112,6 +112,14 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
 
    1. To change the maximum transmission unit \(MTU\) from 1500 \(default\) to 8500 \(jumbo frames\), select **Jumbo MTU \(MTU size 8500\)**\.
 
+   1. \(Optional\) Add or remove a tag\.
+
+      \[Add a tag\] Choose **Add tag** and do the following:
+      + For **Key**, enter the key name\.
+      + For **Value**, enter the key value\.
+
+      \[Remove a tag\] Next to the tag, choose **Remove tag**\.
+
 1. Choose **Create virtual interface**\.
 
 After you've created the virtual interface, you can download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](create-vif.md#vif-router-config)\.

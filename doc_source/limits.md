@@ -9,7 +9,7 @@ The following table lists the limits related to AWS Direct Connect\. Unless indi
 | Transit virtual interfaces per AWS Direct Connect dedicated connection |  1  | This limit cannot be increased\. | 
 | Private, public, or transit virtual interfaces per AWS Direct Connect hosted connection1 | 1 | This limit cannot be increased\. | 
 |  Active AWS Direct Connect dedicated connections per Region per account  | 10 |  | 
-|  Routes per Border Gateway Protocol \(BGP\) session on a private virtual interface  |  100  |  This limit cannot be increased\.  | 
+|  Routes per Border Gateway Protocol \(BGP\) session on a private virtual interface If you advertise more than 100 routes over the BGP session, the BGP session will go into an idle state\.  |  100  |  This limit cannot be increased\.  | 
 |  Routes per Border Gateway Protocol \(BGP\) session on a public virtual interface  |  1,000  |  This limit cannot be increased\.  | 
 |  Dedicated connections per link aggregation group \(LAG\)  | 4 |  | 
 |  Link aggregation groups \(LAGs\) per Region  |  10  |  | 

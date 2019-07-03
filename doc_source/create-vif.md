@@ -45,6 +45,14 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
    1. To advertise prefixes to Amazon, for **Prefixes you want to advertise**, enter the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\. 
 
+   1. \(Optional\) Add or remove a tag\.
+
+      \[Add a tag\] Choose **Add tag** and do the following:
+      + For **Key**, enter the key name\.
+      + For **Value**, enter the key value\.
+
+      \[Remove a tag\] Next to the tag, choose **Remove tag**\.
+
 1. Choose **Create virtual interface**\.
 
 1. Download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](#vif-router-config)\.
@@ -99,6 +107,14 @@ If you use the VPC wizard to create a VPC, route propagation is automatically en
 
    1. To change the maximum transmission unit \(MTU\) from 1500 \(default\) to 9001 \(jumbo frames\), select **Jumbo MTU \(MTU size 9001\)**\.
 
+   1. \(Optional\) Ador remove a tag\.
+
+      \[Add a tag\] Choose **Add tag** and do the following:
+      + For **Key**, enter the key name\.
+      + For **Value**, enter the key value\.
+
+      \[Remove a tag\] Next to the tag, choose **Remove tag**\.
+
 1. Choose **Create virtual interface**\.
 
 1. Download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](#vif-router-config)\.
@@ -151,6 +167,14 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
       \[IPv6\] To configure an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
 
    1. To change the maximum transmission unit \(MTU\) from 1500 \(default\) to 8500 \(jumbo frames\), select **Jumbo MTU \(MTU size 8500\)**\.
+
+   1. \(Optional\) Add or remove a tag\.
+
+      \[Add a tag\] Choose **Add tag** and do the following:
+      + For **Key**, enter the key name\.
+      + For **Value**, enter the key value\.
+
+      \[Remove a tag\] Next to the tag, choose **Remove tag**\.
 
 1. Choose **Create virtual interface**\.
 
