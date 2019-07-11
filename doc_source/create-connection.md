@@ -8,8 +8,6 @@ If you do not have equipment at an AWS Direct Connect location, first contact an
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
-
 1. On the **AWS Direct Connect** screen, under **Get started**, choose **Create a connection**\.
 
 1. On the **Create Connection** pane, under **Connection settings,** do the following:
