@@ -1,6 +1,6 @@
 # Creating a Hosted Virtual Interface<a name="createhostedvirtualinterface"></a>
 
-You can create a public or private hosted virtual interface\. Before you begin, ensure that you have read the information in [Prerequisites for Virtual Interfaces](WorkingWithVirtualInterfaces.md#vif-prerequisites)\.
+You can create a public, transit or private hosted virtual interface\. Before you begin, ensure that you have read the information in [Prerequisites for Virtual Interfaces](WorkingWithVirtualInterfaces.md#vif-prerequisites)\.
 
 ## Creating a Hosted Private Virtual Interface<a name="create-hosted-private-vif"></a>
 
@@ -44,7 +44,7 @@ You can create a public or private hosted virtual interface\. Before you begin, 
 
    1. To change the maximum transmission unit \(MTU\) from 1500 \(default\) to 9001 \(jumbo frames\), select **Jumbo MTU \(MTU size 9001\)**\.
 
-   1. \(Optional\) Ador remove a tag\.
+   1. \(Optional\) Add or remove a tag\.
 
       \[Add a tag\] Choose **Add tag** and do the following:
       + For **Key**, enter the key name\.

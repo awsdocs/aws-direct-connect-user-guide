@@ -2,6 +2,8 @@
 
 You can create a transit virtual interface to connect to a transit gateway, a public virtual interface to connect to public resources \(non\-VPC services\), or a private virtual interface to connect to a VPC\.
 
+To create a virtual interface for accounts within your AWS Organizations, or AWS Organizations that are different from yours, create a hosted virtual interface\. For more information, see [Creating a Hosted Virtual Interface](createhostedvirtualinterface.md)\.
+
 **Prerequisites**  
 Before you begin, ensure that you have read the information in [Prerequisites for Virtual Interfaces](WorkingWithVirtualInterfaces.md#vif-prerequisites)\.
 
@@ -107,7 +109,7 @@ If you use the VPC wizard to create a VPC, route propagation is automatically en
 
    1. To change the maximum transmission unit \(MTU\) from 1500 \(default\) to 9001 \(jumbo frames\), select **Jumbo MTU \(MTU size 9001\)**\.
 
-   1. \(Optional\) Ador remove a tag\.
+   1. \(Optional\) Add or remove a tag\.
 
       \[Add a tag\] Choose **Add tag** and do the following:
       + For **Key**, enter the key name\.
@@ -147,8 +149,6 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
    1. For **Connection**, choose the Direct Connect connection that you want to use for this interface\.
 
    1. For **Virtual interface owner**, choose **My AWS account** if the virtual interface is for your AWS account\. 
-
-   1. For **Gateway type**, choose **Direct Connect gateway**\.
 
    1.  For **Direct Connect gateway**, select the Direct Connect gateway\.
 

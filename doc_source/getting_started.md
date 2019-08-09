@@ -245,7 +245,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
    1. To change the maximum transmission unit \(MTU\) from 1500 \(default\) to 9001 \(jumbo frames\), select **Jumbo MTU \(MTU size 9001\)**\.
 
-   1. \(Optional\) Ador remove a tag\.
+   1. \(Optional\) Add or remove a tag\.
 
       \[Add a tag\] Choose **Add tag** and do the following:
       + For **Key**, enter the key name\.
@@ -310,7 +310,9 @@ There are different configuration choices available when you provision two dedic
 
 How you configure the connections doesn't affect redundancy, but it does affect the policies that determine how your data is routed over both connections\. We recommend that you configure both connections as active\.
 
-If you use a VPN connection for redundancy, ensure that you implement a health check and failover mechanism, and check your [route table routing](https://docs.aws.amazon.com/vpc/latest/userguide/SetUpVPNConnections.html#vpn-configure-routing)\.
+If you use a VPN connection for redundancy, ensure that you implement a health check and failover mechanism\. If you use either of the following configurations, then you need to check your [route table routing](https://docs.aws.amazon.com/vpc/latest/userguide/SetUpVPNConnections.html#vpn-configure-routing) to route to the new network interface\. 
++ You use your own instances for routing, for example the instance is the firewall\. 
++ You use your own instance that terminates a VPN connection\.
 
 To achieve high availability, we strongly recommend that you configure connections to different AWS Direct Connect locations\. For more information about high availability options, see [Multiple Data Center HA Network Connectivity](https://aws.amazon.com/answers/networking/aws-multiple-data-center-ha-network-connectivity/)\.
 

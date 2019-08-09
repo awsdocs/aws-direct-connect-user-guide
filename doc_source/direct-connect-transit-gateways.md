@@ -23,9 +23,16 @@ The following rules apply:
 + You cannot attach a Direct Connect gateway to a transit gateway when the Direct Connect gateway is already associated with a virtual private gateway or is attached to a private virtual interface\.
 + There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect Limits](limits.md)\.
 + A Direct Connect gateway supports communication between attached transit virtual interfaces and associated transit gateways only\. 
-+ The transit virtual interface can be in any location, but currently the transit gateway must reside in the United States\.
 
-For information about the Regions that support transit gateway associations, see [Use AWS Transit Gateway & Direct Connect to Centralize and Streamline Your Network Connectivity](https://aws.amazon.com/blogs/aws/use-aws-transit-gateway-direct-connect-to-centralize-and-streamline-your-network-connectivity/) at the AWS News Blog website\. 
+The following Regions support transit gateway associations:
++ US East \(N\. Virginia\)
++ US East \(Ohio\)
++ US West \(N\. California\) \- San Francisco
++ US West \(Oregon\) \- Portland
++ AWS GovCloud \(US\-East\)
++ AWS GovCloud \(US\-West\)
++ Canada \(Central\) Region \- Montreal
++ EU \(Ireland\) \- Dublin
 
 ## Associating and Disassociating Transit Gateways<a name="associate-tgw-with-direct-connect-gateway"></a>
 
@@ -91,8 +98,6 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
    1. For **Connection**, choose the Direct Connect connection that you want to use for this interface\.
 
    1. For **Virtual interface owner**, choose **My AWS account** if the virtual interface is for your AWS account\. 
-
-   1. For **Gateway type**, choose **Direct Connect gateway**\.
 
    1.  For **Direct Connect gateway**, select the Direct Connect gateway\.
 

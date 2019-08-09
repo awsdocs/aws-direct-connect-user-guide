@@ -9,6 +9,7 @@ The following diagram shows how AWS Direct Connect interfaces with your network\
 **Topics**
 + [AWS Direct Connect Components](#overview-components)
 + [Network Requirements](#overview_requirements)
++ [Pricing for AWS Direct Connect](#Paying)
 + [Accessing a Remote AWS Region](remote_regions.md)
 + [Routing Policies and BGP Communities](routing-and-bgp.md)
 
@@ -39,3 +40,13 @@ In addition, your network must meet the following conditions:
 AWS Direct Connect supports both the IPv4 and IPv6 communication protocols\. IPv6 addresses provided by public AWS services are accessible through AWS Direct Connect public virtual interfaces\.
 
 AWS Direct Connect supports an Ethernet frame size of 1522 or 9023 bytes \(14 bytes Ethernet header \+ 4 bytes VLAN tag \+ bytes for the IP datagram \+ 4 bytes FCS\) at the link layer\. You can set the MTU of your private virtual interfaces\. For more information, see [Setting Network MTU for Private Virtual Interfaces or Transit Virtual Interfaces](set-jumbo-frames-vif.md)\.
+
+## Pricing for AWS Direct Connect<a name="Paying"></a>
+
+AWS Direct Connect has two billing elements: port hours and outbound data transfer\. Port hour pricing is determined by capacity and connection type \(dedicated connection or hosted connection\)\. 
+
+For private virtual interfaces and transit virtual interfaces, Data Transfer Out \(DTO\) over AWS Direct Connect is charged per GB to the account that owns the virtual interface\. There are no additional charges to use multi\-account Direct Connect gateway\. 
+
+For publicly addressable AWS resources \(for example, Amazon S3 buckets, Classic EC2 instances, or EC2 traffic that goes through an internet gateway\), if the outbound traffic is destined for public prefixes owned by the same AWS payer account and actively advertised to AWS through an AWS Direct Connect public virtual Interface, the Data Transfer Out \(DTO\) usage is metered toward the resource owner at AWS Direct Connect data transfer rate\.
+
+For more information, see [Amazon Direct Connect Pricing](https://aws.amazon.com/directconnect/pricing/)\.

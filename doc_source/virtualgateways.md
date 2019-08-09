@@ -18,6 +18,8 @@ The following rules apply:
   + Direct communication between a virtual interface attached to a Direct Connect gateway and a VPN connection on a virtual private gateway that's associated with the same Direct Connect gateway\.
 + You cannot associate a virtual private gateway with more than one Direct Connect gateway and you cannot attach a private virtual interface to more than one Direct Connect gateway\.
 + A virtual private gateway that you associate with a Direct Connect gateway must be attached to a VPC\.
++ A virtual private gateway association proposal expires 7 days after it is created\.
++ An accepted virtual private gateway proposal, or a deleted virtual private gateway proposal remains visible for 3 days\.
 
 To connect your AWS Direct Connect connection to a VPC in the same Region only, you can create a Direct Connect gateway\. Or, you can create a private virtual interface and attach it to the virtual private gateway for the VPC\. For more information, see [Creating a Private Virtual Interface](create-vif.md#create-private-vif) and [VPN CloudHub](https://docs.aws.amazon.com/vpc/latest/userguide/VPN_CloudHub.html)\.
 
@@ -100,8 +102,6 @@ If you're accepting a hosted private virtual interface, you can associate it wit
 
    1. For **Virtual interface owner**, choose **My AWS account** if the virtual interface is for your AWS account\. 
 
-   1. For **Gateway type**, choose **Direct Connect gateway**\.
-
    1.  For **Direct Connect gateway**, select the Direct Connect gateway\.
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
@@ -122,7 +122,7 @@ If you're accepting a hosted private virtual interface, you can associate it wit
 
    1. To change the maximum transmission unit \(MTU\) from 1500 \(default\) to 9001 \(jumbo frames\), select **Jumbo MTU \(MTU size 9001\)**\.
 
-   1. \(Optional\) Ador remove a tag\.
+   1. \(Optional\) Add or remove a tag\.
 
       \[Add a tag\] Choose **Add tag** and do the following:
       + For **Key**, enter the key name\.

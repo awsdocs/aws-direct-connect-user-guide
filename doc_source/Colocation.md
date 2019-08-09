@@ -115,12 +115,10 @@ If the cross connect is not completed within 90 days, the authority granted by t
 | Interxion CPH2, Copenhagen | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
 | Interxion FRA6, Frankfurt | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
 | Interxion MAD2, Madrid | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
-| Interxion STO1, Stockholm | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
 | Interxion VIE2, Vienna | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
 | Interxion ZUR1, Zurich | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
 | IPB, Berlin | Contact IPB at [kontakt@ipb\.de](mailto:kontakt@ipb.de)\. | 
 | Equinix ITConic MD2, Madrid | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
-| Telehouse Voltaire, Paris | Create a request using the [Customer Portal](https://thparis.force.com/login)\. The request type is DFM/SFM Layout/Connectivity/MMR Circuit Commissioning\. | 
 
 ## EU \(Ireland\)<a name="cross-connect-eu-west-1"></a>
 
@@ -161,6 +159,20 @@ If the cross connect is not completed within 90 days, the authority granted by t
 | Equinix PA3, Paris | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 | Interxion PAR7, Paris | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
 | Telehouse Voltaire, Paris  | Create a request using the [Customer Portal](https://thparis.force.com/login)\. The request type is DFM/SFM Layout/Connectivity/MMR Circuit Commissioning\. | 
+
+## EU \(Stockholm\)<a name="cross-connect-eu-north-1"></a>
+
+
+| Location | How to request a connection | 
+| --- | --- | 
+| Interxion STO1, Stockholm | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
+
+## Middle East \(Bahrain\)<a name="cross-connect-me-south-1"></a>
+
+
+| Location | How to request a connection | 
+| --- | --- | 
+| AWS Bahrain DC53, Manama | To complete the connection, you can work with one of our [network provider partners](https://aws.amazon.com/directconnect/partners/) at the location to establish connectivity\. You will then provide a Letter of Authorization \(LOA\) from the network provider to AWS through the [AWS Support Center](https://console.aws.amazon.com/support/home)\. AWS will then complete the cross\-connect at this location\.  | 
 
 ## South America \(São Paulo\)<a name="cross-connect-sa-east-1"></a>
 
