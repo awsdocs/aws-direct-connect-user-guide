@@ -85,7 +85,7 @@ If you use the VPC wizard to create a VPC, route propagation is automatically en
 
    1. For **Connection**, choose the Direct Connect connection that you want to use for this interface\.
 
-   1. For **Gateway type**, choose **Virtual private gateway**\. 
+   1. For **Gateway type**, choose **Virtual private gateway**, or **Direct Connect gateway**\. 
 
    1. For **Virtual interface owner**, choose **Another AWS account**, and then enter the AWS account\. 
 

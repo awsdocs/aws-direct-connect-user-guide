@@ -9,6 +9,7 @@ Use *AWS Direct Connect gateway* to connect your VPCs\. You associate an *AWS Di
 **Topics**
 + [Creating a Direct Connect Gateway](#create-direct-connect-gateway)
 + [Deleting Direct Connect Gateways](#delete-direct-connect-gateway)
++ [Migrating from a Virtual Private Gateway to a Direct Connect Gateway](#migrate-to-direct-connect-gateway)
 
 ## Creating a Direct Connect Gateway<a name="create-direct-connect-gateway"></a>
 
@@ -46,3 +47,17 @@ If you no longer require a Direct Connect gateway, you can delete it\. You must 
 **To delete a Direct Connect gateway using the command line or API**
 + [delete\-direct\-connect\-gateway](https://docs.aws.amazon.com/cli/latest/reference/directconnect/delete-direct-connect-gateway.html) \(AWS CLI\)
 + [DeleteDirectConnectGateway](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DeleteDirectConnectGateway.html) \(AWS Direct Connect API\)
+
+## Migrating from a Virtual Private Gateway to a Direct Connect Gateway<a name="migrate-to-direct-connect-gateway"></a>
+
+If you had a virtual private gateway attached to a virtual interface, and you want to migrate to a Direct Connect gateway, perform the following steps:
+
+**To migrate to a Direct Connect gateway**
+
+1. Create a Direct Connect gateway\. For more information, see [Creating a Direct Connect Gateway](#create-direct-connect-gateway)\.
+
+1. Create a virtual interface for the Direct Connect gateway\. For more information, see [Creating a Virtual Interface](create-vif.md)\.
+
+1. Associate the virtual private gateway with the Direct Connect gateway\. For more information, see [Associating and Disassociating Virtual Private Gateways](virtualgateways.md#associate-vgw-with-direct-connect-gateway)\.
+
+1. Delete the virtual interface that was associated with the virtual private gateway\. For more information, see [Deleting Virtual Interfaces](deletevif.md)\.

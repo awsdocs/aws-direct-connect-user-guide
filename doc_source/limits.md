@@ -23,3 +23,7 @@ The following table lists the limits related to AWS Direct Connect\. Unless indi
 AWS Direct Connect supports these port speeds over single\-mode fiber: 1 Gbps: 1000BASE\-LX \(1310nm\) and 10 Gbps: 10GBASE\-LR \(1310nm\)\.
 
 1: You cannot create a transit virtual interface on a hosted connection with a capacity less than 1Gbps\.
+
+## Load Balance Considerations<a name="load-balance-considerations"></a>
+
+If you want to use load balancing with multiple public VIFs, all the VIFs must be in the same Region\.

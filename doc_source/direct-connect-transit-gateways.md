@@ -23,6 +23,8 @@ The following rules apply:
 + You cannot attach a Direct Connect gateway to a transit gateway when the Direct Connect gateway is already associated with a virtual private gateway or is attached to a private virtual interface\.
 + There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect Limits](limits.md)\.
 + A Direct Connect gateway supports communication between attached transit virtual interfaces and associated transit gateways only\. 
++ If you connect to multiple transit gateways that are in different Regions, use unique ASNs for each transit gateway\.
++ A virtual private gateway can be associated with a Direct Connect gateway and also attached to a virtual interface\.
 
 The following Regions support transit gateway associations:
 + US East \(N\. Virginia\)

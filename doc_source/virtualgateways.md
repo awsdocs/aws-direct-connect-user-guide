@@ -13,9 +13,9 @@ The following rules apply:
 + The transit virtual interface can be in any location, but currently the transit gateway must reside in the United States\.
 + You cannot create a public virtual interface to a Direct Connect gateway\.
 + A Direct Connect gateway supports communication between attached private virtual interfaces and associated virtual private gateways only\. The following traffic flows are not supported:
-  + Direct communication between the VPCs that are associated with the Direct Connect gateway\.
-  + Direct communication between the virtual interfaces that are attached to the Direct Connect gateway\.
-  + Direct communication between a virtual interface attached to a Direct Connect gateway and a VPN connection on a virtual private gateway that's associated with the same Direct Connect gateway\.
+  + Direct communication between the VPCs that are associated with a single Direct Connect gateway\. This includes traffic from one VPC to another by using a hairpin through an on\-premises network through a single virtual interface\.
+  + Direct communication between the virtual interfaces that are attached to a single Direct Connect gateway\. 
+  + Direct communication between the virtual interfaces that are attached to a single Direct Connect gateway and a VPN connection on a virtual private gateway that's associated with the same Direct Connect gateway\.
 + You cannot associate a virtual private gateway with more than one Direct Connect gateway and you cannot attach a private virtual interface to more than one Direct Connect gateway\.
 + A virtual private gateway that you associate with a Direct Connect gateway must be attached to a VPC\.
 + A virtual private gateway association proposal expires 7 days after it is created\.
