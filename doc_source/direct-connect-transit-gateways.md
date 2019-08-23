@@ -35,6 +35,8 @@ The following Regions support transit gateway associations:
 + AWS GovCloud \(US\-West\)
 + Canada \(Central\) Region \- Montreal
 + EU \(Ireland\) \- Dublin
++ EU \(Frankfurt\)
++ EU \(London\)
 
 ## Associating and Disassociating Transit Gateways<a name="associate-tgw-with-direct-connect-gateway"></a>
 
