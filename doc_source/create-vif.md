@@ -31,6 +31,8 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
    1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
 
+      The valid values are 1\-2147483647\.
+
 1. Under **Additional settings**, do the following:
 
    1. To configure an IPv4 BGP or an IPv6 peer, do the following:
@@ -95,6 +97,8 @@ If you use the VPC wizard to create a VPC, route propagation is automatically en
 
    1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
 
+      The valid values are 1\-2147483647\.
+
 1. Under **Additional Settings**, do the following:
 
    1. To configure an IPv4 BGP or an IPv6 peer, do the following:
@@ -155,6 +159,8 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
    1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+
+      The valid values are 1\-2147483647\.
 
 1. Under **Additional Settings**, do the following:
 

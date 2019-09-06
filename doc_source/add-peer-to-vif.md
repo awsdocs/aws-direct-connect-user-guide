@@ -33,6 +33,8 @@ Use the following procedure to add a BGP peer\.
 
 1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway, for example, a number between 1 and 65534\. For a public virtual interface, the ASN must be private or already whitelisted for the virtual interface\.
 
+   The valid values are 1\-2147483647\.
+
 1. To provide your own BGP key, for **BGP Authentication Key**, enter your BGP MD5 key\.
 
 1. Choose **Add peering**\.

@@ -25,5 +25,5 @@ Before you can begin using a hosted virtual interface, you must accept the virtu
 + [ConfirmPublicVirtualInterface](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_ConfirmPublicVirtualInterface.html) \(AWS Direct Connect API\)
 
 **To accept a hosted transit virtual interface using the command line or API**
-+ [confirm\-transit\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/confirmtransit-virtual-interface.html) \(AWS CLI\)
++ [confirm\-transit\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/confirm-transit-virtual-interface.html) \(AWS CLI\)
 + [ConfirmTransitVirtualInterface](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_ConfirTransitVirtualInterface.html) \(AWS Direct Connect API\)
