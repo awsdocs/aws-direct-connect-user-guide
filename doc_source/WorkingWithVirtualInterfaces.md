@@ -7,10 +7,14 @@ You must create one of the following virtual interfaces to begin using your AWS 
 
 To connect to other AWS services using IPv6 addresses, check the service documentation to verify that IPv6 addressing is supported\.
 
+## Public Virtual Interface Prefix Advertisement Rules<a name="advertise-prefixes"></a>
+
 We advertise appropriate Amazon prefixes to you so that you can reach either your VPCs or other AWS services\. You can access all AWS prefixes through this connection; for example, Amazon EC2, Amazon S3, and Amazon\.com\. You do not have access to non\-Amazon prefixes\. For a current list of prefixes advertised by AWS, see [AWS IP Address Ranges](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in the *Amazon Web Services General Reference*\.
 
 **Note**  
 We recommend that you use a firewall filter \(based on the source/destination address of packets\) to control traffic to and from some prefixes\. If you're using a prefix filter \(route map\), ensure that it accepts prefixes with an exact match or longer\. Prefixes advertised from AWS Direct Connect may be aggregated and may differ from the prefixes defined in your prefix filter\.
+
+## Hosted Virtual Interfaces<a name="hosted-vif"></a>
 
 To use your AWS Direct Connect connection with another AWS account, you can create a hosted virtual interface for that account\. The owner of the other account must accept the hosted virtual interface to begin using it\. A hosted virtual interface works the same as a standard virtual interface and can connect to public resources or a VPC\.
 
@@ -38,8 +42,6 @@ To create a virtual interface, you need the following information:
   + IPv6: Specify a prefix length of /64 or shorter\.
 + \(Private virtual interface only\) **Jumbo frames**: The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find **Jumbo Frame Capable** on the **Summary** tab\.
 + \(Transit virtual interface only\) **Jumbo frames**: The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 8500 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find **Jumbo Frame Capable** on the **Summary** tab\.
-
-## Hosted Virtual Interfaces<a name="hosted-vif"></a>
 
 You can create a virtual interface for accounts within your AWS Organizations, or AWS Organizations that are different from yours\. You must accept the virtual interface before you can use it\. For information about how to create and accept a virtual interface, see [Creating a Hosted Virtual Interface](createhostedvirtualinterface.md) and [Accepting a Hosted Virtual Interface](accepthostedvirtualinterface.md)\.
 

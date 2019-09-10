@@ -64,6 +64,10 @@ If the cross connect is not completed within 90 days, the authority granted by t
 | Equinix OS1, Osaka  | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 | Equinix TY2, Tokyo  | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 
+## AWS GovCloud \(US\-East\)<a name="cross-connect-gov-us-east-1"></a>
+
+You can't order connections in this Region\.
+
 ## AWS GovCloud \(US\-West\)<a name="cross-connect-gov-us-west-1"></a>
 
 
