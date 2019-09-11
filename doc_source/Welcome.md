@@ -39,7 +39,7 @@ In addition, your network must meet the following conditions:
 
 AWS Direct Connect supports both the IPv4 and IPv6 communication protocols\. IPv6 addresses provided by public AWS services are accessible through AWS Direct Connect public virtual interfaces\.
 
-AWS Direct Connect supports an Ethernet frame size of 1522 or 9023 bytes \(14 bytes Ethernet header \+ 4 bytes VLAN tag \+ bytes for the IP datagram \+ 4 bytes FCS\) at the link layer\. You can set the MTU of your private virtual interfaces\. For more information, see [Setting Network MTU for Private Virtual Interfaces or Transit Virtual Interfaces](set-jumbo-frames-vif.md)\.
+AWS Direct Connect supports an Ethernet frame size of 1522 or 9023 bytes \(14 bytes Ethernet header \+ 4 bytes VLAN tag \+ 20 bytes for the IP datagram \+ 4 bytes FCS\) at the link layer\. You can set the MTU of your private virtual interfaces\. For more information, see [Setting Network MTU for Private Virtual Interfaces or Transit Virtual Interfaces](set-jumbo-frames-vif.md)\.
 
 ## Pricing for AWS Direct Connect<a name="Paying"></a>
 
