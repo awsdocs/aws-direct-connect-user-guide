@@ -26,7 +26,7 @@ The following rules and restrictions apply to tags:
 + Maximum key length: 128 Unicode characters
 + Maximum value length: 265 Unicode characters
 + Tag keys and values are case\-sensitive\.
-+ The `aws:` prefix is reserved for AWS use\. You cannot create or delete tag keys or values with this prefix\. Tags with this prefix do not count against your tags per resource limit\.
++ The `aws:` prefix is reserved for AWS use\. You can’t edit or delete a tag’s key or value when the tag has a tag key with the `aws:` prefix\. Tags with a tag key with the `aws:` prefix do not count against your tags per resource limit\.
 + Allowed characters are letters, spaces, and numbers representable in UTF\-8, plus the following special characters: \+ \- = \. \_ : / @
 + Only the resource owner can add or remove tags\. For example, if there is a hosted connection, the partner will not be able to add, remove, or view the tags\. 
 + Cost allocation tags are only supported for connections, interconnects, and LAGs\. For information about how to use tags with cost management, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the* AWS Billing and Cost Management User Guide*\.

@@ -1,4 +1,4 @@
-# Getting Started with AWS Direct Connect<a name="getting_started"></a>
+# Getting Started<a name="getting_started"></a>
 
 AWS Direct Connect enables you to directly interface your on\-premises network with a device at an AWS Direct Connect location\.
 
@@ -244,8 +244,6 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
       + For **Amazon router peer ip**, enter the IPv4 CIDR address to use to send traffic to AWS\.
 
       \[IPv6\] To configure an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
-
-   1. To advertise prefixes to Amazon, for **Prefixes you want to advertise**, enter the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\. 
 
    1. To change the maximum transmission unit \(MTU\) from 1500 \(default\) to 9001 \(jumbo frames\), select **Jumbo MTU \(MTU size 9001\)**\.
 
