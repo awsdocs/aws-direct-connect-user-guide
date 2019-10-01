@@ -26,17 +26,9 @@ The following rules apply:
 + If you connect to multiple transit gateways that are in different Regions, use unique ASNs for each transit gateway\.
 + A virtual private gateway can be associated with a Direct Connect gateway and also attached to a virtual interface\.
 
-The following Regions support transit gateway associations:
-+ US East \(N\. Virginia\)
-+ US East \(Ohio\)
-+ US West \(N\. California\) \- San Francisco
-+ US West \(Oregon\) \- Portland
-+ AWS GovCloud \(US\-East\)
-+ AWS GovCloud \(US\-West\)
-+ Canada \(Central\) Region \- Montreal
-+ EU \(Ireland\) \- Dublin
-+ EU \(Frankfurt\)
-+ EU \(London\)
+The following Regions do not support transit gateway associations across accounts:
++ Asia Pacific \(Hong Kong\) Region
++ Middle East \(Bahrain\) Region
 
 ## Associating and Disassociating Transit Gateways<a name="associate-tgw-with-direct-connect-gateway"></a>
 
