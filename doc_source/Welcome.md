@@ -31,7 +31,7 @@ To use AWS Direct Connect in an AWS Direct Connect location, your network must m
 + You are working with an independent service provider to connect to AWS Direct Connect\.
 
 In addition, your network must meet the following conditions:
-+ Your network must use single\-mode fiber with a 1000BASE\-LX \(1310nm\) transceiver for 1 gigabit Ethernet or a 10GBASE\-LR \(1310nm\) transceiver for 10 gigabit Ethernet\.
++ Your network must use single\-mode fiber with a 1000BASE\-LX \(1310 nm\) transceiver for 1 gigabit Ethernet or a 10GBASE\-LR \(1310 nm\) transceiver for 10 gigabit Ethernet\.
 + Auto\-negotiation for the port must be disabled\. Port speed and full\-duplex mode must be configured manually\.
 + 802\.1Q VLAN encapsulation must be supported across the entire connection, including intermediate devices\.
 + Your device must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\.
@@ -48,5 +48,7 @@ AWS Direct Connect has two billing elements: port hours and outbound data transf
 For private virtual interfaces and transit virtual interfaces, Data Transfer Out \(DTO\) over AWS Direct Connect is charged per GB to the account that owns the virtual interface\. There are no additional charges to use multi\-account Direct Connect gateway\. 
 
 For publicly addressable AWS resources \(for example, Amazon S3 buckets, Classic EC2 instances, or EC2 traffic that goes through an internet gateway\), if the outbound traffic is destined for public prefixes owned by the same AWS payer account and actively advertised to AWS through an AWS Direct Connect public virtual Interface, the Data Transfer Out \(DTO\) usage is metered toward the resource owner at AWS Direct Connect data transfer rate\.
+
+Data Transfer Out charges for private interfaces and transit virtual interfaces are allocated to the AWS account responsible for the Data Transfer\.
 
 For more information, see [Amazon Direct Connect Pricing](https://aws.amazon.com/directconnect/pricing/)\.

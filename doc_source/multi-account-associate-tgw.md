@@ -4,11 +4,8 @@ You can associate an existing Direct Connect gateway or a new Direct gateway wit
 
 An association proposal can contain prefixes that will be allowed from the transit gateway\. The owner of the Direct Connect gateway can optionally override any requested prefixes in the association proposal\.
 
-You can only associate a Direct Connect gateway and transit gateway when the account that owns the Direct Connect gateway and the account that owns the transit gateway have the same payer ID\.
-
 The following Regions do not support transit gateway associations across accounts:
 + Asia Pacific \(Hong Kong\) Region
-+ Asia Pacific \(Sydney\) Region
 + Middle East \(Bahrain\) Region
 
 Consider this scenario of a Direct Connect gateway owner \(Account Z\) who owns the Direct Connect gateway\. Account A owns the transit gateway and wants to use the Direct Connect gateway\. Account Z accepts the association proposals and can optionally update the prefixes that are allowed from Account A's transit gateway\. After Account Z accepts the proposals, The VPCs attached to the transit gateway can route traffic from the transit gateway to the Direct Connect gateway\. Account Z also owns the routing to the customers because Account Z owns the gateway\.

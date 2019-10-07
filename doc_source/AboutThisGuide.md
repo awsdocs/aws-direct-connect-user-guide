@@ -5,6 +5,7 @@ The following table describes the releases for AWS Direct Connect\.
 
 | Feature | Description | Date | 
 | --- | --- | --- | 
+| Direct Connect Resiliency Toolkit | The Direct Connect Resiliency Toolkit provides a connection wizard with multiple resiliency models that helps you order dedicated connections to achieve your SLA objective\. For more information, see [Using the Direct Connect Resiliency Toolkit to Get Started](resilency_toolkit.md)\. | 2019\-10\-07 | 
 | Additional Region support for Support for AWS Transit Gateway across accounts | For information, see [Transit Gateway Associations](direct-connect-transit-gateways.md)\. | 2019\-09\-30 | 
 | AWS Direct Connect Support for AWS Transit Gateway | You can use an AWS Direct Connect gateway to connect your AWS Direct Connect connection over a transit virtual interface to the VPCs or VPNs attached to your transit gateway You associate a Direct Connect gateway with the transit gateway Then, create a transit virtual interface for your AWS Direct Connect connection to the Direct Connect gateway\. For information, see [Transit Gateway Associations](direct-connect-transit-gateways.md)\. | 2019\-03\-27 | 
 | Jumbo frames support | You can send jumbo frames \(9001 MTU\) over AWS Direct Connect\. For more information, see [Setting Network MTU for Private Virtual Interfaces or Transit Virtual Interfaces](set-jumbo-frames-vif.md)\. | 2018\-10\-11 | 

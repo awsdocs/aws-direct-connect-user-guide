@@ -20,6 +20,10 @@ If you do not have equipment at an AWS Direct Connect location, first contact an
 
    1. For **Port Speed**, choose the connection bandwidth\.
 
+1. For **On\-premises**, select **Connect through an AWS Direct Connect partner** when you use this connection to connect to your data center\.
+
+1. 
+
    1. \(Optional\) Add or remove a tag\.
 
       \[Add a tag\] Choose **Add tag** and do the following:

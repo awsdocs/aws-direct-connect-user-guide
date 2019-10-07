@@ -25,10 +25,9 @@ The following rules apply:
 + A Direct Connect gateway supports communication between attached transit virtual interfaces and associated transit gateways only\. 
 + If you connect to multiple transit gateways that are in different Regions, use unique ASNs for each transit gateway\.
 + A virtual private gateway can be associated with a Direct Connect gateway and also attached to a virtual interface\.
-
-The following Regions do not support transit gateway associations across accounts:
-+ Asia Pacific \(Hong Kong\) Region
-+ Middle East \(Bahrain\) Region
++ The following Regions do not support transit gateway associations across accounts:
+  + Asia Pacific \(Hong Kong\) Region
+  + Middle East \(Bahrain\) Region
 
 ## Associating and Disassociating Transit Gateways<a name="associate-tgw-with-direct-connect-gateway"></a>
 
