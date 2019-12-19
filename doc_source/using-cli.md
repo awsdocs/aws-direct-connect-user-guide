@@ -2,9 +2,9 @@
 
 You can use the AWS CLI to create and work with AWS Direct Connect resources\.
 
-The following example uses the AWS CLI commands to create an AWS Direct Connect connection, download the Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\), and provision a private or public virtual interface\.
+The following example uses the AWS CLI commands to create an AWS Direct Connect connection\. You can also download the Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\) or provision a private or public virtual interface\.
 
-Before you begin, ensure that you have installed and configured the AWS CLI\. For more information, see the [AWS Command Line Interface User Guide](http://docs.aws.amazon.com/cli/latest/userguide/)\.
+Before you begin, ensure that you have installed and configured the AWS CLI\. For more information, see the [AWS Command Line Interface User Guide](https://docs.aws.amazon.com/cli/latest/userguide/)\.
 
 **Topics**
 + [Step 1: Create a Connection](#using-cli-create-connection)
@@ -13,11 +13,11 @@ Before you begin, ensure that you have installed and configured the AWS CLI\. Fo
 
 ## Step 1: Create a Connection<a name="using-cli-create-connection"></a>
 
-The first step is to submit a connection request\. Ensure that you know the port speed that you require and the AWS Direct Connect location\. For more information, see [Connections](WorkingWithConnections.md)\.
+The first step is to submit a connection request\. Ensure that you know the port speed that you require and the AWS Direct Connect location\. For more information, see [AWS Direct Connect Connections](WorkingWithConnections.md)\.
 
 **To create a connection request**
 
-1. Describe the AWS Direct Connect locations for your current region\. In the output that's returned, take note of the location code for the location in which you want to establish the connection\.
+1. Describe the AWS Direct Connect locations for your current Region\. In the output that's returned, take note of the location code for the location in which you want to establish the connection\.
 
    ```
    aws directconnect describe-locations
@@ -60,16 +60,14 @@ The first step is to submit a connection request\. Ensure that you know the port
 
 After you've requested a connection, you can get the LOA\-CFA using the `describe-loa` command\. The output is base64\-encoded\. You must extract the relevant LOA content, decode it, and create a PDF file\.
 
-**To get the LOA\-CFA using Linux or Mac OS X**
-
+**To get the LOA\-CFA using Linux or macOS**  
 In this example, the final part of the command decodes the content using the base64 utility, and sends the output to a PDF file\.
 
 ```
 aws directconnect describe-loa --connection-id dxcon-fg31dyv6 --output text --query loaContent|base64 --decode > myLoaCfa.pdf
 ```
 
-**To get the LOA\-CFA using Windows**
-
+**To get the LOA\-CFA using Windows**  
 In this example, the output is extracted to a file called myLoaCfa\.base64\. The second command uses the `certutil` utility to decode the file and send the output to a PDF file\.
 
 ```
@@ -84,11 +82,11 @@ After you've downloaded the LOA\-CFA, send it to your network provider or coloca
 
 ## Step 3: Create a Virtual Interface and get the Router Configuration<a name="using-cli-create-vif"></a>
 
-After you have placed an order for an AWS Direct Connect connection, you must create a virtual interface to begin using it\. You can create a private virtual interface to connect to your VPC, or you can create a public virtual interface to connect to AWS services that aren't in a VPC\. You can create a virtual interface that supports IPv4 or IPv6 traffic\.
+After you have placed an order for an AWS Direct Connect connection, you must create a virtual interface to begin using it\. You can create a private virtual interface to connect to your VPC\. Or, you can create a public virtual interface to connect to AWS services that aren't in a VPC\. You can create a virtual interface that supports IPv4 or IPv6 traffic\.
 
 Before you begin, ensure that you've read the prerequisites in [Prerequisites for Virtual Interfaces](WorkingWithVirtualInterfaces.md#vif-prerequisites)\. 
 
-When you create a virtual interface using the AWS CLI, the output includes generic router configuration information\. If you want router configuration that's specific to your device, use the AWS Direct Connect console\. For more information, see [Downloading the Router Configuration File](create-vif.md#vif-router-config)\.
+When you create a virtual interface using the AWS CLI, the output includes generic router configuration information\. To create a router configuration that's specific to your device, use the AWS Direct Connect console\. For more information, see [Downloading the Router Configuration File](create-vif.md#vif-router-config)\.
 
 **To create a private virtual interface**
 

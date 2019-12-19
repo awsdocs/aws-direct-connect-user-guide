@@ -16,13 +16,13 @@ If you or your network provider are having difficulty establishing physical conn
 
 1. Verify that your router or your provider's router is powered on and that the ports are activated\.
 
-1. Ensure that the routers are using the correct optical transceiver, auto\-negotiation is disabled, and port speed and full\-duplex mode are manually configured\. For more information, see [Network Requirements](http://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html#overview_requirements)\.
+1. Ensure that the routers are using the correct optical transceiver, auto\-negotiation is disabled, and port speed and full\-duplex mode are manually configured\. For more information, see [Network Requirements](https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html#overview_requirements)\.
 
 1. Verify that the router is receiving an acceptable optical signal over the cross connect\.
 
 1. Try flipping \(also known as rolling\) the Tx/Rx fiber strands\.
 
-1. Check the Amazon CloudWatch metrics for AWS Direct Connect\. You can verify the AWS Direct Connect device's Tx/Rx optical readings \(10\-Gbps port speeds only\), physical error count, and operational status\. For more information, see [Monitoring with Amazon CloudWatch](http://docs.aws.amazon.com/directconnect/latest/UserGuide/monitoring-cloudwatch.html)\.
+1. Check the Amazon CloudWatch metrics for AWS Direct Connect\. You can verify the AWS Direct Connect device's Tx/Rx optical readings \(10\-Gbps port speeds only\), physical error count, and operational status\. For more information, see [Monitoring with Amazon CloudWatch](https://docs.aws.amazon.com/directconnect/latest/UserGuide/monitoring-cloudwatch.html)\.
 
 1. Contact the colocation provider and request a written report for the Tx/Rx optical signal across the cross connect\.
 
@@ -54,7 +54,7 @@ If the BGP session is still not established after verifying these steps, see [Tr
 
 ## Troubleshooting Layer 3/4 \(Network/Transport\) Issues<a name="ts-layer-3"></a>
 
-If your AWS Direct Connect physical connection is up and you can ping the Amazon peer IP address, but your virtual interface is down and the BGP peering session cannot be established, use the following steps to troubleshoot the issue\.
+Consider a situation where your AWS Direct Connect physical connection is up and you can ping the Amazon peer IP address\. If your virtual interface is down and the BGP peering session cannot be established, use the following steps to troubleshoot the issue:
 
 1. Ensure that your BGP local Autonomous System Number \(ASN\) and Amazon's ASN are configured correctly\.
 
@@ -78,14 +78,14 @@ If the BGP peering session is established but you are experiencing routing issue
 
 ## Troubleshooting Routing Issues<a name="ts-routing"></a>
 
-If your virtual interface is up and you've established a BGP peering session but you cannot route traffic over the virtual interface, use the following steps to troubleshoot the issue\.
+Consider a situation where your virtual interface is up and you've established a BGP peering session\. If you cannot route traffic over the virtual interface, use the following steps to troubleshoot the issue:
 
 1. Ensure that you are advertising a route for your on\-premises network prefix over the BGP session\. For a private virtual interface, this can be a private or public network prefix\. For a public virtual interface, this must be your publicly routable network prefix\.
 
-1. For a private virtual interface, ensure that your VPC security groups and network ACLs allow inbound and outbound traffic for your on\-premises network prefix\. For more information, see [Security Groups](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html) and [Network ACLs](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html) in the *Amazon VPC User Guide*\.
+1. For a private virtual interface, ensure that your VPC security groups and network ACLs allow inbound and outbound traffic for your on\-premises network prefix\. For more information, see [Security Groups](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) and [Network ACLs](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_ACLs.html) in the *Amazon VPC User Guide*\.
 
-1. For a private virtual interface, ensure that your VPC route tables have prefixes pointing to the virtual private gateway to which your private virtual interface is connected\. For example, if you prefer to have all your traffic routed towards your on\-premises network by default, you can add the default route \(0\.0\.0\.0/0 and/or ::/0\) with the virtual private gateway as the target in your VPC route tables\.
-   + Alternatively, enable route propagation to automatically update routes in your route tables based on your dynamic BGP route advertisement\. You can have up to 100 propagated routes per route table\. This limit cannot be increased\. For more information, see [Enabling and Disabling Route Propagation](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html#EnableDisableRouteProp) in the *Amazon VPC User Guide*\.
+1. For a private virtual interface, ensure that your VPC route tables have prefixes pointing to the virtual private gateway to which your private virtual interface is connected\. For example, if you prefer to have all your traffic routed towards your on\-premises network by default, you can add the default route \(0\.0\.0\.0/0 or ::/0\) with the virtual private gateway as the target in your VPC route tables\.
+   + Alternatively, enable route propagation to automatically update routes in your route tables based on your dynamic BGP route advertisement\. You can have up to 100 propagated routes per route table\. This limit cannot be increased\. For more information, see [Enabling and Disabling Route Propagation](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html#EnableDisableRouteProp) in the *Amazon VPC User Guide*\.
 
 1. If the above steps do not resolve your routing issues, [contact AWS Support](https://aws.amazon.com/support/createCase)\.
 
