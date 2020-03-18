@@ -47,7 +47,7 @@ Use the following to add, update, list, and delete the tags for your resources\.
 Use the [tag\-resource](https://docs.aws.amazon.com/cli/latest/reference/directconnect/tag-resource.html) command to tag the Connection `dxcon-11aa22bb`\.
 
 ```
-aaws directconnect tag-resource --resource-arn arn:aws:directconnect:us-east-1:123456789012:dxcon/dxcon-11aa22bb --tags "key=Purpose,value=Production"
+aws directconnect tag-resource --resource-arn arn:aws:directconnect:us-east-1:123456789012:dxcon/dxcon-11aa22bb --tags "key=Purpose,value=Production"
 ```
 
 Use the [describe\-tags](https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-tags.html) command to describe the Connection `dxcon-11aa22bb` tags\.
