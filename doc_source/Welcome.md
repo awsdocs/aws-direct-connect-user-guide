@@ -45,10 +45,10 @@ AWS Direct Connect supports an Ethernet frame size of 1522 or 9023 bytes \(14 by
 
 AWS Direct Connect has two billing elements: port hours and outbound data transfer\. Port hour pricing is determined by capacity and connection type \(dedicated connection or hosted connection\)\. 
 
-For private virtual interfaces and transit virtual interfaces, Data Transfer Out \(DTO\) over AWS Direct Connect is charged per GB to the account that owns the virtual interface\. There are no additional charges to use multi\-account Direct Connect gateway\. 
+Data Transfer Out charges for private interfaces and transit virtual interfaces are allocated to the AWS account responsible for the Data Transfer\. There are no additional charges to use multi\-account Direct Connect gateway\. 
 
 For publicly addressable AWS resources \(for example, Amazon S3 buckets, Classic EC2 instances, or EC2 traffic that goes through an internet gateway\), if the outbound traffic is destined for public prefixes owned by the same AWS payer account and actively advertised to AWS through an AWS Direct Connect public virtual Interface, the Data Transfer Out \(DTO\) usage is metered toward the resource owner at AWS Direct Connect data transfer rate\.
 
-Data Transfer Out charges for private interfaces and transit virtual interfaces are allocated to the AWS account responsible for the Data Transfer\.
+
 
 For more information, see [Amazon Direct Connect Pricing](https://aws.amazon.com/directconnect/pricing/)\.
