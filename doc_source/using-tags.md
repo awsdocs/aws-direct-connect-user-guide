@@ -1,4 +1,4 @@
-# Tagging AWS Direct Connect Resources<a name="using-tags"></a>
+# Tagging AWS Direct Connect resources<a name="using-tags"></a>
 
 A tag is a label that a resource owner assigns to their AWS Direct Connect resources\. Each tag consists of a key and an optional value, both of which you define\. Tags enable the resource owner to categorize your AWS Direct Connect resources in different ways, for example, by purpose, or environment\. This is useful when you have many resources of the same type—you can quickly identify a specific resource based on the tags you've assigned to it\. 
 
@@ -19,7 +19,7 @@ You can tag the following AWS Direct Connect resources using the AWS Direct Conn
 | Interconnects | Yes | Yes | Yes | Yes | 
 | Direct Connect gateways | No | No | No | No | 
 
-## Tag Restrictions<a name="using-tags-restrictions"></a>
+## Tag restrictions<a name="using-tags-restrictions"></a>
 
 The following rules and restrictions apply to tags:
 + Maximum number of tags per resource: 50
@@ -31,7 +31,7 @@ The following rules and restrictions apply to tags:
 + Only the resource owner can add or remove tags\. For example, if there is a hosted connection, the partner will not be able to add, remove, or view the tags\. 
 + Cost allocation tags are only supported for connections, interconnects, and LAGs\. For information about how to use tags with cost management, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the* AWS Billing and Cost Management User Guide*\.
 
-## Working with Tags Using the CLI or API<a name="working-with-tags"></a>
+## Working with tags using the CLI or API<a name="working-with-tags"></a>
 
 Use the following to add, update, list, and delete the tags for your resources\.
 

@@ -9,9 +9,9 @@ Security is a shared responsibility between AWS and you\. The [shared responsibi
 This documentation helps you understand how to apply the shared responsibility model when using AWS Direct Connect\. The following topics show you how to configure AWS Direct Connect to meet your security and compliance objectives\. You also learn how to use other AWS services that help you to monitor and secure your AWS Direct Connect resources\. 
 
 **Topics**
-+ [Data Protection in AWS Direct Connect](data-protection.md)
-+ [Identity and Access Management for AWS Direct Connect](security-iam.md)
-+ [Logging and Monitoring in AWS Direct Connect](dc-incident-response.md)
-+ [Compliance Validation for AWS Direct Connect](DirectConnect-compliance.md)
++ [Data protection in AWS Direct Connect](data-protection.md)
++ [Identity and access management for AWS Direct Connect](security-iam.md)
++ [Logging and monitoring in AWS Direct Connect](dc-incident-response.md)
++ [Compliance validation for AWS Direct Connect](DirectConnect-compliance.md)
 + [Resilience in AWS Direct Connect](disaster-recovery-resiliency.md)
-+ [Infrastructure Security in AWS Direct Connect](infrastructure-security.md)
++ [Infrastructure security in AWS Direct Connect](infrastructure-security.md)

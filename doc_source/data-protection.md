@@ -1,4 +1,4 @@
-# Data Protection in AWS Direct Connect<a name="data-protection"></a>
+# Data protection in AWS Direct Connect<a name="data-protection"></a>
 
 AWS Direct Connect conforms to the AWS [shared responsibility model](https://aws.amazon.com/compliance/shared-responsibility-model/), which includes regulations and guidelines for data protection\. AWS is responsible for protecting the global infrastructure that runs all the AWS services\. AWS maintains control over data hosted on this infrastructure, including the security configuration controls for handling customer content and personal data\. AWS customers and APN partners, acting either as data controllers or data processors, are responsible for any personal data that they put in the AWS Cloud\. 
 
@@ -13,5 +13,5 @@ We strongly recommend that you never put sensitive identifying information, such
 For more information about data protection, see the [AWS Shared Responsibility Model and GDPR](https://aws.amazon.com/blogs/security/the-aws-shared-responsibility-model-and-gdpr/) blog post on the *AWS Security Blog*\.
 
 **Topics**
-+ [Internetwork Traffic Privacy in AWS Direct Connect](encryption-at-rest.md)
++ [Internetwork traffic privacy in AWS Direct Connect](encryption-at-rest.md)
 + [Encryption in AWS Direct Connect](encryption-in-transit.md)

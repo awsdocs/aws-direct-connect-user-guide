@@ -68,7 +68,7 @@ After you've created a LAG, you can view its details in the AWS Direct Connect c
 
 1. You can view information about the LAG, including its ID, the AWS Direct Connect endpoint on which the connections terminate\.
 
-After you've created a LAG, you can associate or disassociate connections from it\. For more information, see [Associating a Connection with a LAG](associate-connection-with-lag.md) and [Disassociating a Connection From a LAG](disassociate-connection-from-lag.md)\.
+After you've created a LAG, you can associate or disassociate connections from it\. For more information, see [Associating a connection with a LAG](associate-connection-with-lag.md) and [Disassociating a connection from a LAG](disassociate-connection-from-lag.md)\.
 
 **To create a LAG using the command line or API**
 + [create\-lag](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-lag.html) \(AWS CLI\)

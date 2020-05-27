@@ -1,13 +1,13 @@
-# Creating a Virtual Interface<a name="create-vif"></a>
+# Creating a virtual interface<a name="create-vif"></a>
 
 You can create a transit virtual interface to connect to a transit gateway, a public virtual interface to connect to public resources \(non\-VPC services\), or a private virtual interface to connect to a VPC\.
 
-To create a virtual interface for accounts within your AWS Organizations, or AWS Organizations that are different from yours, create a hosted virtual interface\. For more information, see [Creating a Hosted Virtual Interface](createhostedvirtualinterface.md)\.
+To create a virtual interface for accounts within your AWS Organizations, or AWS Organizations that are different from yours, create a hosted virtual interface\. For more information, see [Creating a hosted virtual interface](createhostedvirtualinterface.md)\.
 
 **Prerequisites**  
-Before you begin, ensure that you have read the information in [Prerequisites for Virtual Interfaces](WorkingWithVirtualInterfaces.md#vif-prerequisites)\.
+Before you begin, ensure that you have read the information in [Prerequisites for virtual interfaces](WorkingWithVirtualInterfaces.md#vif-prerequisites)\.
 
-## Creating a Public Virtual Interface<a name="create-public-vif"></a>
+## Creating a public virtual interface<a name="create-public-vif"></a>
 
 When you create a public virtual interface, it can take up to 72 hours for AWS to review and approve your request\.
 
@@ -29,7 +29,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 
@@ -59,17 +59,19 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 1. Choose **Create virtual interface**\.
 
-1. Download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](#vif-router-config)\.
+1. Download the router configuration for your device\. For more information, see [Downloading the router configuration file](#vif-router-config)\.
 
 **To create a public virtual interface using the command line or API**
 + [create\-public\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-public-virtual-interface.html) \(AWS CLI\)
 + [CreatePublicVirtualInterface](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreatePublicVirtualInterface.html) \(AWS Direct Connect API\)
 
-## Creating a Private Virtual Interface<a name="create-private-vif"></a>
+## Creating a private virtual interface<a name="create-private-vif"></a>
 
-You can provision a private virtual interface to a virtual private gateway in the same Region as your AWS Direct Connect connection\. For more information about provisioning a private virtual interface to an AWS Direct Connect gateway, see [Working with Direct Connect Gateways](direct-connect-gateways.md)\.
+You can provision a private virtual interface to a virtual private gateway in the same Region as your AWS Direct Connect connection\. For more information about provisioning a private virtual interface to an AWS Direct Connect gateway, see [Working with Direct Connect gateways](direct-connect-gateways.md)\.
 
 If you use the VPC wizard to create a VPC, route propagation is automatically enabled for you\. With route propagation, routes are automatically populated to the route tables in your VPC\. If you choose, you can disable route propagation\. For more information, see [Enable Route Propagation in Your Route Table](https://docs.aws.amazon.com/vpc/latest/userguide/SetUpVPNConnections.html#vpn-configure-routing) in the *Amazon VPC User Guide*\.
+
+The maximum transmission unit \(MTU\) of a network connection is the size, in bytes, of the largest permissible packet that can be passed over the connection\. The MTU of a virtual private interface can be either 1500 or 9001 \(jumbo frames\)\. The MTU of a transit virtual interface can be either 1500 or 8500 \(jumbo frames\)\. You can specify the MTU when you create the interface or update it after you create it\. Setting the MTU of a virtual interface to 8500 \(jumbo frames\) or 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find **Jumbo Frame Capable** on the **Summary** tab\.
 
 **To provision a private virtual interface to a VPC**
 
@@ -95,7 +97,7 @@ If you use the VPC wizard to create a VPC, route propagation is automatically en
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 
@@ -121,20 +123,22 @@ If you use the VPC wizard to create a VPC, route propagation is automatically en
 
 1. Choose **Create virtual interface**\.
 
-1. Download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](#vif-router-config)\.
+1. Download the router configuration for your device\. For more information, see [Downloading the router configuration file](#vif-router-config)\.
 
 **To create a private virtual interface using the command line or API**
 + [create\-private\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-private-virtual-interface.html) \(AWS CLI\)
 + [CreatePrivateVirtualInterface](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreatePrivateVirtualInterface.html) \(AWS Direct Connect API\)
 
-## Creating a Transit Virtual Interface to the Direct Connect Gateway<a name="create-transit-vif"></a>
+## Creating a transit virtual interface to the Direct Connect gateway<a name="create-transit-vif"></a>
 
 To connect your AWS Direct Connect connection to the transit gateway, you must create a transit interface for your connection\. Specify the Direct Connect gateway to which to connect\.
+
+The maximum transmission unit \(MTU\) of a network connection is the size, in bytes, of the largest permissible packet that can be passed over the connection\. The MTU of a virtual private interface can be either 1500 or 9001 \(jumbo frames\)\. The MTU of a transit virtual interface can be either 1500 or 8500 \(jumbo frames\)\. You can specify the MTU when you create the interface or update it after you create it\. Setting the MTU of a virtual interface to 8500 \(jumbo frames\) or 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find **Jumbo Frame Capable** on the **Summary** tab\.
 
 **Important**  
 If you associate your transit gateway with one or more Direct Connect gateways, the Autonomous System Number \(ASN\) used by the transit gateway and the Direct Connect gateway must be different\. For example, if you use the default ASN 64512 for both the transit gateway and the Direct Connect gateway, the association request fails\.
 
-**To provision a transit virtual interface to a Direct Connect gateway**
+**To provision a transit virtual interface to a direct connect gateway**
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
@@ -156,7 +160,7 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 
@@ -182,19 +186,19 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
 
 1. Choose **Create virtual interface**\.
 
-After you create the virtual interface, you can download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](#vif-router-config)\.
+After you create the virtual interface, you can download the router configuration for your device\. For more information, see [Downloading the router configuration file](#vif-router-config)\.
 
 **To create a transit virtual interface using the command line or API**
 + [create\-transit\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-transit-virtual-interface.html) \(AWS CLI\)
 + [CreateTransitVirtualInterface](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateTransitVirtualInterface.html) \(AWS Direct Connect API\)
 
-**To view the virtual interfaces that are attached to a Direct Connect gateway using the command line or API**
+**To view the virtual interfaces that are attached to a direct connect gateway using the command line or API**
 + [describe\-direct\-connect\-gateway\-attachments](https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-direct-connect-gateway-attachments.html) \(AWS CLI\)
 + [DescribeDirectConnectGatewayAttachments](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeDirectConnectGatewayAttachments.html) \(AWS Direct Connect API\)
 
-## Downloading the Router Configuration File<a name="vif-router-config"></a>
+## Downloading the router configuration file<a name="vif-router-config"></a>
 
-After you create the virtual interface, you can download the router configuration file for your router\.
+After you create the virtual interface and the interface state is up, you can download the router configuration file for your router\.
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
@@ -214,7 +218,7 @@ After you create the virtual interface, you can download the router configuratio
 
 1. Choose **Download**, and then use the appropriate configuration for your router to ensure that you can connect to AWS Direct Connect\.
 
-### Example Router Configuration Files<a name="vif-example-router-files"></a>
+### Example router configuration files<a name="vif-example-router-files"></a>
 
 The following are example extracts of router configuration files\.
 

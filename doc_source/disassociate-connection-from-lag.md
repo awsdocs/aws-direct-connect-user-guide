@@ -1,4 +1,4 @@
-# Disassociating a Connection From a LAG<a name="disassociate-connection-from-lag"></a>
+# Disassociating a connection from a LAG<a name="disassociate-connection-from-lag"></a>
 
 Convert a connection to standalone by disassociating it from a LAG\. You can't disassociate a connection if it causes the LAG to fall below its threshold for the minimum number of operational connections\.
 

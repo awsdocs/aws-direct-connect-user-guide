@@ -1,4 +1,4 @@
-# Viewing Virtual Interface Details<a name="viewvifdetails"></a>
+# Viewing virtual interface details<a name="viewvifdetails"></a>
 
 You can view the current status of your virtual interface\. Details include:
 + Connection state

@@ -1,14 +1,9 @@
-# Virtual Private Gateway Associations<a name="virtualgateways"></a>
+# Virtual private gateway associations<a name="virtualgateways"></a>
 
-You can use an *AWS Direct Connect gateway* to connect your AWS Direct Connect connection over a private virtual interface to one or more VPCs in your account that are located in the same or different Regions\. You associate a Direct Connect gateway with the virtual private gateway for the VPC\. Then, you create a private virtual interface for your AWS Direct Connect connection to the Direct Connect gateway\. You can attach multiple private virtual interfaces to your Direct Connect gateway\.
+You can use an *AWS Direct Connect gateway* to connect your AWS Direct Connect connection over a private virtual interface to one or more VPCs in any account that are located in the same or different Regions\. You associate a Direct Connect gateway with the virtual private gateway for the VPC\. Then, you create a private virtual interface for your AWS Direct Connect connection to the Direct Connect gateway\. You can attach multiple private virtual interfaces to your Direct Connect gateway\.
 
-In the following diagram, the Direct Connect gateway enables you to use your AWS Direct Connect connection in the US East \(N\. Virginia\) Region to access VPCs in your account in both the US East \(N\. Virginia\) and US West \(N\. California\) Regions\.
-
-![\[Direct connect gateway\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/dx-gateway.png)
-
-The following rules apply:
-+ You cannot use a Direct Connect gateway to connect to a VPC in the China Regions\.
-+ There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect Limits](limits.md)\.
+The following rules apply to VPC associations:
++ There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect quotas](limits.md)\.
 + The VPCs to which you connect through a Direct Connect gateway cannot have overlapping CIDR blocks\. If you add an IPv4 CIDR block to a VPC that's associated with a Direct Connect gateway, ensure that the CIDR block does not overlap with an existing CIDR block for any other associated VPC\. For more information, see [Adding IPv4 CIDR Blocks to a VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#vpc-resize) in the *Amazon VPC User Guide*\.
 + You cannot create a public virtual interface to a Direct Connect gateway\.
 + A Direct Connect gateway supports communication between attached private virtual interfaces and associated virtual private gateways only\. The following traffic flows are not supported:
@@ -20,16 +15,16 @@ The following rules apply:
 + A virtual private gateway association proposal expires 7 days after it is created\.
 + An accepted virtual private gateway proposal, or a deleted virtual private gateway proposal remains visible for 3 days\.
 
-To connect your AWS Direct Connect connection to a VPC in the same Region only, you can create a Direct Connect gateway\. Or, you can create a private virtual interface and attach it to the virtual private gateway for the VPC\. For more information, see [Creating a Private Virtual Interface](create-vif.md#create-private-vif) and [VPN CloudHub](https://docs.aws.amazon.com/vpc/latest/userguide/VPN_CloudHub.html)\.
+To connect your AWS Direct Connect connection to a VPC in the same Region only, you can create a Direct Connect gateway\. Or, you can create a private virtual interface and attach it to the virtual private gateway for the VPC\. For more information, see [Creating a private virtual interface](create-vif.md#create-private-vif) and [VPN CloudHub](https://docs.aws.amazon.com/vpc/latest/userguide/VPN_CloudHub.html)\.
 
-To use your AWS Direct Connect connection with a VPC in another account, you can create a hosted private virtual interface for that account\. When the owner of the other account accepts the hosted virtual interface, they can choose to attach it either to a virtual private gateway or to a Direct Connect gateway in their account\. For more information, see [AWS Direct Connect Virtual Interfaces](WorkingWithVirtualInterfaces.md)\.
+To use your AWS Direct Connect connection with a VPC in another account, you can create a hosted private virtual interface for that account\. When the owner of the other account accepts the hosted virtual interface, they can choose to attach it either to a virtual private gateway or to a Direct Connect gateway in their account\. For more information, see [AWS Direct Connect virtual interfaces](WorkingWithVirtualInterfaces.md)\.
 
 **Topics**
-+ [Associating and Disassociating Virtual Private Gateways](#associate-vgw-with-direct-connect-gateway)
-+ [Creating a Private Virtual Interface to the Direct Connect Gateway](#create-private-vif-for-gateway)
-+ [Associating a Virtual Private Gateway Across Accounts](multi-account-associate-vgw.md)
++ [Associating and disassociating virtual private gateways](#associate-vgw-with-direct-connect-gateway)
++ [Creating a private virtual interface to the Direct Connect gateway](#create-private-vif-for-gateway)
++ [Associating a virtual private gateway across accounts](multi-account-associate-vgw.md)
 
-## Associating and Disassociating Virtual Private Gateways<a name="associate-vgw-with-direct-connect-gateway"></a>
+## Associating and disassociating virtual private gateways<a name="associate-vgw-with-direct-connect-gateway"></a>
 
 The virtual private gateway must be attached to the VPC to which you want to connect\. For more information, see [Create a Virtual Private Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_VPN.html#vpn-create-vpg) in the *Amazon VPC User Guide*\.
 
@@ -74,12 +69,12 @@ You can view all of the virtual private gateways that are associated with the Di
 + [delete\-direct\-connect\-gateway\-association](https://docs.aws.amazon.com/cli/latest/reference/directconnect/delete-direct-connect-gateway-association.html) \(AWS CLI\)
 + [DeleteDirectConnectGatewayAssociation](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DeleteDirectConnectGatewayAssociation.html) \(AWS Direct Connect API\)
 
-## Creating a Private Virtual Interface to the Direct Connect Gateway<a name="create-private-vif-for-gateway"></a>
+## Creating a private virtual interface to the Direct Connect gateway<a name="create-private-vif-for-gateway"></a>
 
 To connect your AWS Direct Connect connection to the remote VPC, you must create a private virtual interface for your connection\. Specify the Direct Connect gateway to which to connect\.
 
 **Note**  
-If you're accepting a hosted private virtual interface, you can associate it with a Direct Connect gateway in your account\. For more information, see [Accepting a Hosted Virtual Interface](accepthostedvirtualinterface.md)\.
+If you're accepting a hosted private virtual interface, you can associate it with a Direct Connect gateway in your account\. For more information, see [Accepting a hosted virtual interface](accepthostedvirtualinterface.md)\.
 
 **To provision a private virtual interface to a Direct Connect gateway**
 
@@ -105,7 +100,7 @@ If you're accepting a hosted private virtual interface, you can associate it wit
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 
@@ -131,7 +126,7 @@ If you're accepting a hosted private virtual interface, you can associate it wit
 
 1. Choose **Create virtual interface**\.
 
-After you've created the virtual interface, you can download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](create-vif.md#vif-router-config)\.
+After you've created the virtual interface, you can download the router configuration for your device\. For more information, see [Downloading the router configuration file](create-vif.md#vif-router-config)\.
 
 **To create a private virtual interface using the command line or API**
 + [create\-private\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-private-virtual-interface.html) \(AWS CLI\)

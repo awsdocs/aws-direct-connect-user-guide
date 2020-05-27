@@ -1,6 +1,6 @@
 # Deleting LAGs<a name="delete-lag"></a>
 
-If you no longer need LAGs, you can delete them\. You cannot delete a LAG if it has virtual interfaces associated with it\. You must first delete the virtual interfaces, or associate them with a different LAG or connection\. Deleting a LAG does not delete the connections in the LAG; you must delete the connections yourself\. For more information, see [Deleting Connections](deleteconnection.md)\.
+If you no longer need LAGs, you can delete them\. You cannot delete a LAG if it has virtual interfaces associated with it\. You must first delete the virtual interfaces, or associate them with a different LAG or connection\. Deleting a LAG does not delete the connections in the LAG; you must delete the connections yourself\. For more information, see [Deleting connections](deleteconnection.md)\.
 
 **To delete a LAG**
 

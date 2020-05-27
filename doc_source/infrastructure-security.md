@@ -1,4 +1,4 @@
-# Infrastructure Security in AWS Direct Connect<a name="infrastructure-security"></a>
+# Infrastructure security in AWS Direct Connect<a name="infrastructure-security"></a>
 
 As a managed service, AWS Direct Connect is protected by the AWS global network security procedures that are described in the [Amazon Web Services: Overview of Security Processes](https://d0.awsstatic.com/whitepapers/Security/AWS_Security_Whitepaper.pdf) whitepaper\.
 
@@ -6,4 +6,4 @@ You use AWS published API calls to access AWS Direct Connect through the network
 
 Additionally, requests must be signed by using an access key ID and a secret access key that is associated with an IAM principal\. Or you can use the [AWS Security Token Service](https://docs.aws.amazon.com/STS/latest/APIReference/Welcome.html) \(AWS STS\) to generate temporary security credentials to sign requests\.
 
-You can call these API operations from any network location, but AWS Direct Connect supports resource\-based access policies, which can include restrictions based on the source IP address\. You can also use AWS Direct Connect policies to control access from specific Amazon Virtual Private Cloud \(Amazon VPC\) endpoints or specific VPCs\. Effectively, this isolates network access to a given AWS Direct Connect resource from only the specific VPC within the AWS network\. For example, see [AWS Direct Connect Resource\-Based Policy Examples](security_iam_resource-based-policy-examples.md)\.
+You can call these API operations from any network location, but AWS Direct Connect supports resource\-based access policies, which can include restrictions based on the source IP address\. You can also use AWS Direct Connect policies to control access from specific Amazon Virtual Private Cloud \(Amazon VPC\) endpoints or specific VPCs\. Effectively, this isolates network access to a given AWS Direct Connect resource from only the specific VPC within the AWS network\. For example, see [AWS Direct Connect resource\-based policy examples](security_iam_resource-based-policy-examples.md)\.

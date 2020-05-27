@@ -1,4 +1,4 @@
-# Compliance Validation for AWS Direct Connect<a name="DirectConnect-compliance"></a>
+# Compliance validation for AWS Direct Connect<a name="DirectConnect-compliance"></a>
 
 Third\-party auditors assess the security and compliance of AWS Direct Connect as part of multiple AWS compliance programs\. These include ISO, SOC, PCI, FedRAMP, DoD, CC SRG, HIPAA BAA, IRP, MTCS\. C5, K\-ISMS, and ENS\-High\.
 

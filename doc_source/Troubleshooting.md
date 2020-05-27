@@ -3,12 +3,12 @@
 The following topics can help you troubleshoot issues with your AWS Direct Connect connection\.
 
 **Topics**
-+ [Troubleshooting Layer 1 \(Physical\) Issues](#ts_layer_1)
-+ [Troubleshooting Layer 2 \(Data Link\) Issues](#ts-layer-2)
-+ [Troubleshooting Layer 3/4 \(Network/Transport\) Issues](#ts-layer-3)
-+ [Troubleshooting Routing Issues](#ts-routing)
++ [Troubleshooting layer 1 \(physical\) issues](#ts_layer_1)
++ [Troubleshooting layer 2 \(data link\) issues](#ts-layer-2)
++ [Troubleshooting layer 3/4 \(Network/Transport\) issues](#ts-layer-3)
++ [Troubleshooting routing issues](#ts-routing)
 
-## Troubleshooting Layer 1 \(Physical\) Issues<a name="ts_layer_1"></a>
+## Troubleshooting layer 1 \(physical\) issues<a name="ts_layer_1"></a>
 
 If you or your network provider are having difficulty establishing physical connectivity to an AWS Direct Connect device, use the following steps to troubleshoot the issue\.
 
@@ -32,7 +32,7 @@ The following flow chart contains the steps to diagnose issues with the physical
 
 ![\[Troubleshoot AWS Direct Connect\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/troubleshooting-chart-layer-1.png)
 
-## Troubleshooting Layer 2 \(Data Link\) Issues<a name="ts-layer-2"></a>
+## Troubleshooting layer 2 \(data link\) issues<a name="ts-layer-2"></a>
 
 If your AWS Direct Connect physical connection is up but your virtual interface is down, use the following steps to troubleshoot the issue\.
 
@@ -50,9 +50,9 @@ The following flow chart contains the steps to diagnose issues with the data lin
 
 ![\[Troubleshoot AWS Direct Connect\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/troubleshooting-chart-layer-2.png)
 
-If the BGP session is still not established after verifying these steps, see [Troubleshooting Layer 3/4 \(Network/Transport\) Issues](#ts-layer-3)\. If the BGP session is established but you are experiencing routing issues, see [Troubleshooting Routing Issues](#ts-routing)\.
+If the BGP session is still not established after verifying these steps, see [Troubleshooting layer 3/4 \(Network/Transport\) issues](#ts-layer-3)\. If the BGP session is established but you are experiencing routing issues, see [Troubleshooting routing issues](#ts-routing)\.
 
-## Troubleshooting Layer 3/4 \(Network/Transport\) Issues<a name="ts-layer-3"></a>
+## Troubleshooting layer 3/4 \(Network/Transport\) issues<a name="ts-layer-3"></a>
 
 Consider a situation where your AWS Direct Connect physical connection is up and you can ping the Amazon peer IP address\. If your virtual interface is down and the BGP peering session cannot be established, use the following steps to troubleshoot the issue:
 
@@ -74,9 +74,9 @@ The following flow chart contains the steps to diagnose issues with the BGP peer
 
 ![\[Troubleshoot AWS Direct Connect\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/troubleshooting-chart-layer-3-4.png)
 
-If the BGP peering session is established but you are experiencing routing issues, see [Troubleshooting Routing Issues](#ts-routing)\.
+If the BGP peering session is established but you are experiencing routing issues, see [Troubleshooting routing issues](#ts-routing)\.
 
-## Troubleshooting Routing Issues<a name="ts-routing"></a>
+## Troubleshooting routing issues<a name="ts-routing"></a>
 
 Consider a situation where your virtual interface is up and you've established a BGP peering session\. If you cannot route traffic over the virtual interface, use the following steps to troubleshoot the issue:
 

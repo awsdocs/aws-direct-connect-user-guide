@@ -6,13 +6,13 @@ The following procedures demonstrate the common scenarios to get set up with an 
 
 **Topics**
 + [Prerequisites](#get-started-prerequisites)
-+ [Step 1: Sign Up for AWS](#get-started-signup)
-+ [Step 2: Request an AWS Direct Connect Dedicated Connection or Accept a Hosted Connection](#ConnectionRequest)
-+ [\(Dedicated Connection\) Step 3: Download the LOA\-CFA](#DedicatedConnection)
-+ [Step 4: Create a Virtual Interface](#createvirtualinterface)
-+ [Step 5: Download the Router Configuration](#routerconfig)
-+ [Step 6: Verify Your Virtual Interface](#connected)
-+ [\(Recommended\) Configure Redundant Connections](#RedundantConnections)
++ [Step 1: Sign up for AWS](#get-started-signup)
++ [Step 2: Request an AWS Direct Connect dedicated connection or accept a hosted connection](#ConnectionRequest)
++ [\(Dedicated connection\) step 3: Download the LOA\-CFA](#DedicatedConnection)
++ [Step 4: Create a virtual interface](#createvirtualinterface)
++ [Step 5: Download the router configuration](#routerconfig)
++ [Step 6: Verify your virtual interface](#connected)
++ [\(Recommended\) configure redundant connections](#RedundantConnections)
 
 ## Prerequisites<a name="get-started-prerequisites"></a>
 
@@ -23,7 +23,7 @@ For connections to AWS Direct Connect with port speeds of 1 Gbps or higher, ensu
 + Your device must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\.
 + \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but does not take effect until you configure it on your router\.
 
-## Step 1: Sign Up for AWS<a name="get-started-signup"></a>
+## Step 1: Sign up for AWS<a name="get-started-signup"></a>
 
 To use AWS Direct Connect, you need an AWS account if you don't already have one\.
 
@@ -35,13 +35,13 @@ To use AWS Direct Connect, you need an AWS account if you don't already have one
 
    Part of the sign\-up procedure involves receiving a phone call and entering a verification code on the phone keypad\.
 
-## Step 2: Request an AWS Direct Connect Dedicated Connection or Accept a Hosted Connection<a name="ConnectionRequest"></a>
+## Step 2: Request an AWS Direct Connect dedicated connection or accept a hosted connection<a name="ConnectionRequest"></a>
 
 For dedicated connections, you can submit a connection request using the AWS Direct Connect console\. For hosted connections, work with an AWS Direct Connect Partner to request a hosted connection\. Ensure that you have the following information:
 + The port speed that you require\. You cannot change the port speed after you create the connection request\. 
 + The AWS Direct Connect location at which the connection is to be terminated\.
 
-You cannot use the AWS Direct Connect console to request a hosted connection\. Instead, contact an AWS Direct Connect Partner, who can create a hosted connection for you, which you then accept\. Skip the following procedure and go to [ Accept Your Hosted Connection](#get-started-accept-hosted-connection)\.
+You cannot use the AWS Direct Connect console to request a hosted connection\. Instead, contact an AWS Direct Connect Partner, who can create a hosted connection for you, which you then accept\. Skip the following procedure and go to [ Accept your hosted connection](#get-started-accept-hosted-connection)\.
 
 **To create a new AWS Direct Connect connection**
 
@@ -79,25 +79,33 @@ You cannot use the AWS Direct Connect console to request a hosted connection\. I
 
 It can take up to 72 hours for AWS to review your request and provision a port for your connection\. During this time, you might receive an email with a request for more information about your use case or the specified location\. The email is sent to the email address that you used when you signed up for AWS\. You must respond within 7 days or the connection is deleted\.
 
-For more information, see [AWS Direct Connect Connections](WorkingWithConnections.md)\.
+For more information, see [AWS Direct Connect connections](WorkingWithConnections.md)\.
 
-### Accept Your Hosted Connection<a name="get-started-accept-hosted-connection"></a>
+### Accept your hosted connection<a name="get-started-accept-hosted-connection"></a>
 
  You must accept the hosted connection in the AWS Direct Connect console before you can create a virtual interface\.
 
-**To accept a hosted connection**
+**To accept a hosted virtual interface**
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
-1. In the navigation pane, choose **Connections**\.
+1. In the navigation pane, choose **Virtual Interfaces**\.
 
-1. Select the hosted connection and choose **View details**\.
+1. Select the virtual interface and then choose **View details**\.
 
-1. Select the confirmation check box and choose **Accept connection**\.
+1. Choose **Accept**\.
+
+1. This applies to private virtual interfaces and transit virtual interfaces\.
+
+   \(Transit virtual interface\) In the **Accept virtual interface** dialog box, select a Direct Connect gateway, and then choose **Accept virtual interface**\.
+
+   \(Private virtual interface\) In the **Accept virtual interface** dialog box, select a virtual private gateway or Direct Connect gateway, and then choose **Accept virtual interface**\.
+
+1. After you accept the hosted virtual interface, the owner of the AWS Direct Connect connection can download the router configuration file\. The **Download router configuration** option is not available for the account that accepts the hosted virtual interface\.
 
 1. Go to [Step 4](#createvirtualinterface) to continue setting up your AWS Direct Connect connection\.
 
-## \(Dedicated Connection\) Step 3: Download the LOA\-CFA<a name="DedicatedConnection"></a>
+## \(Dedicated connection\) step 3: Download the LOA\-CFA<a name="DedicatedConnection"></a>
 
 After you request a connection, AWS makes a Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\) available to you to download, or emails you with a request for more information\. The LOA\-CFA is the authorization to connect to AWS, and is required by the colocation provider or your network provider to establish the cross\-network connection \(cross\-connect\)\.
 
@@ -124,9 +132,9 @@ AWS Direct Connect locations that are listed as multiple sites \(for example, Eq
 **Important**  
 A campus is treated as a single AWS Direct Connect location\. To achieve high availability, configure connections to different AWS Direct Connect locations\.
 
-If you or your network provider experience issues establishing a physical connection, see [Troubleshooting Layer 1 \(Physical\) Issues](Troubleshooting.md#ts_layer_1)\.
+If you or your network provider experience issues establishing a physical connection, see [Troubleshooting layer 1 \(physical\) issues](Troubleshooting.md#ts_layer_1)\.
 
-## Step 4: Create a Virtual Interface<a name="createvirtualinterface"></a>
+## Step 4: Create a virtual interface<a name="createvirtualinterface"></a>
 
 To begin using your AWS Direct Connect connection, you must create a virtual interface\. You can create a private virtual interface to connect to your VPC\. Or, you can create a public virtual interface to connect to public AWS services that aren't in a VPC\. When you create a private virtual interface to a VPC, you need a private virtual interface for each VPC to which to connect\. For example, you need three private virtual interfaces to connect to three VPCs\.
 
@@ -143,11 +151,13 @@ Before you begin, ensure that you have the following information:
 | Peer IP addresses |  A virtual interface can support a BGP peering session for IPv4, IPv6, or one of each \(dual\-stack\)\. You cannot create multiple BGP sessions for the same IP addressing family on the same virtual interface\. The IP address ranges are assigned to each end of the virtual interface for the BGP peering session\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/getting_started.html)  | 
 | Address family | Whether the BGP peering session will be over IPv4 or IPv6\. | 
 | BGP information | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/getting_started.html) | 
-| \(Public virtual interface only\) Prefixes you want to advertise |  : Public IPv4 routes or IPv6 routes to advertise over BGP\. You must advertise at least one prefix using BGP, up to a maximum of 1,000 prefixes\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/getting_started.html) | 
-| \(Private virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo Frame Capable on the Summary tab\. | 
-| \(Transit virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 8500 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo Frame Capable on the Summary tab\. | 
+| \(Public virtual interface only\) Prefixes you want to advertise |   Public IPv4 routes or IPv6 routes to advertise over BGP\. You must advertise at least one prefix using BGP, up to a maximum of 1,000 prefixes\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/getting_started.html) | 
+| \(Private virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. Jumbo frames apply only to propagated routes from AWS Direct Connect\. If you add static routes to a route table that point to your virtual private gateway, then traffic routed through the static routes is sent using 1500 MTU\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo Frame Capable on the Summary tab\. | 
+| \(Transit virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 8500 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. Jumbo frames apply only to propagated routes from AWS Direct Connect\. If you add static routes to a route table that point to your virtual private gateway, then traffic routed through the static routes is sent using 1500 MTU\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo Frame Capable on the Summary tab\. | 
 
 AWS requests additional information from you if your public prefixes or ASNs belong to an ISP or network carrier\. This can be a document using an official company letterhead or an email from the company's domain name verifying that the network prefix/ASN may be used by you\.
+
+For private virtual interface and public virtual interfaces, the maximum transmission unit \(MTU\) of a network connection is the size, in bytes, of the largest permissible packet that can be passed over the connection\. The MTU of a virtual private interface can be either 1500 or 9001 \(jumbo frames\)\. The MTU of a transit virtual interface can be either 1500 or 8500 \(jumbo frames\)\. You can specify the MTU when you create the interface or update it after you create it\. Setting the MTU of a virtual interface to 8500 \(jumbo frames\) or 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find **Jumbo Frame Capable** on the **Summary** tab\.
 
 When you create a public virtual interface, it can take up to 72 hours for AWS to review and approve your request\.
 
@@ -169,7 +179,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 
@@ -223,7 +233,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 
@@ -249,7 +259,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 1. Choose **Create virtual interface**\.
 
-## Step 5: Download the Router Configuration<a name="routerconfig"></a>
+## Step 5: Download the router configuration<a name="routerconfig"></a>
 
 After you have created a virtual interface for your AWS Direct Connect connection, you can download the router configuration file\. The file contains the necessary commands to configure your router for use with your private or public virtual interface\.
 
@@ -275,9 +285,9 @@ After you have created a virtual interface for your AWS Direct Connect connectio
 
 For example configuration files, see [Example Router Configuration Files](https://docs.aws.amazon.com/directconnect/latest/UserGuide/create-vif.html#vif-example-router-files)\.
 
-After you configure your router, the status of the virtual interface goes to `UP`\. If the virtual interface remains down and you cannot ping the AWS Direct Connect device's peer IP address, see [Troubleshooting Layer 2 \(Data Link\) Issues](Troubleshooting.md#ts-layer-2)\. If you can ping the peer IP address, see [Troubleshooting Layer 3/4 \(Network/Transport\) Issues](Troubleshooting.md#ts-layer-3)\. If the BGP peering session is established but you cannot route traffic, see [Troubleshooting Routing Issues](Troubleshooting.md#ts-routing)\.
+After you configure your router, the status of the virtual interface goes to `UP`\. If the virtual interface remains down and you cannot ping the AWS Direct Connect device's peer IP address, see [Troubleshooting layer 2 \(data link\) issues](Troubleshooting.md#ts-layer-2)\. If you can ping the peer IP address, see [Troubleshooting layer 3/4 \(Network/Transport\) issues](Troubleshooting.md#ts-layer-3)\. If the BGP peering session is established but you cannot route traffic, see [Troubleshooting routing issues](Troubleshooting.md#ts-routing)\.
 
-## Step 6: Verify Your Virtual Interface<a name="connected"></a>
+## Step 6: Verify your virtual interface<a name="connected"></a>
 
 After you have established virtual interfaces to the AWS Cloud or to Amazon VPC, you can verify your AWS Direct Connect connection using the following procedures\. 
 
@@ -292,7 +302,7 @@ After you have established virtual interfaces to the AWS Cloud or to Amazon VPC,
 
 1. Ping the private IPv4 address and get a response\.
 
-## \(Recommended\) Configure Redundant Connections<a name="RedundantConnections"></a>
+## \(Recommended\) configure redundant connections<a name="RedundantConnections"></a>
 
 To provide for failover, we recommend that you request and configure two dedicated connections to AWS, as shown in the following figure\. These connections can terminate on one or two routers in your network\.
 
@@ -308,6 +318,6 @@ If you use a VPN connection for redundancy, ensure that you implement a health c
 + You use your own instances for routing, for example the instance is the firewall\. 
 + You use your own instance that terminates a VPN connection\.
 
-To achieve high availability, we strongly recommend that you configure connections to different AWS Direct Connect locations\. For more information about high availability options, see [Multiple Data Center HA Network Connectivity](https://aws.amazon.com/answers/networking/aws-multiple-data-center-ha-network-connectivity/)\.
+To achieve high availability, we strongly recommend that you configure connections to different AWS Direct Connect locations\. 
 
 For more information about AWS Direct Connect resiliency, see [AWS Direct Connect Resiliency Recommendations](https://aws.amazon.com/directconnect/resiliency-recommendation/)\.

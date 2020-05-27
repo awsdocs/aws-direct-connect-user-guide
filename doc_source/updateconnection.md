@@ -1,4 +1,4 @@
-# Updating a Connection<a name="updateconnection"></a>
+# Updating a connection<a name="updateconnection"></a>
 
 You can update the connection name, add a tag to the connection, or remove a tag from the connection\.
 

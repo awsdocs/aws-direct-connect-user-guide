@@ -1,8 +1,8 @@
-# Creating a Hosted Virtual Interface<a name="createhostedvirtualinterface"></a>
+# Creating a hosted virtual interface<a name="createhostedvirtualinterface"></a>
 
-You can create a public, transit or private hosted virtual interface\. Before you begin, ensure that you have read the information in [Prerequisites for Virtual Interfaces](WorkingWithVirtualInterfaces.md#vif-prerequisites)\.
+You can create a public, transit or private hosted virtual interface\. Before you begin, ensure that you have read the information in [Prerequisites for virtual interfaces](WorkingWithVirtualInterfaces.md#vif-prerequisites)\.
 
-## Creating a Hosted Private Virtual Interface<a name="create-hosted-private-vif"></a>
+## Creating a hosted private virtual interface<a name="create-hosted-private-vif"></a>
 
 **To create a hosted private virtual interface**
 
@@ -28,7 +28,7 @@ You can create a public, transit or private hosted virtual interface\. Before yo
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 
@@ -60,7 +60,7 @@ You can create a public, transit or private hosted virtual interface\. Before yo
 + [allocate\-private\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/allocate-private-virtual-interface.html) \(AWS CLI\)
 + [AllocatePrivateVirtualInterface](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_AllocatePrivateVirtualInterface.html) \(AWS Direct Connect API\)
 
-## Creating a Hosted Public Virtual Interface<a name="create-hosted-public-vif"></a>
+## Creating a hosted public virtual interface<a name="create-hosted-public-vif"></a>
 
 **To create a hosted public virtual interface**
 
@@ -80,9 +80,11 @@ You can create a public, transit or private hosted virtual interface\. Before yo
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
+
+1. Under **Additional Settings**, for **Virtual interface owner**, enter the ID of the AWS account to own this virtual interface\.
 
 1. To configure an IPv4 BGP or an IPv6 peer, do the following:
 
@@ -114,7 +116,7 @@ You can create a public, transit or private hosted virtual interface\. Before yo
 + [allocate\-public\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/allocate-public-virtual-interface.html) \(AWS CLI\)
 + [AllocatePublicVirtualInterface](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_AllocatePublicVirtualInterface.html) \(AWS Direct Connect API\)
 
-## Creating a Hosted Transit Virtual Interface<a name="create-hosted-transit-vif"></a>
+## Creating a hosted transit virtual interface<a name="create-hosted-transit-vif"></a>
 
 **To create a hosted transit virtual interface**
 **Important**  
@@ -140,7 +142,7 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 

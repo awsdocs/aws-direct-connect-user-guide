@@ -1,4 +1,4 @@
-# AWS Direct Connect Limits<a name="limits"></a>
+# AWS Direct Connect quotas<a name="limits"></a>
 
 The following table lists the limits related to AWS Direct Connect\. Unless indicated otherwise, you can request an increase for any of these limits using the [AWS Direct Connect Limits form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-direct-connect)\.
 
@@ -8,9 +8,9 @@ The following table lists the limits related to AWS Direct Connect\. Unless indi
 |  Private or public virtual interfaces per AWS Direct Connect dedicated connection  |  50  |  This limit cannot be increased\.  | 
 | Transit virtual interfaces per AWS Direct Connect dedicated connection |  1  | This limit cannot be increased\. | 
 | Private, public, or transit virtual interfaces per AWS Direct Connect hosted connection1 | 1 | This limit cannot be increased\. | 
-|  Active AWS Direct Connect dedicated connections per Region per account  | 10 |  | 
+|  Active AWS Direct Connect connections per Region per account  | 10 |  | 
 | Number of virtual interfaces per Link Aggregation Group \(LAG\) | 50 |  | 
-|  Routes per Border Gateway Protocol \(BGP\) session on a private virtual interface If you advertise more than 100 routes over the BGP session, the BGP session will go into an idle state\.  |  100  |  This limit cannot be increased\.  | 
+|  Routes per Border Gateway Protocol \(BGP\) session on a private virtual interface If you advertise more than 100 routes over the BGP session, the BGP session will go into an idle state with the BGP session DOWN\.  |  100  |  This limit cannot be increased\.  | 
 |  Routes per Border Gateway Protocol \(BGP\) session on a public virtual interface  |  1,000  |  This limit cannot be increased\.  | 
 |  Dedicated connections per link aggregation group \(LAG\)  | 4 |  | 
 |  Link aggregation groups \(LAGs\) per Region  |  10  |  | 
@@ -25,6 +25,6 @@ AWS Direct Connect supports these port speeds over single\-mode fiber: 1 Gbps: 1
 
 1: You cannot create a transit virtual interface on a hosted connection with a capacity less than 1Gbps\.
 
-## Load Balance Considerations<a name="load-balance-considerations"></a>
+## Load balance considerations<a name="load-balance-considerations"></a>
 
 If you want to use load balancing with multiple public VIFs, all the VIFs must be in the same Region\.

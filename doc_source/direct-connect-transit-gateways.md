@@ -1,35 +1,15 @@
-# Transit Gateway Associations<a name="direct-connect-transit-gateways"></a>
+# Transit gateway associations<a name="direct-connect-transit-gateways"></a>
 
 You can use an *AWS Direct Connect gateway* to connect your AWS Direct Connect connection over a transit virtual interface to the VPCs or VPNs that are attached to your transit gateway\. You associate a Direct Connect gateway with the transit gateway\. Then, create a transit virtual interface for your AWS Direct Connect connection to the Direct Connect gateway\. 
 
-This configuration offers the following benefits\. You can:
-+ Manage a single connection for multiple VPCs or VPNs that are in the same Region\.
-+ Advertise prefixes from on\-premises to AWS and from AWS to on\-premises\.
-
-The following diagram illustrates how the Direct Connect gateway enables you to create a single connection to your Direct Connect connection that all of your VPCs can use\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/direct-connect-tgw.png)
-
-The solution involves the following components:
-+ A transit gateway that has VPC attachments\.
-+ A Direct Connect gateway\.
-+ An association between the Direct Connect gateway and the transit gateway\.
-+ A transit virtual interface that is attached to the Direct Connect gateway\.
-
-For information about configuring transit gateways, see [Working with Transit Gateways](https://docs.aws.amazon.com/vpc/latest/tgw/tgw-dcg-attachments.html) in the *Amazon VPC Transit Gateways Guide*\.
-
-The following rules apply:
-+ You cannot use a Direct Connect gateway and a transit gateway in the China Regions\.
+The following rules apply to transit gateway associations:
 + You cannot attach a Direct Connect gateway to a transit gateway when the Direct Connect gateway is already associated with a virtual private gateway or is attached to a private virtual interface\.
-+ There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect Limits](limits.md)\.
++ There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect quotas](limits.md)\.
 + A Direct Connect gateway supports communication between attached transit virtual interfaces and associated transit gateways only\. 
 + If you connect to multiple transit gateways that are in different Regions, use unique ASNs for each transit gateway\.
 + A virtual private gateway can be associated with a Direct Connect gateway and also attached to a virtual interface\.
-+ The following Regions do not support transit gateway associations across accounts:
-  + Asia Pacific \(Hong Kong\) Region
-  + Middle East \(Bahrain\) Region
 
-## Associating and Disassociating Transit Gateways<a name="associate-tgw-with-direct-connect-gateway"></a>
+## Associating and disassociating transit gateways<a name="associate-tgw-with-direct-connect-gateway"></a>
 
 **To associate a transit gateway**
 
@@ -69,7 +49,7 @@ You can view all of the gateways that are associated with the Direct Connect gat
 + [delete\-direct\-connect\-gateway\-association](https://docs.aws.amazon.com/cli/latest/reference/directconnect/delete-direct-connect-gateway-association.html) \(AWS CLI\)
 + [DeleteDirectConnectGatewayAssociation](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DeleteDirectConnectGatewayAssociation.html) \(AWS Direct Connect API\)
 
-## Creating a Transit Virtual Interface to the Direct Connect Gateway<a name="create-transit-vif-for-gateway"></a>
+## Creating a transit virtual interface to the Direct Connect gateway<a name="create-transit-vif-for-gateway"></a>
 
 To connect your AWS Direct Connect connection to the transit gateway, you must create a transit interface for your connection\. Specify the Direct Connect gateway to which to connect\.
 
@@ -98,7 +78,7 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 
@@ -124,7 +104,7 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
 
 1. Choose **Create virtual interface**\.
 
-After you've created the virtual interface, you can download the router configuration for your device\. For more information, see [Downloading the Router Configuration File](create-vif.md#vif-router-config)\.
+After you've created the virtual interface, you can download the router configuration for your device\. For more information, see [Downloading the router configuration file](create-vif.md#vif-router-config)\.
 
 **To create a transit virtual interface using the command line or API**
 + [create\-transit\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-transit-virtual-interface.html) \(AWS CLI\)

@@ -1,14 +1,14 @@
-# How AWS Direct Connect Works with IAM<a name="security_iam_service-with-iam"></a>
+# How AWS Direct Connect works with IAM<a name="security_iam_service-with-iam"></a>
 
 Before you use IAM to manage access to Direct Connect, you should understand what IAM features are available to use with Direct Connect\. To get a high\-level view of how Direct Connect and other AWS services work with IAM, see [AWS Services That Work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html) in the *IAM User Guide*\.
 
 **Topics**
-+ [Direct Connect Identity\-Based Policies](#security_iam_service-with-iam-id-based-policies)
-+ [Direct Connect Resource\-Based Policies](#security_iam_service-with-iam-resource-based-policies)
-+ [Authorization Based on Direct Connect Tags](#security_iam_service-with-iam-tags)
-+ [Direct Connect IAM Roles](#security_iam_service-with-iam-roles)
++ [Direct Connect identity\-based policies](#security_iam_service-with-iam-id-based-policies)
++ [Direct Connect resource\-based policies](#security_iam_service-with-iam-resource-based-policies)
++ [Authorization based on Direct Connect tags](#security_iam_service-with-iam-tags)
++ [Direct Connect IAM roles](#security_iam_service-with-iam-roles)
 
-## Direct Connect Identity\-Based Policies<a name="security_iam_service-with-iam-id-based-policies"></a>
+## Direct Connect identity\-based policies<a name="security_iam_service-with-iam-id-based-policies"></a>
 
 With IAM identity\-based policies, you can specify allowed or denied actions and resources as well as the conditions under which actions are allowed or denied\. Direct Connect supports specific actions, resources, and condition keys\. To learn about all of the elements that you use in a JSON policy, see [IAM JSON Policy Elements Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html) in the *IAM User Guide*\.
 
@@ -67,7 +67,7 @@ The `Resource` element specifies the object or objects to which the action appli
 Direct Connect uses the following ARNs:
 
 
-**Direct Connect Resource ARNs**  
+**Direct connect resource ARNs**  
 
 | Resource Type | ARN | 
 | --- | --- | 
@@ -96,9 +96,9 @@ Some Direct Connect actions, such as those for creating resources, cannot be per
 "Resource": "*"
 ```
 
-To see a list of Direct Connect resource types and their ARNs, see [Resources Defined by AWS Direct Connect](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awskeymanagementservice.html#awskeymanagementservice-resources-for-iam-policies) in the *IAM User Guidelist\_awsdirectconnect\.html\#awsdirectconnect\-resources\-for\-iam\-policies*\. To learn with which actions you can specify the ARN of each resource, see [Actions Defined by AWS Direct Connect](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awskeymanagementservice.html#awskeymanagementservice-actions-as-permissions)\.
+To see a list of Direct Connect resource types and their ARNs, see [Resource Types Defined by AWS Direct Connect](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awsdirectconnect.html#awsdirectconnect-resources-for-iam-policies) in the *IAM User Guide*\. To learn with which actions you can specify the ARN of each resource, see [Actions Defined by AWS Direct Connect](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awskeymanagementservice.html#awskeymanagementservice-actions-as-permissions)\.
 
-### Condition Keys<a name="security_iam_service-with-iam-id-based-policies-conditionkeys"></a>
+### Condition keys<a name="security_iam_service-with-iam-id-based-policies-conditionkeys"></a>
 
 The `Condition` element \(or `Condition` *block*\) lets you specify conditions in which a statement is in effect\. The `Condition` element is optional\. You can build conditional expressions that use [condition operators](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html), such as equals or less than, to match the condition in the policy with values in the request\. 
 
@@ -118,9 +118,9 @@ To see a list of Direct Connect condition keys, see [Condition Keys for AWS Dire
 
 
 
-To view examples of Direct Connect identity\-based policies, see [AWS Direct Connect Identity\-Based Policy Examples](security_iam_id-based-policy-examples.md)\.
+To view examples of Direct Connect identity\-based policies, see [AWS Direct Connect identity\-based policy examples](security_iam_id-based-policy-examples.md)\.
 
-## Direct Connect Resource\-Based Policies<a name="security_iam_service-with-iam-resource-based-policies"></a>
+## Direct Connect resource\-based policies<a name="security_iam_service-with-iam-resource-based-policies"></a>
 
 You can control access to resources and requests by using tag key conditions\. You can also use a condition in your IAM policy to control whether specific tag keys can be used on a resource or in a request\. 
 
@@ -130,31 +130,31 @@ For information about how to use tags with AWS Identity and Access Management po
 
 
 
-To view examples of Direct Connect resource\-based policies, see [AWS Direct Connect Resource\-Based Policy Examples](security_iam_resource-based-policy-examples.md)\.
+To view examples of Direct Connect resource\-based policies, see [AWS Direct Connect resource\-based policy examples](security_iam_resource-based-policy-examples.md)\.
 
-## Authorization Based on Direct Connect Tags<a name="security_iam_service-with-iam-tags"></a>
+## Authorization based on Direct Connect tags<a name="security_iam_service-with-iam-tags"></a>
 
-You can attach tags to Direct Connect resources or pass tags in a request to Direct Connect\. To control access based on tags, you provide tag information in the [condition element](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) of a policy using the `directconnect:ResourceTag/key-name`, `aws:RequestTag/key-name`, or `aws:TagKeys` condition keys\. For more information about tagging Direct Connect resources, see [Tagging AWS Direct Connect Resources](using-tags.md)\.\.
+You can attach tags to Direct Connect resources or pass tags in a request to Direct Connect\. To control access based on tags, you provide tag information in the [condition element](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) of a policy using the `directconnect:ResourceTag/key-name`, `aws:RequestTag/key-name`, or `aws:TagKeys` condition keys\. For more information about tagging Direct Connect resources, see [Tagging AWS Direct Connect resources](using-tags.md)\.\.
 
-To view an example identity\-based policy for limiting access to a resource based on the tags on that resource, see [Associating Direct Connect Virtual Interfaces Based on Tags](security_iam_resource-based-policy-examples.md#security_iam_resource-based-policy-examples-associate-interface)\.
+To view an example identity\-based policy for limiting access to a resource based on the tags on that resource, see [Associating Direct Connect virtual interfaces based on tags](security_iam_resource-based-policy-examples.md#security_iam_resource-based-policy-examples-associate-interface)\.
 
-## Direct Connect IAM Roles<a name="security_iam_service-with-iam-roles"></a>
+## Direct Connect IAM roles<a name="security_iam_service-with-iam-roles"></a>
 
 An [IAM role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) is an entity within your AWS account that has specific permissions\.
 
-### Using Temporary Credentials with Direct Connect<a name="security_iam_service-with-iam-roles-tempcreds"></a>
+### Using temporary credentials with Direct Connect<a name="security_iam_service-with-iam-roles-tempcreds"></a>
 
 You can use temporary credentials to sign in with federation, assume an IAM role, or to assume a cross\-account role\. You obtain temporary security credentials by calling AWS STS API operations such as [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) or [GetFederationToken](https://docs.aws.amazon.com/STS/latest/APIReference/API_GetFederationToken.html)\. 
 
 Direct Connect supports using temporary credentials\. 
 
-### Service\-Linked Roles<a name="security_iam_service-with-iam-roles-service-linked"></a>
+### Service\-linked roles<a name="security_iam_service-with-iam-roles-service-linked"></a>
 
 [Service\-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role) allow AWS services to access resources in other services to complete an action on your behalf\. Service\-linked roles appear in your IAM account and are owned by the service\. An IAM administrator can view but not edit the permissions for service\-linked roles\.
 
 Direct Connect does not support service\-linked roles\.
 
-### Service Roles<a name="security_iam_service-with-iam-roles-service"></a>
+### Service roles<a name="security_iam_service-with-iam-roles-service"></a>
 
 This feature allows a service to assume a [service role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-role) on your behalf\. This role allows the service to access resources in other services to complete an action on your behalf\. Service roles appear in your IAM account and are owned by the account\. This means that an IAM administrator can change the permissions for this role\. However, doing so might break the functionality of the service\.
 

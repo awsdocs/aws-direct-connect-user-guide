@@ -7,13 +7,13 @@ The following example uses the AWS CLI commands to create an AWS Direct Connect 
 Before you begin, ensure that you have installed and configured the AWS CLI\. For more information, see the [AWS Command Line Interface User Guide](https://docs.aws.amazon.com/cli/latest/userguide/)\.
 
 **Topics**
-+ [Step 1: Create a Connection](#using-cli-create-connection)
++ [Step 1: Create a connection](#using-cli-create-connection)
 + [Step 2: Download the LOA\-CFA](#using-cli-loa-cfa)
-+ [Step 3: Create a Virtual Interface and get the Router Configuration](#using-cli-create-vif)
++ [Step 3: Create a virtual interface and get the router configuration](#using-cli-create-vif)
 
-## Step 1: Create a Connection<a name="using-cli-create-connection"></a>
+## Step 1: Create a connection<a name="using-cli-create-connection"></a>
 
-The first step is to submit a connection request\. Ensure that you know the port speed that you require and the AWS Direct Connect location\. For more information, see [AWS Direct Connect Connections](WorkingWithConnections.md)\.
+The first step is to submit a connection request\. Ensure that you know the port speed that you require and the AWS Direct Connect location\. For more information, see [AWS Direct Connect connections](WorkingWithConnections.md)\.
 
 **To create a connection request**
 
@@ -27,12 +27,12 @@ The first step is to submit a connection request\. Ensure that you know the port
    {
        "locations": [
            {
-               "locationName": "NAP do Brasil, Barueri, Sao Paulo",
-               "locationCode": "TNDB"
+               "locationName": "City 1, United States",
+               "locationCode": "Example Location 1"
            },
            {
-               "locationName": "Tivit - Site Transamerica (Sao Paulo)",
-               "locationCode": "TIVIT"
+               "locationName": "City 2, United States",
+               "locationCode": "Example location"
            }
        ]
    }
@@ -41,16 +41,16 @@ The first step is to submit a connection request\. Ensure that you know the port
 1. Create the connection and specify a name, the port speed, and the location code\. In the output that's returned, take note of the connection ID\. You need the ID to get the LOA\-CFA in the next step\.
 
    ```
-   aws directconnect create-connection --location TIVIT --bandwidth 1Gbps --connection-name "Connection to AWS"
+   aws directconnect create-connection --location Example location --bandwidth 1Gbps --connection-name "Connection to AWS"
    ```
 
    ```
    {
        "ownerAccount": "123456789012",
-       "connectionId": "dxcon-fg31dyv6",
+       "connectionId": "dxcon-EXAMPLE",
        "connectionState": "requested",
        "bandwidth": "1Gbps",
-       "location": "TIVIT",
+       "location": "Example location",
        "connectionName": "Connection to AWS",
        "region": "sa-east-1"
    }
@@ -80,13 +80,13 @@ certutil -decode myLoaCfa.base64 myLoaCfa.pdf
 
 After you've downloaded the LOA\-CFA, send it to your network provider or colocation provider\. 
 
-## Step 3: Create a Virtual Interface and get the Router Configuration<a name="using-cli-create-vif"></a>
+## Step 3: Create a virtual interface and get the router configuration<a name="using-cli-create-vif"></a>
 
 After you have placed an order for an AWS Direct Connect connection, you must create a virtual interface to begin using it\. You can create a private virtual interface to connect to your VPC\. Or, you can create a public virtual interface to connect to AWS services that aren't in a VPC\. You can create a virtual interface that supports IPv4 or IPv6 traffic\.
 
-Before you begin, ensure that you've read the prerequisites in [Prerequisites for Virtual Interfaces](WorkingWithVirtualInterfaces.md#vif-prerequisites)\. 
+Before you begin, ensure that you've read the prerequisites in [Prerequisites for virtual interfaces](WorkingWithVirtualInterfaces.md#vif-prerequisites)\. 
 
-When you create a virtual interface using the AWS CLI, the output includes generic router configuration information\. To create a router configuration that's specific to your device, use the AWS Direct Connect console\. For more information, see [Downloading the Router Configuration File](create-vif.md#vif-router-config)\.
+When you create a virtual interface using the AWS CLI, the output includes generic router configuration information\. To create a router configuration that's specific to your device, use the AWS Direct Connect console\. For more information, see [Downloading the router configuration file](create-vif.md#vif-router-config)\.
 
 **To create a private virtual interface**
 
@@ -141,7 +141,7 @@ When you create a virtual interface using the AWS CLI, the output includes gener
        "virtualInterfaceId": "dxvif-ffhhk74f",
        "authKey": "asdf34example",
        "routeFilterPrefixes": [],
-       "location": "TIVIT",
+       "location": "Example location",
        "bgpPeers": [
            {
                "bgpStatus": "down", 
@@ -210,7 +210,7 @@ When you create a virtual interface using the AWS CLI, the output includes gener
                "cidr": "203.0.113.4/30"
            }
        ],
-       "location": "TIVIT",
+       "location": "Example location",
        "bgpPeers": [
            {
                "bgpStatus": "down", 

@@ -1,4 +1,4 @@
-# Link Aggregation Groups<a name="lags"></a>
+# Link aggregation groups<a name="lags"></a>
 
 A link aggregation group \(LAG\) is a logical interface that uses the Link Aggregation Control Protocol \(LACP\) to aggregate multiple connections at a single AWS Direct Connect endpoint, allowing you to treat them as a single, managed connection\.
 
@@ -25,6 +25,6 @@ When you create a LAG or associate more connections with the LAG, we may not be 
 **Topics**
 + [Creating a LAG](create-lag.md)
 + [Updating a LAG](update-lag.md)
-+ [Associating a Connection with a LAG](associate-connection-with-lag.md)
-+ [Disassociating a Connection From a LAG](disassociate-connection-from-lag.md)
++ [Associating a connection with a LAG](associate-connection-with-lag.md)
++ [Disassociating a connection from a LAG](disassociate-connection-from-lag.md)
 + [Deleting LAGs](delete-lag.md)

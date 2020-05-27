@@ -1,18 +1,18 @@
-# Development and Test<a name="dev-test-resiliency"></a>
+# Development and test<a name="dev-test-resiliency"></a>
 
 You can achieve development and test resiliency for non\-critical workloads by using separate connections that terminate on separate devices in one location \(as shown in the following figure\)\. This model provides resiliency against device failure, but does not provide resiliency against location failure\.
 
-![\[Development and Test Model\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/dc-max-resiliency.png)
+![\[Development and Test Model\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/dc_devtest.png)
 
 The following procedures demonstrate how to use the Direct Connect Resiliency Toolkit to configure a development and test resiliency model\.
 
 **Topics**
-+ [Step 1: Sign Up for AWS](#dev-test-signup)
-+ [Step 2: Configure the Resiliency Model](#dev-test-select-model)
-+ [Step 3: Create a Virtual Interface](#dev-test-createvirtualinterface)
-+ [Step 4: Verify Your Virtual Interface](#dev-test-connected)
++ [Step 1: Sign up for AWS](#dev-test-signup)
++ [Step 2: Configure the resiliency model](#dev-test-select-model)
++ [Step 3: Create a virtual interface](#dev-test-createvirtualinterface)
++ [Step 4: Verify your virtual interface](#dev-test-connected)
 
-## Step 1: Sign Up for AWS<a name="dev-test-signup"></a>
+## Step 1: Sign up for AWS<a name="dev-test-signup"></a>
 
 ### <a name="dev-test-signup"></a>
 
@@ -26,7 +26,7 @@ To use AWS Direct Connect, you need an AWS account if you don't already have one
 
    Part of the sign\-up procedure involves receiving a phone call and entering a verification code on the phone keypad\.
 
-## Step 2: Configure the Resiliency Model<a name="dev-test-select-model"></a>
+## Step 2: Configure the resiliency model<a name="dev-test-select-model"></a>
 
 **To configure the resiliency model**
 
@@ -66,7 +66,7 @@ To use AWS Direct Connect, you need an AWS account if you don't already have one
 
    It can take up to 72 hours for AWS to review your request and provision a port for your connection\. During this time, you might receive an email with a request for more information about your use case or the specified location\. The email is sent to the email address that you used when you signed up for AWS\. You must respond within 7 days or the connection is deleted\. 
 
-## Step 3: Create a Virtual Interface<a name="dev-test-createvirtualinterface"></a>
+## Step 3: Create a virtual interface<a name="dev-test-createvirtualinterface"></a>
 
 To begin using your AWS Direct Connect connection, you must create a virtual interface\. You can create a private virtual interface to connect to your VPC\. Or, you can create a public virtual interface to connect to public AWS services that aren't in a VPC\. When you create a private virtual interface to a VPC, you need a private virtual interface for each VPC that you're connecting to\. For example, you need three private virtual interfaces to connect to three VPCs\.
 
@@ -83,9 +83,9 @@ Before you begin, ensure that you have the following information:
 | Peer IP addresses |  A virtual interface can support a BGP peering session for IPv4, IPv6, or one of each \(dual\-stack\)\. You cannot create multiple BGP sessions for the same IP addressing family on the same virtual interface\. The IP address ranges are assigned to each end of the virtual interface for the BGP peering session\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/dev-test-resiliency.html)  | 
 | Address family | Whether the BGP peering session will be over IPv4 or IPv6\. | 
 | BGP information | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/dev-test-resiliency.html) | 
-| \(Public virtual interface only\) Prefixes you want to advertise |  : Public IPv4 routes or IPv6 routes to advertise over BGP\. You must advertise at least one prefix using BGP, up to a maximum of 1,000 prefixes\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/dev-test-resiliency.html) | 
-| \(Private virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo Frame Capable on the Summary tab\. | 
-| \(Transit virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 8500 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo Frame Capable on the Summary tab\. | 
+| \(Public virtual interface only\) Prefixes you want to advertise |   Public IPv4 routes or IPv6 routes to advertise over BGP\. You must advertise at least one prefix using BGP, up to a maximum of 1,000 prefixes\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/dev-test-resiliency.html) | 
+| \(Private virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. Jumbo frames apply only to propagated routes from AWS Direct Connect\. If you add static routes to a route table that point to your virtual private gateway, then traffic routed through the static routes is sent using 1500 MTU\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo Frame Capable on the Summary tab\. | 
+| \(Transit virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 8500 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. Jumbo frames apply only to propagated routes from AWS Direct Connect\. If you add static routes to a route table that point to your virtual private gateway, then traffic routed through the static routes is sent using 1500 MTU\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo Frame Capable on the Summary tab\. | 
 
 If your public prefixes or ASNs belong to an ISP or network carrier, AWS requests additional information from you\. This can be a document using an official company letterhead, or an email from the company's domain name verifying that the network prefix/ASN can be used by you\.
 
@@ -163,7 +163,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway\.
+   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 
@@ -189,7 +189,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 1. Choose **Create virtual interface**\.
 
-## Step 4: Verify Your Virtual Interface<a name="dev-test-connected"></a>
+## Step 4: Verify your virtual interface<a name="dev-test-connected"></a>
 
 After you have established virtual interfaces to the AWS Cloud or to Amazon VPC, you can verify your AWS Direct Connect connection using the following procedures\. 
 

@@ -1,4 +1,4 @@
-# Accepting a Hosted Virtual Interface<a name="accepthostedvirtualinterface"></a>
+# Accepting a hosted virtual interface<a name="accepthostedvirtualinterface"></a>
 
 Before you can begin using a hosted virtual interface, you must accept the virtual interface\. For a private virtual interface, you must also have an existing virtual private gateway or Direct Connect gateway\. For a transit virtual interface, you must have an existing transit gateway or Direct Connect gateway\.
 
@@ -12,7 +12,11 @@ Before you can begin using a hosted virtual interface, you must accept the virtu
 
 1. Choose **Accept**\.
 
-1. \(Private virtual interface\) In the **Accept virtual interface** dialog box, select a virtual private gateway or Direct Connect gateway, and then choose **Accept**\.
+1. This applies to private virtual interfaces and transit virtual interfaces\.
+
+   \(Transit virtual interface\) In the **Accept virtual interface** dialog box, select a Direct Connect gateway, and then choose **Accept virtual interface**\.
+
+   \(Private virtual interface\) In the **Accept virtual interface** dialog box, select a virtual private gateway or Direct Connect gateway, and then choose **Accept virtual interface**\.
 
 1. After you accept the hosted virtual interface, the owner of the AWS Direct Connect connection can download the router configuration file\. The **Download router configuration** option is not available for the account that accepts the hosted virtual interface\.
 

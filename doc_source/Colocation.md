@@ -1,4 +1,4 @@
-# Requesting Cross Connects at AWS Direct Connect Locations<a name="Colocation"></a>
+# Requesting cross connects at AWS Direct Connect locations<a name="Colocation"></a>
 
 After you have downloaded your Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\), you must complete your cross\-network connection, also known as a *cross connect*\. If you already have equipment located in an AWS Direct Connect location, contact the appropriate provider to complete the cross connect\. For specific instructions for each provider, see the table below\. Contact your provider for cross connect pricing\. After the cross connect is established, you can create the virtual interfaces using the AWS Direct Connect console\.
 
@@ -6,7 +6,7 @@ Some locations are set up as a campus\. For more information, see [AWS Direct Co
 
 If you do not already have equipment located in an AWS Direct Connect location, you can work with one of the partners in the AWS Partner Network \(APN\)\. They help you to connect to an AWS Direct Connect location\. For more information, see [APN Partners supporting AWS Direct Connect](http://aws.amazon.com/directconnect/partners/)\. You must share the LOA\-CFA with your selected provider to facilitate your cross connect request\.
 
-An AWS Direct Connect connection can provide access to resources in other Regions\. For more information, see [Accessing a Remote AWS Region](remote_regions.md)\.
+An AWS Direct Connect connection can provide access to resources in other Regions\. For more information, see [Accessing a remote AWS Region](remote_regions.md)\.
 
 **Note**  
 If the cross connect is not completed within 90 days, the authority granted by the LOA\-CFA expires\. To renew a LOA\-CFA that has expired, you can download it again from the AWS Direct Connect console\. For more information, see [Downloading the LOA\-CFA](create-connection.md#create-connection-loa-cfa)\.
@@ -22,12 +22,12 @@ If the cross connect is not completed within 90 days, the authority granted by t
 + [Canada \(Central\)](#cross-connect-ca-central-1)
 + [China \(Beijing\)](#cross-connect-cn-north-1)
 + [China \(Ningxia\)](#cross-connect-cn-northwest-1)
-+ [EU \(Frankfurt\)](#cross-connect-eu-central-1)
-+ [EU \(Ireland\)](#cross-connect-eu-west-1)
-+ [EU \(Italy\)](#cross-connect-italy)
-+ [EU \(London\)](#cross-connect-eu-west-2)
-+ [EU \(Paris\)](#cross-connect-eu-west-3)
-+ [EU \(Stockholm\)](#cross-connect-eu-north-1)
++ [Europe \(Frankfurt\)](#cross-connect-eu-central-1)
++ [Europe \(Ireland\)](#cross-connect-eu-west-1)
++ [Europe \(italy\)](#cross-connect-italy)
++ [Europe \(London\)](#cross-connect-eu-west-2)
++ [Europe \(Paris\)](#cross-connect-eu-west-3)
++ [Europe \(Stockholm\)](#cross-connect-eu-north-1)
 + [Middle East \(Bahrain\)](#cross-connect-me-south-1)
 + [South America \(São Paulo\)](#cross-connect-sa-east-1)
 + [US East \(Ohio\)](#cross-connect-us-east-2)
@@ -127,7 +127,7 @@ You can't order connections in this Region\.
 | Industrial Park IDC, Ningxia | Contact [dx@nwcdcloud\.cn](mailto:dx@nwcdcloud.cn)\. | 
 | Shapotou IDC, Ningxia | Contact [dx@nwcdcloud\.cn](mailto:dx@nwcdcloud.cn)\. | 
 
-## EU \(Frankfurt\)<a name="cross-connect-eu-central-1"></a>
+## Europe \(Frankfurt\)<a name="cross-connect-eu-central-1"></a>
 
 
 | Location | How to request a connection | 
@@ -148,7 +148,7 @@ You can't order connections in this Region\.
 | IPB, Berlin | Contact IPB at [kontakt@ipb\.de](mailto:kontakt@ipb.de)\. | 
 | Equinix ITConic MD2, Madrid | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 
-## EU \(Ireland\)<a name="cross-connect-eu-west-1"></a>
+## Europe \(Ireland\)<a name="cross-connect-eu-west-1"></a>
 
 
 | Location | How to request a connection | 
@@ -162,14 +162,14 @@ You can't order connections in this Region\.
 | Teraco CT1, Cape Town | Contact Teraco at [support@teraco\.co\.za](mailto:support@teraco.co.za) for existing Teraco customers or [connect@teraco\.co\.za](mailto:connect@teraco.co.za) for new customers\. | 
 | Teraco JB1, Johannesburg | Contact Teraco at [support@teraco\.co\.za](mailto:support@teraco.co.za) for existing Teraco customers or [connect@teraco\.co\.za](mailto:connect@teraco.co.za) for new customers\. | 
 
-## EU \(Italy\)<a name="cross-connect-italy"></a>
+## Europe \(italy\)<a name="cross-connect-italy"></a>
 
 
 | Location | How to request a connection | 
 | --- | --- | 
 | CDLAN srl Via Caldera 21, Milano | Contact CDLAN at [sales@cdlan\.it](mailto:mailto:sales@cdlan.it)\. | 
 
-## EU \(London\)<a name="cross-connect-eu-west-2"></a>
+## Europe \(London\)<a name="cross-connect-eu-west-2"></a>
 
 
 | Location | How to request a connection | 
@@ -179,7 +179,7 @@ You can't order connections in this Region\.
 | Equinix MA3, Manchester | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 | Telehouse West, London | Contact Telehouse UK at [sales\.support@uk\.telehouse\.net](mailto:sales.support@uk.telehouse.net)\. | 
 
-## EU \(Paris\)<a name="cross-connect-eu-west-3"></a>
+## Europe \(Paris\)<a name="cross-connect-eu-west-3"></a>
 
 
 | Location | How to request a connection | 
@@ -188,7 +188,7 @@ You can't order connections in this Region\.
 | Interxion PAR7, Paris | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
 | Telehouse Voltaire, Paris  | Create a request using the [Customer Portal](https://thparis.force.com/login)\. The request type is DFM/SFM Layout/Connectivity/MMR Circuit Commissioning\. | 
 
-## EU \(Stockholm\)<a name="cross-connect-eu-north-1"></a>
+## Europe \(Stockholm\)<a name="cross-connect-eu-north-1"></a>
 
 
 | Location | How to request a connection | 
@@ -201,6 +201,7 @@ You can't order connections in this Region\.
 | Location | How to request a connection | 
 | --- | --- | 
 | AWS Bahrain DC53, Manama | To complete the connection, you can work with one of our [network provider partners](https://aws.amazon.com/directconnect/partners/) at the location to establish connectivity\. You will then provide a Letter of Authorization \(LOA\) from the network provider to AWS through the [AWS Support Center](https://console.aws.amazon.com/support/home)\. AWS will then complete the cross\-connect at this location\.  | 
+|  AWS Bahrain DC52, Manama | To complete the connection, you can work with one of our [network provider partners](https://aws.amazon.com/directconnect/partners/) at the location to establish connectivity\. You will then provide a Letter of Authorization \(LOA\) from the network provider to AWS through the [AWS Support Center](https://console.aws.amazon.com/support/home)\. AWS will then complete the cross\-connect at this location\.  | 
 
 ## South America \(São Paulo\)<a name="cross-connect-sa-east-1"></a>
 
@@ -228,7 +229,7 @@ You can't order connections in this Region\.
 
 | Location | How to request a connection | 
 | --- | --- | 
-| 165 Halsey Street, Newark | Refer to the resources at [http://www\.165halsey\.com/colocation\-services/connectivity/](http://www.165halsey.com/colocation-services/connectivity/) or contact [operations@165halsey\.com](mailto:operations@165halsey.com)\. | 
+| 165 Halsey Street, Newark | Contact [operations@165halsey\.com](mailto:operations@165halsey.com)\. | 
 | CoreSite NY1, New York | Place an order using the [CoreSite Customer Portal](https://mycoresite.coresite.com/login)\. After you complete the form, review the order for accuracy, and then approve it using the website\. | 
 | CoreSite VA1, Reston  | Place an order at the [CoreSite Customer Portal](https://mycoresite.coresite.com/login)\. After you complete the form, review the order for accuracy, and then approve it using the website\. | 
 | Digital Realty ATL1, Atlanta | Contact Digital Realty at [amazon\.orders@digitalrealty\.com](mailto:amazon.orders@digitalrealty.com)\. | 

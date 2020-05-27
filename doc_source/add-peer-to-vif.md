@@ -1,4 +1,4 @@
-# Adding or Deleting a BGP Peer<a name="add-peer-to-vif"></a>
+# Adding or deleting a BGP peer<a name="add-peer-to-vif"></a>
 
  In some locations, a virtual interface can support up to two IPv4 BGP peering sessions and up to two IPv6 BGP peering sessions\. In other locations, a virtual interface can support a single IPv4 BGP peering session and a single IPv6 BGP peering session\. For information about the Regions that support logical redundancy, see [AWS Direct Connect Locations](https://aws.amazon.com/directconnect/features/#AWS_Direct_Connect_Locations)\.
 
@@ -6,7 +6,7 @@ You cannot specify your own peer IPv6 addresses for an IPv6 BGP peering session\
 
 Multiprotocol BGP is not supported\. IPv4 and IPv6 operate in dual\-stack mode for the virtual interface\.
 
-## Adding a BGP Peer<a name="add-bgp-peer-vif"></a>
+## Adding a BGP peer<a name="add-bgp-peer-vif"></a>
 
 Use the following procedure to add a BGP peer\.
 
@@ -31,9 +31,13 @@ Use the following procedure to add a BGP peer\.
 
 1. \(Private or public virtual interface\) To add IPv6 BGP peers, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses; you cannot specify custom IPv6 addresses\.
 
-1. For **BGP ASN**, enter the Border Gateway Protocol \(BGP\) Autonomous System Number \(ASN\) of your gateway, for example, a number between 1 and 65534\. For a public virtual interface, the ASN must be private or already whitelisted for the virtual interface\.
+1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
+
+   For a public virtual interface, the ASN must be private or already whitelisted for the virtual interface\.
 
    The valid values are 1\-2147483647\.
+
+   Note that if you do not enter a value, AWS automatically assigns one\.
 
 1. To provide your own BGP key, for **BGP Authentication Key**, enter your BGP MD5 key\.
 
@@ -43,7 +47,7 @@ Use the following procedure to add a BGP peer\.
 + [create\-bgp\-peer](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-bgp-peer.html) \(AWS CLI\)
 + [CreateBGPPeer](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateBGPPeer.html) \(AWS Direct Connect API\)
 
-## Deleting a BGP Peer<a name="delete-bgp-peer-vif"></a>
+## Deleting a BGP peer<a name="delete-bgp-peer-vif"></a>
 
 If your virtual interface has both an IPv4 and IPv6 BGP peering session, you can delete one of the BGP peering sessions \(but not both\)\.
 
