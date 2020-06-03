@@ -1,8 +1,8 @@
-# Using the Direct Connect Resiliency Toolkit to get started<a name="resilency_toolkit"></a>
+# Using the AWS Direct Connect Resiliency Toolkit to get started<a name="resilency_toolkit"></a>
 
-AWS offers customers the ability to achieve highly resilient network connections between Amazon Virtual Private Cloud \(Amazon VPC\) and their on\-premises infrastructure\. The Direct Connect Resiliency Toolkit provides a connection wizard with multiple resiliency models\. These models help you to order dedicated connections to achieve your SLA objective\. You select a resiliency model, and then the Direct Connect Resiliency Toolkit guides you through the dedicated connection ordering process\. The resiliency models are designed to ensure that you have the appropriate number of dedicated connections in multiple locations\. 
+AWS offers customers the ability to achieve highly resilient network connections between Amazon Virtual Private Cloud \(Amazon VPC\) and their on\-premises infrastructure\. The AWS Direct Connect Resiliency Toolkit provides a connection wizard with multiple resiliency models\. These models help you to determine, and then place an order for the number of dedicated connections to achieve your SLA objective\. You select a resiliency model, and then the AWS Direct Connect Resiliency Toolkit guides you through the dedicated connection ordering process\. The resiliency models are designed to ensure that you have the appropriate number of dedicated connections in multiple locations\. 
 
-The Direct Connect Resiliency Toolkit has the following benefits:
+The AWS Direct Connect Resiliency Toolkit has the following benefits:
 + Provides guidance on how you determine and then order the appropriate redundant AWS Direct Connect dedicated connections\.
 + Ensures that the redundant dedicated connections have the same speed\.
 + Automatically configures the dedicated connection names\.
@@ -12,27 +12,30 @@ The Direct Connect Resiliency Toolkit has the following benefits:
 + Creates link aggregation groups \(LAGs\), and adds the appropriate number of dedicated connections to the LAGs when you choose a speed other than 1 Gbps or 10 Gbps\.
 + Provides a LAG summary with the dedicated connection SLA that you can achieve, and the total port\-hour cost for each ordered dedicated connection as part of the LAG\.
 + Prevents you from terminating the dedicated connections on the same AWS Direct Connect device\.
++ Provides a way for you to test your configuration for resiliency\. You work with AWS to bring down the BGP peering session in order to verify that traffic routes to one of your redundant virtual interfaces\. For more information, see [AWS Direct Connect Failover Test](resilency_failover.md)\.
++ Provides Amazon CloudWatch metrics for connections and virtual interfaces\. For more information, see [Monitoring AWS Direct Connect resources](monitoring-overview.md)\.
 
-The following resiliency models are available in the Direct Connect Resiliency Toolkit:
+The following resiliency models are available in the AWS Direct Connect Resiliency Toolkit:
 + **Maximum Resiliency**: This model provides you a way to order dedicated connections to achieve an SLA of 99\.99%\. It requires you to meet all of the requirements for achieving the SLA that are specified in the [AWS Direct Connect Service Level Agreement](https://aws.amazon.com/directconnect/sla/)\. 
 + **High Resiliency**: This model provides you a way to order dedicated connections to achieve an SLA of 99\.9%\. It requires you to meet all of the requirements for achieving the SLA that are specified in the [AWS Direct Connect Service Level Agreement](https://aws.amazon.com/directconnect/sla/)\. 
-+ **Development and Test**: This model provides you a way to achieve development and test resiliency for non\-critical workloads by using separate connections that terminate on separate devices in one location\.
++ **Development and Test**: This model provides you a way to achieve development and test resiliency for non\-critical workloads, by using separate connections that terminate on separate devices in one location\.
 + **Classic**\. This model is intended for users that have existing connections and want to add additional connections\. This model does not provide an SLA\.
 
-The best practice is to use the **Connection wizard** in the Direct Connect Resiliency Toolkit to order the dedicated connections to achieve your SLA objective\.
+The best practice is to use the **Connection wizard** in the AWS Direct Connect Resiliency Toolkit to order the dedicated connections to achieve your SLA objective\.
 
-After you select the resiliency model, the Direct Connect Resiliency Toolkit steps you through the following procedures:
+After you select the resiliency model, the AWS Direct Connect Resiliency Toolkit steps you through the following procedures:
 + Selecting the number of dedicated connections
 + Selecting the connection capacity, and the dedicated connection location
 + Ordering the dedicated connections
 + Verifying that the dedicated connections are ready to use
 + Downloading your Letter of Authority \(LOA\-CFA\) for each dedicated connection
++ Verifying that your configuration meets your resiliency requirements
 
 ## Prerequisites<a name="prerequisites"></a>
 
-AWS Direct Connect supports these port speeds over single\-mode fiber: 1 Gbps: 1000BASE\-LX \(1310 nm\) and 10 Gbps: 10GBASE\-LR \(1310 nm\)\.
+AWS Direct Connect supports the following port speeds over single\-mode fiber: 1 Gbps: 1000BASE\-LX \(1310 nm\) and 10 Gbps: 10GBASE\-LR \(1310 nm\)\.
 
-You can set up an AWS Direct Connect connection in one of the following ways\.
+You can set up an AWS Direct Connect connection in one of the following ways:
 
 
 | Model | Bandwidth | Method | 

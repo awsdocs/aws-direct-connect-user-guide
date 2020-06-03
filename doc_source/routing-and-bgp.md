@@ -74,7 +74,7 @@ AWS Direct Connect also provides BGP community tags on advertised Amazon routes\
 
 ## Private virtual interface and transit virtual interface BGP communities<a name="bgp-communities-private-transit"></a>
 
-AWS Direct Connect supports local preference BGP community tags to help control the scope \(Regional or global\) and route preference of traffic on private virtual interfaces and transit virtual interfaces\.
+AWS Direct Connect supports local preference BGP community tags to help control the route preference of traffic on private virtual interfaces and transit virtual interfaces\.
 
 ### Local preference BGP communities<a name="local-pref-bgp-communities"></a>
 
@@ -91,6 +91,6 @@ Local preference BGP community tags are evaluated before any AS\_PATH attribute,
 
 If you do not specify local preference community tags, the default local preference is based on the distance to the AWS Direct Connect location\.
 
-## Public, private and transit virtual interface BGP community tags<a name="bgp-communities-interfaces"></a>
+## Virtual interface BGP community tags<a name="bgp-communities-interfaces"></a>
 
-You can use this traffic engineering technique on public, private and transit virtual interface BGP advertisements to achieve an active/passive load distribution over redundant virtual interfaces\. An active virtual interface has 7224:7300 \(High preference\) as the tag and a Passive has 7224:7100 \(Low preference\) as the tag\.
+You can use this traffic engineering technique for private and transit virtual interface BGP advertisements to achieve an active/passive load distribution over redundant virtual interfaces\. An active virtual interface has 7224:7300 \(High preference\) as the tag and a Passive has 7224:7100 \(Low preference\) as the tag\.

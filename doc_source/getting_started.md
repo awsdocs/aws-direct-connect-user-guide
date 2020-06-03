@@ -8,11 +8,11 @@ The following procedures demonstrate the common scenarios to get set up with an 
 + [Prerequisites](#get-started-prerequisites)
 + [Step 1: Sign up for AWS](#get-started-signup)
 + [Step 2: Request an AWS Direct Connect dedicated connection or accept a hosted connection](#ConnectionRequest)
-+ [\(Dedicated connection\) step 3: Download the LOA\-CFA](#DedicatedConnection)
++ [\(Dedicated connection\) Step 3: Download the LOA\-CFA](#DedicatedConnection)
 + [Step 4: Create a virtual interface](#createvirtualinterface)
 + [Step 5: Download the router configuration](#routerconfig)
 + [Step 6: Verify your virtual interface](#connected)
-+ [\(Recommended\) configure redundant connections](#RedundantConnections)
++ [\(Recommended\) Step 7: Configure redundant connections](#RedundantConnections)
 
 ## Prerequisites<a name="get-started-prerequisites"></a>
 
@@ -105,7 +105,7 @@ For more information, see [AWS Direct Connect connections](WorkingWithConnection
 
 1. Go to [Step 4](#createvirtualinterface) to continue setting up your AWS Direct Connect connection\.
 
-## \(Dedicated connection\) step 3: Download the LOA\-CFA<a name="DedicatedConnection"></a>
+## \(Dedicated connection\) Step 3: Download the LOA\-CFA<a name="DedicatedConnection"></a>
 
 After you request a connection, AWS makes a Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\) available to you to download, or emails you with a request for more information\. The LOA\-CFA is the authorization to connect to AWS, and is required by the colocation provider or your network provider to establish the cross\-network connection \(cross\-connect\)\.
 
@@ -302,7 +302,7 @@ After you have established virtual interfaces to the AWS Cloud or to Amazon VPC,
 
 1. Ping the private IPv4 address and get a response\.
 
-## \(Recommended\) configure redundant connections<a name="RedundantConnections"></a>
+## \(Recommended\) Step 7: Configure redundant connections<a name="RedundantConnections"></a>
 
 To provide for failover, we recommend that you request and configure two dedicated connections to AWS, as shown in the following figure\. These connections can terminate on one or two routers in your network\.
 

@@ -4,13 +4,14 @@ You can achieve maximum resiliency for critical workloads by using separate conn
 
 ![\[Maximum Resiliency Model\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/dc-max-resiliency.png)
 
-The following procedures demonstrate how to use the Direct Connect Resiliency Toolkit to configure a maximum resiliency model\.
+The following procedures demonstrate how to use the AWS Direct Connect Resiliency Toolkit to configure a maximum resiliency model\.
 
 **Topics**
 + [Step 1: Sign up for AWS](#max-resiliency-signup)
 + [Step 2: Configure the resiliency model](#max-resiliency-select-model)
 + [Step 3: Create your virtual interfaces](#max-resiliency-createvirtualinterface)
-+ [Step 4: Verify your virtual interfaces](#max-resiliency-connected)
++ [Step 4: Verify your virtual interface resiliency configuration](#max-resiliency-failover)
++ [Step 5: Verify your virtual interfaces connectivity](#max-resiliency-connected)
 
 ## Step 1: Sign up for AWS<a name="max-resiliency-signup"></a>
 
@@ -195,7 +196,11 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 1. Choose **Create virtual interface**\.
 
-## Step 4: Verify your virtual interfaces<a name="max-resiliency-connected"></a>
+## Step 4: Verify your virtual interface resiliency configuration<a name="max-resiliency-failover"></a>
+
+After you have established virtual interfaces to the AWS Cloud or to Amazon VPC, perform a virtual interface failover test to verify that your configuration meets your resiliency requirements\. For more information, see [AWS Direct Connect Failover Test](resilency_failover.md)\. 
+
+## Step 5: Verify your virtual interfaces connectivity<a name="max-resiliency-connected"></a>
 
 After you have established virtual interfaces to the AWS Cloud or to Amazon VPC, you can verify your AWS Direct Connect connection using the following procedures\. 
 

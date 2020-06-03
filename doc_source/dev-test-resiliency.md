@@ -4,13 +4,14 @@ You can achieve development and test resiliency for non\-critical workloads by u
 
 ![\[Development and Test Model\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/dc_devtest.png)
 
-The following procedures demonstrate how to use the Direct Connect Resiliency Toolkit to configure a development and test resiliency model\.
+The following procedures demonstrate how to use the AWS Direct Connect Resiliency Toolkit to configure a development and test resiliency model\.
 
 **Topics**
 + [Step 1: Sign up for AWS](#dev-test-signup)
 + [Step 2: Configure the resiliency model](#dev-test-select-model)
 + [Step 3: Create a virtual interface](#dev-test-createvirtualinterface)
-+ [Step 4: Verify your virtual interface](#dev-test-connected)
++ [Step 4: Verify your virtual interface resiliency configuration](#dev-test-resiliency-failover)
++ [Step 5: Verify your virtual interface](#dev-test-connected)
 
 ## Step 1: Sign up for AWS<a name="dev-test-signup"></a>
 
@@ -189,7 +190,11 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 1. Choose **Create virtual interface**\.
 
-## Step 4: Verify your virtual interface<a name="dev-test-connected"></a>
+## Step 4: Verify your virtual interface resiliency configuration<a name="dev-test-resiliency-failover"></a>
+
+After you have established virtual interfaces to the AWS Cloud or to Amazon VPC, perform a virtual interface failover test to verify that your configuration meets your resiliency requirements\. For more information, see [AWS Direct Connect Failover Test](resilency_failover.md)\. 
+
+## Step 5: Verify your virtual interface<a name="dev-test-connected"></a>
 
 After you have established virtual interfaces to the AWS Cloud or to Amazon VPC, you can verify your AWS Direct Connect connection using the following procedures\. 
 
