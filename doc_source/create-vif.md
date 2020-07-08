@@ -91,7 +91,7 @@ The maximum transmission unit \(MTU\) of a network connection is the size, in by
 
    1. For **Gateway type**, choose **Virtual private gateway**, or **Direct Connect gateway**\. 
 
-   1. For **Virtual interface owner**, choose **Another AWS account**, and then enter the AWS account\. 
+   1. For **Virtual interface owner**, choose **My AWS account** if the virtual interface is for your AWS account\. 
 
    1. For **Virtual private gateway**, choose the virtual private gateway to use for this interface\.
 
