@@ -1,6 +1,6 @@
 # Maximum resiliency<a name="maximum_resiliency"></a>
 
-You can achieve maximum resiliency for critical workloads by using separate connections that terminate on separate devices in more than one location \(as shown in the following figure\)\. This model provides resiliency against device, connectivity, and complete location failures\.
+You can achieve maximum resiliency for critical workloads by using separate connections that terminate on separate devices in more than one location \(as shown in the following figure\)\. This model provides resiliency against device, connectivity, and complete location failures\. The following figure shows both connections from each customer data center going to the same AWS Direct Connect locations. It's also an option to have each connection from a customer data center going to different Direct Connect locations.
 
 ![\[Maximum Resiliency Model\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/dc-max-resiliency.png)
 
