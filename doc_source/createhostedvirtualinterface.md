@@ -22,7 +22,7 @@ You can create a public, transit or private hosted virtual interface\. Before yo
 
    1. For **Gateway type**, choose **Virtual private gateway**, or **Direct Connect gateway**\. 
 
-   1. For **Virtual interface owner**, choose **Another AWS account**, and then enter the AWS account\. 
+   1. For **Virtual interface owner**, choose **My AWS account**\. 
 
    1. For **Virtual private gateway**, choose the virtual private gateway to use for this interface\.
 
@@ -51,8 +51,6 @@ You can create a public, transit or private hosted virtual interface\. Before yo
       + For **Value**, enter the key value\.
 
       \[Remove a tag\] Next to the tag, choose **Remove tag**\.
-
-1. Choose **Create virtual interface**\.
 
 1. After the hosted virtual interface is accepted by the owner of the other AWS account, you can [download the router configuration file](create-vif.md#vif-router-config)\.
 

@@ -12,6 +12,7 @@ An AWS Direct Connect connection can provide access to resources in other Region
 If the cross connect is not completed within 90 days, the authority granted by the LOA\-CFA expires\. To renew a LOA\-CFA that has expired, you can download it again from the AWS Direct Connect console\. For more information, see [Downloading the LOA\-CFA](create-connection.md#create-connection-loa-cfa)\.
 
 **Topics**
++ [Africa \(Cape Town\)](#cross-connect-af-south-1)
 + [Asia Pacific \(Mumbai\)](#cross-connect-ap-south-1)
 + [Asia Pacific \(Seoul\)](#cross-connect-ap-northeast-2)
 + [Asia Pacific \(Singapore\)](#cross-connect-ap-southeast-1)
@@ -24,16 +25,24 @@ If the cross connect is not completed within 90 days, the authority granted by t
 + [China \(Ningxia\)](#cross-connect-cn-northwest-1)
 + [Europe \(Frankfurt\)](#cross-connect-eu-central-1)
 + [Europe \(Ireland\)](#cross-connect-eu-west-1)
-+ [Europe \(italy\)](#cross-connect-italy)
++ [Europe \(Italy\)](#cross-connect-italy)
 + [Europe \(London\)](#cross-connect-eu-west-2)
 + [Europe \(Paris\)](#cross-connect-eu-west-3)
 + [Europe \(Stockholm\)](#cross-connect-eu-north-1)
 + [Middle East \(Bahrain\)](#cross-connect-me-south-1)
++ [Middle East \(Israel\)](#cross-connect-me-israel)
 + [South America \(São Paulo\)](#cross-connect-sa-east-1)
 + [US East \(Ohio\)](#cross-connect-us-east-2)
 + [US East \(N\. Virginia\)](#cross-connect-us-east-1)
 + [US West \(N\. California\)](#cross-connect-us-west-1)
 + [US West \(Oregon\)](#cross-connect-us-west-2)
+
+## Africa \(Cape Town\)<a name="cross-connect-af-south-1"></a>
+
+
+| Location | How to request a connection | 
+| --- | --- | 
+|  Cape Town Internet Exchange/ Teraco Data Centres | Contact Cape Town Internet Exchange/ Teraco Data Centres\. | 
 
 ## Asia Pacific \(Mumbai\)<a name="cross-connect-ap-south-1"></a>
 
@@ -72,7 +81,7 @@ If the cross connect is not completed within 90 days, the authority granted by t
 | Location | How to request a connection | 
 | --- | --- | 
 | Equinix SY3, Sydney | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
-| Global Switch SY6, Sydney | Contact Global Switch at [salessydney@globalswitch\.com](mailto:salessydney@globalswitch.com)\. | 
+| Global Switch, Sydney | Contact Global Switch at [salessydney@globalswitch\.com](mailto:salessydney@globalswitch.com)\. | 
 | NEXTDC C1, Canberra | Contact NEXTDC at [nxtops@nextdc\.com](mailto:nxtops@nextdc.com)\. | 
 | NEXTDC M1, Melbourne | Contact NEXTDC at [nxtops@nextdc\.com](mailto:nxtops@nextdc.com)\. | 
 | NEXTDC P1, Perth | Contact NEXTDC at [nxtops@nextdc\.com](mailto:nxtops@nextdc.com)\. | 
@@ -162,7 +171,7 @@ You can't order connections in this Region\.
 | Teraco CT1, Cape Town | Contact Teraco at [support@teraco\.co\.za](mailto:support@teraco.co.za) for existing Teraco customers or [connect@teraco\.co\.za](mailto:connect@teraco.co.za) for new customers\. | 
 | Teraco JB1, Johannesburg | Contact Teraco at [support@teraco\.co\.za](mailto:support@teraco.co.za) for existing Teraco customers or [connect@teraco\.co\.za](mailto:connect@teraco.co.za) for new customers\. | 
 
-## Europe \(italy\)<a name="cross-connect-italy"></a>
+## Europe \(Italy\)<a name="cross-connect-italy"></a>
 
 
 | Location | How to request a connection | 
@@ -202,6 +211,13 @@ You can't order connections in this Region\.
 | --- | --- | 
 | AWS Bahrain DC53, Manama | To complete the connection, you can work with one of our [network provider partners](https://aws.amazon.com/directconnect/partners/) at the location to establish connectivity\. You will then provide a Letter of Authorization \(LOA\) from the network provider to AWS through the [AWS Support Center](https://console.aws.amazon.com/support/home)\. AWS will then complete the cross\-connect at this location\.  | 
 |  AWS Bahrain DC52, Manama | To complete the connection, you can work with one of our [network provider partners](https://aws.amazon.com/directconnect/partners/) at the location to establish connectivity\. You will then provide a Letter of Authorization \(LOA\) from the network provider to AWS through the [AWS Support Center](https://console.aws.amazon.com/support/home)\. AWS will then complete the cross\-connect at this location\.  | 
+
+## Middle East \(Israel\)<a name="cross-connect-me-israel"></a>
+
+
+| Location | How to request a connection | 
+| --- | --- | 
+| MedOne in Haifa, Israel | Contact MedOne at [support@Medone\.co\.il](mailto:support@Medone.co.il) | 
 
 ## South America \(São Paulo\)<a name="cross-connect-sa-east-1"></a>
 
