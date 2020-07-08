@@ -46,7 +46,7 @@ You can start the virtual interface failover test using the AWS Direct Connect c
 
    1. Choose **Confirm**\.
 
-   The BG peering session is placed in the DOWN state\. You can send traffic to verify that there are no outages\. If needed, you can stop the test immediately\.
+   The BGP peering session is placed in the DOWN state\. You can send traffic to verify that there are no outages\. If needed, you can stop the test immediately\.
 
 **To start the virtual interface failover test using the AWS CLI**  
 Use [StartBgpDownFailureTest](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_StartBgpFailoverTest.html)\.
