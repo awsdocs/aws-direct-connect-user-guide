@@ -1,6 +1,6 @@
 # Routing policies and BGP communities<a name="routing-and-bgp"></a>
 
-AWS Direct Connect applies inbound \(to your on\-premises data center\) and outbound \(from your AWS Region\) routing policies for a public AWS Direct Connect connection\. You can also use Border Gateway Protocol \(BGP\) community tags on advertised Amazon routes and apply BGP community tags on the routes you advertise to Amazon\.
+AWS Direct Connect applies inbound \(from your on\-premises data center\) and outbound \(from your AWS Region\) routing policies for a public AWS Direct Connect connection\. You can also use Border Gateway Protocol \(BGP\) community tags on routes advertised by Amazon and apply BGP community tags on the routes you advertise to Amazon\.
 
 ## Public virtual interface routing policies<a name="routing-policies"></a>
 
