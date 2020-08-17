@@ -17,7 +17,7 @@ The following table lists the limits related to AWS Direct Connect\. Unless indi
 |  AWS Direct Connect gateways per account  |  200  |  | 
 |  Virtual private gateways per AWS Direct Connect gateway  |  10  |  This limit cannot be increased\.  | 
 | Transit gateways per AWS Direct Connect gateway | 3 | This limit cannot be increased\. | 
-|  Virtual interfaces per AWS Direct Connect gateway  |  30  |  | 
+|  Virtual interfaces (Private or Transit) per AWS Direct Connect gateway  |  30  |  | 
 | Number of prefixes from on\-premises to AWS on a transit virtual interface | 100 | This limit cannot be increased\. | 
 | Number of prefixes per AWS Transit Gateway from AWS to on\-premise on a transit virtual interface | 20 | This limit cannot be increased\. | 
 
