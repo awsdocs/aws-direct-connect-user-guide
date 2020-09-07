@@ -27,15 +27,17 @@ Consider the configuration where the AWS Direct Connect location 1 home Region i
 
 ### All Private virtual interfaces or transit virtual interfaces terminate on a virtual private gateway<a name="virtual-private-gateway"></a>
 
-Consider the configuration where the AWS Direct Connect location 1 home Region is the same as the VPC 1 home Region\. The AWS Direct Connect location 2 and the AWS Direct Connect location 3 are homed to Regions that are different from the VPC 1 home Region\. In this case, there are no community tags and AS PATH prepending on the routes that are advertised from the on\-premises location to location 1\.
+Consider the configuration where the AWS Direct Connect location (east) home Region is the same as the VPC home Region (us-east-1). There is a redundant AWS Direct Connect location in a different Region (west). There are two private VIFs from AWS Direct Connect location (east) to the Direct Connect gateway. There is one private VIF from the AWS Direct Connect location (west) to the Direct Connect gateway. The VIFs have the following configurations:
 
-We prefer AWS Direct Connect location 1 for the VPC 1 traffic because we prefer local homed PoPs over inter\-Region Pops\. Location 2 and location 3 are remote for VPC 1, so for all routes that are not received on Location 1, we load balance traffic across both the remote locations, provided the routes receive the same AS PATH\. The location with the lower AS PATH is the preferred remote location\.
+    Private VIF A (in us-east-1) advertises 172.16.0.0/16 and has an AS_PATH of 65001, 65001, 65001
+    Private VIF B (in us-east-1) advertises 172.16.0.0/16 and has an AS_PATH of 65001, 65001
+    Private VIF C (in us-west-1) advertises 172.16.0.0/16 and has an AS_PATH of 65001\.
 
-Consider the configuration where the AWS Direct Connect location 1 and location 2 home Region is the same as the VPC 1 home Region\. The AWS Direct Connect location 3 and the AWS Direct Connect location 4 are homed to Regions that are different from the VPC 1 home Region\. In this case, there are no community tags and AS PATH prepending on the routes that are advertised from the on\-premises location to location 1 and location 2\.
+In this scenario, even though Private VIF C has the shortest AS_PATH, traffic is routed over Private VIF B because it is in the same Region as the VPC, and therefore has the least cost.
 
-We prefer AWS Direct Connect location 1 and location 2 for the VPC 1 traffic because we prefer local homed PoPs over inter\-Region PoPs\. For routes that are not received on location 1 and location 2, we load balance traffic across both the remote locations, provided the routes receive the same AS PATH\. The location with the lower AS PATH is the preferred remote location\.
+If you change the configuration of Private VIF C to the following configuration, routes that fall in to the VIF C CIDR range use VIF C because it has the longest prefix match.
 
-Local preference BGP communities are the best BGP attributes to achieve the expected routing of the outgoing traffic over different AWS Direct Connect locations\.
+    Private VIF C (in west) advertises 172.16.0.0/24 and has an AS_PATH of 65001\.
 
 ## Public virtual interface BGP communities<a name="bgp-communities"></a>
 
