@@ -25,7 +25,7 @@ The following outbound routing policies apply:
 
 Consider the configuration where the AWS Direct Connect location 1 home Region is the same as the VPC 1 home Region\. The AWS Direct Connect location 2 and AWS Direct Connect location 3 are homed to Regions that are different from the VPC 1 home Region\. In this case, there are no community tags on the routes that are advertised from the on\-premises location to location 1\.
 
-### All Private virtual interfaces or transit virtual interfaces terminate on a virtual private gateway<a name="virtual-private-gateway"></a>
+### All Private virtual interfaces or transit virtual interfaces terminate on a Direct Connect gateway<a name="virtual-private-gateway"></a>
 
 Consider the configuration where the AWS Direct Connect location 1 home Region is the same as the VPC 1 home Region\. The AWS Direct Connect location 2 and the AWS Direct Connect location 3 are homed to Regions that are different from the VPC 1 home Region\. In this case, there are no community tags and AS PATH prepending on the routes that are advertised from the on\-premises location to location 1\.
 
