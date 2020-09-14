@@ -32,7 +32,7 @@ After you create a connection, create a virtual interface to connect to public a
 
 ## Hosted connections<a name="hosted_connection"></a>
 
-To create an AWS Direct Connect connection, you need the following information:
+To create an AWS Direct Connect Hosted connection, you need the following information:
 
 **AWS Direct Connect location**  
 Work with an AWS Direct Connect Partner in the AWS Direct Connect Partner Program to help you establish network circuits between an AWS Direct Connect location and your data center, office, or colocation environment\. They can also help provide colocation space within the same facility as the location\. For more information, see [APN Partners Supporting AWS Direct Connect](https://aws.amazon.com/directconnect/partners)\.
