@@ -1,6 +1,6 @@
 # Updating a LAG<a name="update-lag"></a>
 
-You can update a LAG to change its name, or to change the value for the minimum number of operational connections\., or to add a tag, or remove a tag\.
+You can update a LAG to change its name, or to change the value for the minimum number of operational connections, or to add a tag, or remove a tag\.
 
 **Note**  
 If you adjust the threshold value for the minimum number of operational connections, ensure that the new value does not cause the LAG to fall below the threshold and become non\-operational\.

@@ -39,7 +39,7 @@ If you own the transit gateway, you must create the association proposal\. The t
 
    1. For **Virtual interface owner**, enter the ID of the AWS account that owns the virtual interface for the association\.
 
-   1. \(Optional\) To specify a list of prefixes to be allowed from the virtual private gateway, add the prefixes to **Allowed prefixes**, separating them using commas, or entering them on separate lines\.
+   1. \(Optional\) To specify a list of prefixes to be allowed from the transit gateway, add the prefixes to **Allowed prefixes**, separating them using commas, or entering them on separate lines\.
 
 1. Choose **Associate Direct Connect gateway**\.
 

@@ -6,7 +6,7 @@ Use the test to make sure that traffic routes over redundant virtual interfaces 
 
 ## Test History<a name="test_history"></a>
 
-AWS deletes the test history after 365 days\. The test history includes the status for tests that were run on all BGP peers\. The history includes which BPG peering sessions were tested, the start and end times, and the test status, which can be any of the following values:
+AWS deletes the test history after 365 days\. The test history includes the status for tests that were run on all BGP peers\. The history includes which BGP peering sessions were tested, the start and end times, and the test status, which can be any of the following values:
 + **In progress** \- The test is currently running\.
 + **Completed** \- The test ran for the time that you specified\.
 + **Cancelled** \- The test was cancelled before the specified time\.

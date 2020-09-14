@@ -2,7 +2,7 @@
 
 Select Classic when you have existing connections\.
 
-The following procedures demonstrate the common scenarios to get set up with an AWS Direct Connect connection\. Alternatively, you can refer to the article [How do I provision an AWS Direct Connect connection?](https://aws.amazon.com/premiumsupport/knowledge-center/provision-direct-connection/) in the Knowledge Center\.
+The following procedures demonstrate the common scenarios to get set up with an AWS Direct Connect connection\.
 
 **Topics**
 + [Prerequisites](#get-started-prerequisites)
@@ -21,7 +21,7 @@ For connections to AWS Direct Connect with port speeds of 1 Gbps or higher, ensu
 + Auto\-negotiation for the port must be disabled\. Port speed and full\-duplex mode must be configured manually\.
 + 802\.1Q VLAN encapsulation must be supported across the entire connection, including intermediate devices\.
 + Your device must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\.
-+ \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but does not take effect until you configure it on your router\.
++ \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but does not take effect until you configure it on your router\. For more information, see [How do I enable BFD for my DX connection](https://aws.amazon.com/premiumsupport/knowledge-center/enable-bfd-direct-connect/)\.
 
 ## Step 1: Sign up for AWS<a name="get-started-signup"></a>
 

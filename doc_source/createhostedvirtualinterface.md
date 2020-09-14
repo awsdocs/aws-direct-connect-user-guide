@@ -20,11 +20,7 @@ You can create a public, transit or private hosted virtual interface\. Before yo
 
    1. For **Connection**, choose the Direct Connect connection that you want to use for this interface\.
 
-   1. For **Gateway type**, choose **Virtual private gateway**, or **Direct Connect gateway**\. 
-
-   1. For **Virtual interface owner**, choose **My AWS account**\. 
-
-   1. For **Virtual private gateway**, choose the virtual private gateway to use for this interface\.
+   1. For **Virtual interface owner**, choose **Another AWS account**, and then for **Virtual interface owner**, enter the ID of the AWS account to own this virtual interface\.
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
@@ -76,13 +72,13 @@ You can create a public, transit or private hosted virtual interface\. Before yo
 
    1. For **Connection**, choose the Direct Connect connection that you want to use for this interface\.
 
+   1. For **Virtual interface owner**, choose **Another AWS account**, and then for **Virtual interface owner**, enter the ID of the AWS account to own this virtual interface\.
+
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
    1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
-
-1. Under **Additional Settings**, for **Virtual interface owner**, enter the ID of the AWS account to own this virtual interface\.
 
 1. To configure an IPv4 BGP or an IPv6 peer, do the following:
 
@@ -134,9 +130,7 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
 
    1. For **Connection**, choose the Direct Connect connection that you want to use for this interface\.
 
-   1. For **Gateway type**, choose **Direct Connect gateway**\.
-
-   1.  For **Direct Connect gateway**, select the Direct Connect gateway\.
+   1. For **Virtual interface owner**, choose **Another AWS account**, and then for **Virtual interface owner**, enter the ID of the AWS account to own this virtual interface\.
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 

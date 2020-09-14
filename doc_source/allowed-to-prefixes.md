@@ -9,7 +9,7 @@ When you associate a transit gateway with a Direct Connect gateway, you specify 
 Consider the scenario where you have a VPC with CIDR 10\.0\.0\.0/16 attached to a transit gateway\.
 + When the allowed prefixes list is set to 22\.0\.0\.0/24, you receive 22\.0\.0\.0/24 through BGP on your transit virtual interface\. You do not receive 10\.0\.0\.0/16 because we directly provision the prefixes that are in the allowed prefix list\.
 + When the allowed prefixes list is set to 10\.0\.0\.0/24, you receive 10\.0\.0\.0/24 through BGP on your transit virtual interface\. You do not receive 10\.0\.0\.0/16 because we directly provision the prefixes that are in the allowed prefix list\.
-+ When the allowed prefixes list is set to 10\.0\.0\.0/8, you receive 10\.0\.0\.0/8 through BGP on your transit virtual interface\. You do not receive 10\.0\.0\.0/16 because we directly provision the prefixes that are in the allowed prefix list\.
++ When the allowed prefixes list is set to 10\.0\.0\.0/8, you receive 10\.0\.0\.0/8 through BGP on your transit virtual interface\. 
 
 ## Virtual private gateway associations<a name="allowed-to-prefixes-virtual-private-gateway"></a>
 

@@ -30,7 +30,7 @@ If you or your network provider are having difficulty establishing physical conn
 
 The following flow chart contains the steps to diagnose issues with the physical connection\.
 
-![\[Troubleshoot AWS Direct Connect\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/troubleshooting-chart-layer-1.png)
+![\[Troubleshoot AWS Direct Connect\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/layer1-ts.png)
 
 ## Troubleshooting layer 2 \(data link\) issues<a name="ts-layer-2"></a>
 

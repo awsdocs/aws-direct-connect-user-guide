@@ -29,7 +29,7 @@ A trail is a configuration that enables delivery of events as log files to an Am
 
 The following are example CloudTrail log records for AWS Direct Connect\.
 
-**Example Example: CreateConnection**  
+**Example: CreateConnection**  
 
 ```
 {
@@ -76,7 +76,7 @@ The following are example CloudTrail log records for AWS Direct Connect\.
 }
 ```
 
-**Example Example: CreatePrivateVirtualInterface**  
+**Example: CreatePrivateVirtualInterface**  
 
 ```
 {
@@ -138,7 +138,7 @@ The following are example CloudTrail log records for AWS Direct Connect\.
 }
 ```
 
-**Example Example: DescribeConnections**  
+**Example: DescribeConnections**  
 
 ```
 {
@@ -173,7 +173,7 @@ The following are example CloudTrail log records for AWS Direct Connect\.
 }
 ```
 
-**Example Example: DescribeVirtualInterfaces**  
+**Example: DescribeVirtualInterfaces**  
 
 ```
 {

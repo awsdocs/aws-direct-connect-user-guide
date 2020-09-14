@@ -42,6 +42,8 @@ If you do not have equipment at an AWS Direct Connect location, first contact an
 
 After AWS has processed your connection request, you can download the LOA\-CFA\. 
 
+If you need to change the LOA\-CFA after it has been created \(for example, you need to change the ports\), contact AWS Support\.
+
 **To download the LOA\-CFA**
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
