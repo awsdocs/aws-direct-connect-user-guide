@@ -4,7 +4,7 @@ Learn how allowed prefixes interact with transit gateways and virtual private ga
 
 ## Transit gateway associations<a name="allowed-to-prefixes-transit-gateway"></a>
 
-When you associate a transit gateway with a Direct Connect gateway, you specify a list of up to twenty Amazon VPC prefixes to advertise to the Direct Connect gateway\. The prefix list acts as a filter that allows the same CIDRs, or a smaller range of CIDRs to be advertised to the Direct Connect gateway\. You must set the prefixes to a range that is the same or wider than the VPC CIDR block\.
+When you associate a transit gateway with a Direct Connect gateway, you specify a list of up to twenty (20) Amazon VPC prefixes to advertise to the Direct Connect gateway\. Note: This value cannot be increased. The prefix list acts as a filter that allows the same CIDRs, or a smaller range of CIDRs to be advertised to the Direct Connect gateway\. You must set the prefixes to a range that is the same or wider than the VPC CIDR block\.
 
 Consider the scenario where you have a VPC with CIDR 10\.0\.0\.0/16 attached to a transit gateway\.
 + When the allowed prefixes list is set to 22\.0\.0\.0/24, you receive 22\.0\.0\.0/24 through BGP on your transit virtual interface\. You do not receive 10\.0\.0\.0/16 because we directly provision the prefixes that are in the allowed prefix list\.
