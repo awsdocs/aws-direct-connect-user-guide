@@ -9,9 +9,10 @@ In the following diagram, you have four connections, with two connections to eac
 You can create a LAG from existing connections, or you can provision new connections\. After you've created the LAG, you can associate existing connections \(whether standalone or part of another LAG\) with the LAG\.
 
 The following rules apply:
-+ All connections in the LAG must use the same bandwidth\.
++ All connections in the LAG must use the same bandwidth of !G or 10G Dedicated Connections\. It is not available for Hosted Connections.
 + You can have a maximum of four connections in a LAG\. Each connection in the LAG counts towards your overall connection limit for the Region\.
 + All connections in the LAG must terminate at the same AWS Direct Connect endpoint\. 
++ 
 
 When you create a LAG, you can download the Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\) for each new physical connection individually from the AWS Direct Connect console\. For more information, see [Downloading the LOA\-CFA](create-connection.md#create-connection-loa-cfa)\.
 
