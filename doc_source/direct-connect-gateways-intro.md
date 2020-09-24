@@ -4,7 +4,7 @@ Use *AWS Direct Connect gateway* to connect your VPCs\. You associate an *AWS Di
 + A transit gateway when you have multiple VPCs in the same Region
 + A virtual private gateway
 
- A Direct Connect gateway is a globally available resource\. You can create the Direct Connect gateway in any public Region and access it from all other public Regions\. You can use a Direct Connect gateway in the following scenarios\.
+ A Direct Connect gateway is a globally available resource\. You can create the Direct Connect gateway in any Region and access it from all other Regions\. You can use a Direct Connect gateway in the following scenarios\.
 
 A Direct Connect gateway does not allow gateway associations that are on the same Direct Connect gateway to send traffic to each other \(for example, a virtual private gateway to another virtual private gateway\)\. A Direct Connect gateway does not prevent traffic from being sent from one gateway association back to the gateway association itself \(for example when you have an on\-premises supernet route that contains the prefixes from the gateway association\)\. If you have a configuration with multiple VPCs connected to the same transit gateway, the VPCs could communicate\. To prevent the VPCs from communicating, use separate transit gateway attachments, and then associate a route table with the attachments that have the **blackhole** option set\.
 
@@ -55,7 +55,7 @@ Consider this scenario of a Direct Connect gateway owner \(Account Z\) who owns 
 
 ## Creating a Direct Connect gateway<a name="create-direct-connect-gateway"></a>
 
-You can create a Direct Connect gateway in any supported public Region\. 
+You can create a Direct Connect gateway in any supported Region\. 
 
 **To create a Direct Connect gateway**
 

@@ -61,7 +61,7 @@ If you own the Direct Connect gateway, you must accept the association proposal 
 
 1. On the **Pending proposals** tab, select the proposal and then choose **Accept proposal**\.
 
-1. \(\(Optional\) To specify a list of prefixes to be allowed from the virtual private gateway, add the prefixes to **Allowed prefixes**, separating them using commas, or entering them on separate lines\.
+1. \(\(Optional\) To specify a list of prefixes to be allowed from the transit gateway, add the prefixes to **Allowed prefixes**, separating them using commas, or entering them on separate lines\.
 
 1. Choose **Accept proposal**\.
 
