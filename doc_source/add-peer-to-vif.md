@@ -36,7 +36,7 @@ Use the following procedure to add a BGP peer\.
 
 1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
-   For a public virtual interface, the ASN must be private or already whitelisted for the virtual interface\.
+   For a public virtual interface, the ASN must be private or already on the allow list for the virtual interface\.
 
    The valid values are 1\-2147483647\.
 

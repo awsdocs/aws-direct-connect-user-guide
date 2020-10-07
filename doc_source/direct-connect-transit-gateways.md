@@ -21,7 +21,11 @@ The following rules apply to transit gateway associations:
 
 1. Choose **Gateway associations** and then choose **Associate gateway**\.
 
-1. For **Gateways**, choose the transit gateway to associate, and then choose **Associate gateway**\.
+1. For **Gateways**, choose the transit gateway to associate\.
+
+1. In **Allowed prefixes**, enter the prefixes \(separated by a comma, or on a new line\) which the Direct Connect gateway advertises to the on\-premises data center\.
+
+1. Choose **Associate gateway**
 
 You can view all of the gateways that are associated with the Direct Connect gateway by choosing **Gateway associations**\. 
 

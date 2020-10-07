@@ -7,7 +7,7 @@ The following rules apply to VPC associations:
 + The VPCs to which you connect through a Direct Connect gateway cannot have overlapping CIDR blocks\. If you add an IPv4 CIDR block to a VPC that's associated with a Direct Connect gateway, ensure that the CIDR block does not overlap with an existing CIDR block for any other associated VPC\. For more information, see [Adding IPv4 CIDR Blocks to a VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#vpc-resize) in the *Amazon VPC User Guide*\.
 + You cannot create a public virtual interface to a Direct Connect gateway\.
 + A Direct Connect gateway supports communication between attached private virtual interfaces and associated virtual private gateways only\. The following traffic flows are not supported:
-  + Direct communication between the VPCs that are associated with a single Direct Connect gateway\. This includes traffic from one VPC to another by using a hairpin through an on\-premises network through a single virtual interface\.
+  + Direct communication between the VPCs that are associated with a single Direct Connect gateway\. This includes traffic from one VPC to another by using a hairpin through an on\-premises network through a single Direct Connect gateway\.
   + Direct communication between the virtual interfaces that are attached to a single Direct Connect gateway\. 
   + Direct communication between the virtual interfaces that are attached to a single Direct Connect gateway and a VPN connection on a virtual private gateway that's associated with the same Direct Connect gateway\.
 + You cannot associate a virtual private gateway with more than one Direct Connect gateway and you cannot attach a private virtual interface to more than one Direct Connect gateway\.
