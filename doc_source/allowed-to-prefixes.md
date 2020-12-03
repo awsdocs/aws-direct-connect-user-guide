@@ -4,7 +4,7 @@ Learn how allowed prefixes interact with transit gateways and virtual private ga
 
 ## Virtual private gateway associations<a name="allowed-to-prefixes-virtual-private-gateway"></a>
 
-The prefix list acts as a filter that allows the same CIDRs, or a smaller range of CIDRs to be advertised to the Direct Connect gateway\. You must set the prefixes to a range that is the same or wider than the VPC CIDR block\.
+The prefix list (IPv4 and IPv6) acts as a filter that allows the same CIDRs, or a smaller range of CIDRs to be advertised to the Direct Connect gateway\. You must set the prefixes to a range that is the same or wider than the VPC CIDR block\.
 
 Consider the scenario where you have a VPC with CIDR 10\.0\.0\.0/16 is attached to a virtual private gateway\.
 + When the allowed prefixes list is set to 22\.0\.0\.0/24, you do not receive any route because 22\.0\.0\.0/24 is not the same as, or wider than 10\.0\.0\.0/16\.
