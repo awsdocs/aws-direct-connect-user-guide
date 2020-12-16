@@ -54,7 +54,6 @@ Amazon's trademarks and trade dress may not be used in
    + [Transit gateway associations](direct-connect-transit-gateways.md)
       + [Associating a transit gateway across accounts](multi-account-associate-tgw.md)
    + [Allowed prefixes interactions](allowed-to-prefixes.md)
-      + [Example: Allowed to prefixes in a transit gateway configuration](prefix-example.md)
 + [Tagging AWS Direct Connect resources](using-tags.md)
 + [Security in AWS Direct Connect](security.md)
    + [Data protection in AWS Direct Connect](data-protection.md)

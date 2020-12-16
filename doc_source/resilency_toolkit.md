@@ -48,7 +48,7 @@ For connections to AWS Direct Connect with bandwidths of 1 Gbps or higher, ensur
 + Auto\-negotiation for the port must be disabled\. Port speed and full\-duplex mode must be configured manually\.
 + 802\.1Q VLAN encapsulation must be supported across the entire connection, including intermediate devices\.
 + Your device must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\.
-+ \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but does not take effect until you configure it on your router\. For more information, see [How do I enable BFD for my DX connection](https://aws.amazon.com/premiumsupport/knowledge-center/enable-bfd-direct-connect/)\.
++ \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but does not take effect until you configure it on your router\.
 
 Make sure you have the following information before you begin your configuration:
 + The resiliency model that you want to use\.

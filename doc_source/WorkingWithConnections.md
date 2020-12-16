@@ -26,13 +26,13 @@ The following operations are available for dedicated connections:
 + [Updating a connection](updateconnection.md)
 + [Deleting connections](deleteconnection.md)
 
-You can add a dedicated connection to a link aggregation group \(LAG\) allowing you to treat multiple connections as a single one\. For information, see [Associating a connection with a LAG](associate-connection-with-lag.md)\.
+You can add a dedicated connect to a link aggregation group \(LAG\) allowing you to treat multiple connections as a single one\. For information, see [Associating a connection with a LAG](associate-connection-with-lag.md)\.
 
 After you create a connection, create a virtual interface to connect to public and private AWS resources\. For more information, see [AWS Direct Connect virtual interfaces](WorkingWithVirtualInterfaces.md)\.
 
 ## Hosted connections<a name="hosted_connection"></a>
 
-To create an AWS Direct Connect hosted connection, you need the following information:
+To create an AWS Direct Connect connection, you need the following information:
 
 **AWS Direct Connect location**  
 Work with an AWS Direct Connect Partner in the AWS Direct Connect Partner Program to help you establish network circuits between an AWS Direct Connect location and your data center, office, or colocation environment\. They can also help provide colocation space within the same facility as the location\. For more information, see [APN Partners Supporting AWS Direct Connect](https://aws.amazon.com/directconnect/partners)\.
