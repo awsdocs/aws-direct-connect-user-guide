@@ -2,34 +2,66 @@
 
 You can use an *AWS Direct Connect gateway* to connect your AWS Direct Connect connection over a private virtual interface to one or more VPCs in any account that are located in the same or different Regions\. You associate a Direct Connect gateway with the virtual private gateway for the VPC\. Then, you create a private virtual interface for your AWS Direct Connect connection to the Direct Connect gateway\. You can attach multiple private virtual interfaces to your Direct Connect gateway\.
 
-The following rules apply to VPC associations:
+The following rules apply to virtual private gateway associations:
 + There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect quotas](limits.md)\.
 + The VPCs to which you connect through a Direct Connect gateway cannot have overlapping CIDR blocks\. If you add an IPv4 CIDR block to a VPC that's associated with a Direct Connect gateway, ensure that the CIDR block does not overlap with an existing CIDR block for any other associated VPC\. For more information, see [Adding IPv4 CIDR Blocks to a VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#vpc-resize) in the *Amazon VPC User Guide*\.
 + You cannot create a public virtual interface to a Direct Connect gateway\.
 + A Direct Connect gateway supports communication between attached private virtual interfaces and associated virtual private gateways only\. The following traffic flows are not supported:
-  + Direct communication between the VPCs that are associated with a single Direct Connect gateway\. This includes traffic from one VPC to another by using a hairpin through an on\-premises network through a single virtual interface\.
+  + Direct communication between the VPCs that are associated with a single Direct Connect gateway\. This includes traffic from one VPC to another by using a hairpin through an on\-premises network through a single Direct Connect gateway\.
   + Direct communication between the virtual interfaces that are attached to a single Direct Connect gateway\. 
   + Direct communication between the virtual interfaces that are attached to a single Direct Connect gateway and a VPN connection on a virtual private gateway that's associated with the same Direct Connect gateway\.
 + You cannot associate a virtual private gateway with more than one Direct Connect gateway and you cannot attach a private virtual interface to more than one Direct Connect gateway\.
 + A virtual private gateway that you associate with a Direct Connect gateway must be attached to a VPC\.
 + A virtual private gateway association proposal expires 7 days after it is created\.
 + An accepted virtual private gateway proposal, or a deleted virtual private gateway proposal remains visible for 3 days\.
++ A virtual private gateway can be associated with a Direct Connect gateway and also attached to a virtual interface\.
 
 To connect your AWS Direct Connect connection to a VPC in the same Region only, you can create a Direct Connect gateway\. Or, you can create a private virtual interface and attach it to the virtual private gateway for the VPC\. For more information, see [Creating a private virtual interface](create-vif.md#create-private-vif) and [VPN CloudHub](https://docs.aws.amazon.com/vpc/latest/userguide/VPN_CloudHub.html)\.
 
 To use your AWS Direct Connect connection with a VPC in another account, you can create a hosted private virtual interface for that account\. When the owner of the other account accepts the hosted virtual interface, they can choose to attach it either to a virtual private gateway or to a Direct Connect gateway in their account\. For more information, see [AWS Direct Connect virtual interfaces](WorkingWithVirtualInterfaces.md)\.
 
 **Topics**
++ [Creating a virtual private gateway](#create-virtual-private-gateway)
 + [Associating and disassociating virtual private gateways](#associate-vgw-with-direct-connect-gateway)
 + [Creating a private virtual interface to the Direct Connect gateway](#create-private-vif-for-gateway)
 + [Associating a virtual private gateway across accounts](multi-account-associate-vgw.md)
 
-## Associating and disassociating virtual private gateways<a name="associate-vgw-with-direct-connect-gateway"></a>
+## Creating a virtual private gateway<a name="create-virtual-private-gateway"></a>
 
-The virtual private gateway must be attached to the VPC to which you want to connect\. For more information, see [Create a Virtual Private Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_VPN.html#vpn-create-vpg) in the *Amazon VPC User Guide*\.
+The virtual private gateway must be attached to the VPC to which you want to connect\. 
 
 **Note**  
 If you are planning to use the virtual private gateway for a Direct Connect gateway and a dynamic VPN connection, set the ASN on the virtual private gateway to the value that you require for the VPN connection\. Otherwise, the ASN on the virtual private gateway can be set to any permitted value\. The Direct Connect gateway advertises all connected VPCs over the ASN assigned to it\.
+
+After you create a virtual private gateway, you must attach it to your VPC\.
+
+**To create a virtual private gateway and attach it to your VPC**
+
+1. In the navigation pane, choose **Virtual Private Gateways**, **Create Virtual Private Gateway**\.
+
+1. \(Optional\) Enter a name for your virtual private gateway\. Doing so creates a tag with a key of `Name` and the value that you specify\.
+
+1. For **ASN**, leave the default selection to use the default Amazon ASN\. Otherwise, choose **Custom ASN** and enter a value\. For a 16\-bit ASN, the value must be in the 64512 to 65534 range\. For a 32\-bit ASN, the value must be in the 4200000000 to 4294967294 range\. 
+
+1. Choose **Create Virtual Private Gateway**\.
+
+1. Select the virtual private gateway that you created, and then choose **Actions**, **Attach to VPC**\.
+
+1. Select your VPC from the list and choose **Yes, Attach**\.
+
+**To create a virtual private gateway using the command line or API**
++ [CreateVpnGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpnGateway.html) \(Amazon EC2 Query API\)
++ [create\-vpn\-gateway](https://docs.aws.amazon.com/cli/latest/reference/ec2/create-vpn-gateway.html) \(AWS CLI\)
++ [New\-EC2VpnGateway](https://docs.aws.amazon.com/powershell/latest/reference/items/New-EC2VpnGateway.html) \(AWS Tools for Windows PowerShell\)
+
+**To attach a virtual private gateway to a VPC using the command line or API**
++ [AttachVpnGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-AttachVpnGateway.html) \(Amazon EC2 Query API\)
++ [attach\-vpn\-gateway](https://docs.aws.amazon.com/cli/latest/reference/ec2/attach-vpn-gateway.html) \(AWS CLI\)
++ [Add\-EC2VpnGateway](https://docs.aws.amazon.com/powershell/latest/reference/items/Add-EC2VpnGateway.html) \(AWS Tools for Windows PowerShell\)
+
+## Associating and disassociating virtual private gateways<a name="associate-vgw-with-direct-connect-gateway"></a>
+
+You can associate or disassociate a virtual private gateway and Direct Connect gateway\. The account owner of the virtual private gateway performs these operations\.
 
 **To associate a virtual private gateway**
 
@@ -83,8 +115,6 @@ If you're accepting a hosted private virtual interface, you can associate it wit
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
 1. Choose **Create virtual interface**\.
-
-1. Under **Virtual interface type**, for **Type**, choose **Private**\.
 
 1. Under **Virtual interface type**, choose **Private**\.
 

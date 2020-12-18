@@ -1,9 +1,9 @@
 # AWS Direct Connect quotas<a name="limits"></a>
 
-The following table lists the limits related to AWS Direct Connect\. Unless indicated otherwise, you can request an increase for any of these limits using the [AWS Direct Connect Limits form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-direct-connect)\.
+The following table lists the quotas related to AWS Direct Connect\. Unless indicated otherwise, you can request an increase for any of these limits using the [AWS Direct Connect Limits form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-direct-connect)\.
 
 
-| Component | Limit | Comments | 
+| Component | Quota | Comments | 
 | --- | --- | --- | 
 |  Private or public virtual interfaces per AWS Direct Connect dedicated connection  |  50  |  This limit cannot be increased\.  | 
 | Transit virtual interfaces per AWS Direct Connect dedicated connection |  1  | This limit cannot be increased\. | 
@@ -24,6 +24,21 @@ The following table lists the limits related to AWS Direct Connect\. Unless indi
 AWS Direct Connect supports these port speeds over single\-mode fiber: 1 Gbps: 1000BASE\-LX \(1310nm\) and 10 Gbps: 10GBASE\-LR \(1310nm\)\.
 
 1: You cannot create a transit virtual interface on a hosted connection with a capacity less than 1Gbps\.
+
+## BGP quotas<a name="bgp-quotas"></a>
+
+The following are BGP quotas\. The BGP timers negotiate down to the lowest value between the routers\. The BFD intervals are defined by the slowest device\.
++ Default hold timer: 90 seconds
++ Minimum hold timer: 3 seconds
+
+  A hold value of 0 is not supported\.
++ Default keepalive timer: 30 seconds
++ Minimum keepalive timer: 1 second
++ Graceful restart timer: 120 seconds
+
+  We recommend that you do not configure graceful restart and BFD at the same time\.
++ BFD liveness detection minimum interval: 300 seconds
++ BFD minimum multiplier: 3 seconds
 
 ## Load balance considerations<a name="load-balance-considerations"></a>
 

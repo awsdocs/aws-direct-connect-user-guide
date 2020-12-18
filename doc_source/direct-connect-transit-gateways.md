@@ -7,7 +7,6 @@ The following rules apply to transit gateway associations:
 + There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect quotas](limits.md)\.
 + A Direct Connect gateway supports communication between attached transit virtual interfaces and associated transit gateways only\. 
 + If you connect to multiple transit gateways that are in different Regions, use unique ASNs for each transit gateway\.
-+ A virtual private gateway can be associated with a Direct Connect gateway and also attached to a virtual interface\.
 
 ## Associating and disassociating transit gateways<a name="associate-tgw-with-direct-connect-gateway"></a>
 
@@ -21,7 +20,11 @@ The following rules apply to transit gateway associations:
 
 1. Choose **Gateway associations** and then choose **Associate gateway**\.
 
-1. For **Gateways**, choose the transit gateway to associate, and then choose **Associate gateway**\.
+1. For **Gateways**, choose the transit gateway to associate\.
+
+1. In **Allowed prefixes**, enter the prefixes \(separated by a comma, or on a new line\) which the Direct Connect gateway advertises to the on\-premises data center\.
+
+1. Choose **Associate gateway**
 
 You can view all of the gateways that are associated with the Direct Connect gateway by choosing **Gateway associations**\. 
 

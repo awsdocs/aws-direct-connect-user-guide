@@ -252,7 +252,7 @@ You can't order connections in this Region\.
 | Equinix DC2/DC11, Ashburn | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 | Equinix DA2, Dallas  | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 | Equinix MI1, Miami | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
-| Lightower, Philadelphia | Contact Lightower at [awsorders@lightower\.com](mailto:awsorders@lightower.com)\. | 
+| CrownCastle \(formerly Lightower\), Philadelphia, PA | Contact CrownCastle at [awsorders@crowncastle\.com](mailto:awsorders@crowncastle.com)\. | 
 | Markley, One Summer Street, Boston | Create a request using the [customer portal](https://portal.markleygroup.com)\. For new queries, contact [sales@markleygroup\.com](mailto:sales@markleygroup.com)\. | 
 
 ## US West \(N\. California\)<a name="cross-connect-us-west-1"></a>

@@ -20,7 +20,7 @@ For existing connections, connectivity to AWS is interrupted during the creation
 1. Under** Lag creation type**, choose **Request new connections**, and provide the following information:
    + **LAG name**: A name for the LAG\.
    + **Location**: The location for the LAG\.
-   + **Port speed**: The port speed for the connections\.
+   + **Port speed**: The port speed for the connections\. The possible values are 1Gbps or 10Gbps\.
    + **Number of new connections**: The number of new connections to create\.
 
 1. \(Optional\) Add or remove a tag\.
