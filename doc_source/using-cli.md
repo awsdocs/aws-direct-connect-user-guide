@@ -241,6 +241,8 @@ When you create a virtual interface using the AWS CLI, the output includes gener
    aws directconnect describe-virtual-interfaces --virtual-interface-id dxvif-fgh0hcrk --query virtualInterfaces[*].customerRouterConfig --output text
    ```
 
+    
+
    ```
    <?xml version="1.0" encoding="UTF-8"?>
    <logical_connection id="dxvif-fgh0hcrk">

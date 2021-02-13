@@ -5,6 +5,8 @@ The following table describes the releases for AWS Direct Connect\.
 
 | Feature | Description | Date | 
 | --- | --- | --- | 
+| Support for 100G | Updated topics to include support for 100G dedicated connections\. | 2021\-02\-12 | 
+| New location in Italy | Updated topic to include the addition of the new Israel location\. For more information, see [Europe \(Italy\)](Colocation.md#cross-connect-italy)\. | 2021\-01\-22 | 
 | New location in Israel | Updated topic to include the addition of the new Israel location\. For more information, see [Middle East \(Israel\)](Colocation.md#cross-connect-me-israel)\. | 2020\-07\-07 | 
 | Resiliency Toolkit Failover Testing support | Use the Resiliency Toolkit Failover Testing feature to test the resiliency of your connections\.\. For more information, see [AWS Direct Connect Failover Test](resilency_failover.md)\. | 2020\-06\-03 | 
 | CloudWatch VIF metric support | You can monitor physical AWS Direct Connect connections, and virtual interfaces, using CloudWatch\. For more information, see [Monitoring with Amazon CloudWatch](monitoring-cloudwatch.md)\. | 2020\-05\-11 | 

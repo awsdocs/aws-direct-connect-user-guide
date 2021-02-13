@@ -10,9 +10,9 @@ The following table lists the quotas related to AWS Direct Connect\. Unless indi
 | Private, public, or transit virtual interfaces per AWS Direct Connect hosted connection1 | 1 | This limit cannot be increased\. | 
 |  Active AWS Direct Connect connections per Region per account  | 10 |  | 
 | Number of virtual interfaces per Link Aggregation Group \(LAG\) | 50 |  | 
-|  Routes per Border Gateway Protocol \(BGP\) session on a private virtual interface If you advertise more than 100 routes over the BGP session, the BGP session will go into an idle state with the BGP session DOWN\.  |  100  |  This limit cannot be increased\.  | 
+|  Routes per Border Gateway Protocol \(BGP\) session on a private virtual interface or transit virtual interface If you advertise more than 100 routes over the BGP session, the BGP session will go into an idle state with the BGP session DOWN\.  |  100  |  This limit cannot be increased\.  | 
 |  Routes per Border Gateway Protocol \(BGP\) session on a public virtual interface  |  1,000  |  This limit cannot be increased\.  | 
-|  Dedicated connections per link aggregation group \(LAG\)  | 4 |  | 
+|  Dedicated connections per link aggregation group \(LAG\)  | 4 when the port speed is less than 100G 2 when the port speed is 100G |  | 
 |  Link aggregation groups \(LAGs\) per Region  |  10  |  | 
 |  AWS Direct Connect gateways per account  |  200  |  | 
 |  Virtual private gateways per AWS Direct Connect gateway  |  10  |  This limit cannot be increased\.  | 
@@ -21,7 +21,7 @@ The following table lists the quotas related to AWS Direct Connect\. Unless indi
 | Number of prefixes from on\-premises to AWS on a transit virtual interface | 100 | This limit cannot be increased\. | 
 | Number of prefixes per AWS Transit Gateway from AWS to on\-premise on a transit virtual interface | 20 | This limit cannot be increased\. | 
 
-AWS Direct Connect supports these port speeds over single\-mode fiber: 1 Gbps: 1000BASE\-LX \(1310nm\) and 10 Gbps: 10GBASE\-LR \(1310nm\)\.
+AWS Direct Connect supports these port speeds over single\-mode fiber: 1 Gbps: 1000BASE\-LX \(1310 nm\), 10 Gbps: 10GBASE\-LR \(1310 nm\) and 100Gbps: 100GBASE\-LR4\.
 
 1: You cannot create a transit virtual interface on a hosted connection with a capacity less than 1Gbps\.
 
@@ -37,8 +37,8 @@ The following are BGP quotas\. The BGP timers negotiate down to the lowest value
 + Graceful restart timer: 120 seconds
 
   We recommend that you do not configure graceful restart and BFD at the same time\.
-+ BFD liveness detection minimum interval: 300 seconds
-+ BFD minimum multiplier: 3 seconds
++ BFD liveness detection minimum interval: 300 ms
++ BFD minimum multiplier: 3
 
 ## Load balance considerations<a name="load-balance-considerations"></a>
 

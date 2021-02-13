@@ -9,7 +9,7 @@ The AWS Direct Connect Resiliency Toolkit has the following benefits:
 + Automatically approves your dedicated connections when you have an existing AWS account and you select a known AWS Direct Connect Partner\. The Letter of Authority \(LOA\) is available for immediate download\.
 + Automatically creates a support ticket for the dedicated connection approval when you are a new AWS customer, or you select an unknown \(**Other**\) partner\.
 + Provides an order summary for your dedicated connections, with the SLA that you can achieve and the port\-hour cost for the ordered dedicated connections\.
-+ Creates link aggregation groups \(LAGs\), and adds the appropriate number of dedicated connections to the LAGs when you choose a speed other than 1 Gbps or 10 Gbps\.
++ Creates link aggregation groups \(LAGs\), and adds the appropriate number of dedicated connections to the LAGs when you choose a speed other than 1 Gbps, 10 Gbps, or 100 Gbps\.
 + Provides a LAG summary with the dedicated connection SLA that you can achieve, and the total port\-hour cost for each ordered dedicated connection as part of the LAG\.
 + Prevents you from terminating the dedicated connections on the same AWS Direct Connect device\.
 + Provides a way for you to test your configuration for resiliency\. You work with AWS to bring down the BGP peering session in order to verify that traffic routes to one of your redundant virtual interfaces\. For more information, see [AWS Direct Connect Failover Test](resilency_failover.md)\.
@@ -33,18 +33,18 @@ After you select the resiliency model, the AWS Direct Connect Resiliency Toolkit
 
 ## Prerequisites<a name="prerequisites"></a>
 
-AWS Direct Connect supports the following port speeds over single\-mode fiber: 1 Gbps: 1000BASE\-LX \(1310 nm\) and 10 Gbps: 10GBASE\-LR \(1310 nm\)\.
+AWS Direct Connect supports the following port speeds over single\-mode fiber: 1000BASE\-LX \(1310 nm\) transceiver for 1 gigabit Ethernet, a 10GBASE\-LR \(1310 nm\) transceiver for 10 gigabit, or a 100GBASE\-LR4 for 100 gigabit Ethernet\.
 
 You can set up an AWS Direct Connect connection in one of the following ways:
 
 
 | Model | Bandwidth | Method | 
 | --- | --- | --- | 
-| Dedicated connection | 1 Gbps, 10 Gbps |  Work with an AWS Direct Connect Partner or a network provider to connect a router from your data center, office, or colocation environment to an AWS Direct Connect location\. The network provider does not have to be an [AWS Direct Connect Partner](https://aws.amazon.com/directconnect/partners) to connect you to a dedicated connection\. AWS Direct Connect dedicated connections support these port speeds over single\-mode fiber: 1 Gbps: 1000BASE\-LX \(1310 nm\) and 10 Gbps: 10GBASE\-LR \(1310 nm\)  | 
+| Dedicated connection | 1 Gbps, 10 Gbps, and 100 Gbps |  Work with an AWS Direct Connect Partner or a network provider to connect a router from your data center, office, or colocation environment to an AWS Direct Connect location\. The network provider does not have to be an [AWS Direct Connect Partner](https://aws.amazon.com/directconnect/partners) to connect you to a dedicated connection\. AWS Direct Connect dedicated connections support these port speeds over single\-mode fiber: 1 Gbps: 1000BASE\-LX \(1310 nm\), 10 Gbps: 10GBASE\-LR \(1310 nm\), and 100Gbps: 100GBASE\-LR4\.  | 
 | Hosted connection | 50 Mbps, 100 Mbps, 200 Mbps, 300 Mbps, 400 Mbps, 500 Mbps, 1 Gbps, 2 Gbps, 5 Gbps, and 10 Gbps |  Work with a partner in the [AWS Direct Connect Partner Program](https://aws.amazon.com/directconnect/partners) to connect a router from your data center, office, or colocation environment to an AWS Direct Connect location\. Only certain partners provide higher capacity connections\.   | 
 
 For connections to AWS Direct Connect with bandwidths of 1 Gbps or higher, ensure that your network meets the following requirements:
-+ Your network must use single\-mode fiber with a 1000BASE\-LX \(1310 nm\) transceiver for 1 gigabit Ethernet or a 10GBASE\-LR \(1310 nm\) transceiver for 10 gigabit Ethernet\.
++ Your network must use single\-mode fiber with a 1000BASE\-LX \(1310 nm\) transceiver for 1 gigabit Ethernet, a 10GBASE\-LR \(1310 nm\) transceiver for 10 gigabit, or a 100GBASE\-LR4 for 100 gigabit Ethernet\.
 + Auto\-negotiation for the port must be disabled\. Port speed and full\-duplex mode must be configured manually\.
 + 802\.1Q VLAN encapsulation must be supported across the entire connection, including intermediate devices\.
 + Your device must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\.

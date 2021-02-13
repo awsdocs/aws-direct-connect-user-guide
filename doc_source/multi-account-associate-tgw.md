@@ -23,7 +23,7 @@ If you own the transit gateway, you must create the association proposal\. The t
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
-1. In the navigation pane, choose **Transit gateways** and then select the virtual private gateway\.
+1. In the navigation pane, choose **Transit gateways** and then select the transit gateway\.
 
 1. Choose **View details**\.
 

@@ -17,7 +17,7 @@ The following procedures demonstrate the common scenarios to get set up with an 
 ## Prerequisites<a name="get-started-prerequisites"></a>
 
 For connections to AWS Direct Connect with port speeds of 1 Gbps or higher, ensure that your network meets the following requirements:
-+ Your network must use single\-mode fiber with a 1000BASE\-LX \(1310 nm\) transceiver for 1 gigabit Ethernet or a 10GBASE\-LR \(1310 nm\) transceiver for 10 gigabit Ethernet\.
++ Your network must use single\-mode fiber with a 1000BASE\-LX \(1310 nm\) transceiver for 1 gigabit Ethernet, a 10GBASE\-LR \(1310 nm\) transceiver for 10 gigabit, or a 100GBASE\-LR4 for 100 gigabit Ethernet\.
 + Auto\-negotiation for the port must be disabled\. Port speed and full\-duplex mode must be configured manually\.
 + 802\.1Q VLAN encapsulation must be supported across the entire connection, including intermediate devices\.
 + Your device must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\.
@@ -258,6 +258,8 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
       \[Remove a tag\] Next to the tag, choose **Remove tag**\.
 
 1. Choose **Create virtual interface**\.
+
+1. You need to use your BGP device to advertise the network that you use for the public VIF connection\. 
 
 ## Step 5: Download the router configuration<a name="routerconfig"></a>
 

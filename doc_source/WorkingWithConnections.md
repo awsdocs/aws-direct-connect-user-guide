@@ -1,6 +1,6 @@
 # AWS Direct Connect connections<a name="WorkingWithConnections"></a>
 
-AWS Direct Connect enables you to establish a dedicated network connection between your network and one of the AWS Direct Connect locations\.
+AWS Direct Connect enables you to establish a dedicated network connection between your network and one of the AWS Direct Connect locations\. 
 
 There are two types of connections:
 + Dedicated Connection: A physical Ethernet connection associated with a single customer\. Customers can request a dedicated connection through the AWS Direct Connect console, the CLI, or the API\.
@@ -14,7 +14,7 @@ To create an AWS Direct Connect dedicated connection, you need the following inf
 Work with a partner in the AWS Direct Connect Partner Program to help you establish network circuits between an AWS Direct Connect location and your data center, office, or colocation environment\. They can also help provide colocation space within the same facility as the location\. For more information, see [APN Partners Supporting AWS Direct Connect](https://aws.amazon.com/directconnect/partners)\.
 
 **Port speed**  
-The possible values are 1Gbps and 10Gbps\. 
+The possible values are 1 Gbps, 10 Gbps, and 100 Gbps\. 
 
 You cannot change the port speed after you create the connection request\. To change the port speed, you must create and configure a new connection\.
 
@@ -38,7 +38,7 @@ To create an AWS Direct Connect hosted connection, you need the following inform
 Work with an AWS Direct Connect Partner in the AWS Direct Connect Partner Program to help you establish network circuits between an AWS Direct Connect location and your data center, office, or colocation environment\. They can also help provide colocation space within the same facility as the location\. For more information, see [APN Partners Supporting AWS Direct Connect](https://aws.amazon.com/directconnect/partners)\.
 
 **Port speed**  
-For hosted connections, the possible values are 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, and 10Gbps\. Note that only those AWS Direct Connect partners who have met specific requirements may create a 1Gbps, 2Gbps, 5Gbps or 10Gbps hosted connection\.
+For hosted connections, the possible values are 50 Mbps, 100 Mbps, 200 Mbps, 300 Mbps, 400 Mbps, 500 Mbps, 1 Gbps, 2 Gbps, 5 Gbps, and 10 Gbps\. Note that only those AWS Direct Connect partners who have met specific requirements may create a 1 Gbps, 2 Gbps, 5 Gbps, or 10 Gbps\.
 
 You cannot change the port speed after you create the connection request\. To change the port speed, you must create and configure a new connection\.
 

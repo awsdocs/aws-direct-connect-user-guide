@@ -177,6 +177,7 @@ You can't order connections in this Region\.
 | Location | How to request a connection | 
 | --- | --- | 
 | CDLAN srl Via Caldera 21, Milano | Contact CDLAN at [sales@cdlan\.it](mailto:mailto:sales@cdlan.it)\. | 
+| Equinix, ML2, Milano, Italy | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 
 ## Europe \(London\)<a name="cross-connect-eu-west-2"></a>
 

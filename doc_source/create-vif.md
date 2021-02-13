@@ -59,7 +59,9 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 1. Choose **Create virtual interface**\.
 
-1. Download the router configuration for your device\. For more information, see [Downloading the router configuration file](#vif-router-config)\.
+1. Download the router configuration for your device\. For more information, see [Downloading the router configuration file](#vif-router-config)\.the network being used for the public VIF connection needs to be advertised by the customers BGP device
+
+1. You need to use your BGP device to advertise the network that you use for the public VIF connection\. 
 
 **To create a public virtual interface using the command line or API**
 + [create\-public\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-public-virtual-interface.html) \(AWS CLI\)
