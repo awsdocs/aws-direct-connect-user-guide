@@ -64,7 +64,7 @@ For public virtual interfaces, all routes that AWS Direct Connect advertises to 
 
 The following routing rules apply to traffic on private virtual interfaces and transit virtual interfaces:
 + AWS evaluates the longest prefix match first
-+ By default, AWS uses the distance from the local Region to the AWS Direct Connect to determine the virtual \(or transit\) interface for routing\. You can modify this behavior by assigning local preference communities to virtual interfaces\.
++ By default, AWS uses the distance from the local Region to the AWS Direct Connect location to determine the virtual \(or transit\) interface for routing\. You can modify this behavior by assigning local preference communities to virtual interfaces\.
 + When you have multiple virtual interfaces in a Region, you can set the AS\_PATH attribute to prioritize which interface AWS uses to route traffic\.
 
 ### Private virtual interface and transit virtual interface BGP communities<a name="bgp-communities-private-transit"></a>
