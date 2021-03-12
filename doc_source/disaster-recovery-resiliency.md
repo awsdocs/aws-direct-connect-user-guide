@@ -13,6 +13,6 @@ The AWS Direct Connect Resiliency Toolkit provides a connection wizard with mult
 + **High Resiliency**: You can achieve high resiliency for critical workloads by using two single connections to multiple locations\. This model provides resiliency against connectivity failures caused by a fiber cut or a device failure\. It also helps prevent a complete location failure\.
 + **Development and Test**: You can achieve development and test resiliency for non\-critical workloads by using separate connections that terminate on separate devices in one location\. This model provides resiliency against device failure, but does not provide resiliency against location failure\.
 
-For more information, see [Using the AWS Direct Connect Resiliency Toolkit to get started](resilency_toolkit.md)\.
+For more information, see [Using the AWS Direct Connect Resiliency Toolkit to get started](resiliency_toolkit.md)\.
 
 For information about how to use VPN with AWS Direct Connect, see [AWS Direct Connect Plus VPN](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-direct-connect-plus-vpn-network-to-amazon.html)\.

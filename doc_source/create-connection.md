@@ -2,7 +2,7 @@
 
 You can create a standalone connection, or you can create a connection to associate with a LAG in your account\. If you associate a connection with a LAG, it's created with the same port speed and location that is specified in the LAG\.
 
-You can manually create a connection, or you can use the AWS Direct Connect Resiliency Toolkit to create connections\. For more information, see [Using the AWS Direct Connect Resiliency Toolkit to get started](resilency_toolkit.md)\.
+You can manually create a connection, or you can use the AWS Direct Connect Resiliency Toolkit to create connections\. For more information, see [Using the AWS Direct Connect Resiliency Toolkit to get started](resiliency_toolkit.md)\.
 
 If you do not have equipment at an AWS Direct Connect location, first contact an AWS Direct Connect Partner at the AWS Direct Connect Partner Program\. For more information, see [APN Partners Supporting AWS Direct Connect](https://aws.amazon.com/directconnect/partners)\.
 

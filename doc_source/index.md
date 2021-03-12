@@ -1,7 +1,7 @@
 # AWS Direct Connect User Guide
 
 -----
-*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2021 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -18,12 +18,12 @@ Amazon's trademarks and trade dress may not be used in
    + [Accessing a remote AWS Region](remote_regions.md)
    + [Routing policies and BGP communities](routing-and-bgp.md)
       + [Private virtual interface routing example](private-transit-vif-example.md)
-+ [Using the AWS Direct Connect Resiliency Toolkit to get started](resilency_toolkit.md)
++ [Using the AWS Direct Connect Resiliency Toolkit to get started](resiliency_toolkit.md)
    + [Maximum resiliency](maximum_resiliency.md)
    + [High resiliency](high_resiliency.md)
    + [Development and test](dev-test-resiliency.md)
    + [Classic](getting_started.md)
-   + [AWS Direct Connect Failover Test](resilency_failover.md)
+   + [AWS Direct Connect Failover Test](resiliency_failover.md)
 + [AWS Direct Connect connections](WorkingWithConnections.md)
    + [Creating a connection](create-connection.md)
    + [Viewing connection details](viewdetails.md)

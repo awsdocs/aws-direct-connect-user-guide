@@ -88,7 +88,7 @@ Local preference BGP community tags are mutually exclusive\. To load balance tra
 
 Local preference BGP community tags are evaluated before any AS\_PATH attribute, and are evaluated in order from lowest to highest preference \(where highest preference is preferred\)\.
 
-If you do not specify local preference community tags, the default local preference is based on the distance to the AWS Direct Connect location\.
+If you do not specify local preference using BGP community tags, the default outbound routing behavior is based on the AWS Direct Connect locations' relative distance to the originating Region\.
 
 #### `NO_EXPORT` BGP community<a name="no-export-bgp-communities-privatre-transit"></a>
 
