@@ -92,7 +92,7 @@ If you do not specify local preference using BGP community tags, the default out
 
 #### `NO_EXPORT` BGP community<a name="no-export-bgp-communities-privatre-transit"></a>
 
-The `NO_EXPORT` BGP community tag is supported for public virtual interfaces, private virtual interfaces, and transit virtual interfaces\.
+The `NO_EXPORT` BGP community tag is supported for public virtual interfaces\.
 
 AWS Direct Connect also provides BGP community tags on advertised Amazon routes\. If you use AWS Direct Connect to access public AWS services, you can create filters based on these community tags\. 
 
