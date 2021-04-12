@@ -9,7 +9,7 @@ If you do not already have equipment located in an AWS Direct Connect location, 
 An AWS Direct Connect connection can provide access to resources in other Regions\. For more information, see [Accessing a remote AWS Region](remote_regions.md)\.
 
 **Note**  
-If the cross connect is not completed within 90 days, the authority granted by the LOA\-CFA expires\. To renew a LOA\-CFA that has expired, you can download it again from the AWS Direct Connect console\. For more information, see [Downloading the LOA\-CFA](create-connection.md#create-connection-loa-cfa)\.
+If the cross connect is not completed within 90 days, the authority granted by the LOA\-CFA expires\. To renew a LOA\-CFA that has expired, you can download it again from the AWS Direct Connect console\. For more information, see [Download the LOA\-CFA](create-connection.md#create-connection-loa-cfa)\.
 
 **Topics**
 + [Africa \(Cape Town\)](#cross-connect-af-south-1)
@@ -211,7 +211,7 @@ You can't order connections in this Region\.
 | Location | How to request a connection | 
 | --- | --- | 
 | AWS Bahrain DC53, Manama | To complete the connection, you can work with one of our [network provider partners](https://aws.amazon.com/directconnect/partners/) at the location to establish connectivity\. You will then provide a Letter of Authorization \(LOA\) from the network provider to AWS through the [AWS Support Center](https://console.aws.amazon.com/support/home)\. AWS will then complete the cross\-connect at this location\.  | 
-|  AWS Bahrain DC52, Manama | To complete the connection, you can work with one of our [network provider partners](https://aws.amazon.com/directconnect/partners/) at the location to establish connectivity\. You will then provide a Letter of Authorization \(LOA\) from the network provider to AWS through the [AWS Support Center](https://console.aws.amazon.com/support/home)\. AWS will then complete the cross\-connect at this location\.  | 
+| AWS Bahrain DC52, Manama | To complete the connection, you can work with one of our [network provider partners](https://aws.amazon.com/directconnect/partners/) at the location to establish connectivity\. You will then provide a Letter of Authorization \(LOA\) from the network provider to AWS through the [AWS Support Center](https://console.aws.amazon.com/support/home)\. AWS will then complete the cross\-connect at this location\.  | 
 
 ## Middle East \(Israel\)<a name="cross-connect-me-israel"></a>
 

@@ -1,4 +1,4 @@
-# Adding or removing virtual interface tags<a name="modify-tags-vif"></a>
+# Add or remove virtual interface tags<a name="modify-tags-vif"></a>
 
 Tags provide a way to identify the virtual interface\. You can add or remove a tag if you are the account owner for the virtual interface\.
 

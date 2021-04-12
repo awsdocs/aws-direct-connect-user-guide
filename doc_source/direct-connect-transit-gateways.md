@@ -81,7 +81,7 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
+   1. For **BGP ASN**, enter the Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 
@@ -107,7 +107,7 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
 
 1. Choose **Create virtual interface**\.
 
-After you've created the virtual interface, you can download the router configuration for your device\. For more information, see [Downloading the router configuration file](create-vif.md#vif-router-config)\.
+After you've created the virtual interface, you can download the router configuration for your device\. For more information, see [Download the router configuration file](create-vif.md#vif-router-config)\.
 
 **To create a transit virtual interface using the command line or API**
 + [create\-transit\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-transit-virtual-interface.html) \(AWS CLI\)

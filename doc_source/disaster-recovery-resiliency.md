@@ -6,6 +6,8 @@ For more information about AWS Regions and Availability Zones, see [AWS Global I
 
 In addition to the AWS global infrastructure, AWS Direct Connect offers several features to help support your data resiliency and backup needs\.
 
+For information about how to use VPN with AWS Direct Connect, see [AWS Direct Connect Plus VPN](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-direct-connect-plus-vpn-network-to-amazon.html)\.
+
 ## Failover<a name="failover"></a>
 
 The AWS Direct Connect Resiliency Toolkit provides a connection wizard with multiple resiliency models that helps you order dedicated connections to achieve your SLA objective\. You select a resiliency model, and then the AWS Direct Connect Resiliency Toolkit guides you through the dedicated connection ordering process\. The resiliency models are designed to ensure that you have the appropriate number of dedicated connections in multiple locations\. 
@@ -15,4 +17,6 @@ The AWS Direct Connect Resiliency Toolkit provides a connection wizard with mult
 
 For more information, see [Using the AWS Direct Connect Resiliency Toolkit to get started](resiliency_toolkit.md)\.
 
-For information about how to use VPN with AWS Direct Connect, see [AWS Direct Connect Plus VPN](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-direct-connect-plus-vpn-network-to-amazon.html)\.
+## Logical redundancy<a name="logical_redundancy"></a>
+
+Logical redundancy allows you to create two IPv4 and IPv6 BGP peerings on two different AWS devices over a single connection\. Logical redundancy can reduce downtime when a BGP peering session goes down due to a device failure or maintenance activity\. This option is available on newly\-created 1Gbps or 10Gbps dedicated connections in some locations\. For information about the locations that support logical redundancy, see [AWS Direct Connect FAQs](https://aws.amazon.com/directconnect/faqs/)\.

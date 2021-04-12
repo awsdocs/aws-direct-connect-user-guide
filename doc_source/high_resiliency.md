@@ -130,7 +130,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
    1. To provide your own BGP key, enter your BGP MD5 key\.
 
-      If you do not enter a value, AWS generates a BGP key\.
+      If you do not enter a value, we generate a BGP key\.
 
    1. To advertise prefixes to Amazon, for **Prefixes you want to advertise**, enter the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\. 
 
@@ -168,7 +168,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
+   1. For **BGP ASN**, enter the Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 

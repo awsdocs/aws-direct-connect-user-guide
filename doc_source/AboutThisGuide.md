@@ -5,6 +5,7 @@ The following table describes the releases for AWS Direct Connect\.
 
 | Feature | Description | Date | 
 | --- | --- | --- | 
+| Support MAC Security | You can use AWS Direct Connect connections that support MACsec to encrypt your data from your corporate data center to the AWS Direct Connect location\. For more information, see [MAC Security](MACsec.md)\. | 2021\-03\-31 | 
 | Support for 100G | Updated topics to include support for 100G dedicated connections\. | 2021\-02\-12 | 
 | New location in Italy | Updated topic to include the addition of the new Israel location\. For more information, see [Europe \(Italy\)](Colocation.md#cross-connect-italy)\. | 2021\-01\-22 | 
 | New location in Israel | Updated topic to include the addition of the new Israel location\. For more information, see [Middle East \(Israel\)](Colocation.md#cross-connect-me-israel)\. | 2020\-07\-07 | 
@@ -13,12 +14,12 @@ The following table describes the releases for AWS Direct Connect\.
 | AWS Direct Connect Resiliency Toolkit | The AWS Direct Connect Resiliency Toolkit provides a connection wizard with multiple resiliency models that helps you order dedicated connections to achieve your SLA objective\. For more information, see [Using the AWS Direct Connect Resiliency Toolkit to get started](resiliency_toolkit.md)\. | 2019\-10\-07 | 
 | Additional Region support for Support for AWS Transit Gateway across accounts | For information, see [Transit gateway associations](direct-connect-transit-gateways.md)\. | 2019\-09\-30 | 
 | AWS Direct Connect Support for AWS Transit Gateway | You can use an AWS Direct Connect gateway to connect your AWS Direct Connect connection over a transit virtual interface to the VPCs or VPNs attached to your transit gateway You associate a Direct Connect gateway with the transit gateway Then, create a transit virtual interface for your AWS Direct Connect connection to the Direct Connect gateway\. For information, see [Transit gateway associations](direct-connect-transit-gateways.md)\. | 2019\-03\-27 | 
-| Jumbo frames support | You can send jumbo frames \(9001 MTU\) over AWS Direct Connect\. For more information, see [Setting network MTU for private virtual interfaces or transit virtual interfaces](set-jumbo-frames-vif.md)\. | 2018\-10\-11 | 
+| Jumbo frames support | You can send jumbo frames \(9001 MTU\) over AWS Direct Connect\. For more information, see [Set network MTU for private virtual interfaces or transit virtual interfaces](set-jumbo-frames-vif.md)\. | 2018\-10\-11 | 
 | Local preference BGP communities | You can use local preference BGP community tags to achieve load balancing and route preference for incoming traffic to your network\. For more information, see [Local preference BGP communities](routing-and-bgp.md#local-pref-bgp-communities)\. | 2018\-02\-06 | 
 | AWS Direct Connect gateway | You can use a Direct Connect gateway to connect your AWS Direct Connect connection to VPCs in remote Regions\. For more information, see [Working with Direct Connect gateways](direct-connect-gateways.md)\. | 2017\-11\-01 | 
 | Amazon CloudWatch metrics | You can view CloudWatch metrics for your AWS Direct Connect connections\. For more information, see [Monitoring with Amazon CloudWatch](monitoring-cloudwatch.md)\. | 2017\-06\-29 | 
 | Link aggregation groups | You can create a link aggregation group \(LAG\) to aggregate multiple AWS Direct Connect connections\. For more information, see [Link aggregation groups](lags.md)\. | 2017\-02\-13 | 
-| IPv6 support | Your virtual interface can now support an IPv6 BGP peering session\. For more information, see [Adding or deleting a BGP peer](add-peer-to-vif.md)\. | 2016\-12\-01 | 
+| IPv6 support | Your virtual interface can now support an IPv6 BGP peering session\. For more information, see [Add or delete a BGP peer](add-peer-to-vif.md)\. | 2016\-12\-01 | 
 | Tagging support | You can now tag your AWS Direct Connect resources\. For more information, see [Tagging AWS Direct Connect resources](using-tags.md)\. | 2016\-11\-04 | 
 | Self\-service LOA\-CFA | You can now download your Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\) using the AWS Direct Connect console or API\. | 2016\-06\-22 | 
 | New location in Silicon Valley | Updated topic to include the addition of the new Silicon Valley location in the US West \(N\. California\) Region\. | 2016\-06\-03 | 

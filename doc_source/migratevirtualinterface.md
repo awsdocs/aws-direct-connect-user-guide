@@ -1,4 +1,4 @@
-# Migrating a virtual interface<a name="migratevirtualinterface"></a>
+# Migrate a virtual interface<a name="migratevirtualinterface"></a>
 
 Use this procedure when you want to perform any of the following virtual interface migration operations:
 +  Migrate an existing virtual interface associated with a connection to another LAG\.

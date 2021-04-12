@@ -9,6 +9,7 @@ AWS Identity and Access Management \(IAM\) is an AWS service that helps an admin
 + [How AWS Direct Connect works with IAM](security_iam_service-with-iam.md)
 + [AWS Direct Connect identity\-based policy examples](security_iam_id-based-policy-examples.md)
 + [Troubleshooting AWS Direct Connect identity and access](security_iam_troubleshoot.md)
++ [Using Service\-Linked Roles for AWS Direct Connect](using-service-linked-roles.md)
 
 ## Audience<a name="security_iam_audience"></a>
 

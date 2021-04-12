@@ -1,6 +1,20 @@
-# Updating a connection<a name="updateconnection"></a>
+# Update a connection<a name="updateconnection"></a>
 
-You can update the connection name, add a tag to the connection, or remove a tag from the connection\.
+You can update the following connection attributes:
++ The name of the connection\.
++ The connection's MACsec encryption mode\.
+
+  MACsec is only available on dedicated connections\.
+
+  The valid values are:
+  + `should_encrypt`
+  + `must_encrypt`
+
+    When you set the encryption mode to this value, the connection goes down when the encryption is down\.
+  + `no_encrypt`
+
+------
+#### [ Console ]
 
 **To update a connection**
 
@@ -8,7 +22,7 @@ You can update the connection name, add a tag to the connection, or remove a tag
 
 1. In the navigation pane, choose **Connections**\.
 
-1. Select the connection and choose **Edit**\.
+1. Select the connection, and then choose **Edit**\.
 
 1. Modify the connection:
 
@@ -22,6 +36,15 @@ You can update the connection name, add a tag to the connection, or remove a tag
 
 1. Choose **Edit connection**\.
 
+------
+#### [ Command line ]
+
 **To add a tag or remove a tag using the command line**
 + [tag\-resource](https://docs.aws.amazon.com/cli/latest/reference/directconnect/tag-resource.html) \(AWS CLI\) 
 + [untag\-resource](https://docs.aws.amazon.com/cli/latest/reference/directconnect/untag-resource.html) \(AWS CLI\) 
+
+**To update a connection using the command line or API**
++ [update\-connection](https://docs.aws.amazon.com/cli/latest/reference/directconnect/update-connection.html) \(AWS CLI\)
++ [UpdateConnection](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateConnection.html) \(AWS Direct Connect API\)
+
+------

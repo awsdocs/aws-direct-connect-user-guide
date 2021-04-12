@@ -1,6 +1,6 @@
 # Maximum resiliency<a name="maximum_resiliency"></a>
 
-You can achieve maximum resiliency for critical workloads by using separate connections that terminate on separate devices in more than one location \(as shown in the following figure\)\. This model provides resiliency against device, connectivity, and complete location failures\. The following figure shows both connections from each customer data center going to the same AWS Direct Connect locations\. You can optionally have each connection from a customer data center going to different Direct Connect locations\.
+You can achieve maximum resiliency for critical workloads by using separate connections that terminate on separate devices in more than one location \(as shown in the following figure\)\. This model provides resiliency against device, connectivity, and complete location failures\. The following figure shows both connections from each customer data center going to the same AWS Direct Connect locations\. You can optionally have each connection from a customer data center going to different locations\.
 
 ![\[Maximum Resiliency Model\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/dc-max-resiliency.png)
 
@@ -92,7 +92,7 @@ Before you begin, ensure that you have the following information:
 | \(Private virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. Jumbo frames apply only to propagated routes from AWS Direct Connect\. If you add static routes to a route table that point to your virtual private gateway, then traffic routed through the static routes is sent using 1500 MTU\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo frame capable on the virtual interface General configuration page\. | 
 | \(Transit virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 8500 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. Jumbo frames apply only to propagated routes from AWS Direct Connect\. If you add static routes to a route table that point to your transit gateway, then traffic routed through the static routes is sent using 1500 MTU\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo frame capable on the virtual interface General configuration page\. | 
 
-If your public prefixes or ASNs belong to an ISP or network carrier, AWS requests additional information from you\. This can be a document using an official company letterhead, or an email from the company's domain name verifying that the network prefix/ASN can be used by you\.
+If your public prefixes or ASNs belong to an ISP or network carrier, we request additional information from you\. This can be a document using an official company letterhead, or an email from the company's domain name verifying that the network prefix/ASN can be used by you\.
 
 When you create a public virtual interface, it can take up to 72 hours for AWS to review and approve your request\.
 
@@ -130,7 +130,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
    1. To provide your own BGP key, enter your BGP MD5 key\.
 
-      If you do not enter a value, AWS generates a BGP key\.
+      If you do not enter a value, we generate a BGP key\.
 
    1. To advertise prefixes to Amazon, for **Prefixes you want to advertise**, enter the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\. 
 
@@ -168,7 +168,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
+   1. For **BGP ASN**, enter the Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 

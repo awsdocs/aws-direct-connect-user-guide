@@ -16,7 +16,7 @@ The AWS Direct Connect Resiliency Toolkit has the following benefits:
 + Provides Amazon CloudWatch metrics for connections and virtual interfaces\. For more information, see [Monitoring AWS Direct Connect resources](monitoring-overview.md)\.
 
 The following resiliency models are available in the AWS Direct Connect Resiliency Toolkit:
-+ **Maximum Resiliency**: This model provides you a way to order dedicated connections to achieve an SLA of 99\.99%\. It requires you to meet all of the requirements for achieving the SLA that are specified in the [AWS Direct Connect Service Level Agreement](https://aws.amazon.com/directconnect/sla/)\. 
++ **Maximum Resiliency**: This model provides you a way to order dedicated connections to achieve an SLA of 99\.99%\. It requires you to meet all of the requirements for achieving the SLA that are specified in the [AWS Direct Connect Level Agreement](https://aws.amazon.com/directconnect/sla/)\. 
 + **High Resiliency**: This model provides you a way to order dedicated connections to achieve an SLA of 99\.9%\. It requires you to meet all of the requirements for achieving the SLA that are specified in the [AWS Direct Connect Service Level Agreement](https://aws.amazon.com/directconnect/sla/)\. 
 + **Development and Test**: This model provides you a way to achieve development and test resiliency for non\-critical workloads, by using separate connections that terminate on separate devices in one location\.
 + **Classic**\. This model is intended for users that have existing connections and want to add additional connections\. This model does not provide an SLA\.

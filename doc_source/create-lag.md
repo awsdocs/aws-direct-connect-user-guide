@@ -1,4 +1,4 @@
-# Creating a LAG<a name="create-lag"></a>
+# Create a LAG<a name="create-lag"></a>
 
 You can create a LAG by provisioning new connections, or aggregating existing connections\.
 
@@ -8,6 +8,9 @@ To create a LAG from existing connections, the connections must be on the same A
 
 **Important**  
 For existing connections, connectivity to AWS is interrupted during the creation of the LAG\.
+
+------
+#### [ Create a LAG with new connections using the console ]
 
 **To create a LAG with new connections**
 
@@ -20,18 +23,23 @@ For existing connections, connectivity to AWS is interrupted during the creation
 1. Under** Lag creation type**, choose **Request new connections**, and provide the following information:
    + **LAG name**: A name for the LAG\.
    + **Location**: The location for the LAG\.
-   + **Port speed**: The port speed for the connections\. 
+   + **Port speed**: The port speed for the connections\.
    + **Number of new connections**: The number of new connections to create\.
+   + \(Optional\) Configure MAC security \(MACsec\) for the connection\. Under **Additional Settings**, select **Request a MACsec capable port**\.
 
-1. \(Optional\) Add or remove a tag\.
+     MACsec is only available on dedicated connections\.
+   + \(Optional\) Add or remove a tag\.
 
-   \[Add a tag\] Choose **Add tag** and do the following:
-   + For **Key**, enter the key name\.
-   + For **Value**, enter the key value\.
+     \[Add a tag\] Choose **Add tag** and do the following:
+     + For **Key**, enter the key name\.
+     + For **Value**, enter the key value\.
 
-   \[Remove a tag\] Next to the tag, choose **Remove tag**\.
+     \[Remove a tag\] Next to the tag, choose **Remove tag**\.
 
 1. Choose **Create LAG**\.
+
+------
+#### [ Create a LAG with existing connections using the console ]
 
 **To create a LAG from existing connections**
 
@@ -56,19 +64,8 @@ For existing connections, connectivity to AWS is interrupted during the creation
 
 1. Choose **Create LAG**\.
 
-After you've created a LAG, you can view its details in the AWS Direct Connect console\.
-
-**To view information about your LAG**
-
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
-
-1. In the navigation pane, choose **LAGs**\.
-
-1. Select the LAG and choose **View details**\.
-
-1. You can view information about the LAG, including its ID, the AWS Direct Connect endpoint on which the connections terminate\.
-
-After you create a LAG, you can associate or disassociate connections from it\. For more information, see [Associating a connection with a LAG](associate-connection-with-lag.md) and [Disassociating a connection from a LAG](disassociate-connection-from-lag.md)\.
+------
+#### [ Command line ]
 
 **To create a LAG using the command line or API**
 + [create\-lag](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-lag.html) \(AWS CLI\)
@@ -81,3 +78,7 @@ After you create a LAG, you can associate or disassociate connections from it\. 
 **To download the LOA\-CFA using the command line or API**
 + [describe\-loa](https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-loa.html) \(AWS CLI\)
 + [DescribeLoa](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLoa.html) \(AWS Direct Connect API\)
+
+------
+
+After you create a LAG, you can associate or disassociate connections from it\. For more information, see [Associate a connection with a LAG](associate-connection-with-lag.md) and [Disassociate a connection from a LAG](disassociate-connection-from-lag.md)\.

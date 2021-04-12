@@ -102,8 +102,8 @@ If you had a virtual private gateway attached to a virtual interface, and you wa
 
 1. Create a Direct Connect gateway\. For more information, see [Creating a Direct Connect gateway](#create-direct-connect-gateway)\.
 
-1. Create a virtual interface for the Direct Connect gateway\. For more information, see [Creating a virtual interface](create-vif.md)\.
+1. Create a virtual interface for the Direct Connect gateway\. For more information, see [Create a virtual interface](create-vif.md)\.
 
 1. Associate the virtual private gateway with the Direct Connect gateway\. For more information, see [Associating and disassociating virtual private gateways](virtualgateways.md#associate-vgw-with-direct-connect-gateway)\.
 
-1. Delete the virtual interface that was associated with the virtual private gateway\. For more information, see [Deleting virtual interfaces](deletevif.md)\.
+1. Delete the virtual interface that was associated with the virtual private gateway\. For more information, see [Delete virtual interfaces](deletevif.md)\.
