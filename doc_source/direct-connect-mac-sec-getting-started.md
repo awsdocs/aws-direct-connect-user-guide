@@ -20,7 +20,9 @@ Complete the following tasks before you configure MACsec on a dedicated connecti
 + Create a CKN/CAK pair for the MACsec secret key\.
 
   You can create the pair using an open standard tool\. The pair must meet the requirements specified in [Step 4: Configure your on\-premises router](#associate-key-router)\.
+
 +  MACsec is supported on 10 Gbps and 100 Gbps dedicated Direct Connect connections at selected points of presence\. 
+
 + Make sure that you have a device on your end of the connection that supports MACsec\.
 
 ## Service\-Linked roles<a name="mac-sec-service-linked-roles"></a>
