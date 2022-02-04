@@ -7,6 +7,7 @@ The following rules apply to transit gateway associations:
 + There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect quotas](limits.md)\.
 + A Direct Connect gateway supports communication between attached transit virtual interfaces and associated transit gateways only\. 
 + If you connect to multiple transit gateways that are in different Regions, use unique ASNs for each transit gateway\.
++ A transit gateway can only be used with a 1 Gbps or faster Direct Connect connection\.
 
 ## Associating and disassociating transit gateways<a name="associate-tgw-with-direct-connect-gateway"></a>
 
@@ -75,7 +76,7 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
 
    1. For **Connection**, choose the Direct Connect connection that you want to use for this interface\.
 
-   1. For **Virtual interface owner**, choose **My AWS account** if the virtual interface is for your AWS account\. 
+   1. For **Virtual interface owner**, choose **My AWS account** if the virtual interface is for your AWS account\.
 
    1.  For **Direct Connect gateway**, select the Direct Connect gateway\.
 
