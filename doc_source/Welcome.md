@@ -36,6 +36,7 @@ In addition, your network must meet the following conditions:
 + 802\.1Q VLAN encapsulation must be supported across the entire connection, including intermediate devices\.
 + Your device must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\.
 
+
 + \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. BFD is a feature of BGP that applies to both public and privdate transit virtual interfaces\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but does not take effect until you configure it on your router\. See [Enable BFD for a Direct Connect connection](https://aws.amazon.com/premiumsupport/knowledge-center/enable-bfd-direct-connect/) 
 
 
@@ -51,4 +52,6 @@ Data Transfer Out charges for private interfaces and transit virtual interfaces 
 
 For publicly addressable AWS resources \(for example, Amazon S3 buckets, Classic EC2 instances, or EC2 traffic that goes through an internet gateway\), if the outbound traffic is destined for public prefixes owned by the same AWS payer account and actively advertised to AWS through an AWS Direct Connect public virtual Interface, the Data Transfer Out \(DTO\) usage is metered toward the resource owner at AWS Direct Connect data transfer rate\.
 
+
 For more information, see [AWS Direct Connect Pricing](https://aws.amazon.com/directconnect/pricing/)\.
+
