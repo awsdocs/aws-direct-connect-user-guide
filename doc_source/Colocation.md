@@ -42,7 +42,8 @@ If the cross connect is not completed within 90 days, the authority granted by t
 
 | Location | How to request a connection | 
 | --- | --- | 
-|  Cape Town Internet Exchange/ Teraco Data Centres | Contact Cape Town Internet Exchange/ Teraco Data Centres\. | 
+|  Cape Town Internet Exchange/ Teraco Data Centres | Contact Teraco at [support@teraco\.co\.za](mailto:support@teraco.co.za) for existing Teraco customers or [connect@teraco\.co\.za](mailto:connect@teraco.co.za) for new customers\. | 
+|  Teraco JB1, Johannesburg, South Africa | Contact Teraco at [support@teraco\.co\.za](mailto:support@teraco.co.za) for existing Teraco customers or [connect@teraco\.co\.za](mailto:connect@teraco.co.za) for new customers\. | 
 
 ## Asia Pacific \(Mumbai\)<a name="cross-connect-ap-south-1"></a>
 
@@ -69,6 +70,7 @@ If the cross connect is not completed within 90 days, the authority granted by t
 
 | Location | How to request a connection | 
 | --- | --- | 
+| Equinix HK1, Tsuen Wan N\.T\., Hong Kong SAR | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 | Equinix SG2, Singapore  | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 | Global Switch, Singapore | Contact Global Switch at [salessingapore@globalswitch\.com](mailto:salessingapore@globalswitch.com)\. | 
 | GPX, Mumbai | Contact GPX at [nkankane@gpxglobal\.net](mailto:nkankane@gpxglobal.net)\. | 
@@ -141,9 +143,9 @@ You can't order connections in this Region\.
 
 | Location | How to request a connection | 
 | --- | --- | 
-| CE Colo, Prague | Contact CE Colo at [info@cecolo\.com](mailto:info@cecolo.com)\. | 
-| DigiPlex Ulven, Oslo | Contact DigiPlex at [helpme@digiplex\.com](mailto:helpme@digiplex.com)\. | 
-| Equinix AM3, Amsterdam  | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
+| CE Colo, Prague, Czech Republic | Contact CE Colo at [info@cecolo\.com](mailto:info@cecolo.com)\. | 
+| DigiPlex Ulven, Oslo, Norway | Contact DigiPlex at [helpme@digiplex\.com](mailto:helpme@digiplex.com)\. | 
+| Equinix AM3, Amsterdam, Netherlands | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 | Equinix FR5, Frankfurt  | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\.  | 
 | Equinix HE6, Helsinki | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 | Equinix MU1, Munich  | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
@@ -168,8 +170,6 @@ You can't order connections in this Region\.
 | Equinix LD5, London \(Slough\)  | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\.  | 
 | Interxion DUB2, Dublin | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
 | Interxion MRS1, Marseille | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
-| Teraco CT1, Cape Town | Contact Teraco at [support@teraco\.co\.za](mailto:support@teraco.co.za) for existing Teraco customers or [connect@teraco\.co\.za](mailto:connect@teraco.co.za) for new customers\. | 
-| Teraco JB1, Johannesburg | Contact Teraco at [support@teraco\.co\.za](mailto:support@teraco.co.za) for existing Teraco customers or [connect@teraco\.co\.za](mailto:connect@teraco.co.za) for new customers\. | 
 
 ## Europe \(Italy\)<a name="cross-connect-italy"></a>
 
@@ -210,8 +210,8 @@ You can't order connections in this Region\.
 
 | Location | How to request a connection | 
 | --- | --- | 
-| AWS Bahrain DC53, Manama | To complete the connection, you can work with one of our [network provider partners](https://aws.amazon.com/directconnect/partners/) at the location to establish connectivity\. You will then provide a Letter of Authorization \(LOA\) from the network provider to AWS through the [AWS Support Center](https://console.aws.amazon.com/support/home)\. AWS will then complete the cross\-connect at this location\.  | 
-| AWS Bahrain DC52, Manama | To complete the connection, you can work with one of our [network provider partners](https://aws.amazon.com/directconnect/partners/) at the location to establish connectivity\. You will then provide a Letter of Authorization \(LOA\) from the network provider to AWS through the [AWS Support Center](https://console.aws.amazon.com/support/home)\. AWS will then complete the cross\-connect at this location\.  | 
+| AWS Bahrain DC53, Manama | To complete the connection, you can work with one of our [network provider partners](https://aws.amazon.com/directconnect/partners/) at the location to establish connectivity\. You will then provide a Letter of Authorization \(LOA\) from the network provider to AWS through the [AWS Support Center](https://console.aws.amazon.com/support/home)\. AWS completes the cross\-connect at this location\.  | 
+| AWS Bahrain DC52, Manama | To complete the connection, you can work with one of our [network provider partners](https://aws.amazon.com/directconnect/partners/) at the location to establish connectivity\. You will then provide a Letter of Authorization \(LOA\) from the network provider to AWS through the [AWS Support Center](https://console.aws.amazon.com/support/home)\. AWS completes the cross\-connect at this location\.  | 
 
 ## Middle East \(Israel\)<a name="cross-connect-me-israel"></a>
 
