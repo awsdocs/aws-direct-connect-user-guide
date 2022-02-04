@@ -8,6 +8,8 @@ You cannot specify your own peer IPv6 addresses for an IPv6 BGP peering session\
 
 Multi\-protocol BGP is not supported\. IPv4 and IPv6 operate in dual\-stack mode for the virtual interface\.
 
+BGP peers can't be more than one hop away from each other, because external BGP (EBGP) Multi-hop is disabled on the AWS end.
+
 AWS enables MD5 by default\. You cannot modify this option\.
 
 ## Add a BGP peer<a name="add-bgp-peer-vif"></a>
