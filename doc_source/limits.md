@@ -7,6 +7,7 @@ The following table lists the quotas related to AWS Direct Connect\. Unless indi
 | --- | --- | --- | 
 |  Private or public virtual interfaces per AWS Direct Connect dedicated connection  |  50  |  This limit cannot be increased\.  | 
 | Transit virtual interfaces per AWS Direct Connect dedicated connection |  1  | This limit cannot be increased\. | 
+| Private or public virtual interfaces per AWS Direct Connect dedicated connection and transit virtual interfaces per AWS Direct Connect dedicated connection | 50 and 1 transit virtual interface | This limit cannot be increased\. | 
 | Private, public, or transit virtual interfaces per AWS Direct Connect hosted connection1 | 1 | This limit cannot be increased\. | 
 |  Active AWS Direct Connect connections per Region per account  | 10 |  | 
 | Number of virtual interfaces per Link Aggregation Group \(LAG\) | 50 |  | 
@@ -20,6 +21,8 @@ The following table lists the quotas related to AWS Direct Connect\. Unless indi
 |  Virtual interfaces \(private or transit\) per AWS Direct Connect gateway  |  30  |  | 
 | Number of prefixes from on\-premises to AWS on a transit virtual interface | 100 | This limit cannot be increased\. | 
 | Number of prefixes per AWS Transit Gateway from AWS to on\-premise on a transit virtual interface | 20 | This limit cannot be increased\. | 
+| Number of virtual interfaces per virtual private gateway | There is no limit\. |  | 
+| Number of Direct Connect transit gateway associations \(attached to either a virtual gateway or transit gateway\) | 20 | This limit cannot be increased\. | 
 
 AWS Direct Connect supports these port speeds over single\-mode fiber: 1 Gbps: 1000BASE\-LX \(1310 nm\), 10 Gbps: 10GBASE\-LR \(1310 nm\) and 100Gbps: 100GBASE\-LR4\.
 

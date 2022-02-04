@@ -11,7 +11,7 @@ Consider the configuration where you have instance in two different AWS Regions 
 
 Configure the following options for the resources\.
 + Direct Connect gateway: Set the ASN for to 65030\. For more information, see [Creating a Direct Connect gateway](direct-connect-gateways-intro.md#create-direct-connect-gateway)\.
-+ Transit virtual interface: Set the VLAN to 899, and the ASN to 65020\. For more information, see [Creating a transit virtual interface to the Direct Connect gateway](create-vif.md#create-transit-vif)\.
++ Transit virtual interface: Set the VLAN to 899, and the ASN to 65020\. For more information, see [Create a transit virtual interface to the Direct Connect gateway](create-vif.md#create-transit-vif)\.
 + Direct Connect gateway association with the transit gateway: Set the allowed to prefixes to 10\.0\.0\.0/8\. 
 
   This CIDR block covers both VPC CIDR blocks\. For more information, see [Associating and disassociating transit gateways](direct-connect-transit-gateways.md#associate-tgw-with-direct-connect-gateway)\.

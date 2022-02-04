@@ -1,8 +1,8 @@
-# Creating a hosted virtual interface<a name="createhostedvirtualinterface"></a>
+# Create a hosted virtual interface<a name="createhostedvirtualinterface"></a>
 
-You can create a public, transit or private hosted virtual interface\. Before you begin, ensure that you have read the information in [Prerequisites for virtual interfaces](WorkingWithVirtualInterfaces.md#vif-prerequisites)\.
+You can create a public, transit, or private hosted virtual interface\. Before you begin, ensure that you have read the information in [Prerequisites for virtual interfaces](WorkingWithVirtualInterfaces.md#vif-prerequisites)\.
 
-## Creating a hosted private virtual interface<a name="create-hosted-private-vif"></a>
+## Create a hosted private virtual interface<a name="create-hosted-private-vif"></a>
 
 **To create a hosted private virtual interface**
 
@@ -20,11 +20,11 @@ You can create a public, transit or private hosted virtual interface\. Before yo
 
    1. For **Connection**, choose the Direct Connect connection that you want to use for this interface\.
 
-   1. For **Virtual interface owner**, choose **Another AWS account**, and then for **Virtual interface owner**, enter the ID of the AWS account to own this virtual interface\.
+   1. For **Virtual interface owner**, choose **Another AWS account**, and then for **Virtual interface owner**, enter the ID of the account to own this virtual interface\.
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
+   1. For **BGP ASN**, enter the Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 
@@ -54,7 +54,7 @@ You can create a public, transit or private hosted virtual interface\. Before yo
 + [allocate\-private\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/allocate-private-virtual-interface.html) \(AWS CLI\)
 + [AllocatePrivateVirtualInterface](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_AllocatePrivateVirtualInterface.html) \(AWS Direct Connect API\)
 
-## Creating a hosted public virtual interface<a name="create-hosted-public-vif"></a>
+## Create a hosted public virtual interface<a name="create-hosted-public-vif"></a>
 
 **To create a hosted public virtual interface**
 
@@ -72,11 +72,11 @@ You can create a public, transit or private hosted virtual interface\. Before yo
 
    1. For **Connection**, choose the Direct Connect connection that you want to use for this interface\.
 
-   1. For **Virtual interface owner**, choose **Another AWS account**, and then for **Virtual interface owner**, enter the ID of the AWS account to own this virtual interface\.
+   1. For **Virtual interface owner**, choose **Another AWS account**, and then for **Virtual interface owner**, enter the ID of the account to own this virtual interface\.
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
+   1. For **BGP ASN**, enter the Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 
@@ -92,7 +92,7 @@ You can create a public, transit or private hosted virtual interface\. Before yo
 
 1. To provide your own key to authenticate the BGP session, under **Additional Settings**, for **BGP authentication key**, enter the key\.
 
-   If you do not enter a value, then AWS generates a BGP key\.
+   If you do not enter a value, then we generate a BGP key\.
 
 1. \(Optional\) Add or remove a tag\.
 
@@ -110,7 +110,7 @@ You can create a public, transit or private hosted virtual interface\. Before yo
 + [allocate\-public\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/allocate-public-virtual-interface.html) \(AWS CLI\)
 + [AllocatePublicVirtualInterface](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_AllocatePublicVirtualInterface.html) \(AWS Direct Connect API\)
 
-## Creating a hosted transit virtual interface<a name="create-hosted-transit-vif"></a>
+## Create a hosted transit virtual interface<a name="create-hosted-transit-vif"></a>
 
 **To create a hosted transit virtual interface**
 **Important**  
@@ -130,11 +130,11 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
 
    1. For **Connection**, choose the Direct Connect connection that you want to use for this interface\.
 
-   1. For **Virtual interface owner**, choose **Another AWS account**, and then for **Virtual interface owner**, enter the ID of the AWS account to own this virtual interface\.
+   1. For **Virtual interface owner**, choose **Another AWS account**, and then for **Virtual interface owner**, enter the ID of the account to own this virtual interface\.
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
+   1. For **BGP ASN**, enter the Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 

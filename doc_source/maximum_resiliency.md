@@ -1,6 +1,6 @@
 # Maximum resiliency<a name="maximum_resiliency"></a>
 
-You can achieve maximum resiliency for critical workloads by using separate connections that terminate on separate devices in more than one location \(as shown in the following figure\)\. This model provides resiliency against device, connectivity, and complete location failures\. The following figure shows both connections from each customer data center going to the same AWS Direct Connect locations\. You can optionally have each connection from a customer data center going to different Direct Connect locations\.
+You can achieve maximum resiliency for critical workloads by using separate connections that terminate on separate devices in more than one location \(as shown in the following figure\)\. This model provides resiliency against device, connectivity, and complete location failures\. The following figure shows both connections from each customer data center going to the same AWS Direct Connect locations\. You can optionally have each connection from a customer data center going to different locations\.
 
 ![\[Maximum Resiliency Model\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/dc-max-resiliency.png)
 
@@ -73,8 +73,6 @@ To use AWS Direct Connect, you need an AWS account if you don't already have one
 
 ## Step 3: Create your virtual interfaces<a name="max-resiliency-createvirtualinterface"></a>
 
-The maximum resiliency model requires four virtual interfaces\. 
-
 You can create a private virtual interface to connect to your VPC\. Or, you can create a public virtual interface to connect to public AWS services that aren't in a VPC\. When you create a private virtual interface to a VPC, you need a private virtual interface for each VPC that you're connecting to\. For example, you need three private virtual interfaces to connect to three VPCs\.
 
 Before you begin, ensure that you have the following information:
@@ -87,14 +85,14 @@ Before you begin, ensure that you have the following information:
 | Virtual interface owner | If you're creating the virtual interface for another account, you need the AWS account ID of the other account\. | 
 | \(Private virtual interface only\) Connection | For connecting to a VPC in the same AWS Region, you need the virtual private gateway for your VPC\. The ASN for the Amazon side of the BGP session is inherited from the virtual private gateway\. When you create a virtual private gateway, you can specify your own private ASN\. Otherwise, Amazon provides a default ASN\. For more information, see [Create a Virtual Private Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/SetUpVPNConnections.html#vpn-create-vpg) in the Amazon VPC User Guide\. For connecting to a VPC through a Direct Connect gateway, you need the Direct Connect gateway\. For more information, see [Direct Connect Gateways](https://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-gateways.html)\. | 
 | VLAN | A unique virtual local area network \(VLAN\) tag that's not already in use on your connection\. The value must be between 1 and 4094 and must comply with the Ethernet 802\.1Q standard\. This tag is required for any traffic traversing the AWS Direct Connect connection\. If you have a hosted connection, your AWS Direct Connect Partner provides this value\. You can’t modify the value after you have created the virtual interface\. | 
-| Peer IP addresses |  A virtual interface can support a BGP peering session for IPv4, IPv6, or one of each \(dual\-stack\)\. You cannot create multiple BGP sessions for the same IP addressing family on the same virtual interface\. The IP address ranges are assigned to each end of the virtual interface for the BGP peering session\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/maximum_resiliency.html)  | 
+| Peer IP addresses |  A virtual interface can support a BGP peering session for IPv4, IPv6, or one of each \(dual\-stack\)\. Do not use Elastic IPs \(EIPs\) from the Anazon Pool to create a public virtual interface\. You cannot create multiple BGP sessions for the same IP addressing family on the same virtual interface\. The IP address ranges are assigned to each end of the virtual interface for the BGP peering session\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/maximum_resiliency.html)  | 
 | Address family | Whether the BGP peering session will be over IPv4 or IPv6\. | 
 | BGP information | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/maximum_resiliency.html) | 
 | \(Public virtual interface only\) Prefixes you want to advertise |   Public IPv4 routes or IPv6 routes to advertise over BGP\. You must advertise at least one prefix using BGP, up to a maximum of 1,000 prefixes\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/maximum_resiliency.html) | 
-| \(Private virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. Jumbo frames apply only to propagated routes from AWS Direct Connect\. If you add static routes to a route table that point to your virtual private gateway, then traffic routed through the static routes is sent using 1500 MTU\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo Frame Capable on the Summary tab\. | 
-| \(Transit virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 8500 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. Jumbo frames apply only to propagated routes from AWS Direct Connect\. If you add static routes to a route table that point to your virtual private gateway, then traffic routed through the static routes is sent using 1500 MTU\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo Frame Capable on the Summary tab\. | 
+| \(Private virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. Jumbo frames apply only to propagated routes from AWS Direct Connect\. If you add static routes to a route table that point to your virtual private gateway, then traffic routed through the static routes is sent using 1500 MTU\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo frame capable on the virtual interface General configuration page\. | 
+| \(Transit virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 8500 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. Jumbo frames apply only to propagated routes from AWS Direct Connect\. If you add static routes to a route table that point to your transit gateway, then traffic routed through the static routes is sent using 1500 MTU\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo frame capable on the virtual interface General configuration page\. | 
 
-If your public prefixes or ASNs belong to an ISP or network carrier, AWS requests additional information from you\. This can be a document using an official company letterhead, or an email from the company's domain name verifying that the network prefix/ASN can be used by you\.
+If your public prefixes or ASNs belong to an ISP or network carrier, we request additional information from you\. This can be a document using an official company letterhead, or an email from the company's domain name verifying that the network prefix/ASN can be used by you\.
 
 When you create a public virtual interface, it can take up to 72 hours for AWS to review and approve your request\.
 
@@ -132,7 +130,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
    1. To provide your own BGP key, enter your BGP MD5 key\.
 
-      If you do not enter a value, AWS generates a BGP key\.
+      If you do not enter a value, we generate a BGP key\.
 
    1. To advertise prefixes to Amazon, for **Prefixes you want to advertise**, enter the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\. 
 
@@ -164,13 +162,13 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
    1. For **Gateway type**, choose **Virtual private gateway**, or **Direct Connect gateway**\. 
 
-   1. For **Virtual interface owner**, choose **Another AWS account**, and then enter the AWS account\. 
+   1. For **Virtual interface owner**, choose **Another AWS account**, and then enter the AWS account\.
 
    1. For **Virtual private gateway**, choose the virtual private gateway to use for this interface\.
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
+   1. For **BGP ASN**, enter the Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 
@@ -198,7 +196,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 ## Step 4: Verify your virtual interface resiliency configuration<a name="max-resiliency-failover"></a>
 
-After you have established virtual interfaces to the AWS Cloud or to Amazon VPC, perform a virtual interface failover test to verify that your configuration meets your resiliency requirements\. For more information, see [AWS Direct Connect Failover Test](resilency_failover.md)\. 
+After you have established virtual interfaces to the AWS Cloud or to Amazon VPC, perform a virtual interface failover test to verify that your configuration meets your resiliency requirements\. For more information, see [AWS Direct Connect Failover Test](resiliency_failover.md)\. 
 
 ## Step 5: Verify your virtual interfaces connectivity<a name="max-resiliency-connected"></a>
 

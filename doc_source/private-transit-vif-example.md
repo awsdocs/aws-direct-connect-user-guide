@@ -1,6 +1,6 @@
 # Private virtual interface routing example<a name="private-transit-vif-example"></a>
 
-Consider the configuration where the AWS Direct Connect location 1 home Region \(east\) is the same as the VPC home Region\. There is a redundant AWS Direct Connect location 2 is a different Region \(west\)\. There are two private VIFs from AWS Direct Connect location 1 to the Direct Connect gateway\. There is one private VIF from AWS Direct Connect location 2 to the Direct Connect gateway\. To have AWS route traffic over VIF B before VIF A, set the AS\_PATH attribute of VIF B to be shorter than the VIF A AS\_PATH attribute\.
+Consider the configuration where the AWS Direct Connect location 1 home Region \(east\) is the same as the VPC home Region\. There is a redundant AWS Direct Connect location 2 in a different Region \(west\)\. There are two private VIFs from AWS Direct Connect location 1 to the Direct Connect gateway\. There is one private VIF from AWS Direct Connect location 2 to the Direct Connect gateway\. To have AWS route traffic over VIF B before VIF A, set the AS\_PATH attribute of VIF B to be shorter than the VIF A AS\_PATH attribute\.
 
 The VIFs have the following configurations:
 + VIF A \(in us\-east\-1\) advertises 172\.16\.0\.0/16 and has an AS\_PATH attribute of 65001, 65001, 65001

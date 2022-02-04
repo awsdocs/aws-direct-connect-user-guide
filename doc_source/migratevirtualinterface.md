@@ -1,4 +1,4 @@
-# Migrating a virtual interface<a name="migratevirtualinterface"></a>
+# Migrate a virtual interface<a name="migratevirtualinterface"></a>
 
 Use this procedure when you want to perform any of the following virtual interface migration operations:
 +  Migrate an existing virtual interface associated with a connection to another LAG\.
@@ -6,10 +6,11 @@ Use this procedure when you want to perform any of the following virtual interfa
 + Migrate an existing virtual interface associated with a connection to another connection\.
 
 **Note**  
-When you migrate or associate an existing virtual interface to a new connection, the configuration parameters that are associated with the virtual interfaces are the same\. You can pre\-stage the configuration on the connection, and then update the BGP configuration\.
+You can migrate a virtual interface to a new connection within the same Region, but you can't migrate it from one Region to another\. When you migrate or associate an existing virtual interface to a new connection, the configuration parameters associated with those virtual interfaces are the same\. To work around this, you can pre\-stage the configuration on the connection, and then update the BGP configuration\. 
+You can't migrate a VIF from one hosted connection to another hosted connection\. VLAN IDs are unique; therefore, migrating a VIF in this way would mean the VLANs don't match\. You either need to delete the connection or VIF, and then recreate that using a VLAN that's the same for both the connection and the VIF\.
 
 **Important**  
-The virtual Interface will go down for a brief period\. We recommend you perform this procedure during a maintenance window\.
+The virtual interface will go down for a brief period\. We recommend you perform this procedure during a maintenance window\.
 
 **To migrate a virtual interface**
 

@@ -6,7 +6,7 @@ Use *AWS Direct Connect gateway* to connect your VPCs\. You associate an *AWS Di
 
   You can also use a virtual private gateway to extend your Local Zone\. This configuration allows the VPC associated with the Local Zone to connect to a Direct Connect gateway\. The Direct Connect gateway connects to an AWS Direct Connect location in a Region\. The on\-premises data center has an AWS Direct Connect connection to the AWS Direct Connect location\. For more information, see [Accessing Local Zones using a Direct Connect gateway](https://docs.aws.amazon.com/vpc/latest/userguide/Extend_VPCs.html#access-local-zone) in the *Amazon VPC User Guide*\.
 
- A Direct Connect gateway is a globally available resource\. You can create the Direct Connect gateway in any Region and access it from all other Regions\. You can use a Direct Connect gateway in the following scenarios\.
+A Direct Connect gateway is a globally available resource\. You can create the Direct Connect gateway in any Region and access it from all other Regions\. The following describe scenarios where you can use a Direct Connect gateway\.
 
 A Direct Connect gateway does not allow gateway associations that are on the same Direct Connect gateway to send traffic to each other \(for example, a virtual private gateway to another virtual private gateway\)\. A Direct Connect gateway does not prevent traffic from being sent from one gateway association back to the gateway association itself \(for example when you have an on\-premises supernet route that contains the prefixes from the gateway association\)\. If you have a configuration with multiple VPCs connected to the same transit gateway, the VPCs could communicate\. To prevent the VPCs from communicating, use separate transit gateway attachments, and then associate a route table with the attachments that have the **blackhole** option set\.
 
@@ -22,7 +22,7 @@ Each VPC has a virtual private gateway that connects to the Direct Connect gatew
 
 Consider this scenario of a Direct Connect gateway owner \(Account Z\) who owns the Direct Connect gateway\. Account A and Account B want to use the Direct Connect gateway\. Account A and Account B each send an association proposal to Account Z\. Account Z accepts the association proposals and can optionally update the prefixes that are allowed from Account A's virtual private gateway or Account B's virtual private gateway\. After Account Z accepts the proposals, Account A and Account B can route traffic from their virtual private gateway to the Direct Connect gateway\. Account Z also owns the routing to the customers because Account Z owns the gateway\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/ma-vpc.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/dx-gateway-shared.png)
 
 ## Transit gateway associations<a name="transit-gateway"></a>
 
@@ -102,8 +102,8 @@ If you had a virtual private gateway attached to a virtual interface, and you wa
 
 1. Create a Direct Connect gateway\. For more information, see [Creating a Direct Connect gateway](#create-direct-connect-gateway)\.
 
-1. Create a virtual interface for the Direct Connect gateway\. For more information, see [Creating a virtual interface](create-vif.md)\.
+1. Create a virtual interface for the Direct Connect gateway\. For more information, see [Create a virtual interface](create-vif.md)\.
 
 1. Associate the virtual private gateway with the Direct Connect gateway\. For more information, see [Associating and disassociating virtual private gateways](virtualgateways.md#associate-vgw-with-direct-connect-gateway)\.
 
-1. Delete the virtual interface that was associated with the virtual private gateway\. For more information, see [Deleting virtual interfaces](deletevif.md)\.
+1. Delete the virtual interface that was associated with the virtual private gateway\. For more information, see [Delete virtual interfaces](deletevif.md)\.

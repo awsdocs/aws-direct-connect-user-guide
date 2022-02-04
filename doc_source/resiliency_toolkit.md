@@ -1,4 +1,4 @@
-# Using the AWS Direct Connect Resiliency Toolkit to get started<a name="resilency_toolkit"></a>
+# Using the AWS Direct Connect Resiliency Toolkit to get started<a name="resiliency_toolkit"></a>
 
 AWS offers customers the ability to achieve highly resilient network connections between Amazon Virtual Private Cloud \(Amazon VPC\) and their on\-premises infrastructure\. The AWS Direct Connect Resiliency Toolkit provides a connection wizard with multiple resiliency models\. These models help you to determine, and then place an order for the number of dedicated connections to achieve your SLA objective\. You select a resiliency model, and then the AWS Direct Connect Resiliency Toolkit guides you through the dedicated connection ordering process\. The resiliency models are designed to ensure that you have the appropriate number of dedicated connections in multiple locations\. 
 
@@ -12,11 +12,11 @@ The AWS Direct Connect Resiliency Toolkit has the following benefits:
 + Creates link aggregation groups \(LAGs\), and adds the appropriate number of dedicated connections to the LAGs when you choose a speed other than 1 Gbps, 10 Gbps, or 100 Gbps\.
 + Provides a LAG summary with the dedicated connection SLA that you can achieve, and the total port\-hour cost for each ordered dedicated connection as part of the LAG\.
 + Prevents you from terminating the dedicated connections on the same AWS Direct Connect device\.
-+ Provides a way for you to test your configuration for resiliency\. You work with AWS to bring down the BGP peering session in order to verify that traffic routes to one of your redundant virtual interfaces\. For more information, see [AWS Direct Connect Failover Test](resilency_failover.md)\.
++ Provides a way for you to test your configuration for resiliency\. You work with AWS to bring down the BGP peering session in order to verify that traffic routes to one of your redundant virtual interfaces\. For more information, see [AWS Direct Connect Failover Test](resiliency_failover.md)\.
 + Provides Amazon CloudWatch metrics for connections and virtual interfaces\. For more information, see [Monitoring AWS Direct Connect resources](monitoring-overview.md)\.
 
 The following resiliency models are available in the AWS Direct Connect Resiliency Toolkit:
-+ **Maximum Resiliency**: This model provides you a way to order dedicated connections to achieve an SLA of 99\.99%\. It requires you to meet all of the requirements for achieving the SLA that are specified in the [AWS Direct Connect Service Level Agreement](https://aws.amazon.com/directconnect/sla/)\. 
++ **Maximum Resiliency**: This model provides you a way to order dedicated connections to achieve an SLA of 99\.99%\. It requires you to meet all of the requirements for achieving the SLA that are specified in the [AWS Direct Connect Level Agreement](https://aws.amazon.com/directconnect/sla/)\. 
 + **High Resiliency**: This model provides you a way to order dedicated connections to achieve an SLA of 99\.9%\. It requires you to meet all of the requirements for achieving the SLA that are specified in the [AWS Direct Connect Service Level Agreement](https://aws.amazon.com/directconnect/sla/)\. 
 + **Development and Test**: This model provides you a way to achieve development and test resiliency for non\-critical workloads, by using separate connections that terminate on separate devices in one location\.
 + **Classic**\. This model is intended for users that have existing connections and want to add additional connections\. This model does not provide an SLA\.
@@ -45,10 +45,10 @@ You can set up an AWS Direct Connect connection in one of the following ways:
 
 For connections to AWS Direct Connect with bandwidths of 1 Gbps or higher, ensure that your network meets the following requirements:
 + Your network must use single\-mode fiber with a 1000BASE\-LX \(1310 nm\) transceiver for 1 gigabit Ethernet, a 10GBASE\-LR \(1310 nm\) transceiver for 10 gigabit, or a 100GBASE\-LR4 for 100 gigabit Ethernet\.
-+ Auto\-negotiation for the port must be disabled\. Port speed and full\-duplex mode must be configured manually\.
++ Auto\-negotiation for a port must be disabled for a connection with a port speed of more than 1 Gbps\. However, depending on the AWS Direct Connect endpoint serving your connection, auto\-negotiation might need to be enabled or disabled for 1 Gbps connections\. If your virtual interface remains down, see [Troubleshooting layer 2 \(data link\) issues](Troubleshooting.md#ts-layer-2)\.
 + 802\.1Q VLAN encapsulation must be supported across the entire connection, including intermediate devices\.
 + Your device must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\.
-+ \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but does not take effect until you configure it on your router\.
++ \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. BFD is a feature of BGP that applies to both public and privdate transit virtual interfaces\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but does not take effect until you configure it on your router\. See [Enable BFD for a Direct Connect connection](https://aws.amazon.com/premiumsupport/knowledge-center/enable-bfd-direct-connect/) 
 
 Make sure you have the following information before you begin your configuration:
 + The resiliency model that you want to use\.

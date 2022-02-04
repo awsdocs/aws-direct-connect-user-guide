@@ -86,7 +86,7 @@ After you have placed an order for an AWS Direct Connect connection, you must cr
 
 Before you begin, ensure that you've read the prerequisites in [Prerequisites for virtual interfaces](WorkingWithVirtualInterfaces.md#vif-prerequisites)\. 
 
-When you create a virtual interface using the AWS CLI, the output includes generic router configuration information\. To create a router configuration that's specific to your device, use the AWS Direct Connect console\. For more information, see [Downloading the router configuration file](create-vif.md#vif-router-config)\.
+When you create a virtual interface using the AWS CLI, the output includes generic router configuration information\. To create a router configuration that's specific to your device, use the AWS Direct Connect console\. For more information, see [Download the router configuration file](create-vif.md#vif-router-config)\.
 
 **To create a private virtual interface**
 

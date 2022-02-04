@@ -7,6 +7,7 @@ The following rules apply to transit gateway associations:
 + There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect quotas](limits.md)\.
 + A Direct Connect gateway supports communication between attached transit virtual interfaces and associated transit gateways only\. 
 + If you connect to multiple transit gateways that are in different Regions, use unique ASNs for each transit gateway\.
++ A transit gateway can only be used with a 1 Gbps or faster Direct Connect connection\.
 
 ## Associating and disassociating transit gateways<a name="associate-tgw-with-direct-connect-gateway"></a>
 
@@ -75,13 +76,13 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
 
    1. For **Connection**, choose the Direct Connect connection that you want to use for this interface\.
 
-   1. For **Virtual interface owner**, choose **My AWS account** if the virtual interface is for your AWS account\. 
+   1. For **Virtual interface owner**, choose **My AWS account** if the virtual interface is for your AWS account\.
 
    1.  For **Direct Connect gateway**, select the Direct Connect gateway\.
 
    1. For **VLAN**, enter the ID number for your virtual local area network \(VLAN\)\. 
 
-   1. For **BGP ASN**, enter the The Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
+   1. For **BGP ASN**, enter the Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
       The valid values are 1\-2147483647\.
 
@@ -107,7 +108,7 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
 
 1. Choose **Create virtual interface**\.
 
-After you've created the virtual interface, you can download the router configuration for your device\. For more information, see [Downloading the router configuration file](create-vif.md#vif-router-config)\.
+After you've created the virtual interface, you can download the router configuration for your device\. For more information, see [Download the router configuration file](create-vif.md#vif-router-config)\.
 
 **To create a transit virtual interface using the command line or API**
 + [create\-transit\-virtual\-interface](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-transit-virtual-interface.html) \(AWS CLI\)
