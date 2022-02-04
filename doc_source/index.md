@@ -1,7 +1,7 @@
 # AWS Direct Connect User Guide
 
 -----
-*****Copyright &copy; 2021 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -72,8 +72,8 @@ Amazon's trademarks and trade dress may not be used in
       + [AWS Direct Connect identity-based policy examples](security_iam_id-based-policy-examples.md)
          + [AWS Direct Connect resource-based policy examples](security_iam_resource-based-policy-examples.md)
       + [Troubleshooting AWS Direct Connect identity and access](security_iam_troubleshoot.md)
-      + [Using Service-Linked Roles for AWS Direct Connect](using-service-linked-roles.md)
-   + [AWS managed policies for AWS Direct Connect](security-iam-awsmanpol.md)
+      + [Using service-linked roles for AWS Direct Connect](using-service-linked-roles.md)
+      + [AWS managed policies for AWS Direct Connect](security-iam-awsmanpol.md)
    + [Logging and monitoring in AWS Direct Connect](dc-incident-response.md)
    + [Compliance validation for AWS Direct Connect](DirectConnect-compliance.md)
    + [Resilience in AWS Direct Connect](disaster-recovery-resiliency.md)

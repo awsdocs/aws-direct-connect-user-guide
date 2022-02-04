@@ -2,7 +2,7 @@
 
 You can monitor physical AWS Direct Connect connections, and virtual interfaces, using CloudWatch\. CloudWatch collects raw data from AWS Direct Connect, and processes it into readable metrics\. By default, CloudWatch provides AWS Direct Connect metric data in 5\-minute intervals\.  
 
-For detailed information about CloudWatch, see the [Amazon CloudWatch User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/)\. You can also monitor your services CloudWatch to see what ones are using resources\. For more information, see [AWS Services That Publish CloudWatch Metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html) \.
+For detailed information about CloudWatch, see the [Amazon CloudWatch User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/)\. You can also monitor your services CloudWatch to see what ones are using resources\. For more information, see [AWS Services That Publish CloudWatch Metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)\.
 
 **Topics**
 + [AWS Direct Connect metrics and dimensions](#metrics-dimensions)
@@ -74,7 +74,7 @@ Metrics are grouped first by the service namespace, and then by the various dime
 
 **To view metrics using the AWS Direct Connect console**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/](https://console.aws.amazon.com/directconnect/)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
 1. In the navigation pane, choose **Connections**\.
 

@@ -45,7 +45,7 @@ When you create a public virtual interface, it can take up to 72 hours for us to
 
    1. To provide your own BGP key, enter your BGP MD5 key\.
 
-      If you do not enter a value, we generate a BGP key\.
+      If you do not enter a value, we generate a BGP key\. If you provided your own key, or if we generated the key for you, that value displays in the **BGP authentication key** column on the virtual interface details page of **Virtual interfaces**\.
 
    1. To advertise prefixes to Amazon, for **Prefixes you want to advertise**, enter the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\. 
 
@@ -91,7 +91,7 @@ The maximum transmission unit \(MTU\) of a network connection is the size, in by
 
    1. For **Gateway type**, choose **Virtual private gateway**, or **Direct Connect gateway**\. 
 
-   1. For **Virtual interface owner**, choose **Another AWS account**, and then enter the AWS account\. 
+   1. For **Virtual interface owner**, choose **Another AWS account**, and then enter the AWS account\.
 
    1. For **Virtual private gateway**, choose the virtual private gateway to use for this interface\.
 
@@ -154,7 +154,7 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
 
    1. For **Connection**, choose the Direct Connect connection that you want to use for this interface\.
 
-   1. For **Virtual interface owner**, choose **My AWS account** if the virtual interface is for your AWS account\. 
+   1. For **Virtual interface owner**, choose **My AWS account** if the virtual interface is for your AWS account\.
 
    1.  For **Direct Connect gateway**, select the Direct Connect gateway\.
 
@@ -232,9 +232,8 @@ If you need to manually configure your router for MACsec, use the following tabl
 | CKN length | This is a 64 hexadecimal character \(0–9, A–E\) string\. Use the full length to maximize cross\-platform compatibility\. | 
 | CAK length | This is a 64 hexadecimal character \(0–9, A–E\) string\. Use the full length to maximize cross\-platform compatibility\. | 
 | Cryptographic algorithm | AES\_256\_CMAC | 
-| SAK Cipher Suite | GCM\_AES\_XPN\_256 | 
+| SAK Cipher Suite |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/create-vif.html)  | 
 | Key Cipher Suite | 16 | 
 | Confidentiality Offset | 0 | 
 | ICV Indicator | No | 
 | SAK Rekey Time | PN Rollover> | 
-| Replay Window \(frames\) | 148809600 | 

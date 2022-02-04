@@ -1,12 +1,12 @@
 # Troubleshooting AWS Direct Connect<a name="Troubleshooting"></a>
 
-The following topics can help you troubleshoot issues with your AWS Direct Connect connection\.
+The following troubleshooting information can help you diagnose and fix issues with your AWS Direct Connect connection\.
 
-**Topics**
-+ [Troubleshooting layer 1 \(physical\) issues](#ts_layer_1)
-+ [Troubleshooting layer 2 \(data link\) issues](#ts-layer-2)
-+ [Troubleshooting layer 3/4 \(Network/Transport\) issues](#ts-layer-3)
-+ [Troubleshooting routing issues](#ts-routing)
+**Contents**
++ [Layer 1 \(physical\) issues](#ts_layer_1)
++ [Layer 2 \(data link\) issues](#ts-layer-2)
++ [Layer 3/4 \(Network/Transport\) issues](#ts-layer-3)
++ [Routing issues](#ts-routing)
 
 ## Troubleshooting layer 1 \(physical\) issues<a name="ts_layer_1"></a>
 
@@ -16,7 +16,7 @@ If you or your network provider are having difficulty establishing physical conn
 
 1. Verify that your router or your provider's router is powered on and that the ports are activated\.
 
-1. Ensure that the routers are using the correct optical transceiver, auto\-negotiation is disabled, and port speed and full\-duplex mode are manually configured\. For more information, see [Network Requirements](https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html#overview_requirements)\.
+1. Ensure that the routers are using the correct optical transceiver\. Auto\-negotiation for the port must be disabled if you have a connection with a port speed more than 1 Gbps\. However, depending on the AWS Direct Connect endpoint serving your connection, auto\-negotiation might need to be enabled or disabled for 1 Gbps connections\. If your virtual interface remains down, see [Troubleshooting layer 2 \(data link\) issues](#ts-layer-2)\.
 
 1. Verify that the router is receiving an acceptable optical signal over the cross connect\.
 
