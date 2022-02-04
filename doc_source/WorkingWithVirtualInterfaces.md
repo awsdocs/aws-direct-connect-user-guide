@@ -65,3 +65,6 @@ To create a virtual interface, you need the following information:
 When you create a virtual interface, you can specify the account that owns the virtual interface\. When you choose an AWS account that is not your account, the following rules apply:
 + For private VIFs and transit VIFs, the account applies to the virtual interface and the virtual private gateway/Direct Connect gateway destination\.
 + For public VIFs, the account is used for virtual interface billing\. The Data Transfer Out \(DTO\) usage is metered toward the resource owner at AWS Direct Connect data transfer rate\.
+
+## Considerations<a name="considerations"></a>
++ [RFC 3021: Using 31-Bit Prefixes on IPv4 Point-to-Point Links](https://datatracker.ietf.org/doc/html/rfc3021) is supported on all Direct Connect virtual interface types.
