@@ -1,21 +1,19 @@
-# Development and test<a name="dev-test-resiliency"></a>
+# Maximum resiliency<a name="maximum_resiliency"></a>
 
-You can achieve development and test resiliency for non\-critical workloads by using separate connections that terminate on separate devices in one location \(as shown in the following figure\)\. This model provides resiliency against device failure, but does not provide resiliency against location failure\.
+You can achieve maximum resiliency for critical workloads by using separate connections that terminate on separate devices in more than one location \(as shown in the following figure\)\. This model provides resiliency against device, connectivity, and complete location failures\. The following figure shows both connections from each customer data center going to the same AWS Direct Connect locations\. You can optionally have each connection from a customer data center going to different locations\.
 
-![\[Development and Test Model\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/dc-devtest.png)
+![\[Maximum Resiliency Model\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/dc-max-resiliency.png)
 
-The following procedures demonstrate how to use the AWS Direct Connect Resiliency Toolkit to configure a development and test resiliency model\.
+The following procedures demonstrate how to use the AWS Direct Connect Resiliency Toolkit to configure a maximum resiliency model\.
 
 **Topics**
-+ [Step 1: Sign up for AWS](#dev-test-signup)
-+ [Step 2: Configure the resiliency model](#dev-test-select-model)
-+ [Step 3: Create a virtual interface](#dev-test-createvirtualinterface)
-+ [Step 4: Verify your virtual interface resiliency configuration](#dev-test-resiliency-failover)
-+ [Step 5: Verify your virtual interface](#dev-test-connected)
++ [Step 1: Sign up for AWS](#max-resiliency-signup)
++ [Step 2: Configure the resiliency model](#max-resiliency-select-model)
++ [Step 3: Create your virtual interfaces](#max-resiliency-createvirtualinterface)
++ [Step 4: Verify your virtual interface resiliency configuration](#max-resiliency-failover)
++ [Step 5: Verify your virtual interfaces connectivity](#max-resiliency-connected)
 
-## Step 1: Sign up for AWS<a name="dev-test-signup"></a>
-
-### <a name="dev-test-signup"></a>
+## Step 1: Sign up for AWS<a name="max-resiliency-signup"></a>
 
 To use AWS Direct Connect, you need an AWS account if you don't already have one\.
 
@@ -27,9 +25,9 @@ To use AWS Direct Connect, you need an AWS account if you don't already have one
 
    Part of the sign\-up procedure involves receiving a phone call and entering a verification code on the phone keypad\.
 
-## Step 2: Configure the resiliency model<a name="dev-test-select-model"></a>
+## Step 2: Configure the resiliency model<a name="max-resiliency-select-model"></a>
 
-**To configure the resiliency model**
+**To configure a maximum resiliency model**
 
 1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
 
@@ -37,19 +35,25 @@ To use AWS Direct Connect, you need an AWS account if you don't already have one
 
 1. Under **Connection ordering type**, choose **Connection wizard**\.
 
-1. Under **Resiliency level**, choose **Development and test**, and then choose **Next**\.
+1. Under **Resiliency level**, choose **Maximum Resiliency**, and then choose **Next**\.
 
 1. On the **Configure connections** pane, under **Connection settings,** do the following:
 
-   1. For **bandwidth**, choose the connection bandwidth\.
+   1. For **Bandwidth**, choose the dedicated connection bandwidth\.
 
       This bandwidth applies to all of the created connections\.
 
-   1. For **First location service provider**, select the appropriate AWS Direct Connect location\.
+   1. For **First location service provider**, select the appropriate AWS Direct Connect location for the dedicated connection\.
 
    1. If applicable, for **First Sub location**, choose the floor closest to you or your network provider\. This option is only available if the location has meet\-me rooms \(MMRs\) on multiple floors of the building\.
 
    1. If you selected **Other** for **First location service provider**, for **Name of other provider**, enter the name of the partner that you use\.
+
+   1. For **Second location service provider**, select the appropriate AWS Direct Connect location\.
+
+   1. If applicable, for **Second Sub location**, choose the floor closest to you or your network provider\. This option is only available if the location has meet\-me rooms \(MMRs\) on multiple floors of the building\.
+
+   1. If you selected **Other** for **Second location service provider**, for **Name of other provider**, enter the name of the partner that you use\.
 
    1. \(Optional\) Add or remove a tag\.
 
@@ -67,9 +71,9 @@ To use AWS Direct Connect, you need an AWS account if you don't already have one
 
    It can take up to 72 hours for AWS to review your request and provision a port for your connection\. During this time, you might receive an email with a request for more information about your use case or the specified location\. The email is sent to the email address that you used when you signed up for AWS\. You must respond within 7 days or the connection is deleted\. 
 
-## Step 3: Create a virtual interface<a name="dev-test-createvirtualinterface"></a>
+## Step 3: Create your virtual interfaces<a name="max-resiliency-createvirtualinterface"></a>
 
-To begin using your AWS Direct Connect connection, you must create a virtual interface\. You can create a private virtual interface to connect to your VPC\. Or, you can create a public virtual interface to connect to public AWS services that aren't in a VPC\. When you create a private virtual interface to a VPC, you need a private virtual interface for each VPC that you're connecting to\. For example, you need three private virtual interfaces to connect to three VPCs\.
+You can create a private virtual interface to connect to your VPC\. Or, you can create a public virtual interface to connect to public AWS services that aren't in a VPC\. When you create a private virtual interface to a VPC, you need a private virtual interface for each VPC that you're connecting to\. For example, you need three private virtual interfaces to connect to three VPCs\.
 
 Before you begin, ensure that you have the following information:
 
@@ -81,10 +85,10 @@ Before you begin, ensure that you have the following information:
 | Virtual interface owner | If you're creating the virtual interface for another account, you need the AWS account ID of the other account\. | 
 | \(Private virtual interface only\) Connection | For connecting to a VPC in the same AWS Region, you need the virtual private gateway for your VPC\. The ASN for the Amazon side of the BGP session is inherited from the virtual private gateway\. When you create a virtual private gateway, you can specify your own private ASN\. Otherwise, Amazon provides a default ASN\. For more information, see [Create a Virtual Private Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/SetUpVPNConnections.html#vpn-create-vpg) in the Amazon VPC User Guide\. For connecting to a VPC through a Direct Connect gateway, you need the Direct Connect gateway\. For more information, see [Direct Connect Gateways](https://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-gateways.html)\. | 
 | VLAN | A unique virtual local area network \(VLAN\) tag that's not already in use on your connection\. The value must be between 1 and 4094 and must comply with the Ethernet 802\.1Q standard\. This tag is required for any traffic traversing the AWS Direct Connect connection\. If you have a hosted connection, your AWS Direct Connect Partner provides this value\. You can’t modify the value after you have created the virtual interface\. | 
-| Peer IP addresses |  A virtual interface can support a BGP peering session for IPv4, IPv6, or one of each \(dual\-stack\)\. You cannot create multiple BGP sessions for the same IP addressing family on the same virtual interface\. The IP address ranges are assigned to each end of the virtual interface for the BGP peering session\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/dev-test-resiliency.html)  | 
+| Peer IP addresses |  A virtual interface can support a BGP peering session for IPv4, IPv6, or one of each \(dual\-stack\)\. Do not use Elastic IPs \(EIPs\) from the Anazon Pool to create a public virtual interface\. You cannot create multiple BGP sessions for the same IP addressing family on the same virtual interface\. The IP address ranges are assigned to each end of the virtual interface for the BGP peering session\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/maximum_resiliency.html)  | 
 | Address family | Whether the BGP peering session will be over IPv4 or IPv6\. | 
-| BGP information | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/dev-test-resiliency.html) | 
-| \(Public virtual interface only\) Prefixes you want to advertise |   Public IPv4 routes or IPv6 routes to advertise over BGP\. You must advertise at least one prefix using BGP, up to a maximum of 1,000 prefixes\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/dev-test-resiliency.html) | 
+| BGP information | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/maximum_resiliency.html) | 
+| \(Public virtual interface only\) Prefixes you want to advertise |   Public IPv4 routes or IPv6 routes to advertise over BGP\. You must advertise at least one prefix using BGP, up to a maximum of 1,000 prefixes\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/maximum_resiliency.html) | 
 | \(Private virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. Jumbo frames apply only to propagated routes from AWS Direct Connect\. If you add static routes to a route table that point to your virtual private gateway, then traffic routed through the static routes is sent using 1500 MTU\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo frame capable on the virtual interface General configuration page\. | 
 | \(Transit virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 8500 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. Jumbo frames apply only to propagated routes from AWS Direct Connect\. If you add static routes to a route table that point to your transit gateway, then traffic routed through the static routes is sent using 1500 MTU\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo frame capable on the virtual interface General configuration page\. | 
 
@@ -190,11 +194,11 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 1. Choose **Create virtual interface**\.
 
-## Step 4: Verify your virtual interface resiliency configuration<a name="dev-test-resiliency-failover"></a>
+## Step 4: Verify your virtual interface resiliency configuration<a name="max-resiliency-failover"></a>
 
 After you have established virtual interfaces to the AWS Cloud or to Amazon VPC, perform a virtual interface failover test to verify that your configuration meets your resiliency requirements\. For more information, see [AWS Direct Connect Failover Test](resiliency_failover.md)\. 
 
-## Step 5: Verify your virtual interface<a name="dev-test-connected"></a>
+## Step 5: Verify your virtual interfaces connectivity<a name="max-resiliency-connected"></a>
 
 After you have established virtual interfaces to the AWS Cloud or to Amazon VPC, you can verify your AWS Direct Connect connection using the following procedures\. 
 
