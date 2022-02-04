@@ -17,3 +17,6 @@ The AWS Direct Connect Resiliency Toolkit provides a connection wizard with mult
 
 For more information, see [Using the AWS Direct Connect Resiliency Toolkit to get started](resiliency_toolkit.md)\.
 
+## Logical redundancy<a name="logical_redundancy"></a>
+
+Logical redundancy allows you to create two IPv4 and IPv6 BGP peerings on two different AWS devices over a single connection\. Logical redundancy can reduce downtime when a BGP peering session goes down due to a device failure or maintenance activity\. This option is available on newly\-created 1Gbps or 10Gbps dedicated connections in some locations\. For information about the locations that support logical redundancy, see [AWS Direct Connect FAQs](https://aws.amazon.com/directconnect/faqs/)\.

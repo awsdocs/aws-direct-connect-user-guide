@@ -9,7 +9,7 @@ To connect to other AWS services using IPv6 addresses, check the service documen
 
 ## Public virtual interface prefix advertisement rules<a name="advertise-prefixes"></a>
 
-We advertise appropriate Amazon prefixes to you so that you can reach either your VPCs or other AWS services\. You can access all AWS prefixes through this connection; for example, Amazon EC2, Amazon S3, and Amazon\.com\. You do not have access to non\-Amazon prefixes\. For a current list of prefixes advertised by AWS, see [AWS IP Address Ranges](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in the *Amazon Web Services General Reference*\.
+We advertise appropriate Amazon prefixes to you so that you can reach either your VPCs or other AWS services\. You can access all AWS prefixes through this connection; for example, Amazon EC2, Amazon S3, and Amazon\.com\. You do not have access to non\-Amazon prefixes\. For a current list of prefixes advertised by AWS, see [AWS IP Address Ranges](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in the *Amazon Web Services General Reference*\. AWS does not re\-advertise customer prefixes that were received over AWS Direct Connect public virtual interfaces to other customers\. For more information about public virtual interfaces and routing policies, see [Public virtual interface routing policies](routing-and-bgp.md#routing-policies)\.
 
 **Note**  
 We recommend that you use a firewall filter \(based on the source/destination address of packets\) to control traffic to and from some prefixes\. If you're using a prefix filter \(route map\), ensure that it accepts prefixes with an exact match or longer\. Prefixes advertised from AWS Direct Connect may be aggregated and may differ from the prefixes defined in your prefix filter\.
@@ -65,6 +65,3 @@ To create a virtual interface, you need the following information:
 When you create a virtual interface, you can specify the account that owns the virtual interface\. When you choose an AWS account that is not your account, the following rules apply:
 + For private VIFs and transit VIFs, the account applies to the virtual interface and the virtual private gateway/Direct Connect gateway destination\.
 + For public VIFs, the account is used for virtual interface billing\. The Data Transfer Out \(DTO\) usage is metered toward the resource owner at AWS Direct Connect data transfer rate\.
-
-## Considerations<a name="considerations"></a>
-+ [RFC 3021: Using 31-Bit Prefixes on IPv4 Point-to-Point Links](https://datatracker.ietf.org/doc/html/rfc3021) is supported on all Direct Connect virtual interface types.

@@ -124,7 +124,7 @@ If you're accepting a hosted private virtual interface, you can associate it wit
 
    1. For **Connection**, choose the Direct Connect connection that you want to use for this interface\.
 
-   1. For **Virtual interface owner**, choose **My AWS account** if the virtual interface is for your AWS account\. 
+   1. For **Virtual interface owner**, choose **My AWS account** if the virtual interface is for your AWS account\.
 
    1.  For **Direct Connect gateway**, select the Direct Connect gateway\.
 

@@ -18,7 +18,7 @@ The following procedures demonstrate the common scenarios to get set up with an 
 
 For connections to AWS Direct Connect with port speeds of 1 Gbps or higher, ensure that your network meets the following requirements:
 + Your network must use single\-mode fiber with a 1000BASE\-LX \(1310 nm\) transceiver for 1 gigabit Ethernet, a 10GBASE\-LR \(1310 nm\) transceiver for 10 gigabit, or a 100GBASE\-LR4 for 100 gigabit Ethernet\.
-+ Auto\-negotiation for the port must be disabled\. Port speed and full\-duplex mode must be configured manually\.
++ Auto\-negotiation for a port must be disabled for a connection with a port speed of more than 1 Gbps\. However, depending on the AWS Direct Connect endpoint serving your connection, auto\-negotiation might need to be enabled or disabled for 1 Gbps connections\. If your virtual interface remains down, see [Troubleshooting layer 2 \(data link\) issues](Troubleshooting.md#ts-layer-2)\.
 + 802\.1Q VLAN encapsulation must be supported across the entire connection, including intermediate devices\.
 + Your device must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\.
 + \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but does not take effect until you configure it on your router\.
@@ -227,7 +227,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
    1. For **Gateway type**, choose **Virtual private gateway**, or **Direct Connect gateway**\. 
 
-   1. For **Virtual interface owner**, choose **Another AWS account**, and then enter the AWS account\. 
+   1. For **Virtual interface owner**, choose **Another AWS account**, and then enter the AWS account\.
 
    1. For **Virtual private gateway**, choose the virtual private gateway to use for this interface\.
 

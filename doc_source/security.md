@@ -11,7 +11,6 @@ This documentation helps you understand how to apply the shared responsibility m
 **Topics**
 + [Data protection in AWS Direct Connect](data-protection.md)
 + [Identity and access management for AWS Direct Connect](security-iam.md)
-+ [AWS managed policies for AWS Direct Connect](security-iam-awsmanpol.md)
 + [Logging and monitoring in AWS Direct Connect](dc-incident-response.md)
 + [Compliance validation for AWS Direct Connect](DirectConnect-compliance.md)
 + [Resilience in AWS Direct Connect](disaster-recovery-resiliency.md)

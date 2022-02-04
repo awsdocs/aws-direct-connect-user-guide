@@ -2,7 +2,7 @@
 
 You can achieve development and test resiliency for non\-critical workloads by using separate connections that terminate on separate devices in one location \(as shown in the following figure\)\. This model provides resiliency against device failure, but does not provide resiliency against location failure\.
 
-![\[Development and Test Model\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/dc_devtest.png)
+![\[Development and Test Model\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/dc-devtest.png)
 
 The following procedures demonstrate how to use the AWS Direct Connect Resiliency Toolkit to configure a development and test resiliency model\.
 
@@ -158,7 +158,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
    1. For **Gateway type**, choose **Virtual private gateway**, or **Direct Connect gateway**\. 
 
-   1. For **Virtual interface owner**, choose **Another AWS account**, and then enter the AWS account\. 
+   1. For **Virtual interface owner**, choose **Another AWS account**, and then enter the AWS account\.
 
    1. For **Virtual private gateway**, choose the virtual private gateway to use for this interface\.
 

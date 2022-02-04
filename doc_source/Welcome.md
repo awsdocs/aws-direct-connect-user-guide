@@ -4,7 +4,7 @@ AWS Direct Connect links your internal network to an AWS Direct Connect location
 
 The following diagram shows how AWS Direct Connect interfaces with your network\. 
 
-![\[AWS Direct Connect\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/direct_connect_overview.png)
+![\[AWS Direct Connect\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/direct-connect-overview.png)
 
 **Topics**
 + [AWS Direct Connect components](#overview-components)
@@ -32,7 +32,7 @@ To use AWS Direct Connect in an AWS Direct Connect location, your network must m
 
 In addition, your network must meet the following conditions:
 + Your network must use single\-mode fiber with a 1000BASE\-LX \(1310 nm\) transceiver for 1 gigabit Ethernet, a 10GBASE\-LR \(1310 nm\) transceiver for 10 gigabit, or a 100GBASE\-LR4 for 100 gigabit Ethernet\.
-+ Auto\-negotiation for the port must be disabled\. Port speed and full\-duplex mode must be configured manually\.
++ Auto\-negotiation for a port must be disabled for a connection with a port speed of more than 1 Gbps\. However, depending on the AWS Direct Connect endpoint serving your connection, auto\-negotiation might need to be enabled or disabled for 1 Gbps connections\. If your virtual interface remains down, see [Troubleshooting layer 2 \(data link\) issues](Troubleshooting.md#ts-layer-2)\.
 + 802\.1Q VLAN encapsulation must be supported across the entire connection, including intermediate devices\.
 + Your device must support Border Gateway Protocol \(BGP\) and BGP MD5 authentication\.
 + \(Optional\) You can configure Bidirectional Forwarding Detection \(BFD\) on your network\. Asynchronous BFD is automatically enabled for AWS Direct Connect virtual interfaces, but does not take effect until you configure it on your router\.
@@ -49,4 +49,4 @@ Data Transfer Out charges for private interfaces and transit virtual interfaces 
 
 For publicly addressable AWS resources \(for example, Amazon S3 buckets, Classic EC2 instances, or EC2 traffic that goes through an internet gateway\), if the outbound traffic is destined for public prefixes owned by the same AWS payer account and actively advertised to AWS through an AWS Direct Connect public virtual Interface, the Data Transfer Out \(DTO\) usage is metered toward the resource owner at AWS Direct Connect data transfer rate\.
 
-For more information, see [Amazon Direct Connect Pricing](https://aws.amazon.com/directconnect/pricing/)\.
+For more information, see [AWS Direct Connect Pricing](https://aws.amazon.com/directconnect/pricing/)\.
