@@ -5,6 +5,7 @@ The following table describes the releases for AWS Direct Connect\.
 
 | Feature | Description | Date | 
 | --- | --- | --- | 
+| Support for SiteLink | You can create a virtual private interface that enables connectivity between to Direct Connect points of presence \(PoPs\) in the same AWS Region\. For more information see [Hosted virtual interfaces](WorkingWithVirtualInterfaces.md#hosted-vif)\. | 2021\-12\-01 | 
 | Support MAC Security | You can use AWS Direct Connect connections that support MACsec to encrypt your data from your corporate data center to the AWS Direct Connect location\. For more information, see [MAC Security](MACsec.md)\. | 2021\-03\-31 | 
 | Support for 100G | Updated topics to include support for 100G dedicated connections\. | 2021\-02\-12 | 
 | New location in Italy | Updated topic to include the addition of the new Israel location\. For more information, see [Europe \(Italy\)](Colocation.md#cross-connect-italy)\. | 2021\-01\-22 | 
