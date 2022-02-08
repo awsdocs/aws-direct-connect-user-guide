@@ -9,3 +9,5 @@ The documentation is made available under the Creative Commons Attribution-Share
 The sample code within this documentation is made available under a modified MIT license. See the LICENSE-SAMPLECODE file.
 
 Updated the repository on Feb 4, 2024. This includes merge requests on GitHub, as well as docsite tickete fixes, and updating the content for the release of SiteLink in December 2021.
+
+February 8, 2022 Update: Merged information about Direct Connect SiteLink into the repo. This content is found in WorkingWithVirtualInterfaces.md.
