@@ -11,7 +11,7 @@ The following table lists the quotas related to AWS Direct Connect\. Unless indi
 | Private, public, or transit virtual interfaces per AWS Direct Connect hosted connection1 | 1 | This limit cannot be increased\. | 
 |  Active AWS Direct Connect connections per Region per account  | 10 |  | 
 | Number of virtual interfaces per Link Aggregation Group \(LAG\) | 50 |  | 
-|  Routes per Border Gateway Protocol \(BGP\) session on a private virtual interface or transit virtual interface If you advertise more than 100 routes over the BGP session, the BGP session will go into an idle state with the BGP session DOWN\.  |  100  |  This limit cannot be increased\.  | 
+|  Routes per Border Gateway Protocol \(BGP\) session on a private virtual interface or transit virtual interface If you advertise more than 100 routes over the BGP session, the BGP session will go into an idle state with the BGP session DOWN\. (100 IPv4 routes and 100 IPv6 routes per BGP session) |  100  |  This limit cannot be increased\.  | 
 |  Routes per Border Gateway Protocol \(BGP\) session on a public virtual interface  |  1,000  |  This limit cannot be increased\.  | 
 |  Dedicated connections per link aggregation group \(LAG\)  | 4 when the port speed is less than 100G 2 when the port speed is 100G |  | 
 |  Link aggregation groups \(LAGs\) per Region  |  10  |  | 
@@ -20,7 +20,7 @@ The following table lists the quotas related to AWS Direct Connect\. Unless indi
 | Transit gateways per AWS Direct Connect gateway | 3 | This limit cannot be increased\. | 
 |  Virtual interfaces \(private or transit\) per AWS Direct Connect gateway  |  30  |  | 
 | Number of prefixes from on\-premises to AWS on a transit virtual interface | 100 | This limit cannot be increased\. | 
-| Number of prefixes per AWS Transit Gateway from AWS to on\-premise on a transit virtual interface | 20 | This limit cannot be increased\. | 
+| Number of prefixes per AWS Transit Gateway from AWS to on\-premise on a transit virtual interface (This is combined for both IPv4 and IPv6) | 20 | This limit cannot be increased\. | 
 | Number of virtual interfaces per virtual private gateway | There is no limit\. |  | 
 | Number of Direct Connect transit gateway associations \(attached to either a virtual gateway or transit gateway\) | 20 | This limit cannot be increased\. | 
 
