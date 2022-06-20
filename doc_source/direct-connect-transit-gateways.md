@@ -53,13 +53,17 @@ You can add or remove allowed prefixes to the transit gateway\.
 
 1. Choose the gateway you want to modify and then choose **Edit**\.
 
-1. In **Allowed prefixes**, enter the prefixes \(separated by a comma, or on a new line\) which the Direct Connect gateway advertises to the on\-premises data center\. The prefixes you add should match the Amazon VPC CIDRs for all virtual private gateways\. For more information on allowed prefixes, see [Allowed prefixes interactions](allowed-to-prefixes.md)\.
+1. In **Allowed prefixes**, enter the prefixes which the Direct Connect gateway advertises to the on\-premises data center\. For multiple prefixes, separate each prefix by a comma or put each prefix on a new line\. The prefixes you add should match the Amazon VPC CIDRs for all virtual private gateways\. For more information on allowed prefixes, see [Allowed prefixes interactions](allowed-to-prefixes.md)\.
 
 1. Choose **Edit association**\. 
 
    In the **Gateway association** section the **State** displays **updating**\. When complete, the **State** changes to **associated**\.
 
 1. Choose **Disassociate**\.
+
+1. Choose **Disassociate** again to confirm that you want to disassociate the gateway\.
+
+   In the** Gateway association** section the **State** displays **disassociating**\. When complete, a confirmation message displays and the gateway is removed from the section\. This might take several minutes or longer to complete\.
 
 **To associate a transit gateway using the command line or API**
 + [create\-direct\-connect\-gateway\-association](https://docs.aws.amazon.com/cli/latest/reference/directconnect/create-direct-connect-gateway-association.html) \(AWS CLI\)

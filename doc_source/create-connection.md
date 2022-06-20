@@ -58,10 +58,12 @@ After we have processed your connection request, you can download the LOA\-CFA\.
 
 If you need to change the LOA\-CFA after it has been created \(for example, you need to change the ports\), contact AWS Support\.
 
-The LOA\-CFA expires after 90 days\. If your connection is not up after 90 days, we send you an email alerting you that the LOA\-CFA has expired\. To refresh the LOA\-CFA with a new issue date, download it again from the AWS Direct Connect console\. If you do not take any action, we will begin billing for the connection after the 90 days unless you take explicit action to delete the connection\.
+Billing automatically starts when the port is active or 90 days after the LOA has been issued, whichever comes first\. You can avoid billing charges by deleting the port prior to activation or within 90 days of the LOA being issued\.
+
+If your connection is not up after 90 days, and the LOA\-CFA has not been issued, we will send you an email alerting you that the port will be deleted in 10 days\. If you fail to activate the port within the additional 10 day period, the port will automatically be deleted and you'll need to restart the port creation process\.
 
 **Note**  
-Port\-hour billing starts 90 days after you created the connection, or after the connection between your router and the AWS Direct Connect endpoint is established, whichever comes first\. For more information, see [AWS Direct Connect Pricing](https://aws.amazon.com/directconnect/pricing/)\. If you no longer want the connection after you have reissued the LOA\-CFA, you must delete the connection yourself\. For more information, see [Delete connections](deleteconnection.md)\.
+For more information about pricing, see [AWS Direct Connect Pricing](https://aws.amazon.com/directconnect/pricing/)\. If you no longer want the connection after you have reissued the LOA\-CFA, you must delete the connection yourself\. For more information, see [Delete connections](deleteconnection.md)\.
 
 ------
 #### [ Console ]

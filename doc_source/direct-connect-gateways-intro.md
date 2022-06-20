@@ -1,14 +1,35 @@
 # Direct Connect gateways<a name="direct-connect-gateways-intro"></a>
 
-Use *AWS Direct Connect gateway* to connect your VPCs\. You associate an *AWS Direct Connect gateway* with either of the following gateways: 
+Use AWS Direct Connect gateway to connect your VPCs\. You associate an AWS Direct Connect gateway with either of the following gateways: 
 + A transit gateway when you have multiple VPCs in the same Region
 + A virtual private gateway
 
-  You can also use a virtual private gateway to extend your Local Zone\. This configuration allows the VPC associated with the Local Zone to connect to a Direct Connect gateway\. The Direct Connect gateway connects to an AWS Direct Connect location in a Region\. The on\-premises data center has an AWS Direct Connect connection to the AWS Direct Connect location\. For more information, see [Accessing Local Zones using a Direct Connect gateway](https://docs.aws.amazon.com/vpc/latest/userguide/Extend_VPCs.html#access-local-zone) in the *Amazon VPC User Guide*\.
+You can also use a virtual private gateway to extend your Local Zone\. This configuration allows the VPC associated with the Local Zone to connect to a Direct Connect gateway\. The Direct Connect gateway connects to a Direct Connect location in a Region\. The on\-premises data center has a Direct Connect connection to the Direct Connect location\. For more information, see [Accessing Local Zones using a Direct Connect gateway](https://docs.aws.amazon.com/vpc/latest/userguide/Extend_VPCs.html#access-local-zone) in the *Amazon VPC User Guide*\.
 
-A Direct Connect gateway is a globally available resource\. You can create the Direct Connect gateway in any Region and access it from all other Regions\. The following describe scenarios where you can use a Direct Connect gateway\.
+A Direct Connect gateway is a globally available resource\. You can create the Direct Connect gateway in any Region and access it from all other Regions\. 
 
-A Direct Connect gateway does not allow gateway associations that are on the same Direct Connect gateway to send traffic to each other \(for example, a virtual private gateway to another virtual private gateway\)\. A Direct Connect gateway does not prevent traffic from being sent from one gateway association back to the gateway association itself \(for example when you have an on\-premises supernet route that contains the prefixes from the gateway association\)\. If you have a configuration with multiple VPCs connected to the same transit gateway, the VPCs could communicate\. To prevent the VPCs from communicating, use separate transit gateway attachments, and then associate a route table with the attachments that have the **blackhole** option set\.
+A Direct Connect gateway does not allow gateway associations that are on the same Direct Connect gateway to send traffic to each other \(for example, a virtual private gateway to another virtual private gateway\)\. An exception to this rule is when a supernet is advertised across two or more VPCs, which have their attached virtual private gateways \(VGWs\) associated to the same Direct Connect gateway and on the same virtual interface\. In this case, VPCs can communicate with each other via the Direct Connect endpoint\. For example, if you advertise a supernet \(for example, 10\.0\.0\.0/8 or 0\.0\.0\.0/0\) that overlaps with the VPCs attached to a Direct Connect gateway \(for example, 10\.0\.0\.0/24 and 10\.0\.1\.0/24\), and on the same virtual interface, then from your on\-premises network, the VPCs can communicate with each other\. 
+
+If you want to block VPC\-to\-VPC communication within a Direct Connect gateway, do the following: 
+
+1. Set up security groups on the instances and other resources in the VPC to block traffic between VPCs, also using this as part of the default security group in the VPC\.
+
+1. Avoid advertising a supernet from your on\- premises network that overlaps with your VPCs\. Instead you can advertise more specific routes from your on\-premises network that do not overlap with your VPCs\.
+
+1. Provision a single Direct Connect Gateway for each VPC that you want to connect to your on\-premises network instead of using the same Direct Connect Gateway for multiple VPCs\. For example, instead of using a single Direct Connect Gateway for your development and production VPCs, use separate Direct Connect Gateways for each of these VPCs\.
+
+A Direct Connect gateway does not prevent traffic from being sent from one gateway association back to the gateway association itself \(for example when you have an on\-premises supernet route that contains the prefixes from the gateway association\)\. If you have a configuration with multiple VPCs connected to the same transit gateway, the VPCs could communicate\. To prevent the VPCs from communicating, use separate transit gateway attachments, and then associate a route table with the attachments that have the **blackhole** option set\.
+
+The following describe scenarios describe where you can use a Direct Connect gateway\.
+
+**Topics**
++ [Virtual private gateway associations](#virtual-private-gateway)
++ [Virtual private gateway associations across accounts](#virtual-private-gateway-across-accounts)
++ [Transit gateway associations](#transit-gateway)
++ [Transit gateway associations across accounts](#transit-gateway-across-accounts)
++ [Creating a Direct Connect gateway](#create-direct-connect-gateway)
++ [Deleting Direct Connect gateways](#delete-direct-connect-gateway)
++ [Migrating from a virtual private gateway to a Direct Connect gateway](#migrate-to-direct-connect-gateway)
 
 ## Virtual private gateway associations<a name="virtual-private-gateway"></a>
 
@@ -16,7 +37,7 @@ In the following diagram, the Direct Connect gateway enables you to use your AWS
 
 Each VPC has a virtual private gateway that connects to the Direct Connect gateway using a virtual private gateway association\. The Direct Connect gateway uses a private virtual interface for the connection to the AWS Direct Connect location\. There is an AWS Direct Connect connection from the location to the customer data center\.
 
-![\[Direct connect gateway\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/dx-gateway.png)
+![\[Direct Connect gateway\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/images/dx-gateway.png)
 
 ## Virtual private gateway associations across accounts<a name="virtual-private-gateway-across-accounts"></a>
 

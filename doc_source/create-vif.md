@@ -48,6 +48,8 @@ When you create a public virtual interface, it can take up to 72 hours for us to
       If you do not enter a value, we generate a BGP key\. If you provided your own key, or if we generated the key for you, that value displays in the **BGP authentication key** column on the virtual interface details page of **Virtual interfaces**\.
 
    1. To advertise prefixes to Amazon, for **Prefixes you want to advertise**, enter the IPv4 CIDR destination addresses \(separated by commas\) to which traffic should be routed over the virtual interface\. 
+**Important**  
+You may add additional prefixes to an existing public VIF and advertise those by contacting [AWS support](https://aws.amazon.com/support/createCase)\. In your support case, provide a list of additional CIDR prefixes you want to add to the public VIF and advertise\.
 
    1. \(Optional\) Add or remove a tag\.
 

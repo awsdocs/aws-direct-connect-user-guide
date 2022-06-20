@@ -15,6 +15,7 @@ The following rules apply to virtual private gateway associations:
 + A virtual private gateway association proposal expires 7 days after it is created\.
 + An accepted virtual private gateway proposal, or a deleted virtual private gateway proposal remains visible for 3 days\.
 + A virtual private gateway can be associated with a Direct Connect gateway and also attached to a virtual interface\.
++ Detaching a virtual private gateway from a VPC also disassociates the virtual private gateway from a Direct Connect gateway\.
 
 To connect your AWS Direct Connect connection to a VPC in the same Region only, you can create a Direct Connect gateway\. Or, you can create a private virtual interface and attach it to the virtual private gateway for the VPC\. For more information, see [Create a private virtual interface](create-vif.md#create-private-vif) and [VPN CloudHub](https://docs.aws.amazon.com/vpc/latest/userguide/VPN_CloudHub.html)\.
 

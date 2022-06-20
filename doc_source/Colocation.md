@@ -13,6 +13,7 @@ If the cross connect is not completed within 90 days, the authority granted by t
 
 **Topics**
 + [Africa \(Cape Town\)](#cross-connect-af-south-1)
++ [Asia Pacific \(Jakarta\)](#cross-connect-ap-southeast-3)
 + [Asia Pacific \(Mumbai\)](#cross-connect-ap-south-1)
 + [Asia Pacific \(Seoul\)](#cross-connect-ap-northeast-2)
 + [Asia Pacific \(Singapore\)](#cross-connect-ap-southeast-1)
@@ -45,12 +46,20 @@ If the cross connect is not completed within 90 days, the authority granted by t
 |  Cape Town Internet Exchange/ Teraco Data Centres | Contact Teraco at [support@teraco\.co\.za](mailto:support@teraco.co.za) for existing Teraco customers or [connect@teraco\.co\.za](mailto:connect@teraco.co.za) for new customers\. | 
 |  Teraco JB1, Johannesburg, South Africa | Contact Teraco at [support@teraco\.co\.za](mailto:support@teraco.co.za) for existing Teraco customers or [connect@teraco\.co\.za](mailto:connect@teraco.co.za) for new customers\. | 
 
+## Asia Pacific \(Jakarta\)<a name="cross-connect-ap-southeast-3"></a>
+
+
+| Location | How to request a connection | 
+| --- | --- | 
+|  DCI JK3, Jakarta | Contact DCI Indonesia at [jessie\.w@dci\-indonesia\.com\.com](mailto:support@teraco.co.za)\. | 
+|  NTT 2 Data Center, Jakarta | Contact NTT at [tps\.cms\.presales@global\.ntt](mailto:support@teraco.co.za)\. | 
+
 ## Asia Pacific \(Mumbai\)<a name="cross-connect-ap-south-1"></a>
 
 
 | Location | How to request a connection | 
 | --- | --- | 
-| GPX, Mumbai | Contact GPX at [nkankane@gpxglobal\.net](mailto:nkankane@gpxglobal.net)\. | 
+| GPX, Mumbai | Contact GPX at [rodeshpande@ap\.equinix\.com](mailto:rodeshpande@ap.equinix.com)\. | 
 | NetMagic DC2, Bangalore | Contact NetMagic Sales and Marketing toll\-free at 18001033130 or at [marketing@netmagicsolutions\.com](mailto:marketing@netmagicsolutions.com)\. | 
 | Sify Rabale, Mumbai | Contact Sify at [aws\.directconnect@sifycorp\.com](mailto:aws.directconnect@sifycorp.com)\. | 
 | STT Delhi DC2, Delhi | Contact STT at [enquiry\.AWSDX@sttelemediagdc\.in](mailto:enquiry.AWSDX@sttelemediagdc.in)\. | 
@@ -87,6 +96,7 @@ If the cross connect is not completed within 90 days, the authority granted by t
 | NEXTDC C1, Canberra | Contact NEXTDC at [nxtops@nextdc\.com](mailto:nxtops@nextdc.com)\. | 
 | NEXTDC M1, Melbourne | Contact NEXTDC at [nxtops@nextdc\.com](mailto:nxtops@nextdc.com)\. | 
 | NEXTDC P1, Perth | Contact NEXTDC at [nxtops@nextdc\.com](mailto:nxtops@nextdc.com)\. | 
+| NEXTDC S2, Sydney | Contact NEXTDC at [nxtops@nextdc\.com](mailto:nxtops@nextdc.com)\. | 
 
 ## Asia Pacific \(Tokyo\)<a name="cross-connect-ap-northeast-1"></a>
 
@@ -116,8 +126,8 @@ You can't order connections in this Region\.
 | Location | How to request a connection | 
 | --- | --- | 
 | Allied 250 Front St W, Toronto | Contact [driches@alliedreit\.com](mailto:driches@alliedreit.com)\. | 
-| Cologix MTL3, Montreal | Contact Cologix at [aws@cologix\.com](mailto:aws@cologix.com)\. | 
-| Cologix VAN2, Vancouver | Contact Cologix at [aws@cologix\.com](mailto:aws@cologix.com)\. | 
+| Cologix MTL3, Montreal | Contact Cologix at [sales@cologix\.com](mailto:sales@cologix.com)\. | 
+| Cologix VAN2, Vancouver | Contact Cologix at [sales@cologix\.com](mailto:sales@cologix.com)\. | 
 | eStruxture, Montreal | Contact eStruxture at [directconnect@estruxture\.com](mailto:directconnect@estruxture.com)\. | 
 
 ## China \(Beijing\)<a name="cross-connect-cn-north-1"></a>
@@ -234,8 +244,8 @@ You can't order connections in this Region\.
 
 | Location | How to request a connection | 
 | --- | --- | 
-| Cologix COL2, Columbus | Contact Cologix at [aws@cologix\.com](mailto:aws@cologix.com)\. | 
-| Cologix MIN3, Minneapolis | Contact Cologix at [aws@cologix\.com](mailto:aws@cologix.com)\. | 
+| Cologix COL2, Columbus | Contact Cologix at [sales@cologix\.com](mailto:sales@cologix.com)\. | 
+| Cologix MIN3, Minneapolis | Contact Cologix at [sales@cologix\.com](mailto:sales@cologix.com)\. | 
 | CyrusOne West III, Houston | Submit a request using [customer portal](https://cyrusone.com/about-enterprise-data-center-provider/customer-support/)\. | 
 | Equinix CH2, Chicago | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\.  | 
 | QTS Chicago | Contact QTS at [AConnect@qtsdatacenters\.com](mailto:AConnect@qtsdatacenters.com)\. | 

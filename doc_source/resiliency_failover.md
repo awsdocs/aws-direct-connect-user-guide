@@ -38,7 +38,7 @@ You can start the virtual interface failover test using the AWS Direct Connect c
 
    1. For **Test maximum time**, enter the number of minutes that the test will last\.
 
-      The maximum value is 180 minutes \(3 hours\)\.
+      The maximum value is 4,320 minutes \(72 hours\)\.
 
       The default value is 180 minutes \(3 hours\)\.
 
