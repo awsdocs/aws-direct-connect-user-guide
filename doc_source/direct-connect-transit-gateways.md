@@ -5,7 +5,7 @@ You can use an *AWS Direct Connect gateway* to connect your AWS Direct Connect c
 The following rules apply to transit gateway associations:
 + You cannot attach a Direct Connect gateway to a transit gateway when the Direct Connect gateway is already associated with a virtual private gateway or is attached to a private virtual interface\.
 + There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect quotas](limits.md)\.
-+ A Direct Connect gateway supports communication between attached transit virtual interfaces and associated transit gateways only\. 
++ A Direct Connect gateway supports communication between attached transit virtual interfaces and associated transit gateways only and may enable a virtual private gateway to another virtual private gateway\.
 + If you connect to multiple transit gateways that are in different Regions, use unique ASNs for each transit gateway\.
 + A transit gateway can only be used with a 1 Gbps or faster Direct Connect connection\.
 
@@ -112,7 +112,7 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
 
    1. For **BGP ASN**, enter the Border Gateway Protocol Autonomous System Number of your on\-premises peer router for the new virtual interface\.
 
-      The valid values are 1\-2147483647\.
+      The valid values are 1 to 2147483647\.
 
 1. Under **Additional Settings**, do the following:
 
@@ -121,6 +121,8 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
       \[IPv4\] To configure an IPv4 BGP peer, choose **IPv4** and do one of the following:
       + To specify these IP addresses yourself, for **Your router peer ip**, enter the destination IPv4 CIDR address to which Amazon should send traffic\. 
       + For **Amazon router peer ip**, enter the IPv4 CIDR address to use to send traffic to AWS\.
+**Important**  
+If you let AWS auto\-assign IP addresses, a /30 CIDR will be allocated from 169\.254\.0\.0/16\. AWS does not recommend this option if you intend to use the customer router peer IP address as the source and destination for traffic\. Instead you should use RFC 1918 or other addressing, and specify the address yourself\. For more information about RFC 1918 see [ Address Allocation for Private Internets](https://datatracker.ietf.org/doc/html/rfc1918)\.
 
       \[IPv6\] To configure an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
 

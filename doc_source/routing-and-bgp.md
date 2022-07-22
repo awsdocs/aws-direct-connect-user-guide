@@ -14,6 +14,8 @@ The following inbound routing policies apply:
 The following outbound routing policies apply:
 + AS\_PATH and Longest Prefix Match is used to determine the routing path, and AWS Direct Connect is the preferred path for traffic sourced from Amazon\. 
 + AWS Direct Connect advertises all local and remote AWS Region prefixes where available and includes on\-net prefixes from other AWS non\-Region points of presence \(PoP\) where available; for example, CloudFront and Route 53\.
+**Note**  
+Prefixes listed in the AWS IP address ranges JSON file, ip\-ranges\.json, for the AWS China Regions are not advertised over Direct Connect public VIF for any commercial Region\. For more information about the ip\-ranges\.json file, see [AWS IP address ranges ](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in the *AWS General Reference*\.
 + AWS Direct Connect advertises prefixes with a minimum path length of 3\.
 + AWS Direct Connect advertises all public prefixes with the well\-known `NO_EXPORT` BGP community\.
 + If you have multiple AWS Direct Connect connections, you can adjust the load\-sharing of inbound traffic by advertising prefixes with similar path attributes\.

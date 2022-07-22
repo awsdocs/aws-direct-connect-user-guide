@@ -16,7 +16,7 @@ If you or your network provider are having difficulty establishing physical conn
 
 1. Verify that your router or your provider's router is powered on and that the ports are activated\.
 
-1. Ensure that the routers are using the correct optical transceiver\. Auto\-negotiation for the port must be disabled if you have a connection with a port speed more than 1 Gbps\. However, depending on the AWS Direct Connect endpoint serving your connection, auto\-negotiation might need to be enabled or disabled for 1 Gbps connections\. If your virtual interface remains down, see [Troubleshooting layer 2 \(data link\) issues](#ts-layer-2)\.
+1. Ensure that the routers are using the correct optical transceiver\. Auto\-negotiation for the port must be disabled if you have a connection with a port speed more than 1 Gbps\. However, depending on the AWS Direct Connect endpoint serving your connection, auto\-negotiation might need to be enabled or disabled for 1 Gbps connections\. If auto\-negotation needs to be disabled for your connections, port speed and full\-duplex mode must be configured manually\. If your virtual interface remains down, see [Troubleshooting layer 2 \(data link\) issues](#ts-layer-2)\.
 
 1. Verify that the router is receiving an acceptable optical signal over the cross connect\.
 

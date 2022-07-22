@@ -1,6 +1,6 @@
 # Associating a virtual private gateway across accounts<a name="multi-account-associate-vgw"></a>
 
-You can associate a Direct Connect gateway with a virtual private gateway that is owned by any AWS account\. The Amazon VPCs and the Direct Connect gateway must be owned by AWS Accounts that belong to the same AWS payer account ID\. The Direct Connect gateway can be an existing gateway, or you can create a new gateway\. The owner of the virtual private gateway creates an *association proposal* and the owner of the Direct Connect gateway must accept the association proposal\.
+You can associate a Direct Connect gateway with a virtual private gateway that is owned by any AWS account\. The Direct Connect gateway can be an existing gateway, or you can create a new gateway\. The owner of the virtual private gateway creates an *association proposal* and the owner of the Direct Connect gateway must accept the association proposal\.
 
 An association proposal can contain prefixes that will be allowed from the virtual private gateway\. The owner of the Direct Connect gateway can optionally override any requested prefixes in the association proposal\.
 

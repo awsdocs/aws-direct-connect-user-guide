@@ -31,6 +31,8 @@ Use the following procedure to add a BGP peer\.
 1. \(Public virtual interface\) To add IPv4 BGP peers, do the following:
    + For **Your router peer ip**, enter the IPv4 CIDR destination address where traffic should be sent\.
    + For **Amazon router peer IP**, enter the IPv4 CIDR address to use to send traffic to AWS\.
+**Important**  
+If you let AWS auto\-assign IP addresses, a /30 CIDR will be allocated from 169\.254\.0\.0/16\. AWS does not recommend this option if you intend to use the customer router peer IP address as the source and destination for traffic\. Instead you should use RFC 1918 or other addressing, and specify the address yourself\. For more information about RFC 1918 see [ Address Allocation for Private Internets](https://datatracker.ietf.org/doc/html/rfc1918)\.
 
 1. \(Private or public virtual interface\) To add IPv6 BGP peers, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses; you cannot specify custom IPv6 addresses\.
 
