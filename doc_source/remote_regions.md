@@ -21,5 +21,5 @@ Alternatively, you can create a public virtual interface for your AWS Direct Con
 ## Network\-to\-Amazon VPC Connectivity Options<a name="network-to-vpc"></a>
 
 The following configuration can be used to connect remote networks with your Amazon VPC environment\. These options are useful for integrating AWS resources with your existing on\-site services:
-+ [AWS Direct Connect](https://aws.amazon.com/answers/networking/aws-single-data-center-ha-network-connectivity/)
-+ [AWS Direct Connect and AWS Virtual Private Network](https://aws.amazon.com/answers/networking/aws-single-data-center-ha-network-connectivity/)
++ [AWS Direct Connect](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/welcome.html)
++ [AWS Direct Connect and AWS Virtual Private Network](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/welcome.html)
