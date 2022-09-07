@@ -8,7 +8,7 @@ You can also use a virtual private gateway to extend your Local Zone\. This conf
 
 A Direct Connect gateway is a globally available resource\. You can create the Direct Connect gateway in any Region and access it from all other Regions\. You can set up Direct Connect to bypass a parent Availability Zone and connect directly to the internet or through Direct Connect points\-of\-presence\. For more information about AWS Local Zones, see [AWS Local Zones features](https://aws.amazon.com/about-aws/global-infrastructure/localzones/locations)\.
 
-Customers using Direct Connect with VPCs that currently bypass a parent Availability Zone will not be ale to migrate their Direct Connect connections or virtual interfaces\.
+Customers using Direct Connect with VPCs that currently bypass a parent Availability Zone will not be able to migrate their Direct Connect connections or virtual interfaces\.
 
 The following describe scenarios where you can use a Direct Connect gateway\.
 

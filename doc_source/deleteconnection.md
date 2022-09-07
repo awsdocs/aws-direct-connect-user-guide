@@ -1,6 +1,8 @@
 # Delete connections<a name="deleteconnection"></a>
 
-You can delete a connection as long as there are no virtual interfaces attached to it\. Deleting your connection stops all port hour charges for this connection\. AWS Direct Connect data transfer charges are associated with virtual interfaces\. Any cross connect or network circuit charges are independent of AWS Direct Connect and must be cancelled separately\. For more information about how to delete a virtual interface, see [Delete virtual interfaces](deletevif.md)\.
+You can delete a connection as long as there are no virtual interfaces attached to it\. Deleting your connection stops all port hour charges for this connection\. AWS Direct Connect data transfer charges are associated with virtual interfaces\. For more information about how to delete a virtual interface, see [Delete virtual interfaces](deletevif.md)\.
+
+Before deleting a connection, download the LOA for the connection containing the cross account information\. The facilities or circuit provider might need this information to properly disconnect cross connects and circuits from AWS\. Any cross connect or network circuit charges are independent of AWS Direct Connect and must be cancelled with the facilities or circuit provider\. For the steps to download the connection LOA, see [Download the LOA\-CFA](create-connection.md#create-connection-loa-cfa)\.
 
 If the connection is part of a link aggregation group \(LAG\), you cannot delete the connection if doing so causes the LAG to fall below its setting for the minimum number of operational connections\. 
 

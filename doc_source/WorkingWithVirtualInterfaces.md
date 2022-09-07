@@ -3,7 +3,7 @@
 You must create one of the following virtual interfaces to begin using your AWS Direct Connect connection\. 
 + Private virtual interface: A private virtual interface should be used to access an Amazon VPC using private IP addresses\.
 + Public virtual interface: A public virtual interface can access all AWS public services using public IP addresses\.
-+ Transit virtual interface: A transit virtual interface should be used to access one or more Amazon VPC Transit Gateways associated with Direct Connect gateways\. You can use transit virtual interfaces with 1/2/5/10/100 Gbps AWS Direct Connect dedicated or hosted connections\. For information about Direct Connect gateway configurations, see [Direct Connect gateways](direct-connect-gateways-intro.md)\.
++ Transit virtual interface: A transit virtual interface should be used to access one or more Amazon VPC Transit Gateways associated with Direct Connect gateways\. You can use transit virtual interfaces with any AWS Direct Connect dedicated or hosted connection\. For information about Direct Connect gateway configurations, see [Direct Connect gateways](direct-connect-gateways-intro.md)\.
 
 To connect to other AWS services using IPv6 addresses, check the service documentation to verify that IPv6 addressing is supported\.
 
@@ -18,7 +18,7 @@ We recommend that you use a firewall filter \(based on the source/destination ad
 
 To use your AWS Direct Connect connection with another account, you can create a hosted virtual interface for that account\. The owner of the other account must accept the hosted virtual interface to begin using it\. A hosted virtual interface works the same as a standard virtual interface and can connect to public resources or a VPC\.
 
-A connection of less than 1 Gbps supports only one virtual interface\.
+You can use transit virtual interfaces with 1/2/5/10/100 Gbps, and at speeds of 500 megabits per second \(Mbps\) and lower, Direct Connect dedicated or hosted connections\. A connection of less than 1 Gbps supports only one virtual interface\.
 
 To create a virtual interface, you need the following information:
 
@@ -37,14 +37,27 @@ To create a virtual interface, you need the following information:
 | \(Private virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. Jumbo frames apply only to propagated routes from AWS Direct Connect\. If you add static routes to a route table that point to your virtual private gateway, then traffic routed through the static routes is sent using 1500 MTU\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo frame capable on the virtual interface General configuration page\. | 
 | \(Transit virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 8500 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. Jumbo frames are supported up to 8500 MTU for Direct Connect\. Static routes and propagated routes configured in the Transit Gateway Route Table will support Jumbo Frames, including from EC2 instances with VPC static route table entries to the Transit Gateway Attachment\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo frame capable on the virtual interface General configuration page\. | 
 
-If you're creating a virtual private interface, you can optionally use SiteLink:
+## SiteLink<a name="dx-sitelink"></a>
+
+If you're creating a private or transit virtual interface, you can use SiteLink\.
+
+SiteLink is an optional Direct Connect feature for virtual private interfaces that enables connectivity between any two Direct Connect points of presence \(PoPs\) in the same AWS partition using the shortest available path over the AWS network\. This allows you to connect your on\-premises network through the AWS global network without needing to route your traffic through a Region\. For more information about SiteLink see [Introducing AWS Direct Connect SiteLink](https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-aws-direct-connect-sitelink/)\.
+
+**Note**  
+SiteLink is not available in AWS GovCloud \(US\) and the China Regions\.
+
+There's a separate pricing fee for using SiteLink\. For more information, see [AWS Direct Connect Pricing](https://aws.amazon.com/directconnect/pricing/)\.
+
+SiteLink doesn't support all virtual interface types\. The following table shows the interface type and whether it's supported\. 
 
 
-| Resource | Description | 
+| Virtual interface type | Supported/Not supported | 
 | --- | --- | 
-| SiteLink | SiteLink is a optional Direct Connect feature for virtual private interfaces that enables connectivity between any two Direct Connect points of presence \(PoPs\) in the same AWS partition using the shortest available path over the AWS network\. This allows you to connect your on\-premises network through the AWS global network without needing to route your traffic through a Region\. There's a separate pricing fee for using SiteLink\. For more information, see [AWS Direct Connect Pricing](https://aws.amazon.com/directconnect/pricing/)\. | 
-
-You can create a virtual interface for accounts within your AWS Organizations, or AWS Organizations that are different from yours\. You must accept the virtual interface before you can use it\. For information about how to create and accept a virtual interface, see [Create a hosted virtual interface](createhostedvirtualinterface.md) and [Accept a hosted virtual interface](accepthostedvirtualinterface.md)\.
+|  Transit virtual interface  |  Supported  | 
+|  Private virtual interface attached to a Direct Connect gateway with a virtual gateway  |  Supported  | 
+|  Private virtual interface attached to a Direct Connect gateway not associated with a virtual gateway or transit gateway  |  Supported  | 
+|  Private virtual interface attached to a virtual gateway  |  Not supported  | 
+|  Public virtual interface  |  Not supported  | 
 
 ## Prerequisites for virtual interfaces<a name="vif-prerequisites"></a>
 
@@ -68,17 +81,6 @@ To create a virtual interface, you need the following information:
 | \(Public virtual interface only\) Prefixes you want to advertise |   Public IPv4 routes or IPv6 routes to advertise over BGP\. You must advertise at least one prefix using BGP, up to a maximum of 1,000 prefixes\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/directconnect/latest/UserGuide/WorkingWithVirtualInterfaces.html) | 
 | \(Private virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 9001 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. Jumbo frames apply only to propagated routes from AWS Direct Connect\. If you add static routes to a route table that point to your virtual private gateway, then traffic routed through the static routes is sent using 1500 MTU\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo frame capable on the virtual interface General configuration page\. | 
 | \(Transit virtual interface only\) Jumbo frames | The maximum transmission unit \(MTU\) of packets over AWS Direct Connect\. The default is 1500\. Setting the MTU of a virtual interface to 8500 \(jumbo frames\) can cause an update to the underlying physical connection if it wasn't updated to support jumbo frames\. Updating the connection disrupts network connectivity for all virtual interfaces associated with the connection for up to 30 seconds\. Jumbo frames are supported up to 8500 MTU for Direct Connect\. Static routes and propagated routes configured in the Transit Gateway Route Table will support Jumbo Frames, including from EC2 instances with VPC static route table entries to the Transit Gateway Attachment\. To check whether a connection or virtual interface supports jumbo frames, select it in the AWS Direct Connect console and find Jumbo frame capable on the virtual interface General configuration page\. | 
-
-If you're using SiteLink, not all virtual interface types are supported\. The following table shows the interface type and whether it's supported\. 
-
-
-| Virtual interface type | Supported/Not supported | 
-| --- | --- | 
-|  Transit virtual interface  |  Supported  | 
-|  Private virtual interface attached to a Direct Connect gateway with a virtual gateway  |  Supported  | 
-|  Private virtual interface attached to a Direct Connect gateway not associated with a virtual gateway or transit gateway  |  Supported  | 
-|  Private virtual interface attached to a virtual gateway  |  Not supported  | 
-|  Public virtual interface  |  Not supported  | 
 
 When you create a virtual interface, you can specify the account that owns the virtual interface\. When you choose an AWS account that is not your account, the following rules apply:
 + For private VIFs and transit VIFs, the account applies to the virtual interface and the virtual private gateway/Direct Connect gateway destination\.

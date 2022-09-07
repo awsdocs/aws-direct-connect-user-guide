@@ -7,7 +7,6 @@ The following rules apply to transit gateway associations:
 + There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect quotas](limits.md)\.
 + A Direct Connect gateway supports communication between attached transit virtual interfaces and associated transit gateways only and may enable a virtual private gateway to another virtual private gateway\.
 + If you connect to multiple transit gateways that are in different Regions, use unique ASNs for each transit gateway\.
-+ A transit gateway can only be used with a 1 Gbps or faster Direct Connect connection\.
 
 ## Associating and disassociating transit gateways<a name="associate-tgw-with-direct-connect-gateway"></a>
 
@@ -122,7 +121,9 @@ If you associate your transit gateway with one or more Direct Connect gateways, 
       + To specify these IP addresses yourself, for **Your router peer ip**, enter the destination IPv4 CIDR address to which Amazon should send traffic\. 
       + For **Amazon router peer ip**, enter the IPv4 CIDR address to use to send traffic to AWS\.
 **Important**  
-If you let AWS auto\-assign IP addresses, a /30 CIDR will be allocated from 169\.254\.0\.0/16\. AWS does not recommend this option if you intend to use the customer router peer IP address as the source and destination for traffic\. Instead you should use RFC 1918 or other addressing, and specify the address yourself\. For more information about RFC 1918 see [ Address Allocation for Private Internets](https://datatracker.ietf.org/doc/html/rfc1918)\.
+If you let AWS auto\-assign IPv4 addresses, a /30 CIDR will be allocated from 169\.254\.0\.0/16 IPv4 Link\-Local according to RFC 3927 for point\-to\-point connectivity\. AWS does not recommend this option if you intend to use the customer router peer IP address as the source and/or destination for VPC traffic\. Instead you should use RFC 1918 or other addressing, and specify the address yourself\.  
+For more information about RFC 1918, see [Address Allocation for Private Internets](https://datatracker.ietf.org/doc/html/rfc1918)\.
+For more information about RFC 3927, see [Dynamic Configuration of IPv4 Link\-Local Addresses](https://datatracker.ietf.org/doc/html/rfc3927)\.
 
       \[IPv6\] To configure an IPv6 BGP peer, choose **IPv6**\. The peer IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses\. You cannot specify custom IPv6 addresses\.
 

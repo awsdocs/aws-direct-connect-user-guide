@@ -66,12 +66,13 @@ For public virtual interfaces, all routes that AWS Direct Connect advertises to 
 
 The following routing rules apply to traffic on private virtual interfaces and transit virtual interfaces:
 + AWS evaluates the longest prefix match first
-+ By default, AWS uses the distance from the local Region to the AWS Direct Connect location to determine the virtual \(or transit\) interface for routing\. You can modify this behavior by assigning local preference communities to virtual interfaces\.
-+ When you have multiple virtual interfaces in a Region, you can set the AS\_PATH attribute to prioritize which interface AWS uses to route traffic\.
++ When you have multiple virtual interfaces in a Region, you can set the AS\_PATH attribute to prioritize which interface AWS uses to route traffic\. However, AS\_PATH prepending doesn’t work when the Direct Connect connections are in different AWS Regions than the VPC\. For more information, see [How do I set an Active/Passive Direct Connect connection to AWS?](https://aws.amazon.com/premiumsupport/knowledge-center/active-passive-direct-connect/)\.
 
 ### Private virtual interface and transit virtual interface BGP communities<a name="bgp-communities-private-transit"></a>
 
-AWS Direct Connect supports local preference BGP community tags to help control the route preference of traffic on private virtual interfaces and transit virtual interfaces\.
+AWS Direct Connect supports local preference BGP community tags to help control the route preference of traffic on private virtual interfaces and transit virtual interfaces\. 
+
+The Direct Connect home Region location determines the default routing for private and transit virtual interfaces, using the distance from the local Region to the Direct Connect location\. You can modify this behavior by assigning local preference communities to virtual interfaces\. If you do not specify a local preference using BGP community tags, the default outbound routing behavior is based on the Direct Connect location's relative distance to the originating Region\. 
 
 For an example of a private virtual interface configuration, see [Private virtual interface routing example](private-transit-vif-example.md)\.
 
@@ -90,7 +91,7 @@ Local preference BGP community tags are mutually exclusive\. To load balance tra
 
 Local preference BGP community tags are evaluated before any AS\_PATH attribute, and are evaluated in order from lowest to highest preference \(where highest preference is preferred\)\.
 
-If you do not specify local preference using BGP community tags, the default outbound routing behavior is based on the AWS Direct Connect locations' relative distance to the originating Region\.
+If you do not specify local preference using BGP community tags, the local preference associated with the `7224:7200`—Medium preference community is applied by default\. For routes learned from Direct Connect location with a different associated Region as the local Region, the local preference is lowered to prefer those routes learned from Direct Connect locations associated with the local Region\.
 
 #### `NO_EXPORT` BGP community<a name="no-export-bgp-communities-privatre-transit"></a>
 

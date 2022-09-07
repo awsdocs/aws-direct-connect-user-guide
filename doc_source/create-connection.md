@@ -54,9 +54,9 @@ Use one of the following commands\.
 
 ## Download the LOA\-CFA<a name="create-connection-loa-cfa"></a>
 
-After we have processed your connection request, you can download the LOA\-CFA\. 
+After we have processed your connection request, you can download the LOA\-CFA\. If the link is enabled, the LOA\-CFA is not yet available for you to download\. Check your email for a request for information\. 
 
-If you need to change the LOA\-CFA after it has been created \(for example, you need to change the ports\), contact AWS Support\.
+ 
 
 Billing automatically starts when the port is active or 90 days after the LOA has been issued, whichever comes first\. You can avoid billing charges by deleting the port prior to activation or within 90 days of the LOA being issued\.
 
@@ -78,7 +78,7 @@ For more information about pricing, see [AWS Direct Connect Pricing](https://aws
 
 1. Choose **Download LOA\-CFA**\. 
 **Note**  
-If the link is not enabled, the LOA\-CFA is not yet available for you to download\. Check your email for a request for information\. If it's still unavailable, or you haven't received an email after 72 hours, contact [AWS Support](https://aws.amazon.com/support/createCase)\.
+If the link is not enabled, the LOA\-CFA is not yet available for you to download\. A Support case will be created requesting additional information\. Once you've responded to the request, and the request processed, the LOA\-CFA will be available for download\. If it's still unavailable, contact [AWS Support](https://aws.amazon.com/support/createCase)\.
 
 1. Send the LOA\-CFA to your network provider or colocation provider so that they can order a cross connect for you\. The contact process can vary for each colocation provider\. For more information, see [Requesting cross connects at AWS Direct Connect locations](Colocation.md)\.
 

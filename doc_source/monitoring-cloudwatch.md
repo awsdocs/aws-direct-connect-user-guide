@@ -60,17 +60,21 @@ AWS Direct Connect sends the following metrics about your AWS Direct Connect con
 
 **To view metrics using the CloudWatch console**
 
-Metrics are grouped first by the service namespace, and then by the various dimension combinations within each namespace\.
+Metrics are grouped first by the service namespace, and then by the various dimension combinations within each namespace\. For more information about using Amazon CloudWatch to view Direct Connect metrics, including adding math functions or prebuilt queries, see [Using Amazon CloudWatch metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/working-with-metrics.html) in the *Amazon CloudWatch User Guide*\. 
 
 1. Open the CloudWatch console at [https://console\.aws\.amazon\.com/cloudwatch/](https://console.aws.amazon.com/cloudwatch/)\.
 
-1. In the navigation pane, choose **Metrics**\.
+1. In the navigation pane, choose **Metrics**, and then choose **All metrics**\.
 
-1. For **All metrics**, choose the **DX** metric namespace\.
+1. In the **Metrics** section, choose **DX**\. 
 
-1. Choose **Connection Metrics**, and select the metric dimension to view the metrics \(for example, for the AWS Direct Connect connection\)\.
-
-1. \(Optional for Connection metrics\) To return data for the selected metric in 1\-minute intervals, choose **Graphed metrics**, and select **1 Minute** from the **Period** list\.
+1. Choose a **ConnectionId** or **Metric name**, and then choose any of the following to further define the metric:
+   + **Add to search** — Adds this metric to your search results\.
+   + **Search for this only** — Searches only for this metric\.
+   + **Remove from graph** — Removes this metric from the graph\.
+   + **Graph this metric only** — Graphs only this metric\.
+   + **Graph all search results** — Graphs all metrics\.
+   + **Graph with SQL query** — Opens **Metric Insights \-query builder**, allowing you to choose what you want to graph by creating an SQL query\. For more information on using Metric Insights, see [Query your metrics with CloudWatch Merics Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/query_with_cloudwatch-metrics-insights.html) in the *Amazon CloudWatch User Guide*\. 
 
 **To view metrics using the AWS Direct Connect console**
 
@@ -91,23 +95,34 @@ aws cloudwatch list-metrics --namespace "AWS/DX"
 
 You can create a CloudWatch alarm that sends an Amazon SNS message when the alarm changes state\. An alarm watches a single metric over a time period that you specify\. It sends a notification to an Amazon SNS topic based on the value of the metric relative to a given threshold over a number of time periods\. 
 
-For example, you can create an alarm that monitors the state of an AWS Direct Connect connection\. It sends a notification when the connection state is **down** for five consecutive 1\-minute periods\.
+For example, you can create an alarm that monitors the state of an AWS Direct Connect connection\. It sends a notification when the connection state is **down** for five consecutive 1\-minute periods\. For details on what to know for creating an alarm and for more information on creating an alarm, see [Using Amazon CloudWatch Alarms](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html) in the *Amazon CloudWatch User Guide*\. 
 
-**To create an alarm for the connection state**
+**To create a CloudWatch alarm\.**
 
 1. Open the CloudWatch console at [https://console\.aws\.amazon\.com/cloudwatch/](https://console.aws.amazon.com/cloudwatch/)\.
 
-1. In the navigation pane, choose **Alarms**\.
+1. In the navigation pane, choose **Alarms**, and then choose **All alarms**\.
 
 1. Choose **Create Alarm**\.
 
-1. Choose the **DX Metrics** category\.
+1. Choose **Select metric**, and then choose **DX** \.
 
-1. Select the AWS Direct Connect connection and choose the **ConnectionState** metric\. Choose **Next**\.
+1. Choose the **Connection Metrics** metric\.
 
-1. Configure the alarm as follows, and then choose **Create Alarm**:
-   + For **Alarm Threshold**, enter a name and description for your alarm\. For **Whenever**, choose **<** and enter `1`\. Enter **5** for the consecutive periods\.
-   + For **Actions**, select an existing notification list or choose **New list** to create a new one\.
-   + For **Alarm Preview**, select a period of 1 minute\.
+1. Select the AWS Direct Connect connection and choose the **Select metric** metric\.
 
-For more examples of creating alarms, see [Creating Amazon CloudWatch Alarms](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html) in the *Amazon CloudWatch User Guide*\.
+1. On the** Specify metric and conditions** page, configure the parameters for the alarm\. For more specifying metrics and conditions, see [Using Amazon CloudWatch Alarms](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html) in the *Amazon CloudWatch User Guide*\.
+
+1. Choose **Next**\.
+
+1. Configure the alarm actions on the **Configure actions** page\. For more information on configuring alarm actions, see [Alarm actions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-actions) in the *Amazon CloudWatch User Guide*\.
+
+1. Choose **Next**\. 
+
+1. On the **Add name and description** page, enter a **Name** and an optional **Alarm description** to describe this alarm, and then choose **Next**\.
+
+1. Verify the proposed alarm on the **Preview and create** page\. 
+
+1. If needed choose **Edit** to change any information, and then choose **Create alarm**\.
+
+   The **Alarms** page displays a new row with information about the new alarm\. The **Actions** status displays **Actions enabled**, indicating that the alarm is active\.

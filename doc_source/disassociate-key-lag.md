@@ -21,7 +21,7 @@ You can remove the association between the LAG and the MACsec key\.
 #### [ Command line ]
 
 **To remove an association between a LAG and a MACsec key**
-+ [associate\-mac\-sec\-key](https://docs.aws.amazon.com/cli/latest/reference/directconnect/disassociate-mac-sec-key.html) \(AWS CLI\)
++ [disassociate\-mac\-sec\-key](https://docs.aws.amazon.com/cli/latest/reference/directconnect/disassociate-mac-sec-key.html) \(AWS CLI\)
 + [DisassociateMacSecKey](https://docs.aws.amazon.com/directconnect/latest/APIReference/API__DisassociateMacSecKey.html) \(AWS Direct Connect API\)
 
 ------

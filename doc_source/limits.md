@@ -8,8 +8,8 @@ The following table lists the quotas related to AWS Direct Connect\. Unless indi
 |  Private or public virtual interfaces per AWS Direct Connect dedicated connection  |  50  |  This limit cannot be increased\.  | 
 | Transit virtual interfaces per AWS Direct Connect dedicated connection |  1  | This limit cannot be increased\. | 
 | Private or public virtual interfaces per AWS Direct Connect dedicated connection and transit virtual interfaces per AWS Direct Connect dedicated connection | 50 and 1 transit virtual interface | This limit cannot be increased\. | 
-| Private, public, or transit virtual interfaces per AWS Direct Connect hosted connection1 | 1 | This limit cannot be increased\. | 
-|  Active AWS Direct Connect connections per Region per account  | 10 |  | 
+| Private, public, or transit virtual interfaces per AWS Direct Connect hosted connection | 1 | This limit cannot be increased\. | 
+|  Active AWS Direct Connect connections per Direct Connect location per Region per account  | 10 | Contact your Solutions Architect \(SA\) or Technical Account Manager \(TAM\) for further assistance\. | 
 | Number of virtual interfaces per Link Aggregation Group \(LAG\) | 50 |  | 
 |  Routes per Border Gateway Protocol \(BGP\) session on a private virtual interface or transit virtual interface If you advertise more than 100 routes each for IPv4 and IPv6 over the BGP session, the BGP session will go into an idle state with the BGP session DOWN\.  |  100 each for IPv4 and IPv6  |  This limit cannot be increased\.  | 
 |  Routes per Border Gateway Protocol \(BGP\) session on a public virtual interface  |  1,000  |  This limit cannot be increased\.  | 
@@ -25,8 +25,6 @@ The following table lists the quotas related to AWS Direct Connect\. Unless indi
 | Number of Direct Connect gateways associated to a transit gateway | 20 | This limit cannot be increased\. | 
 
 AWS Direct Connect supports these port speeds over single\-mode fiber: 1 Gbps: 1000BASE\-LX \(1310 nm\), 10 Gbps: 10GBASE\-LR \(1310 nm\) and 100Gbps: 100GBASE\-LR4\.
-
-1: You cannot create a transit virtual interface on a hosted connection with a capacity less than 1Gbps\.
 
 ## BGP quotas<a name="bgp-quotas"></a>
 
