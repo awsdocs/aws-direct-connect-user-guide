@@ -13,3 +13,5 @@ Updated the repository on Feb 4, 2024. This includes merge requests on GitHub, a
 February 8, 2022 Update: Merged information about Direct Connect SiteLink into the repo. This content is found in WorkingWithVirtualInterfaces.md.
 
 July 22, 2022 Update: Merged latest updates, including updated trouble tickets, pull requests, and the release of Direct Connect 1.5 in early July, 2022"
+
+September 7, 2022 update. Merge latest updates, including trouble tickets and updated diagrams, updated LOA-CFA, updated SiteLink.
