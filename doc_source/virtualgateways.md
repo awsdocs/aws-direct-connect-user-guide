@@ -4,6 +4,7 @@ You can use an *AWS Direct Connect gateway* to connect your AWS Direct Connect c
 
 The following rules apply to virtual private gateway associations:
 + There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect quotas](limits.md)\.
++ You cannot attach a Direct Connect gateway to a virtual private gateway when the Direct Connect gateway is already associated with a transit gateway.
 + The VPCs to which you connect through a Direct Connect gateway cannot have overlapping CIDR blocks\. If you add an IPv4 CIDR block to a VPC that's associated with a Direct Connect gateway, ensure that the CIDR block does not overlap with an existing CIDR block for any other associated VPC\. For more information, see [Adding IPv4 CIDR Blocks to a VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#vpc-resize) in the *Amazon VPC User Guide*\.
 + You cannot create a public virtual interface to a Direct Connect gateway\.
 + A Direct Connect gateway supports communication between attached private virtual interfaces and associated virtual private gateways only, and may enable a virtual private gateway to another private gateway\. The following traffic flows are not supported:
