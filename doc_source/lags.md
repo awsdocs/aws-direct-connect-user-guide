@@ -17,7 +17,7 @@ The following rules apply:
 + You can have a maximum of two 100G connections, or four connections with a port speed less than 100G in a LAG\. Each connection in the LAG counts towards your overall connection limit for the Region\. 
 + All connections in the LAG must terminate at the same AWS Direct Connect endpoint\. 
 
-When you create a LAG, you can download the Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\) for each new physical connection individually from the AWS Direct Connect console\. For more information, see [Download the LOA\-CFA](create-connection.md#create-connection-loa-cfa)\.
+When you create a LAG, you can download the Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\) for each new physical connection individually from the AWS Direct Connect console\. For more information, see [Download the LOA\-CFA](dedicated_connection.md#create-connection-loa-cfa)\.
 
 All LAGs have an attribute that determines the minimum number of connections in the LAG that must be operational for the LAG itself to be operational\. By default, new LAGs have this attribute set to 0\. You can update your LAG to specify a different value—doing so means that your entire LAG becomes non\-operational if the number of operational connections falls below this threshold\. This attribute can be used to prevent over\-utilization of the remaining connections\. 
 

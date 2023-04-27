@@ -20,7 +20,7 @@ To view the permissions for this policy, see [AWSDirectConnectReadOnlyAccess](ht
 
 ## AWS managed policy: AWSDirectConnectServiceRolePolicy<a name="security-iam-awsmanpol-AWSDirectConnectServiceRolePolicy"></a>
 
-This policy is attached to the service\-linked role named **AWSServiceRoleForDirectConnect** to allow AWS Direct Connect to retrieve MAC Security secrets on your behalf\. For more information, see [Using service\-linked roles for AWS Direct Connect](using-service-linked-roles.md)\.
+This policy is attached to the service\-linked role named **AWSServiceRoleForDirectConnect** to allow AWS Direct Connect to retrieve MAC Security secrets on your behalf\. For more information, see [Service\-linked roles for AWS Direct Connect](using-service-linked-roles.md)\.
 
 To view the permissions for this policy, see [AWSDirectConnectServiceRolePolicy](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/aws-service-role/AWSDirectConnectServiceRolePolicy) in the AWS Management Console\.
 

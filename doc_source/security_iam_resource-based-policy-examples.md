@@ -1,8 +1,8 @@
-# AWS Direct Connect resource\-based policy examples<a name="security_iam_resource-based-policy-examples"></a>
+# Direct Connect identity\-based policy examples using tag\-based conditions<a name="security_iam_resource-based-policy-examples"></a>
 
 You can control access to resources and requests by using tag key conditions\. You can also use a condition in your IAM policy to control whether specific tag keys can be used on a resource or in a request\. 
 
-For information about how to use tags with AWS Identity and Access Management policies, see [Controlling Access Using Tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_iam-tags.html) in the *IAM User Guide*\.
+For information about how to use tags with IAM policies, see [Controlling Access Using Tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_iam-tags.html) in the *IAM User Guide*\.
 
 ## Associating Direct Connect virtual interfaces based on tags<a name="security_iam_resource-based-policy-examples-associate-interface"></a>
 

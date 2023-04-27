@@ -33,7 +33,7 @@ AWS Direct Connect supports scope BGP community tags and the `NO_EXPORT` BGP com
 
 You can apply BGP community tags on the public prefixes that you advertise to Amazon to indicate how far to propagate your prefixes in the Amazon network, for the local AWS Region only, all Regions within a continent, or all public Regions\.
 
-You can use the following BGP communities for your prefixes:
+For inbound routing policies, you can use the following BGP communities for your prefixes:
 + `7224:9100`—Local AWS Region
 + `7224:9200`—All AWS Regions for a continent
   + North America–wide
@@ -47,7 +47,7 @@ Prefixes that are marked with the same communities, and have identical AS\_PATH 
 
 The communities `7224:1` – `7224:65535` are reserved by AWS Direct Connect\.
 
-AWS Direct Connect applies the following BGP communities to its advertised routes:
+For outbound routing policies, AWS Direct Connect applies the following BGP communities to its advertised routes:
 + `7224:8100`—Routes that originate from the same AWS Region in which the AWS Direct Connect point of presence is associated\.
 + `7224:8200`—Routes that originate from the same continent with which the AWS Direct Connect point of presence is associated\.
 + No tag—Global \(all public AWS Regions\)\.
@@ -56,7 +56,7 @@ Communities that are not supported for an AWS Direct Connect public connection a
 
 ### `NO_EXPORT` BGP community<a name="no-export-bgp-communities"></a>
 
-The `NO_EXPORT` BGP community tag is supported for public virtual interfaces\.
+For outbound routing policies, the `NO_EXPORT` BGP community tag is supported for public virtual interfaces\.
 
 AWS Direct Connect also provides BGP community tags on advertised Amazon routes\. If you use AWS Direct Connect to access public AWS services, you can create filters based on these community tags\. 
 
@@ -64,9 +64,9 @@ For public virtual interfaces, all routes that AWS Direct Connect advertises to 
 
 ## Private virtual interface and transit virtual interface routing policies<a name="private-routing-policies"></a>
 
-The following routing rules apply to traffic on private virtual interfaces and transit virtual interfaces:
+The following outbound routing rules apply to traffic on private virtual interfaces and transit virtual interfaces:
 + AWS evaluates the longest prefix match first
-+ When you have multiple virtual interfaces in a Region, you can set the AS\_PATH attribute to prioritize which interface AWS uses to route traffic\. However, AS\_PATH prepending doesn’t work when the Direct Connect connections are in different AWS Regions than the VPC\. For more information, see [How do I set an Active/Passive Direct Connect connection to AWS?](https://aws.amazon.com/premiumsupport/knowledge-center/active-passive-direct-connect/)\.
++ When you have multiple virtual interfaces in the same associated Region, you can set the AS\_PATH attribute to prioritize which interface AWS uses to route traffic\. However, AS\_PATH prepending doesn’t work when the Direct Connect connections are in different associated AWS Regions than the VPC\. For more information, see [How do I set an Active/Passive Direct Connect connection to AWS?](https://aws.amazon.com/premiumsupport/knowledge-center/active-passive-direct-connect/)\.
 
 ### Private virtual interface and transit virtual interface BGP communities<a name="bgp-communities-private-transit"></a>
 
@@ -84,20 +84,14 @@ You can use local preference BGP community tags to achieve load balancing and ro
 
 The following local preference BGP community tags are supported:
 + `7224:7100`—Low preference
-+ `7224:7200`—Medium preference
++ `7224:7200`—Medium preference 
 + `7224:7300`—High preference
 
-Local preference BGP community tags are mutually exclusive\. To load balance traffic across multiple AWS Direct Connect connections, apply the same community tag across the prefixes for the connections\. To support failover across multiple AWS Direct Connect connections, apply a community tag with a higher preference to the prefixes for the primary or active virtual interface\. For example set the BGP community tags for your primary or active virtual interfaces to 7224:7300 \(high preference\)\.
+Local preference BGP community tags are mutually exclusive\. To load balance traffic across multiple AWS Direct Connect connections, apply the same community tag across the prefixes for the connections\. To support failover across multiple AWS Direct Connect connections, apply a community tag with a higher preference to the prefixes for the primary or active virtual interface\. For example set the BGP community tags for your primary or active virtual interfaces to` 7224:7300` \(high preference\)\.
 
 Local preference BGP community tags are evaluated before any AS\_PATH attribute, and are evaluated in order from lowest to highest preference \(where highest preference is preferred\)\.
 
 If you do not specify local preference using BGP community tags, the local preference associated with the `7224:7200`—Medium preference community is applied by default\. For routes learned from Direct Connect location with a different associated Region as the local Region, the local preference is lowered to prefer those routes learned from Direct Connect locations associated with the local Region\.
-
-#### `NO_EXPORT` BGP community<a name="no-export-bgp-communities-privatre-transit"></a>
-
-The `NO_EXPORT` BGP community tag is supported for public virtual interfaces, private virtual interfaces, and transit virtual interfaces\.
-
-AWS Direct Connect also provides BGP community tags on advertised Amazon routes\. If you use AWS Direct Connect to access public AWS services, you can create filters based on these community tags\. 
 
 #### Virtual interface BGP community tags<a name="bgp-communities-interfaces"></a>
 

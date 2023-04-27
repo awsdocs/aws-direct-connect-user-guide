@@ -1,6 +1,6 @@
 # MAC Security<a name="MACsec"></a>
 
-MAC Security \(MACsec\) is an IEEE standard that provides data confidentiality, data integrity, and data origin authenticity\. You can use AWS Direct Connect connections that support MACsec to encrypt your data from your corporate data center to the AWS Direct Connect location\. 
+MAC Security \(MACsec\) is an IEEE standard that provides data confidentiality, data integrity, and data origin authenticity\. You can use AWS Direct Connect connections that support MACsec to encrypt your data from your corporate data center to the AWS Direct Connect location\. All data flowing across the AWS global network that interconnects with datacenters and Regions is automatically encrypted at the physical layer before it leaves the data center\.
 
 In the following diagram, both the dedicated connection and your on\-premises resources must support MACsec\. Layer 2 traffic that travels over the dedicated connection to or from the data center is encrypted\.
 

@@ -7,7 +7,7 @@ You can remove the association between the connection and the MACsec key\.
 
 **To remove an association between a connection and a MACsec key**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. 
 

@@ -6,7 +6,7 @@ You can create a public, transit, or private hosted virtual interface\. Before y
 
 **To create a hosted private virtual interface**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Open the **AWS Direct Connect** console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
@@ -60,7 +60,7 @@ If you let AWS auto\-assign IP addresses, a /30 CIDR will be allocated from 169\
 
 **To create a hosted public virtual interface**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Open the **AWS Direct Connect** console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
@@ -120,7 +120,7 @@ If you let AWS auto\-assign IP addresses, a /30 CIDR will be allocated from 169\
 **Important**  
 If you associate your transit gateway with one or more Direct Connect gateways, the Autonomous System Number \(ASN\) used by the transit gateway and the Direct Connect gateway must be different\. For example, if you use the default ASN 64512 for both the transit gateway and the Direct Connect gateway, the association request fails\.
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Open the **AWS Direct Connect** console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 

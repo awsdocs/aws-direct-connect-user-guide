@@ -1,15 +1,15 @@
 # Requesting cross connects at AWS Direct Connect locations<a name="Colocation"></a>
 
-After you have downloaded your Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\), you must complete your cross\-network connection, also known as a *cross connect*\. If you already have equipment located in an AWS Direct Connect location, contact the appropriate provider to complete the cross connect\. For specific instructions for each provider, see the table below\. Contact your provider for cross connect pricing\. After the cross connect is established, you can create the virtual interfaces using the AWS Direct Connect console\.
+ After you have downloaded your Letter of Authorization and Connecting Facility Assignment \(LOA\-CFA\), you must complete your cross\-network connection, also known as a *cross connect*\. If you already have equipment located in an AWS Direct Connect location, contact the appropriate provider to complete the cross connect\. For specific instructions for each provider, see the table below\. Contact your provider for cross connect pricing\. After the cross connect is established, you can create the virtual interfaces using the AWS Direct Connect console\.
 
 Some locations are set up as a campus\. For more information, see [AWS Direct Connect Locations](https://aws.amazon.com/directconnect/details/#AWS_Direct_Connect_Locations)\.
 
-If you do not already have equipment located in an AWS Direct Connect location, you can work with one of the partners in the AWS Partner Network \(APN\)\. They help you to connect to an AWS Direct Connect location\. For more information, see [APN Partners supporting AWS Direct Connect](http://aws.amazon.com/directconnect/partners/)\. You must share the LOA\-CFA with your selected provider to facilitate your cross connect request\.
+If you do not already have equipment located in an AWS Direct Connect location, you can work with one of the partners in the AWS Partner Network \(APN\)\. They help you to connect to an AWS Direct Connect location\. For more information, see [APN Partners supporting AWS Direct Connect](https://aws.amazon.com/directconnect/partners/)\. You must share the LOA\-CFA with your selected provider to facilitate your cross connect request\.
 
 An AWS Direct Connect connection can provide access to resources in other Regions\. For more information, see [Accessing a remote AWS Region](remote_regions.md)\.
 
 **Note**  
-If the cross connect is not completed within 90 days, the authority granted by the LOA\-CFA expires\. To renew a LOA\-CFA that has expired, you can download it again from the AWS Direct Connect console\. For more information, see [Download the LOA\-CFA](create-connection.md#create-connection-loa-cfa)\.
+If the cross connect is not completed within 90 days, the authority granted by the LOA\-CFA expires\. To renew a LOA\-CFA that has expired, you can download it again from the AWS Direct Connect console\. For more information, see [Download the LOA\-CFA](dedicated_connection.md#create-connection-loa-cfa)\.
 
 **Topics**
 + [Africa \(Cape Town\)](#cross-connect-af-south-1)
@@ -30,6 +30,7 @@ If the cross connect is not completed within 90 days, the authority granted by t
 + [Europe \(London\)](#cross-connect-eu-west-2)
 + [Europe \(Paris\)](#cross-connect-eu-west-3)
 + [Europe \(Stockholm\)](#cross-connect-eu-north-1)
++ [Europe \(Zurich\)](#cross-connect-eu-central-2)
 + [Middle East \(Bahrain\)](#cross-connect-me-south-1)
 + [Middle East \(Israel\)](#cross-connect-me-israel)
 + [South America \(São Paulo\)](#cross-connect-sa-east-1)
@@ -52,14 +53,14 @@ If the cross connect is not completed within 90 days, the authority granted by t
 | Location | How to request a connection | 
 | --- | --- | 
 |  DCI JK3, Jakarta | Contact DCI Indonesia at [jessie\.w@dci\-indonesia\.com\.com](mailto:support@teraco.co.za)\. | 
-|  NTT 2 Data Center, Jakarta | Contact NTT at [tps\.cms\.presales@global\.ntt](mailto:support@teraco.co.za)\. | 
+|  NTT 2 Data Center, Jakarta | Contact NTT at [tps\.cms\.presales@global\.ntt](mailto:tps.cms.presales@global.ntt)\. | 
 
 ## Asia Pacific \(Mumbai\)<a name="cross-connect-ap-south-1"></a>
 
 
 | Location | How to request a connection | 
 | --- | --- | 
-| GPX, Mumbai | Contact GPX at [rodeshpande@ap\.equinix\.com](mailto:rodeshpande@ap.equinix.com)\. | 
+| Equinix, Mumbai | Contact Equinix at [rodeshpande@ap\.equinix\.com](mailto:rodeshpande@ap.equinix.com)\. | 
 | NetMagic DC2, Bangalore | Contact NetMagic Sales and Marketing toll\-free at 18001033130 or at [marketing@netmagicsolutions\.com](mailto:marketing@netmagicsolutions.com)\. | 
 | Sify Rabale, Mumbai | Contact Sify at [aws\.directconnect@sifycorp\.com](mailto:aws.directconnect@sifycorp.com)\. | 
 | STT Delhi DC2, Delhi | Contact STT at [enquiry\.AWSDX@sttelemediagdc\.in](mailto:enquiry.AWSDX@sttelemediagdc.in)\. | 
@@ -215,6 +216,13 @@ You can't order connections in this Region\.
 | --- | --- | 
 | Interxion STO1, Stockholm | Contact Interxion at [customer\.services@interxion\.com](mailto:customer.services@interxion.com)\. | 
 
+## Europe \(Zurich\)<a name="cross-connect-eu-central-2"></a>
+
+
+| Location | How to request a connection | 
+| --- | --- | 
+| Equinix ZRH51, Oberengstringen, Switzerland | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
+
 ## Middle East \(Bahrain\)<a name="cross-connect-me-south-1"></a>
 
 
@@ -249,7 +257,7 @@ You can't order connections in this Region\.
 | CyrusOne West III, Houston | Submit a request using [customer portal](https://cyrusone.com/about-enterprise-data-center-provider/customer-support/)\. | 
 | Equinix CH2, Chicago | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\.  | 
 | QTS Chicago | Contact QTS at [AConnect@qtsdatacenters\.com](mailto:AConnect@qtsdatacenters.com)\. | 
-| Netrality Properties, 1102 Grand, Kansas City | Contact Netrality Properties at [support@netrality\.com](mailto:support@netrality.com)\. | 
+| Netrality Data Centers, 1102 Grand, Kansas City | Contact Netrality Data Centers at [support@netrality\.com](mailto:support@netrality.com)\. | 
 
 ## US East \(N\. Virginia\)<a name="cross-connect-us-east-1"></a>
 
@@ -265,6 +273,7 @@ You can't order connections in this Region\.
 | Equinix MI1, Miami | Contact Equinix at [awsdealreg@equinix\.com](mailto:awsdealreg@equinix.com)\. | 
 | CrownCastle \(formerly Lightower\), Philadelphia, PA | Contact CrownCastle at [awsorders@crowncastle\.com](mailto:awsorders@crowncastle.com)\. | 
 | Markley, One Summer Street, Boston | Create a request using the [customer portal](https://portal.markleygroup.com)\. For new queries, contact [sales@markleygroup\.com](mailto:sales@markleygroup.com)\. | 
+| Netrality Data Centers, 2nd floor MMR, Philadelphia, PA | Contact Netrality Data Centers at [support@netrality\.com](mailto:support@netrality.com)\. | 
 
 ## US West \(N\. California\)<a name="cross-connect-us-west-1"></a>
 

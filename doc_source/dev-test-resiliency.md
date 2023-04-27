@@ -19,6 +19,10 @@ The following procedures demonstrate how to use the AWS Direct Connect Resilienc
 
 To use AWS Direct Connect, you need an AWS account if you don't already have one\.
 
+#### Sign up for an AWS account<a name="sign-up-for-aws"></a>
+
+If you do not have an AWS account, complete the following steps to create one\.
+
 **To sign up for an AWS account**
 
 1. Open [https://portal\.aws\.amazon\.com/billing/signup](https://portal.aws.amazon.com/billing/signup)\.
@@ -27,13 +31,41 @@ To use AWS Direct Connect, you need an AWS account if you don't already have one
 
    Part of the sign\-up procedure involves receiving a phone call and entering a verification code on the phone keypad\.
 
+   When you sign up for an AWS account, an *AWS account root user* is created\. The root user has access to all AWS services and resources in the account\. As a security best practice, [assign administrative access to an administrative user](https://docs.aws.amazon.com/singlesignon/latest/userguide/getting-started.html), and use only the root user to perform [tasks that require root user access](https://docs.aws.amazon.com/accounts/latest/reference/root-user-tasks.html)\.
+
+AWS sends you a confirmation email after the sign\-up process is complete\. At any time, you can view your current account activity and manage your account by going to [https://aws\.amazon\.com/](https://aws.amazon.com/) and choosing **My Account**\.
+
+#### Create an administrative user<a name="create-an-admin"></a>
+
+After you sign up for an AWS account, create an administrative user so that you don't use the root user for everyday tasks\.
+
+**Secure your AWS account root user**
+
+1.  Sign in to the [AWS Management Console](https://console.aws.amazon.com/) as the account owner by choosing **Root user** and entering your AWS account email address\. On the next page, enter your password\.
+
+   For help signing in by using root user, see [Signing in as the root user](https://docs.aws.amazon.com/signin/latest/userguide/console-sign-in-tutorials.html#introduction-to-root-user-sign-in-tutorial) in the *AWS Sign\-In User Guide*\.
+
+1. Turn on multi\-factor authentication \(MFA\) for your root user\.
+
+   For instructions, see [Enable a virtual MFA device for your AWS account root user \(console\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html#enable-virt-mfa-for-root) in the *IAM User Guide*\.
+
+**Create an administrative user**
++ For your daily administrative tasks, grant administrative access to an administrative user in AWS IAM Identity Center \(successor to AWS Single Sign\-On\)\.
+
+  For instructions, see [Getting started](https://docs.aws.amazon.com/singlesignon/latest/userguide/getting-started.html) in the *AWS IAM Identity Center \(successor to AWS Single Sign\-On\) User Guide*\.
+
+**Sign in as the administrative user**
++ To sign in with your IAM Identity Center user, use the sign\-in URL that was sent to your email address when you created the IAM Identity Center user\.
+
+  For help signing in using an IAM Identity Center user, see [Signing in to the AWS access portal](https://docs.aws.amazon.com/signin/latest/userguide/iam-id-center-sign-in-tutorial.html) in the *AWS Sign\-In User Guide*\.
+
 ## Step 2: Configure the resiliency model<a name="dev-test-select-model"></a>
 
 **To configure the resiliency model**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
-1. On the **AWS Direct Connect** screen, under **Get started**, choose **Create a connection**\.
+1. In the navigation pane, choose **Connections**, and then choose **Create a connection**\.
 
 1. Under **Connection ordering type**, choose **Connection wizard**\.
 
@@ -94,7 +126,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 **To provision a public virtual interface to non\-VPC services**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Open the **AWS Direct Connect** console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
@@ -142,7 +174,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 **To provision a private virtual interface to a VPC**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Open the **AWS Direct Connect** console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
@@ -176,7 +208,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
       + To specify these IP addresses yourself, for **Your router peer ip**, enter the destination IPv4 CIDR address to which Amazon should send traffic\. 
       + For **Amazon router peer ip**, enter the IPv4 CIDR address to use to send traffic to AWS\.
 **Important**  
-If you let AWS auto\-assign IPv4 addresses, a /30 CIDR will be allocated from 169\.254\.0\.0/16 IPv4 Link\-Local according to RFC 3927 for point\-to\-point connectivity\. AWS does not recommend this option if you intend to use the customer router peer IP address as the source and/or destination for VPC traffic\. Instead you should use RFC 1918 or other addressing, and specify the address yourself\.  
+If you let AWS auto\-assign IPv4 addresses, a /29 CIDR will be allocated from 169\.254\.0\.0/16 IPv4 Link\-Local according to RFC 3927 for point\-to\-point connectivity\. AWS does not recommend this option if you intend to use the customer router peer IP address as the source and/or destination for VPC traffic\. Instead you should use RFC 1918 or other addressing, and specify the address yourself\.  
 For more information about RFC 1918, see [Address Allocation for Private Internets](https://datatracker.ietf.org/doc/html/rfc1918)\.
 For more information about RFC 3927, see [Dynamic Configuration of IPv4 Link\-Local Addresses](https://datatracker.ietf.org/doc/html/rfc3927)\.
 

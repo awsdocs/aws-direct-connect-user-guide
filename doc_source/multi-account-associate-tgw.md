@@ -21,7 +21,7 @@ If you own the transit gateway, you must create the association proposal\. The t
 
 **To create an association proposal**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Transit gateways** and then select the transit gateway\.
 
@@ -53,7 +53,7 @@ If you own the Direct Connect gateway, you must accept the association proposal 
 
 **To accept an association proposal**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Direct Connect gateways**\.
 
@@ -67,7 +67,7 @@ If you own the Direct Connect gateway, you must accept the association proposal 
 
 **To reject an association proposal**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Direct Connect gateways**\.
 
@@ -107,7 +107,7 @@ The owner of the transit gateway can delete the Direct Connect gateway associati
 
 **To delete an association proposal**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Transit gateways** and then select the transit gateway\.
 

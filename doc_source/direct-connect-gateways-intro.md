@@ -6,7 +6,7 @@ Use AWS Direct Connect gateway to connect your VPCs\. You associate an AWS Direc
 
 You can also use a virtual private gateway to extend your Local Zone\. This configuration allows the VPC associated with the Local Zone to connect to a Direct Connect gateway\. The Direct Connect gateway connects to a Direct Connect location in a Region\. The on\-premises data center has a Direct Connect connection to the Direct Connect location\. For more information, see [Accessing Local Zones using a Direct Connect gateway](https://docs.aws.amazon.com/vpc/latest/userguide/Extend_VPCs.html#access-local-zone) in the *Amazon VPC User Guide*\.
 
-A Direct Connect gateway is a globally available resource\. You can create the Direct Connect gateway in any Region and access it from all other Regions\. You can set up Direct Connect to bypass a parent Availability Zone and connect directly to the internet or through Direct Connect points\-of\-presence\. For more information about AWS Local Zones, see [AWS Local Zones features](https://aws.amazon.com/about-aws/global-infrastructure/localzones/locations)\.
+A Direct Connect gateway is a globally available resource\. You can connect to any Region globally using a Direct Connect gateway\. This includes AWS GovCloud \(US\) but does not include the AWS China Regions\.
 
 Customers using Direct Connect with VPCs that currently bypass a parent Availability Zone will not be able to migrate their Direct Connect connections or virtual interfaces\.
 
@@ -22,7 +22,7 @@ If you want to block VPC\-to\-VPC communication within a Direct Connect gateway,
 
 1. Provision a single Direct Connect Gateway for each VPC that you want to connect to your on\-premises network instead of using the same Direct Connect Gateway for multiple VPCs\. For example, instead of using a single Direct Connect Gateway for your development and production VPCs, use separate Direct Connect Gateways for each of these VPCs\.
 
-A Direct Connect gateway does not prevent traffic from being sent from one gateway association back to the gateway association itself \(for example when you have an on\-premises supernet route that contains the prefixes from the gateway association\)\. If you have a configuration with multiple VPCs connected to the same transit gateway, the VPCs could communicate\. To prevent the VPCs from communicating, use separate transit gateway attachments, and then associate a route table with the attachments that have the **blackhole** option set\.
+A Direct Connect gateway does not prevent traffic from being sent from one gateway association back to the gateway association itself \(for example when you have an on\-premises supernet route that contains the prefixes from the gateway association\)\. If you have a configuration with multiple VPCs connected to transit gateways associated to same Direct Connect gateway, the VPCs could communicate\. To prevent the VPCs from communicating, associate a route table with the VPC attachments that have the **blackhole** option set\.\.
 
 The following describe scenarios describe where you can use a Direct Connect gateway\.
 
@@ -88,7 +88,7 @@ You can create a Direct Connect gateway in any supported Region\.
 
 **To create a Direct Connect gateway**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Direct Connect Gateways**\.
 
@@ -109,7 +109,7 @@ If you no longer require a Direct Connect gateway, you can delete it\. You must 
 
 **To delete a Direct Connect gateway**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Direct Connect Gateways**\.
 

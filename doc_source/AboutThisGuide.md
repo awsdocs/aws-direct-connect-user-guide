@@ -5,7 +5,7 @@ The following table describes the releases for AWS Direct Connect\.
 
 | Feature | Description | Date | 
 | --- | --- | --- | 
-| Support for SiteLink | You can create a virtual private interface that enables connectivity between to Direct Connect points of presence \(PoPs\) in the same AWS Region\. For more information see [Hosted virtual interfaces](WorkingWithVirtualInterfaces.md#hosted-vif)\. | 2021\-12\-01 | 
+| Support for SiteLink | You can create a virtual private interface that enables connectivity between two Direct Connect points of presence \(PoPs\) in the same AWS Region\. For more information see [Hosted virtual interfaces](WorkingWithVirtualInterfaces.md#hosted-vif)\. | 2021\-12\-01 | 
 | Support MAC Security | You can use AWS Direct Connect connections that support MACsec to encrypt your data from your corporate data center to the AWS Direct Connect location\. For more information, see [MAC Security](MACsec.md)\. | 2021\-03\-31 | 
 | Support for 100G | Updated topics to include support for 100G dedicated connections\. | 2021\-02\-12 | 
 | New location in Italy | Updated topic to include the addition of the new Israel location\. For more information, see [Europe \(Italy\)](Colocation.md#cross-connect-italy)\. | 2021\-01\-22 | 
@@ -37,7 +37,7 @@ The following table describes the releases for AWS Direct Connect\.
 | Support for hosted connections | Updated topics to include support for hosted connections\. | 2013\-10\-22 | 
 | New location in the EU \(Ireland\) Region | Updated topics to include the addition of the new AWS Direct Connect location serving the EU \(Ireland\) Region\. | 2013\-06\-24 | 
 | New Seattle location in the US West \(Oregon\) Region | Updated topics to include the addition of the new AWS Direct Connect location in Seattle serving the US West \(Oregon\) Region\. | 2013\-05\-08 | 
-| Support for using IAM with AWS Direct Connect | Added a topic about using AWS Identity and Access Management with AWS Direct Connect\. For more information, see [Identity and access management for AWS Direct Connect](security-iam.md)\. | 2012\-12\-21 | 
+| Support for using IAM with AWS Direct Connect | Added a topic about using AWS Identity and Access Management with AWS Direct Connect\. For more information, see [Identity and Access Management for Direct Connect](security-iam.md)\. | 2012\-12\-21 | 
 | New Asia Pacific \(Sydney\) Region | Updated topics to include the addition of the new AWS Direct Connect location serving the Asia Pacific \(Sydney\) Region\. | 2012\-12\-14 | 
 | New AWS Direct Connect console, and the US East \(N\. Virginia\) and South America \(Sao Paulo\) Regions | Replaced the AWS Direct Connect Getting Started Guide with the AWS Direct Connect User Guide\. Added new topics to cover the new AWS Direct Connect console, added a billing topic, added router configuration information, and updated topics to include the addition of two new AWS Direct Connect locations serving the US East \(N\. Virginia\) and South America \(Sao Paulo\) Regions\. | 2012\-08\-13 | 
 | Support for the EU \(Ireland\), Asia Pacific \(Singapore\), and Asia Pacific \(Tokyo\) Regions | Added a new troubleshooting section and updated topics to include the addition of four new AWS Direct Connect locations serving the US West \(Northern California\), EU \(Ireland\), Asia Pacific \(Singapore\), and Asia Pacific \(Tokyo\) Regions\. | 2012\-01\-10 | 

@@ -14,7 +14,7 @@ For existing connections, connectivity to AWS is interrupted during the creation
 
 **To create a LAG with new connections**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **LAGs**\.
 
@@ -24,7 +24,7 @@ For existing connections, connectivity to AWS is interrupted during the creation
    + **LAG name**: A name for the LAG\.
    + **Location**: The location for the LAG\.
    + **Port speed**: The port speed for the connections\.
-   + **Number of new connections**: The number of new connections to create\.
+   + **Number of new connections**: The number of new connections to create\. You can have a maximum of four connections when the port speed is 1G or 10G, or two when the port speed is 100G\.
    + \(Optional\) Configure MAC security \(MACsec\) for the connection\. Under **Additional Settings**, select **Request a MACsec capable port**\.
 
      MACsec is only available on dedicated connections\.
@@ -43,7 +43,7 @@ For existing connections, connectivity to AWS is interrupted during the creation
 
 **To create a LAG from existing connections**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **LAGs**\.
 
@@ -51,7 +51,8 @@ For existing connections, connectivity to AWS is interrupted during the creation
 
 1. Under** Lag creation type**, choose **Use existing connections**, and provide the following information:
    + **LAG name**: A name for the LAG\.
-   + **Connection**: The Direct Connect connection to use for the LAG\.
+   + **Existing connections**: The Direct Connect connection to use for the LAG\.
+   + \(Optional\) **Number of new connections**: The number of new connections to create\. You can have a maximum of four connections when the port speed is 1G or 10G, or two when the port speed is 100G\.
    + **Minimum links**: The minimum number of connections that must be operational for the LAG itself to be operational\. If you do not specify a value, we assign a default value of 0\.
 
 1. \(Optional\) Add or remove a tag\.

@@ -4,7 +4,7 @@ You can use an *AWS Direct Connect gateway* to connect your AWS Direct Connect c
 
 The following rules apply to virtual private gateway associations:
 + There are limits for creating and using Direct Connect gateways\. For more information, see [AWS Direct Connect quotas](limits.md)\.
-+ You cannot attach a Direct Connect gateway to a virtual private gateway when the Direct Connect gateway is already associated with a transit gateway.
++  You cannot attach a Direct Connect gateway to a virtual private gateway when the Direct Connect gateway is already associated with a transit gateway\.
 + The VPCs to which you connect through a Direct Connect gateway cannot have overlapping CIDR blocks\. If you add an IPv4 CIDR block to a VPC that's associated with a Direct Connect gateway, ensure that the CIDR block does not overlap with an existing CIDR block for any other associated VPC\. For more information, see [Adding IPv4 CIDR Blocks to a VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#vpc-resize) in the *Amazon VPC User Guide*\.
 + You cannot create a public virtual interface to a Direct Connect gateway\.
 + A Direct Connect gateway supports communication between attached private virtual interfaces and associated virtual private gateways only, and may enable a virtual private gateway to another private gateway\. The following traffic flows are not supported:
@@ -39,7 +39,9 @@ After you create a virtual private gateway, you must attach it to your VPC\.
 
 **To create a virtual private gateway and attach it to your VPC**
 
-1. In the navigation pane, choose **Virtual Private Gateways**, **Create Virtual Private Gateway**\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
+
+1. In the navigation pane, choose **Virtual Private Gateways**, and then choose **Create Virtual Private Gateway**\.
 
 1. \(Optional\) Enter a name for your virtual private gateway\. Doing so creates a tag with a key of `Name` and the value that you specify\.
 
@@ -67,13 +69,13 @@ You can associate or disassociate a virtual private gateway and Direct Connect g
 
 **To associate a virtual private gateway**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
-1. In the navigation pane, choose **Direct Connect Gateways** and then select the Direct Connect gateway\.
+1. In the navigation pane, choose **Direct Connect gateways** and then choose the Direct Connect gateway\.
 
 1. Choose **View details**\.
 
-1. Choose **Gateways associations** and then choose **Associate gateway**\.
+1. Choose **Gateway associations**, and then choose **Associate gateway**\.
 
 1. For **Gateways**, choose the virtual private gateways to associate, and then choose **Associate gateway**\.
 
@@ -81,7 +83,7 @@ You can view all of the virtual private gateways that are associated with the Di
 
 **To disassociate a virtual private gateway**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Direct Connect Gateways** and then select the Direct Connect gateway\.
 
@@ -112,7 +114,7 @@ If you're accepting a hosted private virtual interface, you can associate it wit
 
 **To provision a private virtual interface to a Direct Connect gateway**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Open the **AWS Direct Connect** console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
@@ -144,7 +146,7 @@ If you're accepting a hosted private virtual interface, you can associate it wit
       + To specify these IP addresses yourself, for **Your router peer ip**, enter the destination IPv4 CIDR address to which Amazon should send traffic\. 
       + For **Amazon router peer ip**, enter the IPv4 CIDR address to use to send traffic to AWS\.
 **Important**  
-If you let AWS auto\-assign IPv4 addresses, a /30 CIDR will be allocated from 169\.254\.0\.0/16 IPv4 Link\-Local according to RFC 3927 for point\-to\-point connectivity\. AWS does not recommend this option if you intend to use the customer router peer IP address as the source and/or destination for VPC traffic\. Instead you should use RFC 1918 or other addressing, and specify the address yourself\.  
+If you let AWS auto\-assign IPv4 addresses, a /29 CIDR will be allocated from 169\.254\.0\.0/16 IPv4 Link\-Local according to RFC 3927 for point\-to\-point connectivity\. AWS does not recommend this option if you intend to use the customer router peer IP address as the source and/or destination for VPC traffic\. Instead you should use RFC 1918 or other addressing, and specify the address yourself\.  
 For more information about RFC 1918, see [Address Allocation for Private Internets](https://datatracker.ietf.org/doc/html/rfc1918)\.
 For more information about RFC 3927, see [Dynamic Configuration of IPv4 Link\-Local Addresses](https://datatracker.ietf.org/doc/html/rfc3927)\.
 

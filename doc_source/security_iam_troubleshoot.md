@@ -1,25 +1,25 @@
-# Troubleshooting AWS Direct Connect identity and access<a name="security_iam_troubleshoot"></a>
+# Troubleshooting Direct Connect identity and access<a name="security_iam_troubleshoot"></a>
 
 Use the following information to help you diagnose and fix common issues that you might encounter when working with Direct Connect and IAM\.
 
 **Topics**
 + [I am not authorized to perform an action in Direct Connect](#security_iam_troubleshoot-no-permissions)
 + [I am not authorized to perform iam:PassRole](#security_iam_troubleshoot-passrole)
-+ [I want to view my access keys](#security_iam_troubleshoot-access-keys)
-+ [I am an administrator and want to allow others to access Direct Connect](#security_iam_troubleshoot-admin-delegate)
 + [I want to allow people outside of my AWS account to access my Direct Connect resources](#security_iam_troubleshoot-cross-account-access)
 
 ## I am not authorized to perform an action in Direct Connect<a name="security_iam_troubleshoot-no-permissions"></a>
 
-If the AWS Management Console tells you that you're not authorized to perform an action, then you must contact your administrator for assistance\. Your administrator is the person that provided you with your user name and password\.
+If you receive an error that you're not authorized to perform an action, your policies must be updated to allow you to perform the action\.
 
-The following example error occurs when the `johndoe` IAM user tries to use the console to view details about a *connection* but does not have `directconnect:DeleteConnection` permissions\.
+The following example error occurs when the `mateojackson` IAM user tries to use the console to view details about a fictional `my-example-widget` resource but doesn't have the fictional `directconnect:GetWidget` permissions\.
 
 ```
-User: arn:aws:directconnect:us-east-1:123456789012:dxcon/dxcon-11aa22bb:user/johndoe is not authorized to perform: directconnect:DeleteConnection on resource: MyExampleConnection
+User: arn:aws:iam::123456789012:user/mateojackson is not authorized to perform: directconnect:GetWidget on resource: my-example-widget
 ```
 
-In this case, John asks his administrator to update his policies to allow him to access the `MyExampleConnection` resource using the `directconnect:DeleteConnection` action\.
+In this case, the policy for the `mateojackson` user must be updated to allow access to the `my-example-widget` resource by using the `directconnect:GetWidget` action\.
+
+If you need help, contact your AWS administrator\. Your administrator is the person who provided you with your sign\-in credentials\.
 
 ## I am not authorized to perform iam:PassRole<a name="security_iam_troubleshoot-passrole"></a>
 
@@ -37,29 +37,12 @@ In this case, Mary's policies must be updated to allow her to perform the `iam:P
 
 If you need help, contact your AWS administrator\. Your administrator is the person who provided you with your sign\-in credentials\.
 
-## I want to view my access keys<a name="security_iam_troubleshoot-access-keys"></a>
-
-After you create your IAM user access keys, you can view your access key ID at any time\. However, you can't view your secret access key again\. If you lose your secret key, you must create a new access key pair\. 
-
-Access keys consist of two parts: an access key ID \(for example, `AKIAIOSFODNN7EXAMPLE`\) and a secret access key \(for example, `wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`\)\. Like a user name and password, you must use both the access key ID and secret access key together to authenticate your requests\. Manage your access keys as securely as you do your user name and password\.
-
-**Important**  
- Do not provide your access keys to a third party, even to help [find your canonical user ID](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html#FindingCanonicalId)\. By doing this, you might give someone permanent access to your account\. 
-
-When you create an access key pair, you are prompted to save the access key ID and secret access key in a secure location\. The secret access key is available only at the time you create it\. If you lose your secret access key, you must add new access keys to your IAM user\. You can have a maximum of two access keys\. If you already have two, you must delete one key pair before creating a new one\. To view instructions, see [Managing access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) in the *IAM User Guide*\.
-
-## I am an administrator and want to allow others to access Direct Connect<a name="security_iam_troubleshoot-admin-delegate"></a>
-
-To allow others to access Direct Connect, you must create an IAM entity \(user or role\) for the person or application that needs access\. They will use the credentials for that entity to access AWS\. You must then attach a policy to the entity that grants them the correct permissions in Direct Connect\.
-
-To get started right away, see [Creating your first IAM delegated user and group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-delegated-user.html) in the *IAM User Guide*\.
-
 ## I want to allow people outside of my AWS account to access my Direct Connect resources<a name="security_iam_troubleshoot-cross-account-access"></a>
 
 You can create a role that users in other accounts or people outside of your organization can use to access your resources\. You can specify who is trusted to assume the role\. For services that support resource\-based policies or access control lists \(ACLs\), you can use those policies to grant people access to your resources\.
 
 To learn more, consult the following:
-+ To learn whether Direct Connect supports these features, see [How AWS Direct Connect works with IAM](security_iam_service-with-iam.md)\.
++ To learn whether Direct Connect supports these features, see [How Direct Connect works with IAM](security_iam_service-with-iam.md)\.
 + To learn how to provide access to your resources across AWS accounts that you own, see [Providing access to an IAM user in another AWS account that you own](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_aws-accounts.html) in the *IAM User Guide*\.
 + To learn how to provide access to your resources to third\-party AWS accounts, see [Providing access to AWS accounts owned by third parties](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html) in the *IAM User Guide*\.
 + To learn how to provide access through identity federation, see [Providing access to externally authenticated users \(identity federation\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_federated-users.html) in the *IAM User Guide*\.

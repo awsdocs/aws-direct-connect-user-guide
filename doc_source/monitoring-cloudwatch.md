@@ -29,7 +29,7 @@ The following metrics are available from AWS Direct Connect dedicated connection
 |  `ConnectionErrorCount`  |  The total error count for all types of MAC level errors on the AWS device\. The total includes cyclic redundancy check \(CRC\) errors\.  This metric is the error count that occurred since the last reported datapoint\. When there are errors on the interface, the metric reports non\-zero values\. To get the total count of all errors for the selected interval in CloudWatch, for example, 5 minutes, apply the"sum" statistic\. For more information about getting the sum statistic, see [Getting Statistics for a Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/getting-metric-statistics.html) in the *Amazon CloudWatch User Guide*\.  The metric value is set to 0 when the errors on the interface stop\.  This metric replaces `ConnectionCRCErrorCount`, which is no longer in use\.  Units: Count  | 
 | ConnectionLightLevelTx |  Indicates the health of the fiber connection for outbound \(egress\) traffic from the AWS side of the connection\. There are two dimensions for this metric\. For more information, see [AWS Direct Connect available dimensions](#metrics-available-dimensions)\. Units: dBm  | 
 |  `ConnectionLightLevelRx`  |  Indicates the health of the fiber connection for inbound \(ingress\) traffic to the AWS side of the connection\. There are two dimensions for this metric\. For more information, see [AWS Direct Connect available dimensions](#metrics-available-dimensions)\. Units: dBm  | 
-| ConnectionEncryptionState | Indicates the connection encryption status\. 1 indicates the connection encryption is `up`, and 0 indicates the connection encryption is `down`\. When this metric is applied to a LAG, 1 indicates that all connections in the LAG have encrption `up`\. 0 indicates at least one LAG connection encrption is `down`\.The MAC Security feature is in Beta release for AWS Direct Connect, and is subject to change\. | 
+| ConnectionEncryptionState | Indicates the connection encryption status\. 1 indicates the connection encryption is `up`, and 0 indicates the connection encryption is `down`\. When this metric is applied to a LAG, 1 indicates that all connections in the LAG have encryption `up`\. 0 indicates at least one LAG connection encryption is `down`\. | 
 
 ### AWS Direct Connect virtual interface metrics<a name="virtual-interfaces-metrics-dimensions"></a>
 
@@ -74,15 +74,17 @@ Metrics are grouped first by the service namespace, and then by the various dime
    + **Remove from graph** — Removes this metric from the graph\.
    + **Graph this metric only** — Graphs only this metric\.
    + **Graph all search results** — Graphs all metrics\.
-   + **Graph with SQL query** — Opens **Metric Insights \-query builder**, allowing you to choose what you want to graph by creating an SQL query\. For more information on using Metric Insights, see [Query your metrics with CloudWatch Merics Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/query_with_cloudwatch-metrics-insights.html) in the *Amazon CloudWatch User Guide*\. 
+   + **Graph with SQL query** — Opens **Metric Insights \-query builder**, allowing you to choose what you want to graph by creating an SQL query\. For more information on using Metric Insights, see [Query your metrics with CloudWatch Metrics Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/query_with_cloudwatch-metrics-insights.html) in the *Amazon CloudWatch User Guide*\. 
 
 **To view metrics using the AWS Direct Connect console**
 
-1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Connections**\.
 
-1. Select your connection\. The **Monitoring** tab displays the metrics for your connection\.
+1. Select your connection\. 
+
+1. Choose the **Monitoring** tab to display the metrics for your connection\.
 
 **To view metrics using the AWS CLI**  
 At a command prompt, use the following command\.

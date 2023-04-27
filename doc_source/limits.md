@@ -6,7 +6,7 @@ The following table lists the quotas related to AWS Direct Connect\. Unless indi
 | Component | Quota | Comments | 
 | --- | --- | --- | 
 |  Private or public virtual interfaces per AWS Direct Connect dedicated connection  |  50  |  This limit cannot be increased\.  | 
-| Transit virtual interfaces per AWS Direct Connect dedicated connection |  1  | This limit cannot be increased\. | 
+| Transit virtual interfaces per AWS Direct Connect dedicated connection |  4  | This limit cannot be increased\. | 
 | Private or public virtual interfaces per AWS Direct Connect dedicated connection and transit virtual interfaces per AWS Direct Connect dedicated connection | 50 and 1 transit virtual interface | This limit cannot be increased\. | 
 | Private, public, or transit virtual interfaces per AWS Direct Connect hosted connection | 1 | This limit cannot be increased\. | 
 |  Active AWS Direct Connect connections per Direct Connect location per Region per account  | 10 | Contact your Solutions Architect \(SA\) or Technical Account Manager \(TAM\) for further assistance\. | 
@@ -16,11 +16,11 @@ The following table lists the quotas related to AWS Direct Connect\. Unless indi
 |  Dedicated connections per link aggregation group \(LAG\)  | 4 when the port speed is less than 100G 2 when the port speed is 100G |  | 
 |  Link aggregation groups \(LAGs\) per Region  |  10  |  | 
 |  AWS Direct Connect gateways per account  |  200  |  | 
-|  Virtual private gateways per AWS Direct Connect gateway  |  10  |  This limit cannot be increased\.  | 
-| Transit gateways per AWS Direct Connect gateway | 3 | This limit cannot be increased\. | 
+|  Virtual private gateways per AWS Direct Connect gateway  |  20  |  This limit cannot be increased\.  | 
+| Transit gateways per AWS Direct Connect gateway  | 6 | This limit cannot be increased\. | 
 |  Virtual interfaces \(private or transit\) per AWS Direct Connect gateway  |  30  |  | 
 | Number of prefixes from on\-premises to AWS on a transit virtual interface | 100 | This limit cannot be increased\. | 
-| Number of prefixes per AWS Transit Gateway from AWS to on\-premise on a transit virtual interface | 20 combined total for IPv4 and IPv6 | This limit cannot be increased\. | 
+| Number of prefixes per AWS Transit Gateway from AWS to on\-premise on a transit virtual interface | 200 combined total for IPv4 and IPv6 | This limit cannot be increased\. | 
 | Number of virtual interfaces per virtual private gateway | There is no limit\. |  | 
 | Number of Direct Connect gateways associated to a transit gateway | 20 | This limit cannot be increased\. | 
 

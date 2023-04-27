@@ -3,7 +3,7 @@
 You must create one of the following virtual interfaces to begin using your AWS Direct Connect connection\. 
 + Private virtual interface: A private virtual interface should be used to access an Amazon VPC using private IP addresses\.
 + Public virtual interface: A public virtual interface can access all AWS public services using public IP addresses\.
-+ Transit virtual interface: A transit virtual interface should be used to access one or more Amazon VPC Transit Gateways associated with Direct Connect gateways\. You can use transit virtual interfaces with any AWS Direct Connect dedicated or hosted connection\. For information about Direct Connect gateway configurations, see [Direct Connect gateways](direct-connect-gateways-intro.md)\.
++ Transit virtual interface: A transit virtual interface should be used to access one or more Amazon VPC Transit Gateways associated with Direct Connect gateways\. You can use transit virtual interfaces with any AWS Direct Connect dedicated or hosted connection of any speed\. For information about Direct Connect gateway configurations, see [Direct Connect gateways](direct-connect-gateways-intro.md)\.
 
 To connect to other AWS services using IPv6 addresses, check the service documentation to verify that IPv6 addressing is supported\.
 
@@ -18,7 +18,7 @@ We recommend that you use a firewall filter \(based on the source/destination ad
 
 To use your AWS Direct Connect connection with another account, you can create a hosted virtual interface for that account\. The owner of the other account must accept the hosted virtual interface to begin using it\. A hosted virtual interface works the same as a standard virtual interface and can connect to public resources or a VPC\.
 
-You can use transit virtual interfaces with 1/2/5/10/100 Gbps, and at speeds of 500 megabits per second \(Mbps\) and lower, Direct Connect dedicated or hosted connections\. A connection of less than 1 Gbps supports only one virtual interface\.
+You can use transit virtual interfaces Direct Connect dedicated or hosted connections of any speed\. Hosted connections support only one virtual interface\.
 
 To create a virtual interface, you need the following information:
 
@@ -59,10 +59,14 @@ SiteLink doesn't support all virtual interface types\. The following table shows
 |  Private virtual interface attached to a virtual gateway  |  Not supported  | 
 |  Public virtual interface  |  Not supported  | 
 
+Traffic routing behavior for traffic from AWS Regions \(virtual or transit gateways\) to on\-premises locations over a SiteLink enabled virtual interface varies slightly from the default Direct Connect virtual interface behavior with an AWS path prepend\. When SiteLink is enabled, virtual interfaces from an AWS Region prefer a BGP path with a lower AS path length from a Direct Connect location, regardless of the associated Region\. For example , an associated Region is advertised for each Direct Connect location\. If SiteLink is disabled, by default traffic coming from a virtual or transit gateway prefers a Direct Connect location that is associated with that AWS Region, even if the router from Direct Connect locations associated with different Regions advertises a path with a shorter AS path length\. The virtual or transit gateway still prefers the path from Direct Connect locations local to the associated AWS Region\.
+
+ SiteLink supports a maximum jumbo frame MTU size of either 8500 or 9001, depending on the virtual interface type\. For more information, see [Set network MTU for private virtual interfaces or transit virtual interfaces](set-jumbo-frames-vif.md)\.
+
 ## Prerequisites for virtual interfaces<a name="vif-prerequisites"></a>
 
 Before you create a virtual interface, do the following:
-+ Create a connection\. For more information, see [Create a connection](create-connection.md)\.
++ Create a connection\. For more information, see [Create a connection using the Connection wizard](dedicated_connection.md#create-connection)\.
 + Create a link aggregation group \(LAG\) when you have multiple connections that you want to treat as a single one\. For information, see [Associate a connection with a LAG](associate-connection-with-lag.md)\.
 
 To create a virtual interface, you need the following information:

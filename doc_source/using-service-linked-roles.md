@@ -1,4 +1,4 @@
-# Using service\-linked roles for AWS Direct Connect<a name="using-service-linked-roles"></a>
+# Service\-linked roles for AWS Direct Connect<a name="using-service-linked-roles"></a>
 
 AWS Direct Connect uses AWS Identity and Access Management \(IAM\)[ service\-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role)\. A service\-linked role is a unique type of IAM role that is linked directly to AWS Direct Connect\. Service\-linked roles are predefined by AWS Direct Connect and include all the permissions that the service requires to call other AWS services on your behalf\. 
 
@@ -13,9 +13,9 @@ For information about other services that support service\-linked roles, see [AW
 AWS Direct Connect uses a service\-linked role named `AWSServiceRoleForDirectConnect`\. This allows AWS Direct Connect to retrieve the MACSec secretes stored in AWS Secrets Manager on your behalf\. 
 
 The `AWSServiceRoleForDirectConnect` service\-linked role trusts the following services to assume the role:
-+ `directconnect.amazon.com`
++ `directconnect.amazonaws.com`
 
-The `AWSServiceRoleForDirectConnect` service\-linked role uses the managed policy [AWSDirectConnectServiceRolePolicy](security-iam-awsmanpol.md#security-iam-awsmanpol-AWSDirectConnectServiceRolePolicy)\.
+The `AWSServiceRoleForDirectConnect` service\-linked role uses the managed policy `AWSDirectConnectServiceRolePolicy`\.
 
 You must configure permissions to allow an IAM entity \(such as a user, group, or role\) to create, edit, or delete a service\-linked role\. For the `AWSServiceRoleForDirectConnect` service\-linked role to be created successfully, the IAM identity that you use AWS Direct Connect with must have the required permissions\. To grant the required permissions, attach the following policy to the IAM identity\.
 
@@ -53,7 +53,7 @@ This service\-linked role can appear in your account if you completed an action 
 
 If you delete this service\-linked role, and then need to create it again, you can use the same process to recreate the role in your account\. AWS Direct Connect creates the service\-linked role for you again\. 
 
-You can also use the IAM console to create a service\-linked role with the AWS Direct Connect use case\. In the AWS CLI or the AWS API, create a service\-linked role with the `directconnect.amazon.com` service name\. For more information, see [Creating a service\-linked role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#create-service-linked-role) in the *IAM User Guide*\. If you delete this service\-linked role, you can use this same process to create the role again\.
+You can also use the IAM console to create a service\-linked role with the AWS Direct Connect use case\. In the AWS CLI or the AWS API, create a service\-linked role with the `directconnect.amazonaws.com` service name\. For more information, see [Creating a service\-linked role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#create-service-linked-role) in the *IAM User Guide*\. If you delete this service\-linked role, you can use this same process to create the role again\.
 
 ## Editing a service\-linked role for AWS Direct Connect<a name="edit-slr"></a>
 

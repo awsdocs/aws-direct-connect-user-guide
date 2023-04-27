@@ -24,7 +24,7 @@ You can start the virtual interface failover test using the AWS Direct Connect c
 
 **To start the virtual interface failover test from the AWS Direct Connect console**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. Choose **Virtual interfaces**\.
 
@@ -57,7 +57,7 @@ You can view the virtual interface failover test history using the AWS Direct Co
 
 **To view the virtual interface failover test history from the AWS Direct Connect console**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. Choose **Virtual interfaces**\.
 
@@ -78,7 +78,7 @@ You can stop the virtual interface failover test using the AWS Direct Connect co
 
 **To stop the virtual interface failover test from the AWS Direct Connect console**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. Choose **Virtual interfaces**\.
 

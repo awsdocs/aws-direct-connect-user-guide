@@ -7,7 +7,7 @@ The following procedures demonstrate the common scenarios to get set up with an 
 **Topics**
 + [Prerequisites](#get-started-prerequisites)
 + [Step 1: Sign up for AWS](#get-started-signup)
-+ [Step 2: Request an AWS Direct Connect dedicated connection or accept a hosted connection](#ConnectionRequest)
++ [Step 2: Request an AWS Direct Connect dedicated connection](#ConnectionRequest)
 + [\(Dedicated connection\) Step 3: Download the LOA\-CFA](#DedicatedConnection)
 + [Step 4: Create a virtual interface](#createvirtualinterface)
 + [Step 5: Download the router configuration](#routerconfig)
@@ -27,7 +27,11 @@ For connections to AWS Direct Connect with port speeds of 1 Gbps or higher, ensu
 
 To use AWS Direct Connect, you need an account if you don't already have one\.
 
-**To sign up for an account**
+### Sign up for an AWS account<a name="sign-up-for-aws"></a>
+
+If you do not have an AWS account, complete the following steps to create one\.
+
+**To sign up for an AWS account**
 
 1. Open [https://portal\.aws\.amazon\.com/billing/signup](https://portal.aws.amazon.com/billing/signup)\.
 
@@ -35,19 +39,48 @@ To use AWS Direct Connect, you need an account if you don't already have one\.
 
    Part of the sign\-up procedure involves receiving a phone call and entering a verification code on the phone keypad\.
 
-## Step 2: Request an AWS Direct Connect dedicated connection or accept a hosted connection<a name="ConnectionRequest"></a>
+   When you sign up for an AWS account, an *AWS account root user* is created\. The root user has access to all AWS services and resources in the account\. As a security best practice, [assign administrative access to an administrative user](https://docs.aws.amazon.com/singlesignon/latest/userguide/getting-started.html), and use only the root user to perform [tasks that require root user access](https://docs.aws.amazon.com/accounts/latest/reference/root-user-tasks.html)\.
+
+AWS sends you a confirmation email after the sign\-up process is complete\. At any time, you can view your current account activity and manage your account by going to [https://aws\.amazon\.com/](https://aws.amazon.com/) and choosing **My Account**\.
+
+### Create an administrative user<a name="create-an-admin"></a>
+
+After you sign up for an AWS account, create an administrative user so that you don't use the root user for everyday tasks\.
+
+**Secure your AWS account root user**
+
+1.  Sign in to the [AWS Management Console](https://console.aws.amazon.com/) as the account owner by choosing **Root user** and entering your AWS account email address\. On the next page, enter your password\.
+
+   For help signing in by using root user, see [Signing in as the root user](https://docs.aws.amazon.com/signin/latest/userguide/console-sign-in-tutorials.html#introduction-to-root-user-sign-in-tutorial) in the *AWS Sign\-In User Guide*\.
+
+1. Turn on multi\-factor authentication \(MFA\) for your root user\.
+
+   For instructions, see [Enable a virtual MFA device for your AWS account root user \(console\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html#enable-virt-mfa-for-root) in the *IAM User Guide*\.
+
+**Create an administrative user**
++ For your daily administrative tasks, grant administrative access to an administrative user in AWS IAM Identity Center \(successor to AWS Single Sign\-On\)\.
+
+  For instructions, see [Getting started](https://docs.aws.amazon.com/singlesignon/latest/userguide/getting-started.html) in the *AWS IAM Identity Center \(successor to AWS Single Sign\-On\) User Guide*\.
+
+**Sign in as the administrative user**
++ To sign in with your IAM Identity Center user, use the sign\-in URL that was sent to your email address when you created the IAM Identity Center user\.
+
+  For help signing in using an IAM Identity Center user, see [Signing in to the AWS access portal](https://docs.aws.amazon.com/signin/latest/userguide/iam-id-center-sign-in-tutorial.html) in the *AWS Sign\-In User Guide*\.
+
+## Step 2: Request an AWS Direct Connect dedicated connection<a name="ConnectionRequest"></a>
 
 For dedicated connections, you can submit a connection request using the AWS Direct Connect console\. For hosted connections, work with an AWS Direct Connect Partner to request a hosted connection\. Ensure that you have the following information:
 + The port speed that you require\. You cannot change the port speed after you create the connection request\. 
 + The AWS Direct Connect location at which the connection is to be terminated\.
 
+**Note**  
 You cannot use the AWS Direct Connect console to request a hosted connection\. Instead, contact an AWS Direct Connect Partner, who can create a hosted connection for you, which you then accept\. Skip the following procedure and go to [ Accept your hosted connection](#get-started-accept-hosted-connection)\.
 
 **To create a new AWS Direct Connect connection**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
-1. On the **AWS Direct Connect** screen, under **Get started**, choose **Create a connection**\.
+1. In the navigation pane choose **Connections**, and then choose **Create a connection**\.
 
 1. Choose **Classic**\.
 
@@ -83,27 +116,17 @@ For more information, see [AWS Direct Connect connections](WorkingWithConnection
 
 ### Accept your hosted connection<a name="get-started-accept-hosted-connection"></a>
 
- You must accept the hosted connection in the AWS Direct Connect console before you can create a virtual interface\.
+ You must accept the hosted connection in the AWS Direct Connect console before you can create a virtual interface\. This step only applies to hosted connections\.
 
 **To accept a hosted virtual interface**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
-1. In the navigation pane, choose **Virtual Interfaces**\.
+1. In the navigation pane, choose **Connections**\. 
 
-1. Select the virtual interface and then choose **View details**\.
+1. Select the hosted connection, and then choose **Accept**\.
 
-1. Choose **Accept**\.
-
-1. This applies to private virtual interfaces and transit virtual interfaces\.
-
-   \(Transit virtual interface\) In the **Accept virtual interface** dialog box, select a Direct Connect gateway, and then choose **Accept virtual interface**\.
-
-   \(Private virtual interface\) In the **Accept virtual interface** dialog box, select a virtual private gateway or Direct Connect gateway, and then choose **Accept virtual interface**\.
-
-1. After you accept the hosted virtual interface, the owner of the AWS Direct Connect connection can download the router configuration file\. The **Download router configuration** option is not available for the account that accepts the hosted virtual interface\.
-
-1. Go to [Step 4](#createvirtualinterface) to continue setting up your AWS Direct Connect connection\.
+   Choose **Accept**\.
 
 ## \(Dedicated connection\) Step 3: Download the LOA\-CFA<a name="DedicatedConnection"></a>
 
@@ -111,7 +134,7 @@ After you request a connection, we make a Letter of Authorization and Connecting
 
 **To download the LOA\-CFA**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Sign in to the AWS Management Console and open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Connections**\.
 
@@ -163,7 +186,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 **To provision a public virtual interface to non\-VPC services**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Open the **AWS Direct Connect** console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
@@ -211,7 +234,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
 
 **To provision a private virtual interface to a VPC**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Open the **AWS Direct Connect** console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 
@@ -245,7 +268,7 @@ When you create a public virtual interface, it can take up to 72 hours for AWS t
       + To specify these IP addresses yourself, for **Your router peer ip**, enter the destination IPv4 CIDR address to which Amazon should send traffic\. 
       + For **Amazon router peer ip**, enter the IPv4 CIDR address to use to send traffic to AWS\.
 **Important**  
-If you let AWS auto\-assign IPv4 addresses, a /30 CIDR will be allocated from 169\.254\.0\.0/16 IPv4 Link\-Local according to RFC 3927 for point\-to\-point connectivity\. AWS does not recommend this option if you intend to use the customer router peer IP address as the source and/or destination for VPC traffic\. Instead you should use RFC 1918 or other addressing, and specify the address yourself\.  
+If you let AWS auto\-assign IPv4 addresses, a /29 CIDR will be allocated from 169\.254\.0\.0/16 IPv4 Link\-Local according to RFC 3927 for point\-to\-point connectivity\. AWS does not recommend this option if you intend to use the customer router peer IP address as the source and/or destination for VPC traffic\. Instead you should use RFC 1918 or other addressing, and specify the address yourself\.  
 For more information about RFC 1918, see [Address Allocation for Private Internets](https://datatracker.ietf.org/doc/html/rfc1918)\.
 For more information about RFC 3927, see [Dynamic Configuration of IPv4 Link\-Local Addresses](https://datatracker.ietf.org/doc/html/rfc3927)\.
 
@@ -273,7 +296,7 @@ After you have created a virtual interface for your AWS Direct Connect connectio
 
 **To download a router configuration**
 
-1. Open the AWS Direct Connect console at [https://console\.aws\.amazon\.com/directconnect/v2/home](https://console.aws.amazon.com/directconnect/v2/home)\.
+1. Open the **AWS Direct Connect** console at [https://console\.aws\.amazon\.com/directconnect/v2/](https://console.aws.amazon.com/directconnect/v2/)\.
 
 1. In the navigation pane, choose **Virtual Interfaces**\.
 

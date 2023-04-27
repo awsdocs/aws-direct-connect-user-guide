@@ -25,7 +25,7 @@ Complete the following tasks before you configure MACsec on a dedicated connecti
 
 ## Service\-Linked roles<a name="mac-sec-service-linked-roles"></a>
 
-AWS Direct Connect uses AWS Identity and Access Management \(IAM\)[ service\-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role)\. A service\-linked role is a unique type of IAM role that is linked directly to AWS Direct Connect\. Service\-linked roles are predefined by AWS Direct Connect and include all of the permissions that the service requires to call other AWS services on your behalf\. A service\-linked role makes setting up AWS Direct Connect easier because you don’t have to manually add the necessary permissions\. AWS Direct Connect defines the permissions of its service\-linked roles, and unless defined otherwise, only AWS Direct Connect can assume its roles\. The defined permissions include the trust policy and the permissions policy, and that permissions policy cannot be attached to any other IAM entity\. For more information, see [Using service\-linked roles for AWS Direct Connect](using-service-linked-roles.md)\.
+AWS Direct Connect uses AWS Identity and Access Management \(IAM\)[ service\-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role)\. A service\-linked role is a unique type of IAM role that is linked directly to AWS Direct Connect\. Service\-linked roles are predefined by AWS Direct Connect and include all of the permissions that the service requires to call other AWS services on your behalf\. A service\-linked role makes setting up AWS Direct Connect easier because you don’t have to manually add the necessary permissions\. AWS Direct Connect defines the permissions of its service\-linked roles, and unless defined otherwise, only AWS Direct Connect can assume its roles\. The defined permissions include the trust policy and the permissions policy, and that permissions policy cannot be attached to any other IAM entity\. For more information, see [Service\-linked roles for Direct Connect](security_iam_service-with-iam.md#security_iam_service-with-iam-roles-service-linked)\.
 
 ## MACsec pre\-shared CKN/CAK key considerations<a name="mac-sec-key-consideration"></a>
 
@@ -39,7 +39,7 @@ When we disassociate the last CKN from your connection and the connection encryp
 
 ## Step 1: Create a connection<a name="step-create-connection"></a>
 
- To start using MACsec, you must turn the feature on when you create a dedicated connection\. For more information, see [Create a connection](create-connection.md)\.
+ To start using MACsec, you must turn the feature on when you create a dedicated connection\. For more information, see [Create a connection using the Connection wizard](dedicated_connection.md#create-connection)\.
 
 ## \(Optional\) Step 2: Create a link aggregation group \(LAG\)<a name="step-create-lag"></a>
 
